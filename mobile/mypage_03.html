@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" /><!-- for sub style -->
+<link rel="stylesheet" href="css/mypage.css" type="text/css" />
+<!-- <link rel="stylesheet" href="css/process.css"> -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+    <!-- layout--header 마이페이지// -->
+	<div class="layout--header">
+		<header>
+            <a href="#" class="ir bt-page-prev">뒤로가기</a>
+			<h2 class="page-title">마이카</h2>
+		</header>
+	
+	</div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <!-- 바텀 알럿텍스트 유: btsheet / 무: btsheet-none  -->
+    <main class="layout--containter mycar btsheet"> 
+        <!-- tip -->
+        <div class="tip-box-fixed" id="alertTip01">
+            <span>TIP</span>
+            <p>
+                선납금 또는 보증금을 납부하지 않으면, 해당 계약은 7일 후 <br>사라집니다.
+            </p>
+            <button type="button" class="ir" onclick="ui.modalPopClose(alertTip01);">닫기</button>
+        </div>
+        
+        <div class="cont-wrap">
+            <div class="top-bar">
+                <span class="badge blue">심사승인</span>
+                <p class="num">견적번호 : 6989472</p>
+                <button type="button" class="btn-delete">전체삭제</button>
+            </div>
+            <div class="time-box">
+                <p>견적 유효시간이 <span>5일</span> 남았어요!</p>
+            </div>
+            <div class="car-thumb small">
+                <a href="#">
+                    <div class="img-wrap">
+                        <img src="images/rent_new/test_img2.png" alt="테스트이미지"/>
+                    </div>
+                    <dl>
+                        <dt>제네시스 G80</dt>
+                        <dd>가솔린 2.5 AWD 기본형</dd>
+                        <dd>2020년식</dd>
+                    </dl>
+                    <p class="price">
+                        <span>
+                            <b>월 대여료</b> (세금 및 보험료 포함) 
+                        </span>
+                        <strong>277,225원</strong>
+                    </p>
+                </a>
+            </div>
+            <p class="info-tit">견적조건</p>
+            <ul class="info-list type01">
+                <li>
+                    <span>계약기간</span>
+                    <p>24개월</p>
+                </li>
+                <li>
+                    <span>주행거리</span>
+                    <p>1만 km</p>
+                </li>
+                <li>
+                    <span>보험연령</span>
+                    <p>만 26세 이상</p>
+                </li>
+                <li>
+                    <span>대물배상</span>
+                    <p>1억원</p>
+                </li>
+                <li>
+                    <span>자손</span>
+                    <p>1억원</p>
+                </li>
+                <li>
+                    <span>무보험차 상해</span>
+                    <p>2억원/1인당</p>
+                </li>
+                <li>
+                    <span>선납금</span>
+                    <p>0원 (0%)</p>
+                </li>
+                <li>
+                    <span>보증금</span>
+                    <p>12,009,000원 (30%)</p>
+                </li>
+                <li>
+                    <span>견적일</span>
+                    <p>2023년 01월 01일</p>
+                </li>
+                <li>
+                    <span>견적만료일</span>
+                    <p>2023년 01월 10일</p>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-wrap btn-fixed">
+            <button type="button" class="contract">다이렉트 계약하기</button>
+        </div>
+
+
+        <!-- 바텀 알럿텍스트 유: btsheet / 무: btsheet-none (main태그에 클래스명 토글)  -->
+        <div class="layer_popup custom-alert-pop">
+            <div class="pop_inner complete">
+                <!-- 컨텐츠 -->
+                <div class="pop-contents">
+                    <p class="alert-txt">보증금 조건을 상향 해주세요.</p>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="contract">견적조건 변경하기</button>
+            </div>
+        </div>
+        <!-- e -->
+
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데렌터카 마이카세이브</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" />
+<link rel="stylesheet" href="css/process.css" type="text/css" />
+<!-- //front UI css -->
+
+<!--2024.09 개선화면 CSS-->
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/v2/slick.css" />
+<link rel="stylesheet" type="text/css" href="./css/v2/slick-theme.css" />  
+<link rel="stylesheet" type="text/css" href="./css/v2/aos.css" />  
+<link rel="stylesheet" type="text/css" href="./css/v2/renew.css">
+<script src="./js/aos.js"></script>
+<script>
+    $(function (){
+        // 섹션별 에니메이션
+        AOS.init({duration:1200,offset:100});
+    });
+</script>
+<style>
+    /*//메인에서만 보이도록 처리하려고 했나본데?*/
+.logo-wrap{display: block;margin-top: 12px;}
+</style>
+<!--2024.09 개선화면 CSS-->
+
+</head>
+<body>
+    <div class="layout--header">
+        <header>
+            <h1 class="logo-wrap"><a href="/" class="ir">롯데렌터카 마이카세이브</a></h1>
+            <div class="button-wrap">
+                <button type="button" class="bt-sidemenu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </header>
+
+
+        <div class="side-menu " id="sideMenu">
+            <div class="user-sec">
+                <!-- 로그아웃 시  none class-->
+                <!-- <div class="member none">
+                    <a href="#">
+                        <span>로그인 해주세요.</span>
+                        PASS인증을 통해 비회원도 이용 가능합니다.
+                    </a>
+                </div> -->
+                <!-- 로그인 시-->
+                <div class="member">
+
+                    <div class="mypage">
+                        <div class="user-wrap">
+                            <div class="top-bar">
+                                <div class="badge">개인회원</div>
+                                <button type="button">회원정보 수정</button>
+                            </div>
+                            <a href="/mypage/mycarEstmate">
+                                <h3 class="user"><strong>김롯데</strong> 회원님, <br>반갑습니다!</h3>
+                            </a>
+                            <a href="/mypage/soleProprietorPage" class="member-change">사업자 회원으로 등록하시겠어요?</a>
+                        </div>
+                    </div>
+
+                    <ul class="member-menu">
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_mycontract.png' alt="나의 계약"/>
+                                    <strong>1</strong>
+                                </div>
+                                <span>나의 계약</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_calc.png' alt="견적 보관함"/>
+                                    <!-- <strong>7</strong> -->
+                                </div>
+                                <span>견적 보관함</span>                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_coupon.png' alt="쿠폰함"/>
+                                    <strong>3</strong>
+                                </div>
+                                <span>쿠폰함</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_sellcar.png' alt="내차팔기"/>
+                                    <!-- <strong>1</strong> -->
+                                </div>
+                                <span>내차팔기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_favorite.png' alt="관심차량"/>
+                                    <!-- <strong>7</strong> -->
+                                </div>
+                                <span>관심차량</span>                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_car.png' alt="최근 본 차량"/>
+                                    <strong>13</strong>
+                                </div>
+                                <span>최근 본 차량</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="menu-sec">
+                <p>마이카세이브</p>
+                <ul>
+                    <li><a href="#">중고차 구매</a></li>
+                    <li><a href="#">중고차 장기렌터카</a></li>
+                    <li><a href="#">신차 장기렌터카</a></li>
+                    <li><a href="#">기획전</a></li>
+                </ul>
+                <p>바로가기</p>
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">고객후기</a></li>
+                    <li><a href="#">비교하기</a></li>
+                </ul>
+                <p>바로가기</p>
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">고객후기</a></li>
+                    <li><a href="#">비교하기</a></li>
+                </ul>
+            </div>
+        
+        </div>
+    </div>
+
+    <!--  컨텐츠 시작 -->
+    <main class="layout--containter main-rent">
+
+
+    <div class="mainContents">
+        <div class="mainCon1">
+            <div class="mainVisualBx">
+                <div class="visualTxt">
+                    <div class="vsLeft">
+                        <a href="./buy_list.html">
+                            <h3 class="vsTit">구매하기</h3>
+                            <span class="vsEx">3일 환불보장<br>홈서비스 받고 구매하기</span>
+                            <i class="btnAroow"></i> 
+                        </a>
+                    </div>
+                    <div class="main_bg_video">
+                      <video class="main_video_content" autoplay muted loop>
+                        <source src="./images/main_visual.mp4" type="video/mp4" />
+                        <!-- <source src="img/video.webm" type="video/webm" /> -->
+                      </video>
+                    </div>
+                    <div class="vsRight">
+                        <a href="./rent_list.html">
+                            <h3 class="vsTit">렌트하기</h3>
+                            <span class="vsEx">초기 비용 없이<br>계약까지 단 5분!</span>
+                            <i class="btnAroow"></i> 
+                        </a> 
+                        <div class="vsBg2"></div>
+                    </div>
+                </div>
+
+                <div class="srhBx">
+                    <p class="txt"><span class="countNum" data-start="0" data-end="1009"></span> 대의 차량이 기다리고 있어요!</p>
+                    <button type="button" class="btnSrhOpen">어떤 차량이 궁금하세요?</button>
+                    <i class="iconSroll"></i>
+                </div>  
+                <script>
+                $(window).on('scroll', function() {
+                    if ($(window).scrollTop() > 1500) {
+                        $('.srhBx').fadeOut();
+                    } else {
+                        $('.srhBx').fadeIn();
+                    }
+                });
+                </script>
+
+                <div class="srhWrap">
+                    <div class="mainSrhBx">
+                        <p class="txt"><span class="countNum" data-start="0" data-end="1009"></span> 대의 차량이 기다리고 있어요!</p>
+                        <div class="inputSrhBx">
+                            <button type="button" class="btnSrhSelect">구매하기</button>
+                            <ul class="selectSrh">
+                                <li><a href="#">구매하기</a></li>
+                                <li><a href="#">렌트하기</a></li>
+                            </ul>
+                            <input type="text" class="mainSrhTxt" placeholder="어떤 차량이 궁금하세요?" title="검색어 입력란" value="쏘나">
+                            <ul class="srhTxtList">
+                                <li><a href="#"><span class="bold">쏘나</span><span>타(DN8)</span></a></li>
+                                <li><a href="#"><span class="bold">쏘나</span><span>타(DN8) 하이브리드</span></a></li>
+                            </ul>
+                            <button type="button" class="btnMainSrh">검색</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btnSrhClose">닫기</button>
+                </div>
+            </div> 
+        </div>
+
+        <div class="mainContentWrap">
+            <div class="mainCon2">
+                <div class="swiper-container carBanBx" data-aos="fade-up">
+                    <ul class="swiper-wrapper carBanList">
+                        <li class="swiper-slide"><a href="#"><img src="./images/renew/mo_header_banner01.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/renew/mo_header_banner02.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/renew/mo_header_banner01.png" alt=""></a></li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="carBuyBg" data-aos="fade-up">
+                    <div class="arBuyWrap">             
+                        <dl class="carBuyTit">
+                            <dt>지금 구매 가능한<br />
+                                인기 차량을 확인하세요</dt>
+                            <dd>최근 조회 수가 높은 차량이에요!</dd>
+                        </dl>
+                        
+                        <div class="swiper-container carBuyBx">                            
+                            <ul class="swiper-wrapper carBuyList">
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt><span class="bold">12,800,000</span>원</dt>
+                                                <dd class="strike">월 740,000원</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt><span class="bold">26,200,000</span>원</dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd class="strike">월 740,000원</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                
+                <div class="serviceWrap2" data-aos="fade-up">
+                    <div class="serviceBx2">
+                        <div class="servTit2">
+                            마이카세이브 구매고객 혜택
+                        </div>
+
+                        <div class="serviceList2 secretSlide">
+                            <div class="swiper-pagination"></div>
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="imgBx">
+                                        <img src="./images/renew/mo_service_banner_01.png">
+                                    </div>          
+                                </li>       
+                                <li class="swiper-slide">
+                                    <div class="imgBx">
+                                        <img src="./images/renew/mo_service_banner_02.png">
+                                    </div>
+                                </li>       
+                                <li class="swiper-slide">
+                                    <div class="imgBx">
+                                        <img src="./images/renew/mo_service_banner_03.png">
+                                    </div>
+                                </li>       
+                                <li class="swiper-slide">
+                                    <div class="imgBx">
+                                        <img src="./images/renew/mo_service_banner_04.png">
+                                    </div>
+                                </li>       
+                            </ul>
+                            <div class="swiper-scrollbar"></div>    
+                        </div>
+        
+                    </div>
+                </div>
+
+                <div class="carKeywordBx" data-aos="fade-up">
+                    <div class="conTit">추천 키워드</div>
+                    <div class="keywordBut">
+                        <button type="button" class="active">#하이브리드할인</button>
+                        <button type="button">#인증차</button>
+                        <button type="button">#진단차</button>
+                        <button type="button">#관리차</button>
+                        <button type="button">#출고3년이내</button>
+                        <button type="button">#3만km이하</button>
+                        <button type="button">#여름에는통풍시트</button>
+                    </div>
+                    <div class="keyTabs">
+                        <div class="Keytab active">
+                            <ul class="swiper-wrapper carKeywordList">
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt><span class="bold">12,800,000</span>원</dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="Keytab">
+                            <ul class="swiper-wrapper carKeywordList"> 
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="Keytab">
+                            <ul class="swiper-wrapper carKeywordList">
+                                <li>
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="state">상담진행중</span>
+                                        <div class="imgBx">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>인증차</li>
+                                                <li>진단차</li>
+                                                <li>관리차</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainCon3">
+                <div class="swiper-container mainTheme">
+                    <div class="swiper-wrapper mainThemeWrap">
+                        <!-- <div class="swiper-pagination"></div> -->
+                        <div class="swiper-slide mainThemeCon">
+                            <div class="slideListBx">                        
+                                <ul class="banThemeList">
+                                    <li>
+                                        <dl data-aos="fade-up">
+                                            <!-- <dt>테마 기획전</dt> -->
+                                            <dd class="txtTit">연비걱정 NO!<br><span class="txtRed">전기차</span> 기획전</dd>
+                                            <dd class="txtEx">신속출고<br /> 인기전기차 특가</dd>
+                                        </dl>
+                                        <!-- <a href="#" class="btnView" data-aos="fade-right">차량 더보기</a> -->
+                                        <i class="icon1" data-aos="fade-up"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="carThemeBx">
+                                <ul class="carThemeList">
+                                    <li data-aos="fade-up" data-aos-offset="100">
+                                        <a href="#">
+                                            <span class="state">상담진행중</span>
+                                            <div class="imgBx">
+                                                <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                            </div>
+                                            <div class="carTxtCon">
+                                                <dl class="txtTit">
+                                                    <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                </dl>
+                                                <dl class="txtPrice">
+                                                    <dt><span class="bold">12,000,000</span>원</dt>
+                                                    <dd>신차가 80,000,000원</dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li data-aos="fade-up" data-aos-offset="100">
+                                        <a href="#">
+                                            <span class="state">상담진행중</span>
+                                            <div class="imgBx">
+                                                <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                            </div>
+                                            <div class="carTxtCon">
+                                                <dl class="txtTit">
+                                                    <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                </dl>
+                                                <dl class="txtPrice">
+                                                    <dt><span class="bold">26,300,000</span>원</dt>
+                                                    <dd>신차가 80,000,000원</dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <a href="#">
+                                            <span class="state">상담진행중</span>
+                                            <div class="imgBx">
+                                                <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                            </div>
+                                            <div class="carTxtCon">
+                                                <dl class="txtTit">
+                                                    <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                    <dd>2021.09(22년형)</dd>
+                                                    <dd>하이브리드</dd>
+                                                </dl>
+                                                <dl class="txtPrice">
+                                                    <dt><span class="bold">47,000,000</span>원</dt>
+                                                    <dd>신차가 80,000,000원</dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <a href="#">
+                                            <span class="state">상담진행중</span>
+                                            <div class="imgBx">
+                                                <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                            </div>
+                                            <div class="carTxtCon">
+                                                <dl class="txtTit">
+                                                    <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                </dl>
+                                                <dl class="txtPrice">
+                                                    <dt><span class="bold">12,600,000</span>원</dt>
+                                                    <dd>신차가 80,000,000원</dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li data-aos="fade-up" data-aos-offset="100">
+                                        <a href="#">
+                                            <span class="state">상담진행중</span>
+                                            <div class="imgBx">
+                                                <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                            </div>
+                                            <div class="carTxtCon">
+                                                <dl class="txtTit">
+                                                    <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                </dl>
+                                                <dl class="txtPrice">
+                                                    <dt><span class="bold">12,000,000</span>원</dt>
+                                                    <dd>신차가 80,000,000원</dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li data-aos="fade-up" data-aos-offset="100">
+                                        <a href="#">
+                                            <span class="state">상담진행중</span>
+                                            <div class="imgBx">
+                                                <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                            </div>
+                                            <div class="carTxtCon">
+                                                <dl class="txtTit">
+                                                    <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                </dl>
+                                                <dl class="txtPrice">
+                                                    <dt><span class="bold">26,300,000</span>원</dt>
+                                                    <dd>신차가 80,000,000원</dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <a href="#">
+                                            <span class="state">상담진행중</span>
+                                            <div class="imgBx">
+                                                <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                            </div>
+                                            <div class="carTxtCon">
+                                                <dl class="txtTit">
+                                                    <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                    <dd>2021.09(22년형)</dd>
+                                                    <dd>하이브리드</dd>
+                                                </dl>
+                                                <dl class="txtPrice">
+                                                    <dt><span class="bold">47,000,000</span>원</dt>
+                                                    <dd>신차가 80,000,000원</dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <a href="#">
+                                            <span class="state">상담진행중</span>
+                                            <div class="imgBx">
+                                                <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                            </div>
+                                            <div class="carTxtCon">
+                                                <dl class="txtTit">
+                                                    <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                </dl>
+                                                <dl class="txtPrice">
+                                                    <dt><span class="bold">12,600,000</span>원</dt>
+                                                    <dd>신차가 80,000,000원</dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainBannerWrap" data-aos="fade-up">
+                    <div class="conTit" data-aos-once="true">많이 찾는 서비스</div>
+                    <ul class="mainBanList">
+                        <li>
+                            <a href="#" class="bg1">
+                                <span class="banTit">내차팔기</span>
+                                <span class="banEx">차량번호만 입력하시면<br>쉽고 빠르게 견적을 드립니다.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bg2">
+                                <span class="banTit">보험조회</span>
+                                <span class="banEx">온라인을 통해 간편하게<br>보험 가입을 하세요.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bg3">
+                                <span class="banTit">대출조회</span>
+                                <span class="banEx">마이카세이브 제휴 금융사를 통해<br> 대출가능금액을 확인하세요.</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <div class="layout--footer isApp" data-aos="fade-up">
+        <div class="floating-page-top">
+            <button type="button" class="ir active" onclick="window.scrollTo(0,0)">TOP</button>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-cs">
+                        <dl>
+                            <dt>고객센터</dt>
+                            <dd><a href="tel:031-322-8000">031. 322. 8000</a></dd>
+                            <dd>(평일 09:00 ~ 18:00)</dd>
+                        </dl>
+                    </div>
+                    <div class="footer-sns">
+                        <button type="button" class="ir insta" onclick="location.href='https://www.instagram.com/lotte_rentacar'">Instagram</button>
+                        <button type="button" class="ir facebook" onclick="location.href='https://www.facebook.com/lotterentacar'">Facebook</button>
+                        <button type="button" class="ir kakao" onclick="location.href='https://pf.kakao.com/_gVmbl'">Kakao</button>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <button class="brand-name on" type="button"> 롯데렌탈(주)</button>
+                    <div class="footer-info on">
+                        <p><b>대표이사</b> : <span>최진환</span></p>
+                        <p><b>E-mail</b> : <span> <a href="mailto:mycarsave@lotte.net">mycarsave@lotte.net</a></span></p>
+                        <p><b>사업자등록번호</b> : <span>214-87-79183</span></p>
+                        <p><b>통신판매업신고번호</b> : <span>제2010-경기안양-420호</span></p>
+                        <p><b>주소 </b> : <span> 서울시 강남구 테헤란로 422 KT타워 10층<br>경기도 안양시 동안구 전파로 88, 8층(호계동, 신원비젼타워)</span></p>
+                    </div>
+                    <div class="footer-link">
+                        <ul>
+                            <li><a href="https://www.lotterental.com/homepage/html/web/company/LPC01001.html">회사소개</a></li>
+                            <li><a href="https://www.lotterentacar.net/hp/kor/terms/use.do" target="_blank">이용약관</a></li>
+                            <li><a href="https://www.lotterentacar.net/hp/kor/terms/personalInfo.do" class="emp" target="_blank"><b>개인정보처리방침</b></a></li>
+                            <li><a href="https://www.lotterentacar.net/hp/kor/terms/videoInfo.do" class="emp" target="_blank"><b>영상정보처리방침</b></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!--   네비게이션 -->
+    <nav class="layout--navigation">
+        <ul>
+            <li class="active"><button type="button" onclick="location.href='./main.html'">메인</button></li>
+            <li><button type="button" onclick="location.href='./buy_list.html'">구매하기</button></li>
+            <li><button type="button" onclick="location.href='./rent_list.html'">렌트하기</button></li>
+            <li><button type="button" onclick="location.href='./main.html'">관심차량</button></li>
+            <li>
+                <button type="button">
+                    <div class="thumb-nail">
+                        <img src="./images/rent_new/test_img.png" alt="제네시스 G80" />
+                    </div>
+                    최근 본 차량
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/ui.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- //front UI js -->
+
+    <script>
+        // window.addEventListener("wheel", function(e){
+        //     e.preventDefault();
+        // },{passive : false});
+
+        var mHtml = $("html");
+        var page = 1;
+        mHtml.animate({scrollTop : 0},10);
+        $(window).on("wheel", function(e) {
+            if(mHtml.is(":animated")) return;
+            if(e.originalEvent.deltaY > 0) {
+                if(page == 3) return;
+                page++;
+            } else if(e.originalEvent.deltaY < 0) {
+                if(page == 1) return;
+                page--;
+            }
+            var posTop =(page-1) * $(window).height();
+            mHtml.animate({scrollTop : posTop});
+        })
+
+        let themeSwiper = new Swiper('.theme-slider', {
+            slidesPerView: 1,
+            loop: true,
+        });
+
+        let mainCardSwiper = new Swiper('.card-slider', {
+            slidesPerView: 1.5,
+            grabCursor: true,
+            spaceBetween: 16,
+            loop: false,
+        });
+
+        let carBanBx = new Swiper('.carBanBx',{
+            slidesPerView: 1.1,
+            grabCursor: true,
+            spaceBetween: 16,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        })
+
+        let carBuyBx = new Swiper('.carBuyBx',{
+            slidesPerView: 2,
+            grabCursor: true,
+            spaceBetween: 4,
+            loop: true,
+            autoplay: {
+                enabled: true,
+                delay: 3000,
+                pauseOnMouseEnter: true,
+            },
+        })
+        //키워드탭 스와이프 영역제어
+        let Keytab = new Swiper('.Keytab',{
+            slidesPerView: 1.3,
+            grabCursor: true,
+            spaceBetween: 4,
+            loop: true,
+            autoplay: {
+                enabled: true,
+                delay: 3000,
+                pauseOnMouseEnter: true,
+            },
+        })
+
+        let mainTheme = new Swiper('.mainTheme',{
+            slidesPerView: 1,
+            grabCursor: true,
+            spaceBetween: 26,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        })
+
+        //키워드탭 버튼영역 처리
+        $('.keywordBut button').click(function(){
+            //alert('d');
+            var $this = $(this);
+            var index = $this.index();
+            
+            $this.addClass('active');
+            $this.siblings('.keywordBut button.active').removeClass('active');
+            
+            var $outer = $this.closest('.carKeywordBx');
+            var $current = $outer.find(' > .keyTabs > .Keytab.active');
+            var $post = $outer.find(' > .keyTabs > .Keytab').eq(index);
+            
+            $current.removeClass('active');
+            $post.addClass('active');
+        });
+
+    
+        let brandSwiper = new Swiper('.brand-slider', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            grabCursor: true,
+            spaceBetween: 10,
+            loop: true,
+            // loopedSlides: 1,
+            speed: 650,
+            // effect: 'cards',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            disableOnInteraction: true,
+            observer: true,
+            autoplay: {
+                enabled: true,
+                delay: 3000,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: '.banner-pagination',
+                type: 'fraction'
+            },
+        });
+
+
+        let menu = ['내 집까지 바로배송', '무사고 품질인증 차량', '최대12개월 연장보증','차량방문정비 서비스']
+        let secretSlide = new Swiper(".secretSlide", {
+            slidesPerView: 'auto',
+            observer: true,
+            observeParents: true,   
+            initialslide: 1,    
+            slidesPerView: 1.3,
+            slidesOffsetAfter:0 ,
+            slidesOffsetBefore:0 ,
+            spaceBetween: 16,
+            loop:true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            scrollbar: {
+            el: ".swiper-scrollbar",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (menu[index]) + "</span>";
+                },
+            },
+        });
+
+        // 기획전영역 스와이프 사용여부 확인
+        // let themeSwiper = new Swiper(".slideListBx", {
+        //     //effect : 'fade',
+        //     slidesPerView: 1,
+        //     slidesPerGroup: 1,
+        //     //centeredSlides: false,
+        //     speed : 0,
+        //     //slidesPerGroupSkip: 1,            
+        //     grabCursor: true,       
+        //     observer: true,
+        //     observeParents: true,   
+        //     initialslide: 1,
+        //     pagination : { // 페이징 설정
+        //         el : '.swiper-pagination',
+        //         clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+        //     },    
+        // });
+        
+
+        let hotSearchSwiper = new Swiper('.hot-search-slider', {
+            effect: "creative",
+            creativeEffect: {
+                limitProgress : 2,
+                progressMultiplier: 1,
+                prev: {
+                    translate: ["-200%", 0, 10],
+                    opacity: 1,
+                    scale: 1,
+                },
+                next: {
+                    translate: [0, -35, 0],
+                    opacity: 1,
+                    scale: 0.9,
+                },
+            },
+            grabCursor: true,
+            loop:true,
+            loopedSlides: 2,
+            on: {
+                init: function () {
+                    // 각 슬라이드에 pagination 코드 추가
+                    const slides = this.slides;
+                    slides.forEach(function (slide, index) {
+                        const paginationBullet = document.createElement('div');
+                        paginationBullet.classList.add('swiper-pagination-add');
+                        paginationBullet.innerHTML = `
+                            <span class='swiper-pagination-current'>0${index + 1}</span>
+                            /
+                            <span class="swiper-pagination-total">05</span> 
+                        `;
+                        slide.children[1].after(paginationBullet);
+                    });
+                    updatePaging(this.activeIndex);
+                },
+                slideChange: function () {
+                    updatePaging(this.activeIndex);
+                }
+            }
+        });
+
+        // pagination 숫자 요소들의 위치 업데이트
+        function updatePaging(activeIndex) {
+            const paginationBullets = document.querySelectorAll('.swiper-pagination-add');
+            paginationBullets.forEach(function (bullet, index) {
+                if (index === activeIndex) {
+                    bullet.classList.add('active');
+                } else {
+                    bullet.classList.remove('active');
+                }
+            });
+        }
+
+        let popularCarSwiper = new Swiper('.popular-slider', {
+            slidesPerView: '1.2',
+            grabCursor: true,
+            spaceBetween: 16,
+            loop: false,
+        });
+
+        let reviewSwiper = new Swiper('.review-slider', {
+            slidesPerView: 'auto',
+            grabCursor: true,
+            spaceBetween: 10,
+            loop: false,
+        });
+
+
+    </script>
+
+    <script>
+        function goAppDownload(os){
+            if(os === "ios"){
+                location.href = "https://apps.apple.com/app/id6443792853";
+            }else if(os === "android"){
+                location.href = "https://play.google.com/store/apps/details?id=com.lotterental.automarket";
+            }
+        }
+        // jQuery(function(){
+        //     if(nayuda.isMobileApp()){
+        //         jQuery("#sidemenu-foot-app").hide();
+        //     }
+        // });
+
+        $(".brand-name").click(function (){
+            $(this).toggleClass("on");
+            $(".footer-info").toggleClass("on");
+        });
+    </script>
+
+
+
+
+
+<!--신규화면 스크립트 추가내용-->
+
+    <script>
+        $(document).ready(function() {
+        
+        // 클래스가 "counter"인 모든 요소를 선택합니다.
+        const $counters = $(".countNum");
+        
+        // 노출 비율(%)과 애니메이션 속도(ms)을 설정합니다.
+        const exposurePercentage = 100; // ex) 스크롤 했을 때 $counters 컨텐츠가 화면에 100% 노출되면 숫자가 올라갑니다.
+        const duration = 1000; // ex) 1000 = 1초
+        
+        // 숫자에 쉼표를 추가할지 여부를 설정합니다.
+        const addCommas = true; // ex) true = 1,000 / false = 1000
+        
+        // 숫자를 업데이트하고 애니메이션하는 함수 정의
+        function updateCounter($el, start, end) {
+            let startTime;
+            function animateCounter(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const progress = (timestamp - startTime) / duration;
+                const current = Math.round(start + progress * (end - start));
+                const formattedNumber = addCommas ? current.toLocaleString() : current;
+                $el.text(formattedNumber);
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animateCounter);
+                } else {
+                    $el.text(addCommas ? end.toLocaleString() : end);
+                }
+            }
+            requestAnimationFrame(animateCounter);
+        }
+
+        
+        // 윈도우의 스크롤 이벤트를 모니터링합니다.
+        $(window).on('scroll', function() {
+            // 각 "counter" 요소에 대해 반복합니다.
+            $counters.each(function() {
+                const $el = $(this);
+                // 요소가 아직 스크롤되지 않았다면 처리합니다.
+                if (!$el.data('scrolled')) {
+                    // 요소의 위치 정보를 가져옵니다.
+                    const rect = $el[0].getBoundingClientRect();
+                    const winHeight = window.innerHeight;
+                    const contentHeight = rect.bottom - rect.top;
+                    
+                    // 요소가 화면에 특정 비율만큼 노출될 때 처리합니다.
+                    if (rect.top <= winHeight - (contentHeight * exposurePercentage / 100) && rect.bottom >= (contentHeight * exposurePercentage / 100)) {
+                        const start = parseInt($el.data("start"));
+                        const end = parseInt($el.data("end"));
+                        // 숫자를 업데이트하고 애니메이션을 시작합니다.
+                        updateCounter($el, start, end);
+                        $el.data('scrolled', true);
+                    }
+                }
+            });
+        }).scroll();
+    })
+    </script>
+
+
+
+</body>
+</html>

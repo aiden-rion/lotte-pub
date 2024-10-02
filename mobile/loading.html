@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" /><!-- for sub style -->
+<link rel="stylesheet" href="css/process.css" type="text/css" /><!-- for sub style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+    
+    <!-- Loading -->
+    <div class="preloader">
+      <div class="dimmed"></div>
+      <div class="load-wrap">
+        <div class="bg cloude"></div>
+        <div class="bg tree"></div>
+        <div class="bg car-body">
+          <img src="./images/loading/car_body.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .preloader {position: fixed;left:0;top:0;z-index: 100; display: flex;justify-content: center;align-items: center;width: 100%;height: 100vh;}
+      .preloader .dimmed {position: fixed;left: 0;top: 0;z-index: 10;width: 100%;height: 100vh;background-color: rgba(0, 0, 0, 0.8);}
+      .preloader .load-wrap {position: absolute;z-index: 11;width: 200px;height: 200px;background-color:transparent;overflow: hidden;}
+      .preloader .load-wrap::after {content: '';position: absolute;left: 0;bottom: 30px;width: 100%;height: 3px;background-color: #999;}
+
+
+      .preloader .bg {position: absolute;}
+      .preloader .cloude {
+        width: 30%;height: 100%;
+        top: 0;left: 0;
+        background:url("./images/loading/cloud.svg") no-repeat;
+        animation: cloude 4s linear infinite;
+      }
+      .preloader .tree {
+        width: 90%;height: 100%;
+        top: 0;left: 0;
+        background:url("./images/loading/tree.svg") no-repeat;
+        background-position: 0 73%;
+        animation: tree 4s linear infinite;
+      }
+
+      .preloader .car-body {
+        width: 70%;height: 70%;
+        bottom:-26%;left: 15%;
+      }
+      .preloader .car-body img {
+        animation: shake 0.2s ease-in-out infinite alternate;
+      }
+
+      .preloader .car-body::before,
+      .preloader .car-body::after {
+        content: '';
+        display: block;
+        width: 19%;height:19%;
+        z-index: 2;
+        position: absolute;
+        top:28px;
+        background:url("./images/loading/wheel.svg") no-repeat left top;
+        animation: spin 1s linear infinite;
+      }
+      .preloader .car-body::before{
+        left: 102px;
+        transform-origin: center center;
+      }
+      .preloader .car-body::after {
+        left: 9px;
+        transform-origin: center center;
+      }
+
+      @keyframes cloude {
+        0% {
+          transform: translateX(300%);
+        }
+        100% {
+          transform: translateX(-120%);
+        }
+      }
+      @keyframes tree {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-120%);
+        }
+      }
+      @keyframes shake {
+        0% {
+          transform: translateY(0%);
+        }
+        100% {
+          transform: translateY(3%);
+        }
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+</body>
+</html>

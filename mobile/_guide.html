@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/process.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" /><!-- for sub style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+    <div class ="car-thumb">
+        <a href="#">
+            <div class="img-wrap">
+                <img src="#"/>
+            </div>
+            <dl>
+                <dt>제네시스 G80 </dt>
+                <dd>가솔린 2.5 AWD 기본형</dd>
+                <dd>2020년식</dd>
+            </dl>
+        </a>
+    </div>
+    <div class="info-wrap">
+        <p class="tit">심사 및 본인 인증을 통하여 맞춤 견적을 확인해 보세요!</p>
+        <p class="txt">장기렌터카는 금융 상품이 아니기 때문에 개인 신용 등급에 전혀 영향을 주지 않습니다.</p>    
+        <div class="car-thumb small">
+            <div class="img-wrap">
+                <img src="#"/>
+            </div>
+            <dl>
+                <dt>제네시스 G80 </dt>
+                <dd>가솔린 2.5 AWD 기본형</dd>
+            </dl>
+        </div>
+    </div>
+    
+    <!-- 전체 form-sec -->
+    <!-- 폼영역  form-wrap -->
+    <!-- 영역 안  input-item -->
+
+    <div class="form-sec">
+        <div class="form-wrap">
+            <div class="form-tit-wrap">
+                <h3 class="form-tit">인풋_입력</h3>
+                <a href="#">수정 ></a>
+            </div>
+
+            <!-- 생년월일 -->
+            <div class="input-item">
+				<p class="tit">생년월일</p>
+				<div class="flex">
+					<div class="text-wrap">
+						<input type="text" placeholder="텍스트 입력" id="birth">
+					</div>
+					<select name="" id="">
+						<option value="">내국인</option>
+						<option value="">외국인</option>
+					</select>
+				</div>
+            </div>
+
+            <!-- 휴대전화 -->
+            <div class="input-item">
+                <p class="tit">휴대전화</p>
+                <div class="flex">
+                    <select name="" id="">
+                        <option value="" disabled selected>통신사</option>
+                        <option value="">내국인</option>
+                        <option value="">외국인</option>
+                    </select>
+                    <div class="text-wrap">
+                        <input type="text" placeholder="“-”없이 입력해주세요" id="birth">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 소득유형 -->
+            <div class="input-item">
+                <p class="tit">소득유형</p>
+                <select name="" id="">
+                    <option value="" disabled selected>통신사</option>
+                    <option value="">내국인</option>
+                    <option value="">외국인</option>
+                </select>
+                <p class="caption">* 공동대표의 경우 개인사업자 회원 등록이 제한됩니다.</p>
+            </div>
+
+            <!-- 이름 -->
+            <div class="input-item">
+                <p class="tit">이름</p>
+                <div class="text-wrap">
+                    <input type="text" placeholder="텍스트 입력" id="birth">
+                </div>
+            </div>
+            
+            <!-- 동의 type01 -->
+            <div class="form-wrap">
+                <p class="tit">전체동의</p>
+                <div class="input-item check-all">
+                    <div class="check-wrap all">
+                        <input type="checkbox" id="checkAll" class="checkAll"/>
+                        <label for="checkAll">실속정비상품</label>
+                    </div>
+                    <div class="check-wrap">
+                        <input type="checkbox" id="check01" class="check"/>
+                        <label for="check01">개인정보 수집 및 이용동의 <span>(필수)</span></label>
+                    </div>
+                    <div class="check-wrap">
+                        <input type="checkbox" id="check02" class="check"/>
+                        <label for="check02">마케팅 광고·홍보 활용을 위한 개인정보 수집
+                            및 이용 동의 <span>(필수)</span></label>
+                    </div>
+                    <div class="check-wrap">
+                        <input type="checkbox" id="check02" class="check"/>
+                        <label for="check02">마케팅 광고·홍보 활용을 위한 개인정보 수집
+                            및 이용 동의 <span>(필수)</span></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-item">
+                <label class="tit" for="test04">주소</label>
+                <div class="flex">
+                    <input type="text" placeholder="주소 입력" id="test04">
+                    <button type="button" class="btn-search type01" >주소 검색</button>
+                </div>
+                <!-- 추가인풋 add-input-->
+                <div class="add-input">
+                    <input type="text" placeholder="주소 입력" id="test05">
+                </div>
+                <!-- 추가인풋 add-input-->
+            </div>
+            <div class="input-item">
+                <label class="tit" for="test03">이메일</label>
+                <input type="email" placeholder="이메일 입력" id="test03">
+                <p class="caption">* 공동대표의 경우 개인사업자 회원 등록이 제한됩니다.</p>
+            </div>
+    
+        </div>
+        <div class="form-wrap">
+    </div>
+    
+        <div class="form-tit-wrap">
+            <h3 class="form-tit">인풋_선택</h3>
+        </div>
+        <div class="input-item">
+            <div class="check-wrap all">
+                <input type="checkbox" id="checkAll" class="checkAll"/>
+                <label for="checkAll">전체동의</label>
+            </div>
+            <div class="check-wrap">
+                <input type="checkbox" id="check01" class="check"/>
+                <label for="check01">개인정보 수집 및 이용동의 <span>(필수)</span></label>
+            </div>
+            <div class="check-wrap">
+                <input type="checkbox" id="check02" class="check"/>
+                <label for="check02">마케팅 광고·홍보 활용을 위한 개인정보 수집
+                    및 이용 동의 <span>(필수)</span></label>
+            </div>
+        </div>
+        
+        <div class="input-item">
+            <div class="tit flex">주행거리
+                <a href="#"></a>
+            </div>
+            <div class="radio-wrap">
+                <div class="radio">
+                    <input type="radio" id="radio4" name="주행거리" value="" checked/>
+                    <label for="radio4"> ~1만km</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="radio5" name="주행거리" value=""/>
+                    <label for="radio5"> ~2만km</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="radio6" name="주행거리" value=""/>
+                    <label for="radio6"> ~3만km</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="radio7" name="주행거리" value=""/>
+                    <label for="radio7"> 무제한</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-item">
+            <div class="tit">계약기간</div>
+            <div class="radio-wrap">
+                <div class="radio">
+                    <input type="radio" id="12m" name="계약기간" value="" checked/>
+                    <label for="12m"> 12개월</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="24m" name="계약기간" value=""/>
+                    <label for="24m"> 24개월</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="36m" name="계약기간" value=""/>
+                    <label for="36m"> 36개월</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-item">
+            <div class="tit flex">대물배상
+                <a href="#"></a>
+            </div>
+            <div class="radio-wrap">
+                <div class="radio">
+                    <input type="radio" id="radio18" name="대물배상" value="" checked/>
+                    <label for="radio18">1억원</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="radio19" name="대물배상" value=""/>
+                    <label for="radio19">2억원</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<!--    버튼 -->
+    <div class="btn-wrap">
+        <button type="submit" class="btn-submit on">개인사업자 등록하기</button>
+        <button type="submit" class="btn-submit">개인사업자 등록하기</button>
+    </div>
+    <div class="btn-wrap flex">
+        <button type="submit" class="btn type02">개인사업자 등록하기</button>
+        <button type="submit" class="btn type03">다이렉트 계약하기</button>
+    </div>
+
+    <div class="btn-fixed-wrap">
+		<a href="#" class="btn-submit on fixed">PASS 인증하기</a>
+	</div>
+
+<!--    탭-->
+    <div class="tap-wrap">
+        <div class="tab">
+            <button type="button" data-tab="tab1" class="on">탭1</button>
+            <button type="button" data-tab="tab2">탭2</button>
+        </div>
+        <div id="tab1" class="tab-content on">
+            탭1 내용
+        </div>
+        <div id="tab2" class="tab-content">
+            탭2 내용
+        </div>
+    </div>
+</body>
+</html>

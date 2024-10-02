@@ -1,0 +1,11 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="check box" clip-path="url(#clip0_872_7627)">
+<circle id="Ellipse 33" cx="14" cy="14" r="13.5" fill="white" stroke="#E6E6E6"/>
+<path id="check" d="M8 14.695L11.9508 19L20 10" stroke="#E6E6E6" stroke-width="1.5" stroke-linecap="square"/>
+</g>
+<defs>
+<clipPath id="clip0_872_7627">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
+</svg>

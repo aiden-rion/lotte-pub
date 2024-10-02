@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" />
+<link rel="stylesheet" href="css/popup.css" type="text/css" />
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+
+</head>
+<body>
+
+<div class="layout--wrap">
+	
+	<div class="layout--header--popup">
+		<header class="pop-header">
+			<h2 class="login-title">로그인</h2>
+			<button type="button" class="ir bt-page-close">페이지 닫기</button>
+		</header>
+	</div>
+	
+	<!-- layout--container -->
+	<main class="layout--containter--popup">		
+		<div class="tab-wrap login">
+			<div class="tab">
+				<button type="button" data-tab="tab1" class="on">휴대폰</button>
+				<button type="button" data-tab="tab2" class="">L.POINT</button>
+			</div>
+
+			<!-- 휴대폰 -->
+			<div id="tab1" class="tab-content on">
+				<section class="login-type">
+					<h3>개인회원 로그인</h3>
+					<!-- 사업자 로그인시 노출
+					<h3>개인사업자 로그인</h3>
+					-->
+					<div class="btn-member">
+						<a href="#">개인사업자 로그인</a>
+					</div>
+					<div class="login-info">
+						<p>PASS로 간편하게 인증하고<br />
+							견적부터 계약까지 자유롭게 이용해 보세요!</p>
+
+						<!-- 사업자 로그인시 노출
+						<ul class="form-insert">
+							<li><input type="text" placeholder="사업자번호를 입력해 주세요" title="사업자번호를 입력해 주세요" /></li>
+						</ul>
+						 -->
+					</div>
+
+					<div class="login-btn">
+						<button type="submit" class="bt-common-type2 bt-full rnd bt-login">PASS 인증하기</button>
+					</div>
+					<p class="login-desc">PASS 인증 시 비회원도 나의 견적/계약 내역을 확인 가능합니다.</p>
+				</section>
+			</div>
+
+			<!-- L.POINT -->
+			<div id="tab2" class="tab-content">
+				<section class="login-type">
+					<h3>개인회원 로그인</h3>
+					<!-- 사업자 로그인시 노출
+					<h3>개인사업자 로그인</h3>
+					-->
+
+					<!-- 말풍선 -->
+					<article class="tip-box arrow-up">
+						<p>L.Point 통합회원 로그인 시 개인사업자는
+							마이페이지에서 사업자 등록 후 가능합니다.</p>
+						<button type="button" class="ir bt-layer-close">닫기</button>
+
+					</article>
+
+					<div class="btn-member">
+						<a href="#">개인사업자 로그인</a>
+					</div>
+					<div class="login-wrap">
+						<ul class="form-insert">
+							<li><input type="text" placeholder="아이디를 입력해 주세요" title="아이디를 입력해 주세요" /></li>
+							<li><input type="password" placeholder="비밀번호를 입력해 주세요" title="비밀번호를 입력해 주세요" /></li>
+							<!-- 사업자 로그인시 노출
+							<li><input type="text" placeholder="사업자번호를 입력해 주세요" title="사업자번호를 입력해 주세요" /></li>
+							-->
+						</ul>
+						<div class="check-wrap round-normal">
+							<input type="checkbox" class="checkAll" id="chkSaveLogin" name="chkSaveLogin" />
+							<label for="chkSaveLogin">아이디 저장</label>
+						</div>
+
+						<div class="login-btn">
+							<button type="submit" class="bt-common-type2 bt-full rnd bt-login">로그인</button>
+						</div>
+						<div class="join-link">
+							<a href="#">아이디찾기</a>
+							<a href="#">비밀번호찾기</a>
+							<a href="#">회원가입</a>
+						</div>
+					</div>
+					<div class="sns-login-wrap">
+							<h3><span>간편로그인</span></h3>
+							<ul>
+								<li><button type="button" class="sns-login ir login-naver">네이버 로그인</button></li>
+								<li><button type="button" class="sns-login ir login-kakao">카카오 로그인</button></li>
+								<li><button type="button" class="sns-login ir login-ios">IOS 간편 로그인</button></li>
+							</ul>
+						</div>
+				</section>
+			</div>
+		</div>
+	</main>
+
+
+	<!-- layout--footer// -->
+	<div class="layout--footer">
+		<footer>
+			
+		</footer>	
+	</div>
+	<!-- //layout-footer -->
+	
+</div>
+<!-- //layout--wrap -->
+
+</body>
+</html>
+	
+

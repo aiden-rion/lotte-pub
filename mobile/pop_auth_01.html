@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" /><!-- for sub style -->
+<link rel="stylesheet" href="css/process.css" type="text/css" /><!-- for sub style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+    <!-- layout--header 견적// -->
+	<div class="layout--header">
+		<header>
+            <!-- <a href="#" class="ir bt-page-prev">뒤로가기</a> -->
+			<h2 class="page-title">간편인증</h2>
+			<button type="button" class="ir bt-page-close">페이지 닫기</button>
+		</header>
+	
+	</div>
+
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter  ctn">
+        <div class="info-wrap">
+			<p class="tit">고객님께서는 최근 3일 이내에 인증을 완료하셨습니다.
+                지금 바로 내 맞춤 견적을 확인해 보세요!</p>
+			<p class="txt">장기렌터카는 금융 상품이 아니기 때문에 개인 신용 등급에 전혀 영향을 주지 않습니다.</p>    
+			<div class="car-thumb small">
+				<div class="img-wrap">
+					<img src="./images/rent_new/test_img.png"/>
+				</div>
+				<dl>
+					<dt>제네시스 G80 </dt>
+					<dd>가솔린 2.5 AWD 기본형</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="form-sec">
+			<div class="input-item">
+                <p class="tit">소득유형</p>
+                <select id="income">
+                    <option value="" selected>개인(급여소득자),직장인</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+			<div class="input-item">
+                <p class="tit">사업자 등록번호</p>
+                <div class="text-wrap">
+                    <input type="text" placeholder="하이픈(-)없이 입력해주세요" id="company-num">
+                </div>
+            </div>
+			<div class="form-wrap">
+                <div class="input-item check-all">
+                    <div class="check-wrap all">
+                        <input type="checkbox" id="checkAll" class="checkAll"/>
+                        <label for="checkAll">약관 전체동의</label>
+                    </div>
+                    <div class="check-wrap">
+                        <input type="checkbox" id="check01" class="check"/>
+                        <label for="check01">개인정보 수집 및 이용동의 <span>(필수)</span></label>
+                    </div>
+                    <div class="check-wrap">
+                        <input type="checkbox" id="check02" class="check"/>
+                        <label for="check02">마케팅 광고·홍보 활용을 위한 개인정보 수집
+                            및 이용 동의 <span>(필수)</span></label>
+                    </div>
+                    <div class="check-wrap">
+                        <input type="checkbox" id="check03" class="check"/>
+                        <label for="check03">마케팅 광고·홍보 활용을 위한 개인정보 수집
+                            및 이용 동의 <span>(필수)</span></label>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </main>
+
+    <!-- 버튼 -->
+	<div class="btn-fixed-wrap">
+		<a href="#" class="btn-submit on fixed">PASS 인증하기</a>
+	</div>
+
+</body>
+</html>

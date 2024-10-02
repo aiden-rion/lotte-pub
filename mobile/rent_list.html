@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데렌터카 마이카세이브</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<!-- <link rel="stylesheet" href="css/common_new.css" type="text/css" /> -->
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+<link rel="stylesheet" href="css/et_ux.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" />
+<link rel="stylesheet" href="css/process.css" type="text/css" />
+<!-- //front UI css -->
+
+<!--2024.09 개선화면 CSS-->
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/v2/slick.css" />
+<link rel="stylesheet" type="text/css" href="./css/v2/slick-theme.css" />  
+<link rel="stylesheet" type="text/css" href="./css/v2/aos.css" />  
+<link rel="stylesheet" type="text/css" href="./css/v2/renew.css">
+<script src="./js/aos.js"></script>
+<script>
+    $(function (){
+        // 섹션별 에니메이션
+        AOS.init({duration:1200,offset:100});
+    });
+</script>
+<!--2024.09 개선화면 CSS-->
+</head>
+<body>
+
+
+    <div class="layout--header sub">
+        <header>
+            <!--로고-->
+            <button type="button" id="carPrevButton" class="ir bt-page-prev" onclick="location.href='./main.html'">이전 페이지</button>
+            <!--페이지명-->
+            <h2 class="page-title">중고차 장기렌터카</h2>
+            <div class="button-wrap">   
+                <button type="button" class="bt-sidemenu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </header>
+    </div>
+
+    <div id="reactMainPage">
+      <div class="filter-menu layer_popup_wrappper" id="filterPopup" style="display: none;">
+        <div class="layer_popup bg-bottom">
+          <div class="pop_inner">
+            <div class="pop-head">
+              <h3 class="pop-title">필터</h3>
+              <a href="javascript:void(0)" class="ir pop_close">닫기</a>
+            </div>
+            <div class="pop-contents">
+              <div class="ctn-search">
+                <div class="filter-container">
+                  <div class="search-element">
+                    <div class="search-condition-container" style="display: block;">
+                      <div class="search-condition">
+                        <div class="condition-item item-cartype">
+                          <div id="carTypeList" class="model-list-container code-list-fold" style="display: block;">
+                            <h4 class="title-head ">차종</h4>
+                          </div>
+                        </div>
+                        <div class="model-list-container maker-list">
+                          <h4 class="title-head">제조사/모델</h4>
+                          <div class="model-container-wrap">
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" name="" id="br5">
+                                    <label>
+                                      <img class="logo" src="/mobile/images/common/logo/logo-hyundai.png">현대 </label>
+                                  </span>
+                                  <span class="count">(438)</span>
+                                  <button type="button" class="ir bt-flip bot">목록열기</button>
+                                </div>
+                              </div>
+                              <div class="bt-fixed-container search-btn">
+                                <button type="button" class="bt-condition-selected bt-active">선택</button>
+                              </div>
+                            </div>
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" name="" id="br146">
+                                    <label>
+                                      <img class="logo" src="/mobile/images/common/logo/logo-genesis.png">제네시스 </label>
+                                  </span>
+                                  <span class="count">(113)</span>
+                                  <button type="button" class="ir bt-flip bot">목록열기</button>
+                                </div>
+                              </div>
+                              <div class="bt-fixed-container search-btn">
+                                <button type="button" class="bt-condition-selected bt-active">선택</button>
+                              </div>
+                            </div>
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" name="" id="br2">
+                                    <label>
+                                      <img class="logo" src="/mobile/images/common/logo/logo-kia.png">기아 </label>
+                                  </span>
+                                  <span class="count">(379)</span>
+                                  <button type="button" class="ir bt-flip bot">목록열기</button>
+                                </div>
+                              </div>
+                              <div class="bt-fixed-container search-btn">
+                                <button type="button" class="bt-condition-selected bt-active">선택</button>
+                              </div>
+                            </div>
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" name="" id="br4">
+                                    <label>
+                                      <img class="logo" src="/mobile/images/common/logo/logo-kgmobility.png">KG모빌리티(쌍용) </label>
+                                  </span>
+                                  <span class="count">(47)</span>
+                                  <button type="button" class="ir bt-flip bot">목록열기</button>
+                                </div>
+                              </div>
+                              <div class="bt-fixed-container search-btn">
+                                <button type="button" class="bt-condition-selected bt-active">선택</button>
+                              </div>
+                            </div>
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" name="" id="br1">
+                                    <label>
+                                      <img class="logo" src="/mobile/images/common/logo/logo-chevrolet.png">쉐보레(GM대우) </label>
+                                  </span>
+                                  <span class="count">(49)</span>
+                                  <button type="button" class="ir bt-flip bot">목록열기</button>
+                                </div>
+                              </div>
+                              <div class="bt-fixed-container search-btn">
+                                <button type="button" class="bt-condition-selected bt-active">선택</button>
+                              </div>
+                            </div>
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" name="" id="br3">
+                                    <label>
+                                      <img class="logo" src="/mobile/images/common/logo/logo-renault.png">르노코리아(삼성) </label>
+                                  </span>
+                                  <span class="count">(12)</span>
+                                  <button type="button" class="ir bt-flip bot">목록열기</button>
+                                </div>
+                              </div>
+                              <div class="bt-fixed-container search-btn">
+                                <button type="button" class="bt-condition-selected bt-active">선택</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="condition-item item-price">
+                        <h3 class="item-title">월 대여료</h3>
+                        <div class="type-group range">
+                          <div class="range-bts">
+                            <button type="button" class="rg-bt on">전체</button>
+                            <button type="button" class="rg-bt">~50만원</button>
+                            <button type="button" class="rg-bt">~60만원</button>
+                            <button type="button" class="rg-bt">~70만원</button>
+                          </div>
+                        </div>
+                        <div class="type-group">
+                          <div class="select-type-input has-bt">
+                            <span class="ip_wrap">
+                              <input type="text" inputmode="numeric" value="">
+                              <small>만원</small>
+                            </span>
+                            <span class="sb">~</span>
+                            <span class="ip_wrap">
+                              <input type="text" inputmode="numeric" value="">
+                              <small>만원</small>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="condition-item item-distance">
+                        <h3 class="item-title">주행거리</h3>
+                        <div class="type-group range">
+                          <div class="range-bts">
+                            <button type="button" class="rg-bt on">전체</button>
+                            <button type="button" class="rg-bt">1만</button>
+                            <button type="button" class="rg-bt">3만</button>
+                            <button type="button" class="rg-bt">5만</button>
+                            <button type="button" class="rg-bt">7만</button>
+                          </div>
+                        </div>
+                        <div class="type-group direct">
+                          <div class="select-type-input">
+                            <span class="ip_wrap">
+                              <input type="text" inputmode="numeric" id="minMileageInput" value="">
+                              <small>km</small>
+                            </span>
+                            <span class="sb">~</span>
+                            <span class="ip_wrap">
+                              <input type="text" inputmode="numeric" id="minMileageInput" value="">
+                              <small>km</small>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="condition-item item-year unfold" data-fold="foldable">
+                        <h3 class="item-title">연식</h3>
+                        <div class="type-group range">
+                          <div class="range-bts">
+                            <button type="button" class="rg-bt on">전체</button>
+                            <button type="button" class="rg-bt">~3년</button>
+                            <button type="button" class="rg-bt">~4년</button>
+                            <button type="button" class="rg-bt">~5년</button>
+                          </div>
+                        </div>
+                        <div class="select-type-input">
+                          <span class="sl_wrap">
+                            <select name="year1" id="minYear">
+                              <option value="">최소</option>
+                              <option value="2025">2025년</option>
+                              <option value="2024">2024년</option>
+                              <option value="2023">2023년</option>
+                              <option value="2022">2022년</option>
+                              <option value="2021">2021년</option>
+                              <option value="2020">2020년</option>
+                              <option value="2019">2019년</option>
+                              <option value="2018">2018년</option>
+                              <option value="2017">2017년</option>
+                              <option value="2016">2016년</option>
+                              <option value="2015">2015년</option>
+                              <option value="2014">2014년</option>
+                              <option value="2013">2013년</option>
+                              <option value="2012">2012년</option>
+                              <option value="2011">2011년</option>
+                              <option value="2010">2010년</option>
+                              <option value="2009">2009년</option>
+                              <option value="2008">2008년</option>
+                              <option value="2007">2007년</option>
+                              <option value="2006">2006년</option>
+                              <option value="2005">2005년</option>
+                              <option value="2004">2004년</option>
+                              <option value="2003">2003년</option>
+                              <option value="2002">2002년</option>
+                              <option value="2001">2001년</option>
+                              <option value="2000">2000년</option>
+                              <option value="1999">1999년</option>
+                              <option value="1998">1998년</option>
+                              <option value="1997">1997년</option>
+                              <option value="1996">1996년</option>
+                              <option value="1995">1995년</option>
+                              <option value="1994">1994년</option>
+                              <option value="1993">1993년</option>
+                              <option value="1992">1992년</option>
+                              <option value="1991">1991년</option>
+                              <option value="1990">1990년</option>
+                              <option value="1989">1989년</option>
+                              <option value="1988">1988년</option>
+                              <option value="1987">1987년</option>
+                              <option value="1986">1986년</option>
+                              <option value="1985">1985년</option>
+                              <option value="1984">1984년</option>
+                              <option value="1983">1983년</option>
+                              <option value="1982">1982년</option>
+                              <option value="1981">1981년</option>
+                              <option value="1980">1980년</option>
+                            </select>
+                          </span>
+                          <span class="sb">~</span>
+                          <span class="sl_wrap">
+                            <select name="year2" id="maxYear">
+                              <option value="">최대</option>
+                              <option value="2025">2025년</option>
+                              <option value="2024">2024년</option>
+                              <option value="2023">2023년</option>
+                              <option value="2022">2022년</option>
+                              <option value="2021">2021년</option>
+                              <option value="2020">2020년</option>
+                              <option value="2019">2019년</option>
+                              <option value="2018">2018년</option>
+                              <option value="2017">2017년</option>
+                              <option value="2016">2016년</option>
+                              <option value="2015">2015년</option>
+                              <option value="2014">2014년</option>
+                              <option value="2013">2013년</option>
+                              <option value="2012">2012년</option>
+                              <option value="2011">2011년</option>
+                              <option value="2010">2010년</option>
+                              <option value="2009">2009년</option>
+                              <option value="2008">2008년</option>
+                              <option value="2007">2007년</option>
+                              <option value="2006">2006년</option>
+                              <option value="2005">2005년</option>
+                              <option value="2004">2004년</option>
+                              <option value="2003">2003년</option>
+                              <option value="2002">2002년</option>
+                              <option value="2001">2001년</option>
+                              <option value="2000">2000년</option>
+                              <option value="1999">1999년</option>
+                              <option value="1998">1998년</option>
+                              <option value="1997">1997년</option>
+                              <option value="1996">1996년</option>
+                              <option value="1995">1995년</option>
+                              <option value="1994">1994년</option>
+                              <option value="1993">1993년</option>
+                              <option value="1992">1992년</option>
+                              <option value="1991">1991년</option>
+                              <option value="1990">1990년</option>
+                              <option value="1989">1989년</option>
+                              <option value="1988">1988년</option>
+                              <option value="1987">1987년</option>
+                              <option value="1986">1986년</option>
+                              <option value="1985">1985년</option>
+                              <option value="1984">1984년</option>
+                              <option value="1983">1983년</option>
+                              <option value="1982">1982년</option>
+                              <option value="1981">1981년</option>
+                              <option value="1980">1980년</option>
+                            </select>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="condition-item item-fuel" data-fold="foldable">
+                        <div id="fuelList" class="model-list-container code-list-fold" style="display: block;">
+                          <h4 class="title-head unfold">연료</h4>
+                          <div class="codelist-wrap">
+                            <div class="model-container select-all-wrap">
+                              <button type="button" class="bt-select-all selected">전체</button>
+                            </div>
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" id="fuelList_01" value="01">
+                                    <label for="fuelList_01">가솔린</label>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" id="fuelList_02" value="02">
+                                    <label for="fuelList_02">디젤</label>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" id="fuelList_03" value="03">
+                                    <label for="fuelList_03">LPG</label>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" id="fuelList_06" value="06">
+                                    <label for="fuelList_06">하이브리드</label>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="model-container">
+                              <div class="model-item">
+                                <div class="item-title">
+                                  <span class="ck-wrap">
+                                    <input type="checkbox" id="fuelList_05" value="05">
+                                    <label for="fuelList_05">전기(EV)</label>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="condition-item item-color-outside">
+                        <div id="colorExList" class="model-list-container" style="display: block;">
+                          <h4 class="title-head">외장색상</h4>
+                          <div class="color-list-wrap">
+                            <div class="model-container color-list">
+                              <div class="model-item C001">
+                                <h3 class="item-title">
+                                  <button type="button" class="bt-item" value="C001">
+                                    <var style="background-color: rgb(0, 0, 0);"></var>
+                                    <span>검정</span>
+                                  </button>
+                                </h3>
+                              </div>
+                            </div>
+                            <div class="model-container color-list">
+                              <div class="model-item C006">
+                                <h3 class="item-title">
+                                  <button type="button" class="bt-item" value="C006">
+                                    <var style="background-color: rgb(80, 76, 76);"></var>
+                                    <span>쥐색</span>
+                                  </button>
+                                </h3>
+                              </div>
+                            </div>
+                            <div class="model-container color-list">
+                              <div class="model-item C005">
+                                <h3 class="item-title">
+                                  <button type="button" class="bt-item" value="C005">
+                                    <var style="background-color: rgb(176, 176, 176);"></var>
+                                    <span>회색</span>
+                                  </button>
+                                </h3>
+                              </div>
+                            </div>
+                            <div class="model-container color-list">
+                              <div class="model-item C003">
+                                <h3 class="item-title">
+                                  <button type="button" class="bt-item" value="C003">
+                                    <var style="background-color: rgb(221, 221, 221);"></var>
+                                    <span>은색</span>
+                                  </button>
+                                </h3>
+                              </div>
+                            </div>
+                            <div class="model-container color-list">
+                              <div class="model-item C002">
+                                <h3 class="item-title">
+                                  <button type="button" class="bt-item" value="C002">
+                                    <var style="background-color: rgb(255, 255, 255);"></var>
+                                    <span>흰색</span>
+                                  </button>
+                                </h3>
+                              </div>
+                            </div>
+                            <div class="model-container color-list">
+                              <div class="model-item C022">
+                                <h3 class="item-title">
+                                  <button type="button" class="bt-item" value="C022">
+                                    <var style="background-color: rgb(245, 245, 220);"></var>
+                                    <span>미색</span>
+                                  </button>
+                                </h3>
+                              </div>
+                            </div>
+                            <div class="model-container color-list">
+                              <div class="model-item C004">
+                                <h3 class="item-title">
+                                  <button type="button" class="bt-item" value="C004">
+                                    <var style="background-color: rgb(245, 245, 233);"></var>
+                                    <span>진주색</span>
+                                  </button>
+                                </h3>
+                              </div>
+                            </div>
+                            <div class="model-container color-list">
+                              <div class="model-item C007">
+                                <h3 class="item-title">
+                                  <button type="button" class="bt-item" value="C007">
+                                    <var style="background-color: rgb(25, 65, 94);"></var>
+                                    <span>남색</span>
+                                  </button>
+                                </h3>
+                              </div>
+                            </div>
+                            <div class="model-container color-list">
+                              <div class="model-item C012">
+                                <h3 class="item-title">
+                                  <button type="button" class="bt-item" value="C012">
+                                    <var style="background-color: rgb(51, 72, 148);"></var>
+                                    <span>청옥색</span>
+                                  </button>
+                                </h3>
+                              </div>
+                            </div>
+                            <div class="model-container color-list">
+                              <div class="model-item C009">
+                                <h3 class="item-title">
+                                  <button type="button" class="bt-item" value="C009">
+                                    <var style="background-color: rgb(204, 15, 15);"></var>
+                                    <span>빨강(주홍)</span>
+                                  </button>
+                                </h3>
+                              </div>
+                            </div>
+                            <div class="filter-more">
+                              <button class="filter-more-button">더보기</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="condition-item item-lotteService">
+                        <h3 class="item-title">롯데서비스 <div class="common-layer-group posTop">
+                            <button type="button" class="ir common-layer-bt">툴팁보기</button>
+                            <div class="common-layer-tooptip custom-tooltip">
+                              <h4>무사고</h4>
+                              <p>법정 성능점검 기준 주요 골격(프레임) 사고 이력이 없는 <u>무사고 진단차량</u>입니다. </p>
+                              <h4>정기관리</h4>
+                              <p>신차 출고부터 지금까지 롯데렌터카에서 <u>정기관리한 차량</u>입니다. </p>
+                              <h4>다이렉트</h4>
+                              <p>온라인을 통해 직접 심사부터 전자계약까지 가능한 <br>
+                                <u>비대면 전용 차량</u>입니다.
+                              </p>
+                            </div>
+                          </div>
+                        </h3>
+                        <ul class="svc-box-wrap">
+                          <li class="svc-box ">
+                            <img class="active" src="/mobile/images/icon/ico-certification.png">
+                            <img class="inactive" src="/mobile/images/icon/ico-certification-inactive.png">
+                            <span>무사고</span>
+                          </li>
+                          <li class="svc-box ">
+                            <img class="active" src="/mobile/images/icon/ico-management.png">
+                            <img class="inactive" src="/mobile/images/icon/ico-management-inactive.png">
+                            <span>정기관리</span>
+                          </li>
+                          <li class="svc-box ">
+                            <img class="active" src="/mobile/images/icon/ico-direct.png">
+                            <img class="inactive" src="/mobile/images/icon/ico-direct-inactive.png">
+                            <span>다이렉트</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="bt-fixed-container search-btn">
+                        <button type="button" class="bt-condition-reset bt-default">초기화</button>
+                        <button type="button" class="bt-condition-search bt-active">검색 (0)</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="countryList" style="display: none;">
+        <div class="layout--header sub">
+          <header>
+            <h1 class="logo-wrap" style="display: none;">
+              <h1 class="logo-wrap" style="display: none;">
+                <a href="/" class="ir">롯데-렌터카</a>
+              </h1>
+            </h1>
+            <button type="button" class="ir bt-page-prev" style="display: block;">이전 페이지</button>
+            <h2 class="page-title" style="display: block;">국산/수입</h2>
+            <div class="button-wrap">
+              <button type="button" class="bt-sidemenu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </button>
+            </div>
+          </header>
+          <div class="side-menu " id="sideMenu">
+            <div class="user-sec">
+              <div class="member none">
+                <a href="#">
+                  <span>로그인 해주세요.</span>PASS인증을 통해 간편하게 이용 가능합니다. </a>
+              </div>
+              <div class="member">
+                <div class="user-info">
+                  <a href="#">
+                    <div class="img-wrap">
+                      <img src="/mobile/images/rent_new/test_user.jpg" alt="">
+                    </div>
+                    <dl>
+                      <dt>
+                        <strong>김렌탈</strong> 고객님
+                      </dt>
+                      <dd>개인회원</dd>
+                    </dl>
+                  </a>
+                  <a href="#" class="user-type">사업자 회원으로 등록하시겠어요?</a>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <div class="img-wrap">
+                        <img src="/mobile/images/rent_new/icon/ico_car.png" alt="관심차량">
+                        <strong>1</strong>
+                      </div>
+                      <span>관심차량</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="img-wrap">
+                        <img src="/mobile/images/rent_new/icon/ico_list.png" alt="나의 계약">
+                        <strong>7</strong>
+                      </div>
+                      <span>나의 계약</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="img-wrap">
+                        <img src="/mobile/images/rent_new/icon/ico_calc.png" alt="견적 보관함">
+                        <strong>13</strong>
+                      </div>
+                      <span>견적 보관함</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu-sec">
+              <p>마이카세이브</p>
+              <ul>
+                <li>
+                  <a href="#">중고차렌트</a>
+                </li>
+                <li>
+                  <a href="#">신차렌트</a>
+                </li>
+                <li>
+                  <a href="#">오토리스</a>
+                </li>
+                <li>
+                  <a href="#">내차팔기</a>
+                </li>
+                <li>
+                  <a href="#">기획전</a>
+                </li>
+              </ul>
+              <p>바로가기</p>
+              <ul>
+                <li>
+                  <a href="#">공지사항</a>
+                </li>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+                <li>
+                  <a href="#">상담신청</a>
+                </li>
+                <li>
+                  <a href="#">고객후기</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="layout--container ctn-search">
+          <div class="search-list-container">
+            <div class="search-element">
+              <div class="search-condition">
+                <div class="condition-item">
+                  <div class="item-title">
+                    <span class="ck-wrap">
+                      <input type="radio" id="countryList_" value="">
+                      <label for="countryList_">전체</label>
+                    </span>
+                  </div>
+                </div>
+                <div class="condition-item">
+                  <div class="item-title">
+                    <span class="ck-wrap">
+                      <input type="radio" id="countryList_1" value="1">
+                      <label for="countryList_1">국산</label>
+                    </span>
+                  </div>
+                </div>
+                <div class="condition-item">
+                  <div class="item-title">
+                    <span class="ck-wrap">
+                      <input type="radio" id="countryList_2" value="2">
+                      <label for="countryList_2">수입</label>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bt-fixed-container search-btn">
+              <button type="button" class="bt-condition-selected">선택</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="layout--container ctn-car-list" style="padding-top: 70px;">
+          <div class="search-list-container">
+            <div class="list-element">
+              <div class="list-search">
+                <div class="sch-group">
+                  <button type="button" class="bt-search">검색</button>
+                  <button type="button" class="btn-del" hidden="">삭제</button>
+                  <input type="text" class="search-input" placeholder="" value="">
+                  <button type="button" class="ir bt-list-filter">
+                    <span>검색필터</span>
+                  </button>
+                </div>
+              </div>
+              <div class="list-head">
+                <p class="list-total-count">
+                  <var> 1,038 </var>대
+                </p>
+                <div class="list-filter">
+                  <button type="button" class="bt-condition-align">
+                    <span>최근 등록순</span>
+                    <img src="https://mycarsave.lotterentacar.net/mobile/images/icon/ico-sort.png">
+                  </button>
+                  <button type="button" class="bt-condition-align list-view-btn">
+                    <img src="https://mycarsave.lotterentacar.net/mobile/images/icon/ic-list-02.png">
+                  </button>
+                </div>
+              </div>
+              <section class="promotionSale-wrap">
+                <div class="popular-sec">
+                  <div class="sec-inner">
+                    <div class="title-wrap">
+                      <h3>
+                        <img class="ico-sale2" src="https://mycarsave.lotterentacar.net/mobile/images/icon/ico-sale2.png" alt="">한정특가
+                      </h3>
+                      <div class="condition-item item-wtCar">
+                        <label class="switch" for="switch-wt">
+                          <span class="item-title">27대</span> 전체보기 </label>
+                        <input class="switch-input" type="checkbox" id="switch-wt">
+                      </div>
+                    </div>
+                    <div class="swiper-container popular-slider swiper-initialized swiper-horizontal swiper-ios">
+                      <div class="swiper-wrapper" id="swiper-wrapper-4c57ed5d7b3494af" aria-live="polite" style="cursor: grab;">
+                        <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/10/LFILE_000016700820240510140623.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 2.0 가솔린 프레스티지</dt>
+                              <dd>2023/04(23년형)</dd>
+                              <dd>24,896km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>468,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>520,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/25/LFILE_000015662020240425130225.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 1.6 가솔린 터보 시그니처</dt>
+                              <dd>2020/04(20년형)</dd>
+                              <dd>51,389km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>424,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>471,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="3 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/06/17/LFILE_000019610520240617130359.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 1.6 가솔린 터보 시그니처</dt>
+                              <dd>2021/05(21년형)</dd>
+                              <dd>43,702km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>484,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>537,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="4 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap inprogress">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/06/26/LFILE_000020433520240626110247.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 1.6 가솔린 터보 프레스티지</dt>
+                              <dd>2020/09(20년형)</dd>
+                              <dd>68,442km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>363,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>403,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="5 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap inprogress">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/03/11/LFILE_000012420120240311112158.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 프리미엄 플러스</dt>
+                              <dd>2022/08(22년형)</dd>
+                              <dd>36,975km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>426,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>473,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="6 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/07/LFILE_000016417320240507130114.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 1.6 가솔린 터보 노블레스</dt>
+                              <dd>2021/04(21년형)</dd>
+                              <dd>70,470km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>466,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>517,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="7 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/07/LFILE_000016445120240507133241.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 프리미엄 플러스</dt>
+                              <dd>2022/08(22년형)</dd>
+                              <dd>45,434km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>426,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>473,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="8 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap inprogress">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/16/LFILE_000014839120240416124154.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 2.0 가솔린 트렌디</dt>
+                              <dd>2021/05(21년형)</dd>
+                              <dd>60,240km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>335,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>372,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="9 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/10/LFILE_000016704820240510141742.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 모던</dt>
+                              <dd>2021/12(21년형)</dd>
+                              <dd>54,473km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>387,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>430,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="10 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/17/LFILE_000017078620240517112002.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) 1.6 터보 프리미엄 플러스</dt>
+                              <dd>2021/07(22년형)</dd>
+                              <dd>88,377km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>458,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>508,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="11 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/08/LFILE_000014299920240408131447.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 1.6 가솔린 터보 시그니처</dt>
+                              <dd>2022/07(22년형)</dd>
+                              <dd>52,025km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>576,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>640,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="12 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/05/LFILE_000014165820240405111503.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 프리미엄 플러스</dt>
+                              <dd>2022/06(22년형)</dd>
+                              <dd>55,309km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>414,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>460,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="13 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/26/LFILE_000015794020240426125800.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 인스퍼레이션</dt>
+                              <dd>2022/09(22년형)</dd>
+                              <dd>43,233km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>514,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>571,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="14 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/23/LFILE_000017510020240523110041.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 프리미엄 플러스</dt>
+                              <dd>2022/08(22년형)</dd>
+                              <dd>15,023km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>420,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>466,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="15 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/16/LFILE_000014909720240416154532.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 1.6 가솔린 터보 트렌디</dt>
+                              <dd>2021/12(21년형)</dd>
+                              <dd>45,728km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>422,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>468,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="16 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/24/LFILE_000017659820240524130053.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 프리미엄 플러스</dt>
+                              <dd>2022/03(22년형)</dd>
+                              <dd>43,602km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>411,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>456,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="17 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/08/LFILE_000014280320240408112947.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 프리미엄 플러스</dt>
+                              <dd>2022/04(22년형)</dd>
+                              <dd>33,431km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>436,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>484,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="18 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/08/LFILE_000014324620240408134318.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul></ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) 1.6 터보 스마트</dt>
+                              <dd>2020/04(20년형)</dd>
+                              <dd>93,885km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>326,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>362,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="19 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/27/LFILE_000017799920240527134029.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 모던</dt>
+                              <dd>2022/04(22년형)</dd>
+                              <dd>61,585km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>403,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>447,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="20 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/09/LFILE_000014461220240409171054.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 모던</dt>
+                              <dd>2022/07(22년형)</dd>
+                              <dd>24,033km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>417,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>463,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="21 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/28/LFILE_000017881220240528114136.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 2.0 가솔린 프레스티지</dt>
+                              <dd>2022/03(22년형)</dd>
+                              <dd>91,356km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>397,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>441,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="22 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/06/24/LFILE_000020179120240624103433.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul></ul>
+                              </div>
+                              <dt>기아 신형K5 1.6 가솔린 터보 노블레스</dt>
+                              <dd>2021/07(21년형)</dd>
+                              <dd>42,260km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>472,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>524,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="23 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/22/LFILE_000015250520240422114453.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 2.0 가솔린 시그니처</dt>
+                              <dd>2021/03(21년형)</dd>
+                              <dd>40,689km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>434,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>482,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="24 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/31/LFILE_000018272520240531112544.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 프리미엄 플러스</dt>
+                              <dd>2022/08(22년형)</dd>
+                              <dd>25,300km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>426,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>473,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="25 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/07/03/LFILE_000020899820240703125145.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>현대 쏘나타(DN8) G2.0 프리미엄</dt>
+                              <dd>2021/04(21년형)</dd>
+                              <dd>77,423km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>366,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>406,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="26 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/07/18/LFILE_000021874420240718134832.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="certification">무사고</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 1.6 가솔린 터보 시그니처</dt>
+                              <dd>2021/04(21년형)</dd>
+                              <dd>28,273km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>494,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>548,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="27 / 27" style="width: 284px; margin-right: 16px;">
+                          <div class="img-wrap ">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/07/18/LFILE_000021876620240718135015.png" alt="차량이미지">
+                            <div class="timesaleWrap2">
+                              <span class="ico-timesale1"></span>
+                              <span class="txt">한정 특가</span>
+                              <span class="time">06 일 06 : 55 : 01</span>
+                            </div>
+                          </div>
+                          <div class="txt-wrap">
+                            <dl>
+                              <div class="badge">
+                                <ul>
+                                  <li class="officer">정기관리</li>
+                                </ul>
+                              </div>
+                              <dt>기아 신형K5 2.0 가솔린 프레스티지</dt>
+                              <dd>2021/06(21년형)</dd>
+                              <dd>81,203km</dd>
+                            </dl>
+                            <div>
+                              <p>월 <var>341,000</var>원 <span> / 24개월</span>
+                              </p>
+                              <span class="price2">월 <var>378,000</var>원 </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <div class="list-content">
+                <div class="grid-wrap false">
+                  <ul class="list-type-common cols-2">
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026420020240923100323.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">기아 쏘렌토 하이브리드 1.6 HEV 4WD 프레스티지</div>
+                          <div class="list-option">
+                            <span class="year">2023/05(23년형)</span>
+                            <span class="dstc">18,243km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>738,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026415920240923095953.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 더 뉴그랜저IG 가솔린 3.3 익스클루시브</div>
+                          <div class="list-option">
+                            <span class="year">2022/10(23년형)</span>
+                            <span class="dstc">28,516km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>613,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026413920240923095602.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 쏘나타(DN8) 1.6 터보 프리미엄</div>
+                          <div class="list-option">
+                            <span class="year">2019/11(20년형)</span>
+                            <span class="dstc">35,017km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>323,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026409520240923095302.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 디 올뉴그랜저 하이브리드 1.6 하이브리드 캘리그래피</div>
+                          <div class="list-option">
+                            <span class="year">2023/07(23년형)</span>
+                            <span class="dstc">12,413km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>968,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026404720240923094744.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 아반떼(CN7) 1.6 가솔린 모던</div>
+                          <div class="list-option">
+                            <span class="year">2022/08(23년형)</span>
+                            <span class="dstc">23,004km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>418,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026521120240923130354.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 더 뉴그랜저IG 가솔린 2.5 프리미엄 초이스</div>
+                          <div class="list-option">
+                            <span class="year">2021/03(21년형)</span>
+                            <span class="dstc">24,744km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>436,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026492920240923112041.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 아이오닉 5 EV 2WD 롱레인지 익스클루시브</div>
+                          <div class="list-option">
+                            <span class="year">2021/10(22년형)</span>
+                            <span class="dstc">61,043km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>499,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026477920240923110815.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 쏘나타(DN8) G2.0 모던</div>
+                          <div class="list-option">
+                            <span class="year">2021/06(22년형)</span>
+                            <span class="dstc">51,076km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>379,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026466520240923104940.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 코나 1.6 가솔린 2WD 모던 초이스</div>
+                          <div class="list-option">
+                            <span class="year">2020/08(20년형)</span>
+                            <span class="dstc">49,769km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>299,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026454920240923103851.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 코나 일렉트릭 EV 모던</div>
+                          <div class="list-option">
+                            <span class="year">2020/08(20년형)</span>
+                            <span class="dstc">43,550km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>403,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026393520240923093145.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">쉐보레(GM대우) 더 뉴트랙스 1.6 디젤 프리미어</div>
+                          <div class="list-option">
+                            <span class="year">2020/12(21년형)</span>
+                            <span class="dstc">101,150km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>354,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026441120240923102425.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 아반떼(CN7) 1.6 가솔린 스마트</div>
+                          <div class="list-option">
+                            <span class="year">2022/04(23년형)</span>
+                            <span class="dstc">23,549km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>297,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026432220240923101726.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">쉐보레(GM대우) 더 뉴스파크 LT</div>
+                          <div class="list-option">
+                            <span class="year">2020/12(21년형)</span>
+                            <span class="dstc">38,410km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>296,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026490920240923111932.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">기아 쏘렌토 하이브리드 1.6 HEV 4WD 프레스티지</div>
+                          <div class="list-option">
+                            <span class="year">2023/05(23년형)</span>
+                            <span class="dstc">21,801km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 <var>738,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026488220240923111655.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">기아 신형 쏘렌토(MQ4) 2.2 디젤 2WD 노블레스</div>
+                          <div class="list-option">
+                            <span class="year">2022/04(22년형)</span>
+                            <span class="dstc">89,155km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">
+                              <span class="prc">월 undefined<var>641,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-item ">
+                      <a class="link-detail-view">
+                        <div class="list-thumb">
+                          <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026484520240923111335.png/dims/resize/828x620" alt="차량이미지">
+                        </div>
+                        <div class="list-detail">
+                          <div class="list-title">현대 더 뉴그랜저IG 하이브리드 2.4 HEV 프리미엄</div>
+                          <div class="list-option">
+                            <span class="year">2021/10(22년형)</span>
+                            <span class="dstc">54,455km</span>
+                          </div>
+                          <div class="list-price">
+                            <div class="price">undefined<span class="prc">월 undefined<var>536,000</var>원undefined</span>undefined<span class="period"> / 24개월</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <button type="button" class="bt-common-type8 bt-full bt-down">
+                    <span>더보기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sort-menu layer_popup_wrappper" id="selectOrderPopup">
+        <div class="layer_popup bg-bottom">
+          <div class="pop_inner">
+            <div class="pop-head">
+              <h3 class="pop-title">정렬</h3>
+              <a href="javascript:void(0)" class="ir pop_close">닫기</a>
+            </div>
+            <div class="pop-contents">
+              <ul class="sort-wrap">
+                <li>
+                  <input type="radio" name="sort" id="sort_rd" value="rd">
+                  <label for="sort_rd" class="custom-radio-button">최근 등록순</label>
+                </li>
+                <li>
+                  <input type="radio" name="sort" id="sort_ra" value="ra">
+                  <label for="sort_ra" class="custom-radio-button">오래된 등록순</label>
+                </li>
+                <li>
+                  <input type="radio" name="sort" id="sort_yd" value="yd">
+                  <label for="sort_yd" class="custom-radio-button">최근 연식순</label>
+                </li>
+                <li>
+                  <input type="radio" name="sort" id="sort_ya" value="ya">
+                  <label for="sort_ya" class="custom-radio-button">오래된 연식순</label>
+                </li>
+                <li>
+                  <input type="radio" name="sort" id="sort_ma" value="ma">
+                  <label for="sort_ma" class="custom-radio-button">낮은 주행거리순</label>
+                </li>
+                <li>
+                  <input type="radio" name="sort" id="sort_md" value="md">undefined<label for="sort_md" class="custom-radio-button">높은 주행거리순</label>
+                </li>
+                <li>undefined<input type="radio" name="sort" id="sort_pa" value="pa">undefined<label for="sort_pa" class="custom-radio-button">낮은 가격순</label>undefined</li>undefined<li>undefined<input type="radio" name="sort" id="sort_pd" value="pd">undefined<label for="sort_pd" class="custom-radio-button">높은 가격순</label>undefined</li>undefined
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- front UI js// -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/ui.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- //front UI js -->
+
+    <script>
+        let popularCarSwiper = new Swiper('.popular-slider', {
+            slidesPerView: '1.3',
+            grabCursor: true,
+            spaceBetween: 16,
+            loop: false,
+            direction: 'horizontal',
+            speed: 300, // 230720 수정
+            watchOverflow: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction'
+            }
+        });
+
+            // 한정특가 타임딜 표기
+            function formatTimer(timer) {
+            return timer.toString().padStart(2, "0");
+        }
+
+    
+        function formatPromotionPeriod(promotion) {
+            if (promotion < 0) {
+                return "00 : 00 : 00";
+            } else {
+                var seconds = Math.floor(promotion / 1000 % 60);
+                var minutes = Math.floor(promotion / (1000 * 60) % 60);
+                var hours = Math.floor(promotion / (1000 * 60 * 60) % 24);
+                var days = Math.floor(promotion / (1000 * 60 * 60 * 24));
+
+                if (days === 0) {
+                    return this.formatTimer(hours) + " : " + this.formatTimer(minutes) + " : " + this.formatTimer(seconds);
+                } else {
+                    return this.formatTimer(days) + " \uC77C  " + this.formatTimer(hours) + " : " + this.formatTimer(minutes) + " : " + this.formatTimer(seconds);
+                }
+            }
+        }
+
+        // 한정특가 timer interval
+
+    </script>
+
+</body>
+</html>

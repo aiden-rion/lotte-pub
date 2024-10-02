@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+/*layout for mobile*/
+.sec-car-check-view {padding-left:20px;padding-right:20px;}
+
+/*form*/
+#carCheckViewPop input[type="checkbox"]+label{position:relative;display:inline-block;height:20px;line-height:22px;padding-left:26px;-webkit-user-select:none;-webkit-user-drag:none;cursor:pointer;font-size:14px;font-weight:500;}
+#carCheckViewPop input[type="checkbox"]+label::after{content:"";display:inline-block;position:absolute;left:0;top:0;width:20px;height:20px;background:url('../images/icon/ico-checkbox-b.svg') no-repeat 50% 50%;background-size:100%;}
+#carCheckViewPop input[type="checkbox"]:checked+label::after{background:url('../images/icon/ico-checkbox-checked-b.svg') no-repeat 50% 50%;background-size:100%;}
+#carCheckViewPop input[type="checkbox"]{position:absolute;left:0;opacity:0;width:20px;height:20px;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-user-drag:none}
+
+#carCheckViewPop input[type="radio"]{position:absolute;left:0;opacity:0;width:22px;height:22px;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-user-drag:none}
+#carCheckViewPop input[type="radio"]+label{position:relative;display:inline-block;height:22px;line-height:23px;padding-left:28px;-webkit-user-select:none;-webkit-user-drag:none;cursor:pointer;font-size:14px;font-weight:500;}
+#carCheckViewPop input[type="radio"]+label::after{content:"";display:inline-block;position:absolute;left:-1px;top:1px;width:22px;height:22px;background:url('../images/icon/ico-radio-check-b.svg') no-repeat 50% 50%;background-size:100%;}
+#carCheckViewPop input[type="radio"]:checked+label::after{background:url('../images/icon/ico-radio-checked-b.svg') no-repeat 50% 50%;background-size:100%;}
+
+#carCheckViewPop .pop-btn {display:flex;justify-content:center;padding-top:48px;}
+#carCheckViewPop .pop-btn button {margin:0 5px;}
+#carCheckViewPop .pop-btn button.wide {min-width:170px;font-size:18px;}
+#carCheckViewPop .pop-btn .bt-pop-type1 {min-width:110px;padding:0 10px;height:50px;border-radius:5px;color:#fff;font-size:16px;font-weight:700;background:#FF3333}
+#carCheckViewPop .pop-btn .bt-pop-type2 {min-width:110px;padding:0 10px;height:50px;border-radius:5px;color:#fff;font-size:16px;font-weight:700;background:#303030;}
+#carCheckViewPop .pop-btn .bt-pop-type3 {min-width:110px;padding:0 10px;height:50px;border-radius:5px;color:#fff;font-size:16px;font-weight:700;background:#999;}
+#carCheckViewPop .pop-btn button:disabled {color:#fff;background:#999;}
+
+/* 성능점검뷰 */
+#carCheckViewPop h3 + .list-flip {}
+#carCheckViewPop .list-flip {border-top:1px solid #E9E9E9;margin-bottom:30px}
+#carCheckViewPop .list-flip .flip-group {position:relative;border-bottom:1px solid #E9E9E9;}
+#carCheckViewPop .list-flip .flip-group h4 {padding:15px 10px 15px 10px;font-size:12px;font-weight:700;}
+#carCheckViewPop .list-flip .flip-group ul {display:none}
+#carCheckViewPop .list-flip .flip-group li {padding:10px;font-size:12px;display:flex;justify-content:space-between;}
+#carCheckViewPop .list-flip .bt-flip {position:absolute;right:0;top:0;width:48px;height:48px;background:url("../images/icon/ico-selectbox-b.svg") no-repeat 70% 50%;transition:none}
+#carCheckViewPop .list-flip .bt-flip.show {transform:rotate(-180deg);background:url("../images/icon/ico-selectbox-b.svg") no-repeat 30% 50%;}
+#carCheckViewPop .box-gray {padding:15px;background:#F3F3F3}
+#carCheckViewPop .box-gray p {font-weight:300}
+#carCheckViewPop .box-gray p.t-al-c {text-align:center;}
+#carCheckViewPop .box-gray .num-list > li {font-weight:300;font-size:12px}
+#carCheckViewPop .box-gray .num-list > li + li {margin-top:15px;}
+#carCheckViewPop .box-gray .num-list > li > ul {padding-left:5px;}
+#carCheckViewPop .bul-list > li {padding-left:10px;font-weight:300;}
+#carCheckViewPop .bul-list > li.mt {margin-top:15px;font-size:12px}
+#carCheckViewPop .bul-list > li.mt strong {position:relative;display:block;margin-top:10px;padding-left:15px;}
+#carCheckViewPop .bul-list > li.mt strong:before {content:"";position:absolute;left:5px;top:7px;display:inline-block;width:3px;height:3px;background:#303030;border-radius:50%;}
+#carCheckViewPop .pop-car-check-view {width:900px;min-width:900px !important}
+#carCheckViewPop .modal-body {padding:32px;}
+#carCheckViewPop .pop_close {position:absolute;top:0;right:-50px;width:50px;height:50px;background:url("../images/icon/ico-close-layer-white.svg") no-repeat 50% 50%;}
+#carCheckViewPop .pop_inner {padding:40px;}
+#carCheckViewPop .bt-print-common {position:absolute;right:40px;top:40px;width:100px;height:30px;border:1px solid #E9E9E9;border-radius:5px;font-size:11px;}
+#carCheckViewPop .car-check-view {padding-top:30px;}
+#carCheckViewPop .car-check-group h3 {margin-bottom:7px;font-size:14px;color:#000;font-weight:700;}
+#carCheckViewPop .car-check-group + .car-check-group {margin-top:30px;}
+#carCheckViewPop .car-check-group h3 span {font-weight:300;font-size:12px;}
+#carCheckViewPop .car-check-group .tb-top-check {display:block;margin-bottom:10px;}
+#carCheckViewPop .car-check-group .tb.half {width:392px;}
+#carCheckViewPop .car-check-group .tb.full {position:relative;width:100%;}
+#carCheckViewPop .car-check-group .tb.full + .tb.full {margin-top:40px;}
+#carCheckViewPop .car-check-group .tb h4 {padding-bottom:5px;font-size:14px;color:#000;font-weight:700}
+#carCheckViewPop .car-check-group .tb table {background:#F3F3F3;}
+#carCheckViewPop .car-check-group .tb table th {height:50px;padding:10px 0 10px 10px;color:#000;padding-left:10px;font-weight:300;font-size:12px;border-bottom:1px solid #E9E9E9;text-align:left;}
+#carCheckViewPop .car-check-group .tb table td {height:50px;color:#000;padding:10px;text-align:right;border-bottom:1px solid #E9E9E9;font-size:12px;}
+#carCheckViewPop .car-check-group .tb table thead th {font-weight:500;}
+#carCheckViewPop .car-check-group .tb table thead th:last-child {border-right:0;}
+#carCheckViewPop .car-check-group .tb table tbody th {font-weight:300}
+#carCheckViewPop .car-check-group .tb table tr th:first-child {border-left:0;}
+#carCheckViewPop .car-check-group .tb table tr td:first-child {border-left:0;}
+#carCheckViewPop .car-check-group .tb table tr.dim th,
+#carCheckViewPop .car-check-group .tb table tr.dim td {opacity:0.2;}
+#carCheckViewPop .car-check-group .tb table tbody tr:last-child th,
+#carCheckViewPop .car-check-group .tb table tbody tr:last-child td {border-bottom:0;}
+#carCheckViewPop .car-check-group .tb .dim {color:#ddd}
+#carCheckViewPop .car-check-group .tb .wf {max-width:100%;}
+#carCheckViewPop .car-check-group .tb .w2 {max-width:160px;}
+#carCheckViewPop .car-check-group .tb .mr10 {margin-right:10px;}
+#carCheckViewPop .car-check-group .tb .mr15 {margin-right:15px;}
+#carCheckViewPop .car-check-group .tb .mr20 {margin-right:20px;}
+#carCheckViewPop .car-check-group .tb .al-r {text-align:right;}
+#carCheckViewPop .car-check-group .tb .ck-group.dim .ck-wrap {opacity:0.8;}
+#carCheckViewPop .car-check-group .tb .ck-group + .ck-group {margin-top:15px;}
+#carCheckViewPop .car-check-group .tb .ck-group .sb {display:inline-block;vertical-align:middle;margin:1px 0 0 0;}
+#carCheckViewPop .car-check-group .tb .ck-wrap + .ck-wrap {margin-left:10px;}
+#carCheckViewPop .car-check-group .tb .ck-wrap label {font-size:12px;font-weight:300}
+#carCheckViewPop .car-check-group .tb .ck-wrap input:disabled {opacity:0 !important}
+#carCheckViewPop .car-check-group .tb .ck-wrap input:disabled + label {cursor:default}
+#carCheckViewPop .car-check-group .tb .ck-wrap.rvt label {padding-left:0;padding-right:26px}
+#carCheckViewPop .car-check-group .tb .ck-wrap.rvt label:after {left:auto;right:0;}
+#carCheckViewPop .car-check-group .tb input[type="radio"]+label {line-height:20px;padding-left:22px;}
+#carCheckViewPop .car-check-group .tb input[type="radio"]+label::after {width:18px;height:18px;}
+#carCheckViewPop .car-check-group .tb input[type="radio"]:checked+label::after {width:18px;height:18px;}
+#carCheckViewPop .car-check-group .tb .t {vertical-align:middle;font-size:12px;font-weight:300}
+#carCheckViewPop .car-check-group .tb .t.c {display:block;text-align:center;padding-right:0;}
+#carCheckViewPop .car-check-group .tb .t.ml {margin-left:15px;padding-right:5px;}
+#carCheckViewPop .car-check-group .tb .t.b {font-weight:700;}
+#carCheckViewPop .car-check-group .tb .sb {padding:0 5px;font-weight:300;}
+#carCheckViewPop .car-check-group .tb :disabled {border:0 !important;opacity:0.7;color:#ddd}
+#carCheckViewPop .car-check-group .tb :disabled + small {opacity:0.3;}
+#carCheckViewPop .car-check-group .tb .bt-func {height:30px;margin-left:10px;padding:0 8px;font-size:12px;font-weight:700;background:#fff;white-space:nowrap;border:1px solid #ddd}
+#carCheckViewPop .car-check-group .tb .bt-func2 {display:block;margin:4px auto;height:28px;border-radius:3px;padding:0 8px;font-size:12px;font-weight:700;background:#fff;white-space:nowrap;border:1px solid #ddd}
+#carCheckViewPop .car-check-group .tb .cell-pic {padding:0;background:#fff;}
+#carCheckViewPop .car-check-group .tb .cell-pic .pic {width:100%;}
+#carCheckViewPop .car-check-group .tb .cell-pic .pic img {display:block;width:100%;height:100%;margin:0 auto;}
+#carCheckViewPop .car-check-group .tb .cell-pic p {padding:10px 0 15px 0;}
+#carCheckViewPop .car-check-group .tb .cell-paper {padding:0;background:#fff;}
+#carCheckViewPop .car-check-group .tb .cell-paper .pic {width:100%;}
+#carCheckViewPop .car-check-group .tb .cell-paper .pic img {display:block;width:100%;height:100%;margin:0 auto;}
+#carCheckViewPop .car-check-group .tb .cell-paper p {padding:10px 0 20px 0;}
+/* =========================================================================================================
+	성능점검상태
+========================================================================================================= */
+/* 성능점검상태 */
+#carCheckViewPop .check-guide {padding-bottom:20px;color:#FF3333;font-weight:300;font-size:12px;text-align:center;}
+#carCheckViewPop .car-check-area {margin-right:-20px;margin-left:-20px;overflow-x:auto;margin-bottom:10px;border:1px solid #E9E9E9;border-top:1px solid #000}
+#carCheckViewPop .check-car								{position:relative;z-index:10;margin:0 auto;margin-left:-50px;padding:0;margin-top:26px;margin-bottom:8px;width:730px;height:440px;background:url('../images/checkcar/check_bg_car.png') no-repeat;/*transform:scale(0.65);transform-origin:0 0;margin:0 -300px -110px 0;*/}
+#carCheckViewPop .check-car .check_link_bg				{position:absolute;top:0;left:0;z-index:200;width:100%;height:100%;}
+#carCheckViewPop .check-car .condition-mark				{position:relative;width:100%;height:100%;}
+#carCheckViewPop .check-car .condition-mark > p		{display:none;position:absolute;top:0;left:0;z-index:50;text-indent:-9999px;width:100%;height:100%;}
+#carCheckViewPop .check-car .i-mark						{z-index:300;display:inline-block;margin:0 !important;padding:0;width:20px; height:20px;font-size:12px;font-weight:bold;color:#fff;line-height:22px;text-align:center;overflow:hidden;border-radius:10px;-webkit-border-radius:10px; -moz-border-radius:10px;-o-border-radius:10px;}
+#carCheckViewPop .mark-name									{margin:0 auto;padding:30px 0;width:775px;height:auto;}
+#carCheckViewPop .mark-name:after							{content:"";display:block;float:none;clear:both;}
+#carCheckViewPop .mark-name > li							{position:relative;display:table;float:left;margin:0 20px 30px;padding:0;width:110px;height:auto;text-align:left;}
+#carCheckViewPop .mark-name > li > h3						{display:table-cell;vertical-align:middle;margin:0;padding:0;width:100%;height:30px;font-size:12px;font-weight:normal;color:#666;}
+#carCheckViewPop .mark-name > li > span					{position:absolute;top:0;right:0;z-index:100;display:block;margin:0 !important;padding:0;width:30px;height:30px;font-size:13px;font-weight:bold;color:#fff;line-height:30px;text-align:center;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-o-border-radius:15px;}
+#carCheckViewPop .bg-red										{background-color:#374367;}
+#carCheckViewPop .bg-red input[type=checkbox]:checked {background:url('../images/icon_checkbox_red.png') no-repeat #fff;background-size:33px 33px;}
+#carCheckViewPop .bg-blue										{background-color:#1e9cff;}
+#carCheckViewPop .bg-black									{background-color:#151515;cursor:pointer;}
+#carCheckViewPop .check-car .flag {height:20px;}
+
+/* 좌측 */
+#carCheckViewPop .check_FL_foglamp							{background:url('../images/checkcar/check_FL_foglamp.png') no-repeat;}
+#carCheckViewPop .check_FL_wheel							{background:url('../images/checkcar/check_FL_wheel.png') no-repeat;}
+#carCheckViewPop .check_RL_wheel							{background:url('../images/checkcar/check_RL_wheel.png') no-repeat;}
+#carCheckViewPop .check_L_side								{background:url('../images/checkcar/check_L_side.png') no-repeat;}
+#carCheckViewPop .check_L_fender							{background:url('../images/checkcar/check_L_fender.png') no-repeat;}
+#carCheckViewPop .check_FL_door								{background:url('../images/checkcar/check_FL_door.png') no-repeat;}
+#carCheckViewPop .check_RL_door								{background:url('../images/checkcar/check_RL_door.png') no-repeat;}
+#carCheckViewPop .check_L_quarterpanel					{background:url('../images/checkcar/check_L_quarterpanel.png') no-repeat;}
+#carCheckViewPop .check_RL_foglamp							{background:url('../images/checkcar/check_RL_foglamp.png') no-repeat;}
+#carCheckViewPop .check_LA_filler							{background:url('../images/checkcar/check_LA_filler.png') no-repeat;}
+#carCheckViewPop .check_LB_filler							{background:url('../images/checkcar/check_LB_filler.png') no-repeat;}
+#carCheckViewPop .check_LC_filler							{background:url('../images/checkcar/check_LC_filler.png') no-repeat;}
+#carCheckViewPop .check_FL_window							{background:url('../images/checkcar/check_FL_window.png') no-repeat;}
+#carCheckViewPop .check_RL_window							{background:url('../images/checkcar/check_RL_window.png') no-repeat;}
+
+/* 상단 */
+#carCheckViewPop .check_F_bumper							{background:url('../images/checkcar/check_F_bumper.png') no-repeat;}
+#carCheckViewPop .check_grill								{background:url('../images/checkcar/check_grill.png') no-repeat;}
+#carCheckViewPop .check_L_lamp								{background:url('../images/checkcar/check_L_lamp.png') no-repeat;}
+#carCheckViewPop .check_R_lamp								{background:url('../images/checkcar/check_R_lamp.png') no-repeat;}
+#carCheckViewPop .check_bonnet								{background:url('../images/checkcar/check_bonnet.png') no-repeat;}
+#carCheckViewPop .check_F_window							{background:url('../images/checkcar/check_F_window.png') no-repeat;}
+#carCheckViewPop .check_R_window							{background:url('../images/checkcar/check_R_window.png') no-repeat;}
+#carCheckViewPop .check_roof									{background:url('../images/checkcar/check_roof.png') no-repeat;}
+#carCheckViewPop .check_L_mirror							{background:url('../images/checkcar/check_L_mirror.png') no-repeat;}
+#carCheckViewPop .check_R_mirror							{background:url('../images/checkcar/check_R_mirror.png') no-repeat;}
+#carCheckViewPop .check_trunk								{background:url('../images/checkcar/check_trunk.png') no-repeat;}
+#carCheckViewPop .check_L_taillight						{background:url('../images/checkcar/check_L_taillight.png') no-repeat;}
+#carCheckViewPop .check_R_taillight						{background:url('../images/checkcar/check_R_taillight.png') no-repeat;}
+#carCheckViewPop .check_R_bumper							{background:url('../images/checkcar/check_R_bumper.png') no-repeat;}
+
+/* 하체 */
+#carCheckViewPop .check_radiator								{background:url('../images/checkcar/check_radiator.png') no-repeat;}
+#carCheckViewPop .check_F_panel								{background:url('../images/checkcar/check_F_panel.png') no-repeat;}
+#carCheckViewPop .check_FL_insidepanel					{background:url('../images/checkcar/check_FL_insidepanel.png') no-repeat;}
+#carCheckViewPop .check_FL_sidemember						{background:url('../images/checkcar/check_FL_sidemember.png') no-repeat;}
+#carCheckViewPop .check_FL_wheelhouse						{background:url('../images/checkcar/check_FL_wheelhouse.png') no-repeat;}
+#carCheckViewPop .check_FR_insidepanel					{background:url('../images/checkcar/check_FR_insidepanel.png') no-repeat;}
+#carCheckViewPop .check_FR_sidemember						{background:url('../images/checkcar/check_FR_sidemember.png') no-repeat;}
+#carCheckViewPop .check_FR_wheelhouse						{background:url('../images/checkcar/check_FR_wheelhouse.png') no-repeat;}
+#carCheckViewPop .check_crossmember						{background:url('../images/checkcar/check_crossmember.png') no-repeat;}
+#carCheckViewPop .check_dashpanel							{background:url('../images/checkcar/check_dashpanel.png') no-repeat;}
+#carCheckViewPop .check_floorpanel							{background:url('../images/checkcar/check_floorpanel.png') no-repeat;}
+#carCheckViewPop .check_packagetray						{background:url('../images/checkcar/check_packagetray.png') no-repeat;}
+#carCheckViewPop .check_RL_wheelhouse						{background:url('../images/checkcar/check_RL_wheelhouse.png') no-repeat;}
+#carCheckViewPop .check_RL_sidemember						{background:url('../images/checkcar/check_RL_sidemember.png') no-repeat;}
+#carCheckViewPop .check_trunkfloor							{background:url('../images/checkcar/check_trunkfloor.png') no-repeat;}
+#carCheckViewPop .check_RR_sidemember						{background:url('../images/checkcar/check_RR_sidemember.png') no-repeat;}
+#carCheckViewPop .check_RR_wheelhouse						{background:url('../images/checkcar/check_RR_wheelhouse.png') no-repeat;}
+#carCheckViewPop .check_rearpanel							{background:url('../images/checkcar/check_rearpanel.png') no-repeat;}
+
+/* 우측 */
+#carCheckViewPop .check_FR_foglamp							{background:url('../images/checkcar/check_FR_foglamp.png') no-repeat;}
+#carCheckViewPop .check_FR_wheel							{background:url('../images/checkcar/check_FR_wheel.png') no-repeat;}
+#carCheckViewPop .check_RR_wheel							{background:url('../images/checkcar/check_RR_wheel.png') no-repeat;}
+#carCheckViewPop .check_R_side								{background:url('../images/checkcar/check_R_side.png') no-repeat;}
+#carCheckViewPop .check_R_fender							{background:url('../images/checkcar/check_R_fender.png') no-repeat;}
+#carCheckViewPop .check_FR_door								{background:url('../images/checkcar/check_FR_door.png') no-repeat;}
+#carCheckViewPop .check_RR_door								{background:url('../images/checkcar/check_RR_door.png') no-repeat;}
+#carCheckViewPop .check_R_quarterpanel					{background:url('../images/checkcar/check_R_quarterpanel.png') no-repeat;}
+#carCheckViewPop .check_RR_foglamp							{background:url('../images/checkcar/check_RR_foglamp.png') no-repeat;}
+#carCheckViewPop .check_RA_filler							{background:url('../images/checkcar/check_RA_filler.png') no-repeat;}
+#carCheckViewPop .check_RB_filler							{background:url('../images/checkcar/check_RB_filler.png') no-repeat;}
+#carCheckViewPop .check_RC_filler							{background:url('../images/checkcar/check_RC_filler.png') no-repeat;}
+#carCheckViewPop .check_FR_window							{background:url('../images/checkcar/check_FR_window.png') no-repeat;}
+#carCheckViewPop .check_RR_window							{background:url('../images/checkcar/check_RR_window.png') no-repeat;}
+
+/* 성능점검상태 */
+#carCheckViewPop .check-guide {padding-bottom:20px;color:#FF3333;font-weight:300;font-size:12px;text-align:center;}
+.sec-car-check-view .car-check-area {margin-right:-20px;margin-left:-20px;overflow-x:auto;margin-bottom:10px;border:1px solid #E9E9E9;border-top:1px solid #000}
+.sec-car-check-view .check-car								{position:relative;z-index:10;margin:0 auto;margin-left:-50px;padding:0;margin-top:26px;margin-bottom:8px;width:730px;height:440px;background:url('../images/checkcar/check_bg_car.png') no-repeat;/*transform:scale(0.65);transform-origin:0 0;margin:0 -300px -110px 0;*/}
+.sec-car-check-view .check-car .check_link_bg				{position:absolute;top:0;left:0;z-index:200;width:100%;height:100%;}
+.sec-car-check-view .check-car .condition-mark				{position:relative;width:100%;height:100%;}
+.sec-car-check-view .check-car .condition-mark > p		{display:none;position:absolute;top:0;left:0;z-index:50;text-indent:-9999px;width:100%;height:100%;}
+.sec-car-check-view .check-car .i-mark						{z-index:300;display:inline-block;margin:0 !important;padding:0;width:20px; height:20px;font-size:12px;font-weight:bold;color:#fff;line-height:22px;text-align:center;overflow:hidden;border-radius:10px;-webkit-border-radius:10px; -moz-border-radius:10px;-o-border-radius:10px;}
+.sec-car-check-view .mark-name									{margin:0 auto;padding:30px 0;width:775px;height:auto;}
+.sec-car-check-view .mark-name:after							{content:"";display:block;float:none;clear:both;}
+.sec-car-check-view .mark-name > li							{position:relative;display:table;float:left;margin:0 20px 30px;padding:0;width:110px;height:auto;text-align:left;}
+.sec-car-check-view .mark-name > li > h3						{display:table-cell;vertical-align:middle;margin:0;padding:0;width:100%;height:30px;font-size:12px;font-weight:normal;color:#666;}
+.sec-car-check-view .mark-name > li > span					{position:absolute;top:0;right:0;z-index:100;display:block;margin:0 !important;padding:0;width:30px;height:30px;font-size:13px;font-weight:bold;color:#fff;line-height:30px;text-align:center;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-o-border-radius:15px;}
+.sec-car-check-view .bg-red										{background-color:#374367;}
+.sec-car-check-view .bg-red input[type=checkbox]:checked {background:url('../images/icon_checkbox_red.png') no-repeat #fff;background-size:33px 33px;}
+.sec-car-check-view .bg-blue										{background-color:#1e9cff;}
+.sec-car-check-view .bg-black									{background-color:#151515;cursor:pointer;}
+.sec-car-check-view .check-car .flag {height:20px;}
+
+.sec-car-check-view .bg-X									{background-color:#4E8AFF;cursor:pointer;}
+.sec-car-check-view .bg-W									{background-color:#FD2323;cursor:pointer;}
+.sec-car-check-view .bg-A									{background-color:#289900;cursor:pointer;}
+.sec-car-check-view .bg-C									{background-color:#8A54FC;cursor:pointer;}
+.sec-car-check-view .bg-U									{background-color:#F5A70E;cursor:pointer;}
+.sec-car-check-view .bg-T									{background-color:#828282;cursor:pointer;}
+
+
+/* 좌측 */
+.sec-car-check-view .check_FL_foglamp							{background:url('../images/checkcar/check_FL_foglamp.png') no-repeat;}
+.sec-car-check-view .check_FL_wheel							{background:url('../images/checkcar/check_FL_wheel.png') no-repeat;}
+.sec-car-check-view .check_RL_wheel							{background:url('../images/checkcar/check_RL_wheel.png') no-repeat;}
+.sec-car-check-view .check_L_side								{background:url('../images/checkcar/check_L_side.png') no-repeat;}
+.sec-car-check-view .check_L_fender							{background:url('../images/checkcar/check_L_fender.png') no-repeat;}
+.sec-car-check-view .check_FL_door								{background:url('../images/checkcar/check_FL_door.png') no-repeat;}
+.sec-car-check-view .check_RL_door								{background:url('../images/checkcar/check_RL_door.png') no-repeat;}
+.sec-car-check-view .check_L_quarterpanel					{background:url('../images/checkcar/check_L_quarterpanel.png') no-repeat;}
+.sec-car-check-view .check_RL_foglamp							{background:url('../images/checkcar/check_RL_foglamp.png') no-repeat;}
+.sec-car-check-view .check_LA_filler							{background:url('../images/checkcar/check_LA_filler.png') no-repeat;}
+.sec-car-check-view .check_LB_filler							{background:url('../images/checkcar/check_LB_filler.png') no-repeat;}
+.sec-car-check-view .check_LC_filler							{background:url('../images/checkcar/check_LC_filler.png') no-repeat;}
+.sec-car-check-view .check_FL_window							{background:url('../images/checkcar/check_FL_window.png') no-repeat;}
+.sec-car-check-view .check_RL_window							{background:url('../images/checkcar/check_RL_window.png') no-repeat;}
+
+/* 상단 */
+.sec-car-check-view .check_F_bumper							{background:url('../images/checkcar/check_F_bumper.png') no-repeat;}
+.sec-car-check-view .check_grill								{background:url('../images/checkcar/check_grill.png') no-repeat;}
+.sec-car-check-view .check_L_lamp								{background:url('../images/checkcar/check_L_lamp.png') no-repeat;}
+.sec-car-check-view .check_R_lamp								{background:url('../images/checkcar/check_R_lamp.png') no-repeat;}
+.sec-car-check-view .check_bonnet								{background:url('../images/checkcar/check_bonnet.png') no-repeat;}
+.sec-car-check-view .check_F_window							{background:url('../images/checkcar/check_F_window.png') no-repeat;}
+.sec-car-check-view .check_R_window							{background:url('../images/checkcar/check_R_window.png') no-repeat;}
+.sec-car-check-view .check_roof									{background:url('../images/checkcar/check_roof.png') no-repeat;}
+.sec-car-check-view .check_L_mirror							{background:url('../images/checkcar/check_L_mirror.png') no-repeat;}
+.sec-car-check-view .check_R_mirror							{background:url('../images/checkcar/check_R_mirror.png') no-repeat;}
+.sec-car-check-view .check_trunk								{background:url('../images/checkcar/check_trunk.png') no-repeat;}
+.sec-car-check-view .check_L_taillight						{background:url('../images/checkcar/check_L_taillight.png') no-repeat;}
+.sec-car-check-view .check_R_taillight						{background:url('../images/checkcar/check_R_taillight.png') no-repeat;}
+.sec-car-check-view .check_R_bumper							{background:url('../images/checkcar/check_R_bumper.png') no-repeat;}
+
+/* 하체 */
+.sec-car-check-view .check_radiator								{background:url('../images/checkcar/check_radiator.png') no-repeat;}
+.sec-car-check-view .check_F_panel								{background:url('../images/checkcar/check_F_panel.png') no-repeat;}
+.sec-car-check-view .check_FL_insidepanel					{background:url('../images/checkcar/check_FL_insidepanel.png') no-repeat;}
+.sec-car-check-view .check_FL_sidemember						{background:url('../images/checkcar/check_FL_sidemember.png') no-repeat;}
+.sec-car-check-view .check_FL_wheelhouse						{background:url('../images/checkcar/check_FL_wheelhouse.png') no-repeat;}
+.sec-car-check-view .check_FR_insidepanel					{background:url('../images/checkcar/check_FR_insidepanel.png') no-repeat;}
+.sec-car-check-view .check_FR_sidemember						{background:url('../images/checkcar/check_FR_sidemember.png') no-repeat;}
+.sec-car-check-view .check_FR_wheelhouse						{background:url('../images/checkcar/check_FR_wheelhouse.png') no-repeat;}
+.sec-car-check-view .check_crossmember						{background:url('../images/checkcar/check_crossmember.png') no-repeat;}
+.sec-car-check-view .check_dashpanel							{background:url('../images/checkcar/check_dashpanel.png') no-repeat;}
+.sec-car-check-view .check_floorpanel							{background:url('../images/checkcar/check_floorpanel.png') no-repeat;}
+.sec-car-check-view .check_packagetray						{background:url('../images/checkcar/check_packagetray.png') no-repeat;}
+.sec-car-check-view .check_RL_wheelhouse						{background:url('../images/checkcar/check_RL_wheelhouse.png') no-repeat;}
+.sec-car-check-view .check_RL_sidemember						{background:url('../images/checkcar/check_RL_sidemember.png') no-repeat;}
+.sec-car-check-view .check_trunkfloor							{background:url('../images/checkcar/check_trunkfloor.png') no-repeat;}
+.sec-car-check-view .check_RR_sidemember						{background:url('../images/checkcar/check_RR_sidemember.png') no-repeat;}
+.sec-car-check-view .check_RR_wheelhouse						{background:url('../images/checkcar/check_RR_wheelhouse.png') no-repeat;}
+.sec-car-check-view .check_rearpanel							{background:url('../images/checkcar/check_rearpanel.png') no-repeat;}
+
+/* 우측 */
+.sec-car-check-view .check_FR_foglamp							{background:url('../images/checkcar/check_FR_foglamp.png') no-repeat;}
+.sec-car-check-view .check_FR_wheel							{background:url('../images/checkcar/check_FR_wheel.png') no-repeat;}
+.sec-car-check-view .check_RR_wheel							{background:url('../images/checkcar/check_RR_wheel.png') no-repeat;}
+.sec-car-check-view .check_R_side								{background:url('../images/checkcar/check_R_side.png') no-repeat;}
+.sec-car-check-view .check_R_fender							{background:url('../images/checkcar/check_R_fender.png') no-repeat;}
+.sec-car-check-view .check_FR_door								{background:url('../images/checkcar/check_FR_door.png') no-repeat;}
+.sec-car-check-view .check_RR_door								{background:url('../images/checkcar/check_RR_door.png') no-repeat;}
+.sec-car-check-view .check_R_quarterpanel					{background:url('../images/checkcar/check_R_quarterpanel.png') no-repeat;}
+.sec-car-check-view .check_RR_foglamp							{background:url('../images/checkcar/check_RR_foglamp.png') no-repeat;}
+.sec-car-check-view .check_RA_filler							{background:url('../images/checkcar/check_RA_filler.png') no-repeat;}
+.sec-car-check-view .check_RB_filler							{background:url('../images/checkcar/check_RB_filler.png') no-repeat;}
+.sec-car-check-view .check_RC_filler							{background:url('../images/checkcar/check_RC_filler.png') no-repeat;}
+.sec-car-check-view .check_FR_window							{background:url('../images/checkcar/check_FR_window.png') no-repeat;}
+.sec-car-check-view .check_RR_window							{background:url('../images/checkcar/check_RR_window.png') no-repeat;}

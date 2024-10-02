@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+
+.main-rent div .immediately {color:#666666;font-size:14px;}
+.main-rent div .immediately span {margin:0;font-weight: 600;}
+
+.faq-sec ul li:nth-child(4) a .img-wrap {
+    background: url("../images/rent_new/icon/icon_faq_04.png") center/cover;
+}
+.ul-li li::before {content: 'ㆍ';display: inline-block;}
+.ul-li li {text-indent:-7px;margin-left:7px;margin-bottom: 8px;}
+
+/*.info-txt::before {content: ''; width: 17px;height: 17px;background-image: url("../images/icon/ico-info.svg");background-size: 100% 100%;background-position: center;background-repeat: no-repeat;display: inline-block;margin-right: 5px;}*/
+.box.purchase .info-txt {display: flex;align-items: center;}
+.box.purchase {font-size:12px;font-weight: 700;background: #EDF4FF;}
+.box.purchase .val {font-size:13px !important;display: flex;align-items: center;}
+.box.purchase .val var {font-size:13px !important;}
+
+.psc-btn-group .psc-wrap li.box > div {align-items: center !important;}
+
+.et-banner-wrap {background:#F5F7FA;padding:25px 20px;border-radius: 10px;margin-top:30px;}
+.et-banner-wrap .st1 {font-size:13px;color:#999999;font-weight: 700;}
+.et-banner-wrap .st2 {font-size:18px;color:#000;font-weight: 700;margin: 10px 0;}
+.et-banner-wrap .st3 {font-size:13px;color:#000;font-weight: 700}
+.et-banner-wrap .st4 {font-size:17px;color:#FF3333;font-weight: 700;margin-top:5px;}
+.et-banner-wrap .box {border-radius: 10px;padding:20px;background: #fff;}
+.et-banner-wrap button {border: 1px solid #E6E6E6;padding: 10px 0;margin-top:20px;border-radius: 5px;font-size: 15px;font-weight: 700;background: #fff;}
+
+
+/* 인수형상품 안내 페이지 */
+.acq_wrap {background: linear-gradient(180deg, #FFF490 0%, #FFDC84 6.9%);padding:0 4% 5%;}
+.acq_wrap section + section {margin-bottom:20px}
+.acq_wrap .option05 {background: #fff;margin: 0 auto;border-radius:10px;padding:12% 5%}
+.acq_wrap .faq-wrap {margin-top:20px;}
+.acq_wrap .faq-wrap .faq {border: 1px solid #E6E6E6;padding:5%;text-align: left;border-radius: 10px;cursor: pointer;}
+.acq_wrap .faq-wrap .faq .tit {font-size:16px;position: relative; font-weight: 600;}
+.acq_wrap .faq-wrap .faq .txt {font-size:14px;display: none;padding-top:10px;}
+.acq_wrap .faq-wrap .faq button {width: 100%; text-align: left;}
+.acq_wrap .faq-wrap .faq.active .tit::after {background: url(../images/page/acq_arrow1.png) no-repeat 50% 50%;background-size:18px;}
+.acq_wrap .faq-wrap .faq .tit::after {content: "";position: absolute;right:0%;top:2px;display: inline-block;width: 18px;height: 18px;background: url(https://mycarsave.lotterentacar.net/images/page/acq_arrow2.png) no-repeat 50% 50%;background-size: 18px;}
+.acq_wrap .faq-wrap .faq + .faq {margin-top:16px}
+.acq_wrap .faq-wrap .faq.active .tit {color:#FF3333}
+.acq_wrap .faq-wrap .faq.active .txt {display: flex;}
+.acq_wrap .faq-wrap .faq.active  {border:1px solid #FF3333}
+.acq_wrap .faq-wrap .faq .tit span , .acq_wrap .option05 .faq-wrap .faq .txt span {margin-right:10px}
+.acq_wrap .faq-wrap .faq > li {display: flex;}
+.acq_wrap .bottom-btn {margin:30px 0 0}
+.acq_wrap section {margin: 0 auto;}
+.acq_wrap .bottom-btn a {display: block;background: #FF3333;color:#fff;text-align: center;font-size:16px;padding:17px 0;border-radius:10px;}
+
+/* 한정특가 */
+/* ico-timesale 경로변경 */
+
+.popular-slider .img-wrap {position: relative;}
+.popular-slider .img-wrap.impending {width: 100%;border:2px solid #4B87FF;}
+.popular-slider .swiper .img-wrap img {width: 100%;}
+
+.ico-timesale1 {background: url('https://mycarsave.lotterentacar.net/mobile/images/icon/ico-timesale.png') center;background-size: 16px auto;width: 16px;height: 16px;margin:0 5px}
+.ico-timesale2 {background: url('https://mycarsave.lotterentacar.net/mobile/images/icon/ico-timesale2.png') center;background-size: 16px auto;width: 16px;height: 16px;margin:0 5px}
+
+.time {font-weight: 700;}
+.timesaleWrap {position: absolute;left:0px;bottom:0px;background: linear-gradient(90deg, #2E70F0 0%, #29D1E7 100%);background-size:150% auto;height: 30px;color:#fff;display: flex;    align-items: center;    justify-content: center;    gap: 5px;    z-index: 10;    font-size:14px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    animation: gradient2 1.5s linear infinite;    width: 100%;}
+.timesaleWrap2 {position: absolute;left:0px;bottom:0px;background: #6eb1eb;height: 30px;color:#fff;display: flex;align-items: center;justify-content: center;gap: 5px;z-index: 10;    font-size:14px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    width: 100%;}
+
+.list-content .timesaleWrap3 {position: relative;background: linear-gradient(90deg, #2E70F0 0%, #29D1E7 100%);background-size:150% auto;height: 38px;color:#fff;display: flex;    align-items: center;    justify-content: center;    gap: 5px;    z-index: 10;    font-size:16px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;   animation: gradient2 1.5s linear infinite;    width: 100%;}
+.list-content .timesaleWrap2 {position: relative;background: #6eb1eb;height: 38px;color:#fff;display: flex;align-items: center;justify-content: center;gap: 5px;z-index: 10;    font-size:16px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    width: 100%;}
+
+.list-content .list-thumb  {position: relative;}
+.list-content .list-thumb.impending {border:2px solid #4B87FF;}
+
+.detail_timesaleWrap1 {font-weight: 600;background: linear-gradient(90deg, #2E70F0 0%, #29D1E7 100%);background-size:150% auto;height: 40px;color:#fff;display: flex;    align-items: center;    justify-content: center;    gap: 5px;    z-index: 10;    font-size:16px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    animation: gradient2 1.5s linear infinite;    width: 100%;}
+.detail_timesaleWrap2 {font-weight: 600; position: relative; height: 40px;color:#000;display: flex;align-items: center;justify-content: center;gap: 5px;z-index: 10;font-size:16px;box-sizing: border-box;letter-spacing: -0.5px;overflow: hidden;width: 100%;;}
+.detail_timesaleWrap2::before {width: 100%;height: 100%;position: absolute;top:0;left:0;content: '';background: #2C97FB;opacity:0.12;z-index: -1;}
+.detail_timesaleWrap2 .txt {color: #4B87FF}
+
+.list-timesaleWrap1 {position: relative; background: #e5f2fe;height: 38px;color:#4B87FF;display: flex;align-items: center;justify-content: center;z-index: 10;    font-size:16px;    box-sizing: border-box;   overflow: hidden;    width: 100%;font-weight: 700;}
+.list-timesaleWrap1 .time {color:#000;background: #fff;border-radius: 15px;padding:3px 12px;font-size:14px;margin-left:10px}
+
+.list-timesaleWrap2 {background: linear-gradient(90deg, #2E70F0 0%, #29D1E7 100%);position: relative;background-size:150% auto;height: 38px;color:#fff;display: flex;align-items: center;justify-content: center;z-index: 10;    font-size:16px;    box-sizing: border-box;   overflow: hidden;    width: 100%;font-weight: 500;animation: gradient2 1.5s linear infinite}
+.list-timesaleWrap2 .time {color:#000;background: #fff;border-radius: 15px;font-size:14px;margin-left:10px;    border:1px solid transparent;    border-radius: 20px;    background-image: linear-gradient(#fff, #fff), linear-gradient(90.66deg, #63EDFF 5.72%, #0E5EFF 99.43%);    background-origin: border-box;    background-clip: content-box, border-box;    height: 28px;    display: flex;    align-items: center;}
+.list-timesaleWrap2 .time  .cont {margin:0 9px}
+
+.list-detail .list-price .price2 {font-size:14px;color:#B1B1B1;text-decoration: line-through;text-align: right;}
+.list-detail .list-price .recommendPrice {font-size:14px;color:#B1B1B1;text-decoration: line-through;}
+.price-wrap .price2 {font-size:14px;color:#B1B1B1;text-decoration: line-through;text-align: right;margin-left:5px;letter-spacing: -0.5px;}
+
+.detail-body.type2 .car-price .price-wrap {justify-content: left;}
+.detail-body.type2 .car-price {margin-top:3px;}
+.detail-body.type2 .car-main-info .option {margin-top:13px}
+
+.popular-slider .txt-wrap .price2 {color:#B1B1B1;font-size:14px;letter-spacing: -0.5px;text-decoration: line-through;}
+
+@keyframes gradient2 {
+    0% {background-position: 100% 50%;}
+    50% {background-position: 0% 50%;}
+    100% {background-position: 100% 50%;}
+}
+
+.alike-timesaleWrap {position: absolute;left:0px;bottom:0px;background: linear-gradient(90deg, #2E70F0 0%, #29D1E7 100%);background-size:150% auto;height: 30px;color:#fff;display: flex;    align-items: center;    justify-content: center;    gap: 5px;    z-index: 10;    font-size:14px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    animation: gradient2 1.5s linear infinite;    width: 100%;}
+.alike-timesaleWrap2 {position: absolute;left:0px;bottom:0px;background: #6eb1eb;height: 30px;color:#fff;display: flex;align-items: center;justify-content: center;gap: 5px;z-index: 10;    font-size:14px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    width: 100%;}
+
+.svc-box.promotionSale {position: relative;}
+.svc-box.promotionSale:after {content: 'NEW';color: #9198FF;border:1px solid #9198FF;width: 40px;height: 20px;border-radius: 4px;line-height: 20px;font-size:12px;position: absolute;top:-10px;left:50%;transform: translate(-50%);background: #fff;text-align: center;font-weight: 700;box-sizing: border-box;}
+
+.search-wrap ul li a.promotionSale {color: #4B87FF;background:#EDF4FF url('https://mycarsave.lotterentacar.net/mobile/images/icon/ico-sale2.png') 10px center no-repeat;background-size: 22px auto;padding:7px 12px 7px 35px}
+
+.load-more-wrap {text-align: center; margin-top: 16px;}
+.load-more-wrap .load-more { display: inline-flex;padding: 8px 12px 8px 16px;gap: 4px;border-radius: 19px;border: 1px solid #D9D9D9;font-weight: 400; color: #3B3B3B;}
+.load-more-wrap .load-more > span {font-weight: 700;}
+.load-more {display: flex;align-items: center;}
+.load-more img {width: 16px;}
+
+.list-head .list-filter .list-view-btn {padding-left:7px;margin-left:7px}
+.list-head .list-filter .list-view-btn::after {content: '';    position: absolute;    top: 6px;    bottom: 6px;    left: -2px;    width: 1px;    height: auto;    background-color: #e9e9e9;}
+
+.promotionSale-wrap	.ico-sale2,
+.promotion-list-header	.ico-sale2{width:24px;height: 24px;margin-right:8px}
+.promotionSale-wrap .title-wrap h3,
+.promotion-list-header .title-wrap h3{display: flex;color:#3B3B3B;font-size: 20px;font-weight: 800;align-items: center;line-height: 1.2;}
+.promotionSale-wrap .title-wrap h3 span,
+.promotion-list-header .title-wrap h3 span{color:#000}
+.promotionSale-wrap .title-wrap a,
+.promotion-list-header .title-wrap a{color:#666666}
+.promotionSale-wrap .title-wrap,
+.promotion-list-header .title-wrap{margin-bottom:12px}
+.promotionSale-wrap {background: #F0EFF4;	padding: 10px 0;}
+.promotionSale-wrap > div {	background: #fff;	border-radius: 20px;}
+.promotionSale-wrap .item-wtCar,
+.promotion-list-header .item-wtCar{
+    display: flex; align-items: center;
+    font-size: 14px; font-weight: 400; color: #3B3B3B;
+}
+.promotionSale-wrap .item-wtCar .switch-input,
+.promotion-list-header .item-wtCar .switch-input{
+    margin-left:4px;
+}
+.promotionSale-wrap .item-wtCar span.item-title{font-weight:600;}
+.promotion-list-wrap{
+    background:#F0EFF4;
+}
+.promotion-list-header .title-wrap{
+    padding:20px 20px 0;
+    margin-bottom:5px;
+}
+.promotion-list-wrap .list-type-common{
+    background:#fff;
+}
+.promotion-list-header{
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    top: 10px;
+    background: #fff;
+}
+
+.sec-inner {padding: 24px 20px;}
+.title-wrap {position: relative;    margin-bottom: 24px;    display: flex;    justify-content: space-between;    align-items: center;}
+
+/* 일반 차량 리스트형 */
+.list-type-common.cols-2 {--column-count: 2;    display: grid;    grid-template-columns: repeat(var(--column-count), 1fr);    gap: 6px;padding:24px 20px;}
+.list-type-common.cols-2 .list-detail {padding:10px 0}
+.list-type-common.cols-2 .list-title {font-size:14px}
+.list-type-common.cols-2 .list-price .price {text-align: left;}
+.list-type-common.cols-2 .list-detail .list-price .price2 {text-align: left;}
+.list-type-common.cols-2 .list-price {margin:5px 0}
+.list-type-common.cols-2 .list-thumb {border-radius: 8px;}
+.list-type-common.cols-2 .list-price .price .prc var {font-size:16px}
+
+/*등록 예정 차량 리스트형 */
+.list-type-common.cols-2  .link-detail-view {display:block; }
+.list-type-common.cols-2  .list-item {position:relative;}
+.list-type-common.cols-2  .list-thumb {width:100%;overflow: hidden;height: 128px;}
+.list-type-common.cols-2  .list-thumb img {display:block;width:100%;height: 100%;}
+.list-type-common.cols-2  .list-thumb .swiper-horizontal{position:relative;}
+
+@media screen and (min-width: 500px) {
+    .list-type-common.cols-2 .list-thumb {width:100%;overflow: hidden;height: 165px;}
+}
+
+@media screen and (min-width: 620px) {
+    .list-type-common.cols-2 .list-thumb {width:100%;overflow: hidden;height: 200px;}
+}
+
+@media screen and (min-width: 750px) {
+    .list-type-common.cols-2 .list-thumb {width:100%;overflow: hidden;height: 255px;}
+}
+.list-type-wt.list-type-common.cols-2 {--column-count: 2;    display: grid;    grid-template-columns: repeat(var(--column-count), 1fr);    gap: 6px;padding:24px 20px;}
+.list-type-wt.list-type-common.cols-2 .list-detail {padding:10px 0}
+.list-type-wt.list-type-common.cols-2 .list-title {font-size:14px}
+.list-type-wt.list-type-common.cols-2 .list-price .price {text-align: left;}
+.list-type-wt.list-type-common.cols-2 .list-detail .list-price .price2 {text-align: left;}
+.list-type-wt.list-type-common.cols-2 .list-price {margin:5px 0}
+.list-type-wt.list-type-common.cols-2 .list-thumb {border-radius: 8px;}
+.list-type-wt.list-type-common.cols-2 .list-price .price .prc var {font-size:16px}
+.list-type-wt.list-type-common.cols-2 .list-item .list-thumb::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    left: 20px;
+    width: 45px;
+    height: 55px;
+    background-image: url(https://mycarsave.lotterentacar.net/mobile/images/elements/img-comingsoon.png);
+    background-size: 100%;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+}
+/*등록 예정 차량 리스트형 */
+
+.popular-sec .popular-slider {overflow: visible;}
+.popular-sec .popular-slider .swiper-slide {margin-right: 16px;}
+.promotionSale-wrap .popular-sec .popular-slider .badge {margin-bottom: 8px;    padding: 0;}
+.popular-slider .badge ul {display: flex;    align-items: center;    gap: 4px;}
+.popular-slider .badge ul li {/*width: 50px; */   height: 26px;    font-weight: 700;    display: flex;    justify-content: center;    align-items: center;    background-color: #F2F2F2;    border-radius: 4px;}
+.popular-slider .badge .certification {color: #fff;    background-color: #F33;}
+.popular-slider .badge .diagnosis {color: #fff;    background-color: #111;}
+/*.promotionSale-wrap .popular-sec .popular-slider .img-wrap {margin-bottom: 16px;    height: 180px;    border-radius: 12px;    overflow: hidden;}*/
+/*.promotionSale-wrap .popular-sec .popular-slider .img-wrap img {height: 100%; width: 100%;}*/
+.promotionSale-wrap .popular-sec .popular-slider .img-wrap {margin-bottom: 16px;    height: 190px; max-height: 290px;   border-radius: 12px;    overflow: hidden;}
+
+@media screen and (min-width:420px) {
+    .promotionSale-wrap .popular-sec .popular-slider .img-wrap {height: 230px;}
+}
+
+@media screen and (min-width:500px) {
+    .promotionSale-wrap .popular-sec .popular-slider .img-wrap {height: 270px;}
+}
+
+
+
+.promotionSale-wrap .popular-sec .popular-slider .img-wrap img {height: 100%; width: 100%;max-height: 290px;}
+.promotionSale-wrap .popular-sec .popular-slider a img {width: 100%;    height: 180px;    object-fit: cover;    border-radius: 12px;    overflow: hidden;}
+.promotionSale-wrap .popular-sec .popular-slider dl {display: flex; flex-wrap: wrap; margin-bottom: 4px;}
+.promotionSale-wrap .popular-sec .popular-slider dl dt {width: 100%;    margin-bottom: 4px;    overflow: hidden;    font-size: 16px;    font-weight: 800;    letter-spacing: -0.32px;    display: -webkit-box; -webkit-box-orient: vertical;    -webkit-line-clamp: 1;    align-self: stretch;}
+.promotionSale-wrap .popular-sec .popular-slider dl dd {position: relative;    margin-right: 16px;    color: #8b8b8b;    letter-spacing: -0.28px;}
+.promotionSale-wrap .popular-sec .popular-slider dl dd:after {position: absolute;    display: inline-block;    content: '';    width: 1px;    height: 10px;    top: 6px;    right: -8px;    background: #E6E6E6;}
+.promotionSale-wrap .popular-sec .popular-slider dl dd:last-child:after{display: none;}
+.promotionSale-wrap .popular-sec .popular-slider .txt-wrap p {font-size: 18px;    color: #FF3333;    font-weight: 800;    letter-spacing: -0.32px;}
+.promotionSale-wrap .popular-sec .popular-slider .txt-wrap p span {font-size: 14px;    font-weight: 400;    margin-left: 4px;}
+.promotionSale-wrap .inprogress::after {    content: '상담진행중';    position: absolute;    right: 12px;    top: 15px;    padding: 5px 10px;    font-size: 12px;    color: #fff;    border-radius: 40px;    background: rgba(0, 0, 0, 0.3);    z-index: 1;}
+
+.list-head .list-filter .list-view-btn img {width: 16px;height: 16px;margin-left: 0px;margin-bottom: 3px;opacity: 0.8;}
+
+/* 모바일 리스트형 임시 타임딜 - 한정특가 영역 추가 시 삭제 */
+.timesaleWrap-temp {position: absolute;left:0px;bottom:0px;background: linear-gradient(90deg, #2E70F0 0%, #29D1E7 100%);background-size:150% auto;height: 30px;color:#fff;display: flex;    align-items: center;    justify-content: center;    gap: 3px;    z-index: 10;    font-size:13px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    animation: gradient2 1.5s linear infinite;    width: 100%;}
+.timesaleWrap2-temp {position: absolute;left:0px;bottom:0px;background: #6eb1eb;height: 30px;color:#fff;display: flex;align-items: center;justify-content: center;gap: 3px;z-index: 10;    font-size:13px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    width: 100%;}
+
+.ico-timesale1-temp {background: url('https://mycarsave.lotterentacar.net/mobile/images/icon/ico-timesale.png') center;background-size: 12px auto;width: 12px;height: 12px;margin:0 5px}
+.ico-timesale2-temp {background: url('https://mycarsave.lotterentacar.net/mobile/images/icon/ico-timesale2.png') center;background-size: 12px auto;width: 12px;height: 12px;margin:0 5px}
+/* 모바일 리스트형 임시 타임딜 - 한정특가 영역 추가 시 삭제 */
+
+/* 모바일 리스트형 연식, 주행거리 */
+.list-content .list-type-common.cols-2 .list-detail .list-option span {
+    position: relative;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+}
+
+
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" /><!-- for sub style -->
+<link rel="stylesheet" href="css/process.css" type="text/css" /><!-- for sub style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <div class="layout--popup--wrap">
+        <div class="layout--header">
+          <header>
+            <h2 class="page-title">제휴카드 혜택 안내</h2>
+            <button type="button" class="ir bt-page-close" onClick={closeModal}>페이지 닫기</button>
+          </header>
+        </div>
+  
+        <main class="layout--containter ctn ">
+			<div class="main-card-sec">
+				<div class="swiper-container alliance-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="img-wrap">
+								<img src='./images/rent_new/card_test01.png' alt="카드 이미지"/>
+							</div>
+							<div class="txt-wrap">
+								<dl>
+									<dt>
+										MY RENTAL+ 롯데카드
+									</dt>
+									<dd>
+										장기렌터카 대여료 월 최대 3만원 할인에
+										그린카/세차클링 혜택까지!
+									</dd>
+								</dl>
+								<div class="now">
+									<span>now</span>
+									<p>제휴카드 결제시 <strong>월 최대 3만원 청구할인!</strong></p>
+									<p class="desc">
+										자세한 내용은 우리카드 홈페이지(www.wooribank.com)와
+										발급전용 ARS(1800-4195)로 확인해주세요.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img-wrap">
+								<img src='./images/rent_new/card_test02.png' alt="카드 이미지"/>
+							</div>
+							<div class="txt-wrap">
+								<dl>
+									<dt>
+										롯데렌터카 신차장EV +우리카드
+									</dt>
+									<dd>
+										장기렌터카 렌탈료 최대 25,000원 할인에 
+										주유 최대 리터당 100원 + 전기차 충전 
+										최대 50% 할인 혜택까지!
+									</dd>
+								</dl>
+								<div class="now">
+									<span>now</span>
+									<p>제휴카드 결제시 <strong>월 최대 3만원 청구할인!</strong></p>
+									<p class="desc">
+										자세한 내용은 우리카드 홈페이지(www.wooribank.com)와
+										발급전용 ARS(1800-4195)로 확인해주세요.
+									</p>
+								</div>
+							</div>
+						 </div>
+					</div>
+					<div class="btn-custom">
+						<div class="swiper-button-next"></div>
+    					<div class="swiper-button-prev"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+        </main>
+      </div>
+
+    <!-- 버튼 -->
+	<div class="btn-wrap btn-fixed">
+		<button class="contract">카드혜택 자세히 보기</button>
+	</div>
+
+	<script>
+		let mainCardSwiper = new Swiper('.alliance-slider', {
+            slidesPerView: 1,
+            grabCursor: true,
+            loop: false,
+			pagination: {
+			el: ".swiper-pagination",
+			},
+			navigation: {
+        	nextEl: ".btn-custom .swiper-button-next",
+        	prevEl: ".btn-custom .swiper-button-prev",
+      		},
+        });
+	</script>
+
+</body>
+</html>

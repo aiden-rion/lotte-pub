@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" /><!-- for sub style -->
+<link rel="stylesheet" href="css/mypage.css" type="text/css" /><!-- for sub style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+    <!-- layout--header 마이페이지// -->
+	<div class="layout--header">
+		<header>
+            <a href="#" class="ir bt-page-prev">뒤로가기</a>
+			<h2 class="page-title">마이카</h2>
+		</header>
+	
+	</div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter mycar">
+        <!-- tip -->
+        <div class="tip-box-fixed" id="alertTip01">
+            <span>TIP</span>
+            <p>
+                선납금 또는 보증금을 납부하지 않으면, 해당 계약은 7일 후 <br>사라집니다.
+            </p>
+            <button type="button" class="ir" onclick="ui.modalPopClose(alertTip01);">닫기</button>
+        </div>
+        
+        <div class="cont-wrap">
+            <div class="top-bar">
+                <span class="badge blue">계약완료</span>
+                <p class="num">승인번호 : 1357913579</p>
+            </div>
+            <div class="car-info">
+                <dl>
+                    <dt>기아 CARNIVAL KA4 (D)2.2</dt>
+                    <dd>123하4567</dd>
+                </dl>
+                <div class="img-wrap">
+                    <img src="images/rent_new/test_img4.png" alt="테스트이미지">
+                </div>
+                <ul class="info-list type01">
+                    <li>
+                        <span>계약기간</span>
+                        <p>24개월</p>
+                    </li>
+                    <li>
+                        <span>계약만료일</span>
+                        <p>2023.01.01</p>
+                    </li>
+                    <li>
+                        <span>상품명</span>
+                        <p>장기 중고차 인수옵션 일반형</p>
+                    </li>
+                    <li>
+                        <span>보험연령</span>
+                        <p>만 26세 이상</p>
+                    </li>
+                    <li>
+                        <span>정비상품</span>
+                        <p>일반정비</p>
+                    </li>
+                </ul>
+                <p class="price">
+                    <span><b>월 대여료</b> (세금 및 보험료 포함)</span>
+                    <strong>450,000원</strong>
+                </p>
+            </div>
+            <div class="btn-wrap gap">
+                <button type="button" class="btn type01">후기 작성하기</button>
+                <button type="button" class="btn type02">계약서 PDF 보기</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

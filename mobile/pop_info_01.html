@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" /><!-- for sub style -->
+<link rel="stylesheet" href="css/mypage.css" type="text/css" /><!-- for sub style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+    <!-- layout--header 마이페이지// -->
+	<div class="layout--header">
+		<header>
+            <h2 class="page-title">차량 상세정보</h2>
+            <button type="button" class="ir bt-page-close">닫기</button>
+		</header>
+	</div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter mycar">
+        <div class="cont-wrap">
+            <h1>차량 정보를 확인해 주세요.</h1>
+            <div class="swiper-container mycar-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/rent_new/mypage-swiper-test.png" alt="테스트이미지">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/rent_new/mypage-swiper-test.png" alt="테스트이미지">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/rent_new/mypage-swiper-test.png" alt="테스트이미지">
+                    </div>
+                </div>
+                <div class="swiper-pagination-custom"></div>
+            </div>
+            <p class="info-tit">기본 사양정보</p>
+            <ul class="info-list type01">
+                <li>
+                    <span>연식</span>
+                    <p>2019년식</p>
+                </li>
+                <li>
+                    <span>주행거리</span>
+                    <p>12,780km</p>
+                </li>
+                <li>
+                    <span>연료</span>
+                    <p>가솔린</p>
+                </li>
+                <li>
+                    <span>배기량</span>
+                    <p>3,300cc</p>
+                </li>
+                <li>
+                    <span>인승</span>
+                    <p>5인승</p>
+                </li>
+                <li>
+                    <span>변속기</span>
+                    <p>오토</p>
+                </li>
+                <li>
+                    <span>최초등록일</span>
+                    <p>2019.02.28</p>
+                </li>
+                <li>
+                    <span>차량번호</span>
+                    <p>00하0000</p>
+                </li>
+            </ul>
+            <p class="info-tit">차량 옵션 및 상세 점검 내역</p>
+            <ul class="info-list type01">
+                <li>
+                    <span>색상</span>
+                    <p>외장  : 녹턴 그레이 <br/>
+                        내장 : 검정색</p>
+                </li>
+                <li>
+                    <span>주요옵션</span>
+                    <p>
+                        에어백 / 네비게이션 / 후방센서 <br/>
+                        블루투스 / 열선시트 / 열선 스티어링 <br/>
+                        AUX / 후방카메라 / 파워윈도우 <br/>
+                    </p> 
+                </li>
+                <li>
+                    <span>성능점검</span>
+                    <p>
+                        단순수리 : 없음<br/>
+                        사고이력 : 없음
+                    </p>
+                </li>
+                <li>
+                    <span>보험이력</span>
+                    <p>
+                        내차피해 : 1회<br/>
+                        상대차피해 : 없음<br/>
+                        침수 보험사고 : 없음<br/>
+                        소유자변경 : 없음<br/>
+                        차량번호변경 : 없음<br/>
+                        특수용도이력 : 있음
+                    </p>
+                </li>
+                <li>
+                    <span>관리이력</span>
+                    <p>
+                        2023.07.04 | 엔진오일 교환<br/>
+                        2023.07.04 | 실내클리너
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        let mycarSwiper = new Swiper('.mycar-slider', {
+            slidesPerView: '1',
+            grabCursor: true,
+            spaceBetween: 26,
+            loop: false,
+            pagination: {
+                el: '.swiper-pagination-custom',
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return ('0' + number).slice(-2);
+                },
+                formatFractionTotal: function (number) {
+                    return ('0' + number).slice(-2);
+                },
+                renderFraction: function (currentClass, totalClass) {
+                    return '<span class="' + currentClass + '"></span>' +
+                        ' / ' +
+                        '<span class="' + totalClass + '"></span>';
+                },
+            }
+        });
+    </script>
+</body>
+</html>

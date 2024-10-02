@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" /><!-- for sub style -->
+<link rel="stylesheet" href="css/mypage.css" type="text/css" /><!-- for sub style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+    <!-- layout--header 마이페이지// -->
+	<div class="layout--header">
+		<header>
+			<h2 class="page-title">계약서 PDF 보기</h2>
+            <button type="button" class="ir bt-page-close">닫기</button>
+		</header>
+	</div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter mypage">
+        <div class="cont-wrap">
+            <div class="pdf-wrap">
+                <img src="images/rent_new/test_pdf.png" alt="테스트이미지">
+                <img src="images/rent_new/test_pdf.png" alt="테스트이미지">
+                <img src="images/rent_new/test_pdf.png" alt="테스트이미지">
+                <img src="images/rent_new/test_pdf.png" alt="테스트이미지">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let mycarSwiper = new Swiper('.review-slider', {
+            slidesPerView: '1',
+            grabCursor: true,
+            spaceBetween: 26,
+            loop: false,
+            pagination: {
+                el: '.swiper-pagination-custom',
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return ('0' + number).slice(-2);
+                },
+                formatFractionTotal: function (number) {
+                    return ('0' + number).slice(-2);
+                },
+                renderFraction: function (currentClass, totalClass) {
+                    return '<span class="' + currentClass + '"></span>' +
+                        ' / ' +
+                        '<span class="' + totalClass + '"></span>';
+                },
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="time" clip-path="url(#clip0_2451_6001)">
+<g id="icon_timer">
+<path id="Vector" d="M10 17C13.866 17 17 13.866 17 10C17 6.134 13.866 3 10 3C6.134 3 3 6.134 3 10C3 13.866 6.134 17 10 17Z" stroke="#1A1A1A" stroke-width="1.2" stroke-linejoin="round"/>
+<path id="Vector_2" d="M10.0004 6L10 10.1029L13 13" stroke="#1A1A1A" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2451_6001">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
