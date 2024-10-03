@@ -27,7 +27,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .mainCon3{position:relative;z-index:10;background:#fff;} 
 .mainVisualBx{position:relative;}
 .visualTxt{position:relative;width:100%; overflow: hidden;}
-.visualTxt .vsLeft{position:relative;background:#FFC85A;transition: 0.8s;transition-timing-function: ease; display:flex;justify-content:center;align-items:center;}
+.visualTxt .vsLeft{position:relative;background:url('../../images/renew/icon/video_cover.svg') no-repeat cover;transition: 0.8s;transition-timing-function: ease; display:flex;justify-content:center;align-items:center;}
 .visualTxt .vsRight{position:relative;background:#FFC85A;transition: 0.8s;transition-timing-function: ease;display:flex;justify-content:center;align-items:center;}
 /*.visualTxt .vsLeft.active.intro{width:100%;}*/
 .visualTxt > div{position:relative;height:100vh;box-sizing: border-box;text-align: center;text-align:center;overflow:hidden;}
