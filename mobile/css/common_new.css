@@ -8,9 +8,9 @@ body {
     background:#fff;
     overflow-x:hidden;
     /* touch-action: none; */
-    -webkit-overflow-scrolling: none;
+    /* -webkit-overflow-scrolling: none; */
     /* overflow: hideen; */
-    overscroll-behavior: none;
+    /* overscroll-behavior: none; */
 }
 img {border:0;max-width:100%;}
 table {width:100%;border-collapse:collapse;border-spacing:0;}
