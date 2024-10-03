@@ -9,7 +9,7 @@ body {
     overflow-x:hidden;
     touch-action: none;
     -webkit-overflow-scrolling: none;
-    overflow: hideen;
+    /* overflow: hideen; */
     overscroll-behavior: none;
 }
 img {border:0;max-width:100%;}

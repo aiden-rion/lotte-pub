@@ -31,7 +31,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .visualTxt .vsRight{position:relative;background:#FFC85A;transition: 0.8s;transition-timing-function: ease;display:flex;justify-content:center;align-items:center;}
 /*.visualTxt .vsLeft.active.intro{width:100%;}*/
 .visualTxt > div{position:relative;height:100vh;box-sizing: border-box;text-align: center;text-align:center;overflow:hidden;}
-.visualTxt > div a{display:inline-block;position: relative;z-index:5;width: 55%;top: -100px;}
+.visualTxt > div a{display:inline-block;position: relative;z-index:5;width: 55%;top: -10em;}
 .visualTxt > div a .vsTit{animation:txtLeft 1s ease-in-out both ;display:block;font-size:1.0em;font-weight:700;color:#fff;line-height:28px;}
 .visualTxt > div a .vsEx{animation:txtLeft 1s 0.3s ease-in-out both ;display:block;font-size:1.50em;font-weight:700;color:#fff;}
 
@@ -70,8 +70,8 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 
 .mainVisualBx .srhBx{animation:txtTop 1s 0.3s ease-in-out both ;position: fixed;display: block;width:100%;text-align:center; margin-top: 48px; bottom: 143px;}
 .mainVisualBx .srhBx .iconSroll{animation:downScroll 1.8s ease-out infinite;display:none;width:40px;height:40px;margin:20px auto 0;background:url(../../images/renew/ic_scroll.png) no-repeat center center;} 
-.mainVisualBx .srhBx .btnSrhOpen{width:calc(100% - 52px);height:64px;display:inline-block;padding-left:30px;margin:12px 26px 0;font-size:16px;font-weight:400;color:#999999;line-height:24px;border-radius:64px;background:#fff url(../../images/renew/ic_srh.png) no-repeat 92% center;box-sizing: border-box;text-align:left; border: 2px solid #ff3333;} 
-.mainVisualBx .srhBx .txt{font-size:20px;font-weight:600;color:#fff;line-height:36px;} 
+.mainVisualBx .srhBx .btnSrhOpen{width:calc(100% - 3.25em);height:4em;display:inline-block;padding-left:1.88em;margin:12px 26px 0;font-size:16px;font-weight:400;color:#999999;line-height:24px;border-radius:64px;background:#fff url(../../images/renew/ic_srh.png) no-repeat 92% center;box-sizing: border-box;text-align:left; border: 2px solid #ff3333;} 
+.mainVisualBx .srhBx .txt{font-size:1.25em;font-weight:600;color:#fff;line-height:36px;} 
 .mainVisualBx .srhBx .txt .countNum{color:#FF0000;font-weight:900;} 
 
 .quickBan{display:none;position:fixed;z-index:20;right:40px;bottom:60px;width:68px;}
