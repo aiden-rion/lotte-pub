@@ -4,7 +4,14 @@
 * {margin:0;padding:0;box-sizing:border-box;font-family:'pretendard', 'Noto Sans KR', sans-serif;font-feature-settings: "tnum"}
 html {background: #fff !important;}
 html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a {line-height:1.5;color:#1A1A1A;font-size:14px;font-weight:400;}
-body {background:#fff;overflow-x:hidden;}
+body {
+    background:#fff;
+    overflow-x:hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hideen;
+    overscroll-behavior: none;
+}
 img {border:0;max-width:100%;}
 table {width:100%;border-collapse:collapse;border-spacing:0;}
 
