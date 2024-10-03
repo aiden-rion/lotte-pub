@@ -113,29 +113,54 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .btnSrhClose{position:absolute;left:50%;bottom:5%; width:60px;height:60px;margin:0 0 0 -25px;background: url(../../images/renew/btn_close.png) no-repeat center center;  font-size:0;line-height:0;text-indent: -9999px;border-radius: 50%;border:2px solid #Fff;}
 
 
-/* 메인 하단 배너 */
+/* 금융영역으로 변경 */
 .mainBannerWrap .conTit{
-	font-size:28px;font-weight:800;color:#111;text-align:center;
+	font-size:1.75em;font-weight:800;color:#111;text-align:center;
 	display: flex;
 	justify-content: center;
 	margin-top: 48px;
 }
-.mainBanList{display:flex;justify-content:space-between;width:100%;margin:0 auto;padding:48px 0 0;flex-direction: column;align-items: center;}
+.mainBannerWrap .subTitle{
+    font-size:1em;font-weight:300;color:#999; text-align:center;
+    margin-top:10px;
+}
+.mainBannerWrap ul{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    margin:30px 16px 0;
+}
+.mainBannerWrap ul li{
+    text-align:center;
+    border:1px solid #ddd;
+    border-radius:12px;
+    text-align:center;
+    padding:19px 0;
+    width:100%;
+}
+.mainBannerWrap ul li a img{
+    width:48px; height:48px;
+    display:block;
+    margin:0 auto;
+}
+.mainBannerWrap ul li a span{
+    display:block;
+    
+}
+
+/*배너영역으로 활용시*/
+/* .mainBanList{display:flex;justify-content:space-between;width:100%;margin:0 auto;padding:48px 0 0;flex-direction: column;align-items: center;}
 .mainBanList li{width: 100%;}
 .mainBanList li:first-child a{border-top: 1px solid #ddd;}
 .mainBanList li a{display:block;position:relative;padding:24px 40px;border-bottom: 1px solid #ddd;}
 .mainBanList li a::before{display:block;content:'';position:absolute;right:40px;top:30px;width:68px;height:68px;}
 .mainBanList li a:hover{border:1px solid #bbb;}
-.mainBanList li a:hover .banTit{color:#FF3333;}
-/* .mainBanList li a.bg1:hover::before{animation:banRotate 1.5s 2 ease;}
-.mainBanList li a.bg2:hover::before{animation:banUpDown 1.5s 2 ease;}
-.mainBanList li a.bg3:hover::before{animation:banBigSmall 1.5s 2 ease;} */
-/* .mainBanList li a.bg3:hover::before{animation:banBigSmall 1.5s infinite ease;} */
-.mainBanList li a.bg1::before{background:url(../../images/renew/ic_sellcar.png) no-repeat center center;background-size: 68px 68px;}
+.mainBanList li a:hover .banTit{color:#FF3333;} */
+/* .mainBanList li a.bg1::before{background:url(../../images/renew/ic_sellcar.png) no-repeat center center;background-size: 68px 68px;}
 .mainBanList li a.bg2::before{background:url(../../images/renew/ic_insurance.png) no-repeat center center;background-size: 68px 68px;}
 .mainBanList li a.bg3::before{background:url(../../images/renew/ic_loan.png) no-repeat center center;background-size: 68px 68px;}
 .mainBanList li a .banTit{display:block;margin-bottom:8px;font-size:18px;font-weight:600;color:#1A1A1A;}
-.mainBanList li a .banEx{font-size:14px;font-weight:400;color:#666;line-height:22px;}
+.mainBanList li a .banEx{font-size:14px;font-weight:400;color:#666;line-height:22px;} */
 
 /* 테마기획전 */
 .mainTheme{
@@ -176,18 +201,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
     color: #fff;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 4px;
-}
-.carThemeList li .saleType{
-    display: block;
-    position: absolute;
-    left: 6px;
-    bottom: 11px;
-    padding: 5px 9px;
-    font-size: 11px;
-    font-weight: 600;
-    color: #fff;
-    background: #EE2929;
-    border-radius: 15px;
+    z-index:2;
 }
 .carThemeList li .imgBx{position:relative; border-radius:5px;overflow:hidden;}
 .carThemeList li .imgBx img{width: 100%;}
@@ -237,7 +251,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .carKeywordList li{text-align:center;}
 .carKeywordList li a{position:relative;display:inline-block;width:100%;}
 .carKeywordList li .state{display:block;position:absolute;z-index:2;right:12px;top:12px;padding:8px 10px;font-size:12px;font-weight:600;color:#fff;background:rgba(0, 0, 0, 0.4);border-radius:4px;}
-.carKeywordList li .rentType:after{
+li .rentType:after{
     content:'렌트';
     display: block;
     position: absolute;
@@ -250,7 +264,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
     background: #333;
     border-radius: 15px;
 }
-.carKeywordList li .saleType:after{
+li .saleType:after{
     content:'구매';
     display: block;
     position: absolute;
@@ -447,7 +461,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .carBuyList li{text-align:center;}
 .carBuyList li a{position:relative;display:inline-block;width:100%;}
 .carBuyList li .state{display:block;position:absolute;right:12px;top:12px;padding:8px 10px;font-size:11px;font-weight:600;color:#fff;background:rgba(0, 0, 0, 0.4);border-radius:4px;}
-.carBuyList li .imgBx{border-radius:5px;overflow:hidden;}
+.carBuyList li .imgBx{border-radius:5px;overflow:hidden;position:relative;}
 .carBuyList li .imgBx img{width: 100%;}
 .carBuyList li .carTxtCon{margin-top:16px;text-align:left;}
 .carBuyList li .carTxtCon dl.txtTit{display:flex;flex-wrap:wrap;}
