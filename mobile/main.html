@@ -182,8 +182,8 @@
                 <div class="visualTxt">
                     <div class="vsLeft">
                         <a href="./buy_list.html">
-                            <h3 class="vsTit">구매하기</h3>
-                            <span class="vsEx">3일 환불보장<br>홈서비스 받고 구매하기</span>
+                            <h3 class="vsTit">믿을 수 있는 중고차 서비스</h3>
+                            <span class="vsEx">롯데렌터카 중고차 서비스<br>T CAR</span>
                             <i class="btnAroow"></i> 
                         </a>
                     </div>
@@ -193,14 +193,14 @@
                         <!-- <source src="img/video.webm" type="video/webm" /> -->
                       </video>
                     </div>
-                    <div class="vsRight">
+                    <!-- <div class="vsRight">
                         <a href="./rent_list.html">
                             <h3 class="vsTit">렌트하기</h3>
                             <span class="vsEx">초기 비용 없이<br>계약까지 단 5분!</span>
                             <i class="btnAroow"></i> 
                         </a> 
                         <div class="vsBg2"></div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="srhBx">
@@ -210,15 +210,32 @@
                 </div>  
                 <script>
                 $(window).on('scroll', function() {
-                    if ($(window).scrollTop() > 1500) {
-                        $('.srhBx').fadeOut();
+                    if ($(window).scrollTop() > 300) {
+                        $('.srhBx').css("position","static");
+                        $('.srhBx > .txt').css("color","#333");
                     } else {
-                        $('.srhBx').fadeIn();
+                        $('.srhBx').css("position","fixed");
+                        $('.srhBx > .txt').css("color","#fff");
                     }
                 });
                 </script>
 
-                <div class="srhWrap">
+                <!-- <script>
+                $(function() {
+                    $.fn.Scrolling = function(obj, tar) {
+                        var _this = this;
+                        $(window).scroll(function(e) {
+                            var end = obj + tar;
+                            $(window).scrollTop() >= obj ? _this.addClass("fixed") : _this.removeClass("fixed");
+                            if($(window).scrollTop() >= end) _this.removeClass("fixed");
+                        });
+                    };
+
+                    $(".scrBx").Scrolling($(".mainContentWrap").offset().top, ($(".mainVisualBx").height() - $(".scrBx").height()));
+                });
+                </script> -->
+
+                <!-- <div class="srhWrap">
                     <div class="mainSrhBx">
                         <p class="txt"><span class="countNum" data-start="0" data-end="1009"></span> 대의 차량이 기다리고 있어요!</p>
                         <div class="inputSrhBx">
@@ -236,7 +253,7 @@
                         </div>
                     </div>
                     <button type="button" class="btnSrhClose">닫기</button>
-                </div>
+                </div> -->
             </div> 
         </div>
 
@@ -1187,22 +1204,22 @@
         // window.addEventListener("wheel", function(e){
         //     e.preventDefault();
         // },{passive : false});
-
-        var mHtml = $("html");
-        var page = 1;
-        mHtml.animate({scrollTop : 0},10);
-        $(window).on("wheel", function(e) {
-            if(mHtml.is(":animated")) return;
-            if(e.originalEvent.deltaY > 0) {
-                if(page == 3) return;
-                page++;
-            } else if(e.originalEvent.deltaY < 0) {
-                if(page == 1) return;
-                page--;
-            }
-            var posTop =(page-1) * $(window).height();
-            mHtml.animate({scrollTop : posTop});
-        })
+        // 한페이지씩 이동하도록 코드
+        // var mHtml = $("html");
+        // var page = 1;
+        // mHtml.animate({scrollTop : 0},10);
+        // $(window).on("wheel", function(e) {
+        //     if(mHtml.is(":animated")) return;
+        //     if(e.originalEvent.deltaY > 0) {
+        //         if(page == 3) return;
+        //         page++;
+        //     } else if(e.originalEvent.deltaY < 0) {
+        //         if(page == 1) return;
+        //         page--;
+        //     }
+        //     var posTop =(page-1) * $(window).height();
+        //     mHtml.animate({scrollTop : posTop});
+        // })
 
         let themeSwiper = new Swiper('.theme-slider', {
             slidesPerView: 1,

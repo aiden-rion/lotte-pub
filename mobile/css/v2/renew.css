@@ -44,7 +44,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
   z-index: 0;
 }
 .visualTxt > div.main_bg_video .main_video_content {
-  height: 50%;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   filter: brightness(30%);
