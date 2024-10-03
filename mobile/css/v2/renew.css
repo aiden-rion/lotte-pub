@@ -68,9 +68,9 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .visualTxt > div a .btnAroow:hover{background:#1A1A1A url(../../images/renew/icon/icon_arrow_red.svg) no-repeat center center;}
 .visualTxt > div a .btnAroow i{margin: 0 auto;}
 
-.mainVisualBx .srhBx{animation:txtTop 1s 0.3s ease-in-out both ;position: fixed;display: block;width:100%;text-align:center; margin-top: 48px; bottom: 143px;}
+.mainVisualBx .srhBx{animation:txtTop 1s 0.3s ease-in-out both ;position: fixed;display: block;width:100%;text-align:center; margin-top: 48px; bottom: 120px;}
 .mainVisualBx .srhBx .iconSroll{animation:downScroll 1.8s ease-out infinite;display:none;width:40px;height:40px;margin:20px auto 0;background:url(../../images/renew/ic_scroll.png) no-repeat center center;} 
-.mainVisualBx .srhBx .btnSrhOpen{width:calc(100% - 3.25em);height:4em;display:inline-block;padding-left:1.88em;margin:12px 26px 0;font-size:16px;font-weight:400;color:#999999;line-height:24px;border-radius:64px;background:#fff url(../../images/renew/ic_srh.png) no-repeat 92% center;box-sizing: border-box;text-align:left; border: 2px solid #ff3333;} 
+.mainVisualBx .srhBx .btnSrhOpen{width:calc(100% - 3.25em);height:3.75em;display:inline-block;padding-left:1.88em;margin:12px 26px 0;font-size:16px;font-weight:400;color:#999999;line-height:24px;border-radius:64px;background:#fff url(../../images/renew/ic_srh.png) no-repeat 92% center;box-sizing: border-box;text-align:left; border: 2px solid #ff3333;} 
 .mainVisualBx .srhBx .txt{font-size:1.25em;font-weight:600;color:#fff;line-height:36px;} 
 .mainVisualBx .srhBx .txt .countNum{color:#FF0000;font-weight:900;} 
 
@@ -144,14 +144,8 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .mainThemeWrap{position:relative;}
 .mainThemeWrap .mainThemeCon{width:100%;margin:0 auto;}
 .mainThemeCon{display:flex; justify-content:space-between; position:relative; z-index:5; flex-direction:column;}
-.slideListBx{position:sticky; top:0px; left:0px;width:100%; height:calc(100vh - 532px); }
-.slideListBx .banThemeList{ height:calc(38vh - 100px); position:sticky; top:70px; left:0;
-	background: linear-gradient(
-	  to top,
-      rgba(252, 249, 243, 0) 5%,
-      rgba(252, 249, 243, 1) 15%,
-      rgba(252, 249, 243, 1) 100%
-    );
+.slideListBx{width:100%; height:calc(100vh - 49em); }
+.slideListBx .banThemeList{
 	padding: 40px 26px;
 }
 .slideListBx .banThemeList li{position:relative;height:100%;}
@@ -162,7 +156,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .slideListBx .banThemeList li dl dd.txtEx{margin-top:12px;font-size:16px;font-weight:400;color:#666666;line-height:24px;}
 .slideListBx .banThemeList li a{position:relative;display:inline-block;margin-top:32px;min-width:116px;height:36px;padding:7px 40px 7px 16px;font-size:14px;font-weight:400;color:#1A1A1A;border-radius:36px;border:1px solid #666;box-sizing:border-box;}
 .slideListBx .banThemeList li a:after{display:block;content:'';position:absolute;right:10px;top:9px;width:18px;height:18px;background:url(../../images/renew/ic_arrow.png) no-repeat 0 0;}
-.slideListBx .banThemeList li .icon1{display:block;position:absolute;right:-15px;bottom:40px;width:220px;height:121px;background:url(../../images/renew/ic_car.png) no-repeat 0 0; background-size: 220px auto;}
+.slideListBx .banThemeList li .icon1{display:block;position:absolute;right:-5%;bottom:-35px;width:220px;height:121px;background:url(../../images/renew/ic_car.png) no-repeat 0 0; background-size: 220px auto;}
 .slideListBx .banThemeList .btnView:hover{background:#1a1a1a;color:#fff;}
 
 .carThemeBx{width:100%;height:100%;}
@@ -172,12 +166,13 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .carThemeList > li a{display:block;padding:0 0 15px 0;border-radius:5px;}
 /*.carThemeList > li a:hover{animation:carThemeList 0.5s 1 ease both;}*/
 .carThemeList li .state{display:block;position:absolute;right:12px;top:12px;padding:8px 10px;font-size:12px;font-weight:600;color:#fff;background:rgba(0, 0, 0, 0.4);border-radius:4px;}
+.carThemeList li .saleType{display:block;position:absolute;left:6px;top:98px;padding:5px 7px;font-size:12px;font-weight:600;color:#fff;background:#EE2929;border-radius:15px;}
 .carThemeList li .imgBx{border-radius:5px;overflow:hidden;}
 .carThemeList li .imgBx img{width: 100%;}
 .carThemeList li .carTxtCon{margin-top:16px;}
 .carThemeList li .carTxtCon dl.txtTit{display:flex;flex-wrap:wrap;}
 .carThemeList li .carTxtCon dl.txtTit dt{font-size:14px;font-weight:700;color:#1A1A1A;line-height:20px;}
-.carThemeList li .carTxtCon dl.txtTit dd{margin-top:4px;font-size:14px;font-weight:400;color:#666666;line-height:20px;}
+.carThemeList li .carTxtCon dl.txtTit dd{margin-top:4px;font-size:12px;font-weight:400;color:#666666;line-height:20px;}
 .carThemeList li .carTxtCon dl.txtTit dd::after{display:inline-block;content:'';width:1px;height:10px;margin:0 4px;background:#DDDDDD;}
 .carThemeList li .carTxtCon dl.txtTit dd:last-child::after{display:none;}
 .carThemeList li .carTxtCon dl.txtPrice{margin-top:16px;}
@@ -216,12 +211,12 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .carKeywordBx .slick-next:hover{background:url(../../images/renew/btn_keyword_next.png) no-repeat center center;}
 .carKeywordBx .slick-next::before{display:none;}
 
-.carKeywordList{position:relative;width:1200px;margin:0 auto;}
+.carKeywordList{position:relative;width:100%;margin:0 auto;}
 .carKeywordList li{text-align:center;}
-.carKeywordList li a{position:relative;display:inline-block;width:280px;}
+.carKeywordList li a{position:relative;display:inline-block;width:100%;}
 .carKeywordList li .state{display:block;position:absolute;right:12px;top:12px;padding:8px 10px;font-size:12px;font-weight:600;color:#fff;background:rgba(0, 0, 0, 0.4);border-radius:4px;}
 .carKeywordList li .imgBx{border-radius:5px;overflow:hidden;}
-.carKeywordList li .imgBx img{width:280px;height:200px;}
+.carKeywordList li .imgBx img{width:100%;}
 .carKeywordList li .carTxtCon{margin-top:16px;text-align:left;}
 .carKeywordList li .carTxtCon dl.txtTit{display:flex;flex-wrap:wrap;height:71px;}
 .carKeywordList li .carTxtCon dl.txtTit dt{font-size:18px;font-weight:700;color:#1A1A1A;line-height:24px;}
@@ -402,7 +397,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .carBuyBx{margin:20px;}
 .carBuyList{padding:0 0 0 0;}
 .carBuyList li{text-align:center;}
-.carBuyList li a{position:relative;display:inline-block;width:172px;}
+.carBuyList li a{position:relative;display:inline-block;width:100%;}
 .carBuyList li .state{display:block;position:absolute;right:12px;top:12px;padding:8px 10px;font-size:11px;font-weight:600;color:#fff;background:rgba(0, 0, 0, 0.4);border-radius:4px;}
 .carBuyList li .imgBx{border-radius:5px;overflow:hidden;}
 .carBuyList li .imgBx img{width: 100%;}
