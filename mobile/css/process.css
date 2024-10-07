@@ -506,7 +506,7 @@ main.judge {
 }
 .ctn .info-list li p {
     max-width: 70%;
-    text-align: right;
+    text-align: left;
 }
 .complete-list ul li span, .info-list li span {
     text-align: right;
