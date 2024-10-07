@@ -23,8 +23,8 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .layout--header-new .sub-menu li a:hover{background:#F5F7FA;border-radius:10px;}
 
 /* 비쥬얼 */
-.mainCon2{position:relative;z-index:5;background:#fff;overflow-x:hidden;}
-.mainCon3{position:relative;z-index:10;background:#fff;overflow-x:hidden;} 
+.mainCon2{position:relative;z-index:5;background:#fff;overflow:hidden;}
+.mainCon3{position:relative;z-index:10;background:#fff;overflow:hidden;} 
 .mainVisualBx{position:relative;}
 .visualTxt{position:relative;width:100%; overflow: hidden;}
 .visualTxt .vsLeft{position:relative;background:url('../../images/renew/icon/video_cover.svg') no-repeat cover;transition: 0.8s;transition-timing-function: ease; display:flex;justify-content:center;align-items:center;}

@@ -1379,8 +1379,8 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
     content:'렌트';
     display: block;
     position: absolute;
-    left: 6px;
-    bottom: 7px;
+    left: 16px;
+    bottom: 6px;
     padding: 5px 9px;
     font-size: 11px;
     font-weight: 600;

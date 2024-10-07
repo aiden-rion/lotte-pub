@@ -540,6 +540,14 @@ main.judge {
     padding: 20px 26px;
     background: #F5F7FA;
 }
+.car-thumb.white a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 26px;
+    background: #FFF;
+    border-bottom:10px solid #F5F7FA;
+}
 .car-thumb a::before {
     position: absolute;
     display: block;
