@@ -1431,6 +1431,15 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
 .page-error .link {padding-top:30px;text-align:center;}
 
 /* list-common */
+
+.list-tab{
+    display:flex;
+}
+.list-tab li{
+    width:100%;
+}
+
+
 .list-head {height: 48px;padding: 0 20px; position:relative; border-top: 1px solid #efefef;background-color: #fff;/*background-color: #f1f1f1;*/display: flex; justify-content: space-between; align-items: center; margin-top: 20px;}
 .list-head .pos-r {position:absolute;right:0;top:0;}
 .list-head .list-total-count {font-size:13px;font-weight:300; color: #303030;letter-spacing: -0.1px; /*margin-top: 30px;*/}
