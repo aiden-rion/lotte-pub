@@ -514,6 +514,47 @@ main.judge {
 .complete-list p {
     font-weight: 700;
 }
+
+.complete-list-total{
+    border:1px solid #1A1A1A;
+    margin-top:20px;
+    border-radius:10px;
+}
+.complete-list-total .tit {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.36px;
+}
+.complete-list-total ul {
+    padding: 24px ;
+    background-color: #fff;
+    border-radius: 12px;
+}
+.complete-list-total ul li{
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    letter-spacing: -0.28px;
+    align-items: center;
+}
+.complete-list-total ul li:last-child{
+    margin-bottom: 0;
+}
+.complete-list-total ul li p{
+    min-width: 27%;
+}
+.complete-list-total ul li span {
+    text-align: right;
+    font-size: 1.25em;
+    color:#ff3333;
+    font-weight:800;
+}
+.complete-list-total p {
+    font-weight: 700;
+}
+
+
 .complete .banner-wrap {
     width: 100%;
     height: 120px;
@@ -702,6 +743,10 @@ main.judge {
     justify-content: space-between;
     align-items: center;
 }
+.direct_info_step .info-list{
+    margin-bottom:35px;
+}
+
 .step-sec {
     display: flex;
     justify-content: space-between;
@@ -808,7 +853,7 @@ section.border-bt:last-child {
 .desc {
     margin-top: 8px;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: -0.26px;
     color: #999;
 }

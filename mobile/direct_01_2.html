@@ -152,8 +152,8 @@
             <p>약관동의</p>
             <ul>
                 <li class="complete"></li>
-                <li class="on">2</li>
-                <li>3</li>
+                <li class="complete"></li>
+                <li class="on">3</li>
             </ul>
         </div>
         <div class ="car-thumb white">
@@ -169,51 +169,32 @@
             </a>
         </div>
 
-        <section>
+        <section class="direct_info_step border-none">
             <div class="sec-tit">
                 <div class="flex">
                     <h1>명의자 정보입력</h1>
                 </div>
-                <a href="" class="btn-more">기본정보 수정</a>
             </div>
-            <div class="input-item">
-                <p class="tit">개인/사업자 선택<em class="ess">*</em></p>
-                <select id="income">
-                    <option value="" selected>(개인) 김롯데</option>
-                    <option value="">(사업자) 김롯데 사업자</option>
-                </select>
-            </div>
-            <div class="input-item">
-                <div class="tit">이름<em class="ess"></em></div>
-                <div class="datebox-wrap">
-                    <div class="dateBox basic">
-                        <span class="ip-wrap"><input type="text" placeholder="김롯데" readonly /></span>
-                    </div>
-                </div>
-            </div>
-            <div class="input-item">
-                <div class="tit">생년월일<em class="ess">*</em></div>
-                <div class="datebox-wrap">
-                    <div class="dateBox basic">
-                        <span class="ip-wrap"><input type="text" placeholder="1983-01-01" readonly /></span>
-                    </div>
-                </div>
-            </div>
-            <div class="input-item">
-                <p class="tit">성별<em class="ess">*</em></p>
-                <select id="income">
-                    <option value="" selected>선택</option>
-                    <option value="">남자</option>
-                    <option value="">여자</option>
-                </select>
-            </div>
-            <div class="input-item">
-                <div class="tit">휴대폰번호<em class="ess"></em></div>
-                <div class="datebox-wrap">
-                    <div class="dateBox basic">
-                        <span class="ip-wrap"><input type="text" placeholder="010-1234-1234" readonly /></span>
-                    </div>
-                </div>
+            <div class="info-list">
+                <ul>
+                    <li>
+                        <p>이름</p>
+                        <span>김롯데</span>
+                    </li>
+                    <li>
+                        <p>이메일</p>
+                        <span>kimlotte@lotte.net</span>
+                    </li>
+                    <li>
+                        <p>생년월일/성별</p>
+                        <span>123456-1</span>
+                    </li>
+    
+                    <li>
+                        <p>휴대폰번호</p>
+                        <span>010-1234-1234</span>
+                    </li>
+                </ul>
             </div>
 
             <div class="sec-tit">
@@ -246,71 +227,53 @@
                     </li>
                 </ul>
             </div>
-        </section>
 
+            <div class="sec-tit">
+                <div class="flex">
+                    <h1>차량배송지역</h1>
+                </div>
+            </div>
+            <div class="info-list">
+                <ul>
+                    <li>
+                        <p>시/도</p>
+                        <span>서울특별시</span>
+                    </li>
+                    <li>
+                        <p>시군구</p>
+                        <span>강남구</span>
+                    </li>
+                </ul>
+            </div>
 
-        <section class="border-none">
-            <div class="tab-wrap mt10">
-                <div class="sec-tit">
-                    <div class="flex">
-                        <h1>공동명의 정보</h1>
-                    </div>
+            <div class="sec-tit">
+                <div class="flex">
+                    <h1>공동명의 정보</h1>
                 </div>
-                <div class="tab type01">
-                    <button type="button" data-tab="tab1" class="">단독명의로 구매해요</button>
-                    <button type="button" data-tab="tab2" class="on">공동명의자가 있어요</button>
-                </div>
-                <div class="tab-content" id="tab1"></div>
-                <div class="tab-content on" id="tab2">
-                    <div class="input-item">
-                        <p class="tit">개인/사업자 선택<em class="ess">*</em></p>
-                        <select id="income">
-                            <option value="" selected>(개인) 김롯데</option>
-                            <option value="">(사업자) 김롯데 사업자</option>
-                        </select>
-                    </div>
-                    <div class="input-item">
-                        <div class="tit">이름<em class="ess">*</em></div>
-                        <div class="datebox-wrap">
-                            <div class="dateBox basic">
-                                <span class="ip-wrap"><input type="text" placeholder="이름을 입력하세요"/></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-item">
-                        <div class="tit">생년월일<em class="ess">*</em></div>
-                        <div class="datebox-wrap">
-                            <div class="dateBox basic">
-                                <span class="ip-wrap"><input type="text" placeholder="YYYY-MM-DD"/></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-item">
-                        <p class="tit">성별<em class="ess">*</em></p>
-                        <select id="income">
-                            <option value="" selected>선택</option>
-                            <option value="">남자</option>
-                            <option value="">여자</option>
-                        </select>
-                    </div>
-                    <div class="input-item">
-                        <div class="tit">명의자 지분율<em class="ess">*</em></div>
-                        <div class="datebox-wrap">
-                            <div class="dateBox basic">
-                                <span class="ip-wrap"><input type="text" placeholder="명의자의 지분율 입력"/></span>
-                            </div>
-                        </div>
-                        <p class="desc">명의자 지분율 입력 시, 공동명의자 지분율이 자동 계산됩니다.</p>
-                    </div>
-                    <div class="input-item">
-                        <div class="tit">공동명의자 지분율</div>
-                        <div class="datebox-wrap">
-                            <div class="dateBox basic">
-                                <span class="ip-wrap"><input type="text" placeholder="공동명의자의 지분율" readonly /></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="info-list">
+                <ul>
+                    <li>
+                        <p>개인/사업자</p>
+                        <span>개인</span>
+                    </li>
+                    <li>
+                        <p>이름</p>
+                        <span>김롯데</span>
+                    </li>
+                    <li>
+                        <p>생년월일/성별</p>
+                        <span>123456-1</span>
+                    </li>    
+                    <li>
+                        <p>명의자 지분율</p>
+                        <span>99%</span>
+                    </li>
+                    <li>
+                        <p>공동명의자 지분율</p>
+                        <span>1%</span>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
@@ -360,7 +323,7 @@
         </div>
         <div class="btn-wrap">
             <button type="button">상담 신청하기</button>
-            <button type="button" class="contract" onclick="location.href='./direct_01_2.html'">다음</button>
+            <button type="button" class="contract" onclick="location.href='./direct_01_3.html'">다음</button>
         </div>
     </div>
 </body>

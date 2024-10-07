@@ -126,9 +126,13 @@ button {border:0;background:0;cursor:pointer;outline:none;transition: all 0.1s;}
 }
 .input-item .tit-wrap span {
     line-height: 1;
-}.form-sec .tit, .ex-box .tit, .input-item .tit {
+}
+.form-sec .tit, .ex-box .tit, .input-item .tit {
      margin-bottom:8px;
- }
+}
+.form-sec .tit, .ex-box .tit, .input-item .ess{
+    color:#ff3333;
+}
 
 .flex {
     display: flex;
