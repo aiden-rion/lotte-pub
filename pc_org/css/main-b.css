@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* main layout */
+.body-ctn-main:before {content:"";position:absolute;left:0;right:0;top:80px;display:block;border-top:1px solid #E9E9E9;}
+.body-ctn-main .layout--header {z-index:100;background:#fff;}
+.body-ctn-main .layout--header header {height:81px;}
+.body-ctn-main .layout--container {width:100%;padding:0;}
+.body-ctn-main .layout--footer {position:relative;z-index:100;background:#fff}
+
+/* main-type1 */
+.ctn-main {height:1300px}
+.main-container {position:relative;height:1300px;overflow:hidden;background:#000;}
+.main-building-container {position:absolute;left:50%;top:40%;transform:translate(-50%, -50%);width:2400px;height:1500px;}
+.main-building-container .main-building {position:absolute;top:0;left:0;right:0;width:100%;height:1500px;background:#000 url("../images/main/type-b-bg.jpg") no-repeat 50% 50%;background-size:2400px;z-index:10}
+.main-building-container .link-area {position:absolute;width:1550px;height:600px;left:50%;top:750px;transform:translate(-50%, -50%);}
+.main-building-container .link-area button {position:absolute;transition:all .2s}
+.main-building-container .ele-car {position:absolute;top:690px;left:50%;transform:translate(-43%, 0%);width:1434px;height:582px;background:url("../images/main/type-b-car.png") no-repeat;}
+.main-building-container .link-area .car1 {width:482px;height:310px;top:327px;left:158px;opacity:0;}
+.main-building-container .link-area .car1:hover:before {content:"";position:absolute;top:-218px;left:0px;display:block;width:546px;height:432px;background:url("../images/main/type-b-car-txt1.png") no-repeat;}
+.main-building-container .link-area .car1:after {content:"";position:absolute;top:-80px;left:168px;display:block;width:67px;height:87px;background:url("../images/main/type-b-arr1.png") no-repeat;
+    animation-name: moveAni;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.main-building-container .link-area .car1:hover {background:url("../images/main/type-b-car-on1.png") no-repeat;opacity:1}
+.main-building-container .link-area .car2 {width:612px;height:487px;top:335px;left:980px;opacity:0;}
+.main-building-container .link-area .car2:hover:before {content:"";position:absolute;top:-247px;left:165px;display:block;width:546px;height:431px;background:url("../images/main/type-b-car-txt2.png") no-repeat;}
+.main-building-container .link-area .car2:after {content:"";position:absolute;top:-100px;left:346px;display:block;width:67px;height:86px;background:url("../images/main/type-b-arr2.png") no-repeat;
+    animation-name: moveAni;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.main-building-container .link-area .car2:hover {background:url("../images/main/type-b-car-on2.png") no-repeat;opacity:1}
+
+@keyframes moveAni {
+    0% {transform:translateY(-5px);opacity:0;}
+    100% {transform:translateY(10px);opacity:1;}
+}
+
+.popup_list {width:1250px;}
+.popup_list .pop-head {height:85px;}
+.popup_list .pop-head img {display:block;padding-left:5px;padding-top:20px;}  
+.popup_list .pop_close {right:-50px;background:url("../images/icon/ico-close-layer-white.svg") no-repeat 50% 50%}

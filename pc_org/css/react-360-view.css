@@ -1,0 +1,308 @@
+
+/* v360 */
+#react360view .v360-main {
+    width: 100%;
+    height: 100%;
+    max-width: 1024px;
+    margin: 20px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+/* HEADER */
+
+#react360view .v360-header {
+    /* width: calc(100% - 20px); */
+    background-color: #000;
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    /* text-shadow: 1px 1px #000000; */
+    flex: 0 1 auto;
+}
+
+/* VIEWER */
+
+#react360view #productInsert {
+    background-color: #FFF;
+    width: 100%;
+    height: calc(100vh - 184px);
+    max-height: 768px;
+    position: relative;
+    overflow: hidden;
+}
+
+#react360view .v360-fullscreen #productInsert {
+    height: 100vh;
+    max-height: none;
+}
+
+#react360view #viewport-wrapper {
+    width: 100%;
+    height: calc(100% - 10px);
+    margin: 5px auto;
+    position: absolute;
+    left: 0;
+    transition: width 0.3s ease;
+}
+#react360view .v360-viewport {
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* position: absolute; */
+    left: 0;
+    /* transition: width 0.3s ease; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#react360view #viewport-wrapper.wide {
+    width: 100%;
+}
+
+#react360view .v360-viewport iframe {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* left: 50%;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    transform-origin: center center; */
+}
+
+#react360view .v360-viewport img {
+    position: relative;
+}
+
+
+/* FULLSCREEN & MENU TOGGLE BUTTONS */
+
+#react360view .v360-fullscreen-toggle{
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+    position: absolute;
+    /* color: #999;
+    fill: #999; */
+    float: right;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    z-index: 150;
+}
+
+#react360view .v360-fullscreen-toggle:hover {
+    fill: #000;
+}
+/*
+.v360-fullscreen-toggle div:last-child {
+    display: none;
+} */
+
+#react360view .v360-fullscreen {
+    z-index: 9999;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#react360view .v360-fullscreen .v360-header,
+#react360view .v360-fullscreen #v360-menu-btns {
+    border-radius: 0;
+}
+
+#react360view .v360-fullscreen productInsert {
+    height: calc(100vh - 95px);
+    max-height: none;
+}
+
+#react360view .ui-accordion-header {
+    background-color: #B0BEC5;
+    outline: none;
+    line-height: 1.5em;
+    transition: all 0.3s ease;
+}
+
+#react360view .ui-accordion-header:hover,
+#react360view .ui-accordion-header.ui-state-active {
+    background-color: #607D8B;
+    color: #FFF;
+}
+
+/* MENU BUTTONS */
+
+#react360view #v360-menu-btns {
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    /* position: absolute; */
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 150;
+}
+
+#react360view .light{
+    background-color: #fff !important;
+}
+
+#react360view .dark{
+    background-color: #000 !important;
+}
+
+#react360view .v360-menu-btns {
+    /* background-color: #999; */
+    width: auto;
+    min-height: 20px;
+    margin: 5px 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 1em;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+}
+/*
+.v360-btn-active{
+    background-color: #000;
+} */
+
+#react360view .light .v360-menu-btns {
+    color: #000;
+}
+
+#react360view .dark .v360-menu-btns {
+    color: #fff;
+}
+
+/* .light .v360-btn-active{
+    color: #fff;
+} */
+
+#react360view .light .v360-menu-btns:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+#react360view .dark .v360-menu-btns:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+#react360view .v360-main {
+    filter: alpha(opacity=50);
+    /* opacity: 0.5; */
+    cursor: default;
+    /* pointer-events: none; */
+}
+
+#react360view #v360-image-container {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+
+#react360view .v360-image-container {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+
+#react360view .v360-product-box-shadow{
+    position: absolute;
+    /* z-index: 99; */
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    box-shadow: rgb(34, 34, 34) 0px 0px 100px inset;
+}
+
+#react360view .v360-fullscreen-toggle-btn i{
+    /* background-color: #fff; */
+    font-size: 20px;
+}
+#react360view .v360-spinner-grow{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    background-color: rgb(33, 37, 41);
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-animation: spinner-grow .75s linear infinite;
+    animation: spinner-grow .75s linear infinite;
+}
+#react360view .v360-percentage-description{
+    margin-left: 2rem;
+}
+
+
+/* Tooltip */
+
+#react360view .tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+#react360view .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#react360view .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+#react360view .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#react360view .tooltip{
+    opacity: 1 !important;
+}

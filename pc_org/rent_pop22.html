@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body>
+
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter">
+    </main>
+
+
+    <!--  팝업   -->
+    <div class="layer_popup_wrappper rent-pop" id="alertPop01" style="display: block;">
+        <div class="layer_popup review">
+            <div class="pop_inner">
+                <div class="pop-head">
+                    <h2>내가 남긴 후기</h2>
+                    <button class="ir btn-close" onclick="ui.modalPopClose(alertPop01);">팝업닫기</button>
+                </div>
+                <div class="pop-contents">
+                    <p class="review-tit">기아 K8 하이브리드 너무 좋아요</p>
+                    <div class="rating-wrap">
+                        <div class="star-wrap small" id="ratingStar">
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star"></span>
+                        </div>
+                        <p>(4)</p>
+                    </div>
+                    <!-- 이미지 등록시 -->
+                    <div class="swiper-container review-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="img-wrap">
+                                    <img src="images/rent_new/mypage/swiper_test.png" alt="테스트이미지">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="img-wrap">
+                                    <img src="images/rent_new/mypage/swiper_test.png" alt="테스트이미지">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="img-wrap">
+                                    <img src="images/rent_new/mypage/swiper_test.png" alt="테스트이미지">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination-custom"></div>
+                    </div>
+                    <div class="txt-box">
+                        롯데에서 구매한 차량이 도착하지도 않았는데 신뢰감이 가고 편합니다. 롯데를 통해 구매하게 된 것은 지인 추천도 있고, 개인적으로 호객 행위를 좋아하지 않기 떄문입니다. 롯데오토마켓에서 구매한 차량은 매장
+                        방문도 하지 않았고, 롯데오토마켓에서 준비한 사진들과 문서만으로 충분히 검토하여 비대면 온라인 구매를 진행했습니다. 가장 감동적이었던 것은 결제 시스템이었습니다.
+                        굳이 상담사와 통화할 필요 없이, 결제 시스템이 엄청나게 잘 되어 있습니다. 실제 결제할 떄에는 차량 가액에 관리비, 보증비, 등록신청대행수수료, 배송비, 이전비가 추가되는데 놀라운 것은 각각의 항목을
+                        현금으로 할 것인지 카드로 할 것인지 선택할 수 있습니다. 차량가 일부는 현금 일부는 카드 결제도 가능하며 카드도 여러 장을 이용해 원하는 금액으로 지정하여 결제가 가능합니다.
+                    </div>
+                    <div class="review-info">
+                        <p>서** 님</p>
+                        <span>2022년 09월 06일</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+
+    <script>
+        const mycarSwiper = new Swiper('.review-slider', {
+            slidesPerView: '1',
+            grabCursor: true,
+            spaceBetween: 26,
+            loop: false,
+            pagination: {
+                el: '.review-slider .swiper-pagination-custom',
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return ('0' + number).slice(-2);
+                },
+                formatFractionTotal: function (number) {
+                    return ('0' + number).slice(-2);
+                },
+                renderFraction: function (currentClass, totalClass) {
+                    return '<span class="' + currentClass + '"></span>' +
+                        ' / ' +
+                        '<span class="' + totalClass + '"></span>';
+                },
+            }
+        });
+    </script>
+</body>
+</html>

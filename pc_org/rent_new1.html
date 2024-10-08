@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body>
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter process">
+        <div class="cont-wrap">
+            <div class="page-tit">
+                <h2>다이렉트 견적</h2>
+            </div>
+            <div class="process-cont-wrap">
+                <div class="option-wrap">
+                    <div class="option-sec">
+                        <h3>계약 조건 선택</h3>
+                        <!-- tip -->
+                        <article class="tip-wrap">
+                            <span>TIP</span><p>현재 인기 계약 조건은 36개월 선납금 30% 2만km입니다!</p>
+                        </article>
+                        <div class="input-wrap">
+                            <div class="input-item">
+                                <div class="tit-wrap">
+                                    <span>계약기간</span>
+                                </div>
+                                <div class="radio-wrap">
+                                    <div class="radio">
+                                        <input type="radio" id="month_01" name="month_01" value="" checked/>
+                                        <label for="month_01"> 12개월</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="month_02" name="month_01" value=""/>
+                                        <label for="month_02"> 24개월</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="3" name="month_01" value=""/>
+                                        <label for="3"> 36개월</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-item">
+                                <div class="tit-wrap">
+                                    <span>주행거리</span>
+                                </div>
+                                <div class="radio-wrap">
+                                    <div class="radio">
+                                        <input type="radio" id="radio4" name="radio4" value="" checked/>
+                                        <label for="radio4"> ~1만km</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio5" name="radio4" value=""/>
+                                        <label for="radio5"> ~2만km</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio6" name="radio4" value=""/>
+                                        <label for="radio6"> ~3만km</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio7" name="radio4" value=""/>
+                                        <label for="radio7"> 무제한</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-wrap">
+                            <button type="button" class="accordion-header">계약조건에 대해 궁금하신가요?</button>
+                            <div class="accordion-content">
+                                <div class="grey-box">
+                                    <p class="tit">약정 주행거리란?</p>
+                                    <b>주행 거리 초과 위약금</b>
+                                    <ul class="info-txt">
+                                        <li>계약종료시 다음과 같은 산식으로 주행거리초과위약금을 부담하여야 함. 중도해지 시 실제 이용기간을 적용하여 산정함.</li>
+                                        <li>주행거리초과위약금 = {실주행거리 - [연간약정주행거리 × 계약기간(년)] - [500km ÷ 365 × 계약유지일수]} × 차종별 위약금 (VAT 별도)</li>
+                                        <li>계약종료시 다음과 같은 산식으로 주행거리초과위약금을 부담하여야 함. 중도해지 시 실제 이용기간을 적용하여 산정함.</li>
+                                    </ul>
+                                    <table>
+                                        <tr>
+                                            <td>배기량</td>
+                                            <td>1,600cc 미만</td>
+                                            <td>2,000cc 미만</td>
+                                            <td>2,000cc 이상</td>
+                                            <td>전기차</td>
+                                            <td>수입차</td>
+                                        </tr>
+                                        <tr>
+                                            <td>위약금</td>
+                                            <td>60원 / km</td>
+                                            <td>80원 / km</td>
+                                            <td>100원 / km</td>
+                                            <td>100원 / km</td>
+                                            <td>200원 / km</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <button type="button" class="close-button">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-sec">
+                        <h3>보증 조건 선택</h3>
+                        <!-- tip -->
+                        <article class="tip-wrap">
+                            <span>TIP</span><p>현재 인기 보증 조건은 선납금 20% 입니다!</p>
+                        </article>
+                        <div class="input-wrap">
+                            <div class="input-item">
+                                <div class="tit-wrap">
+                                    <span>보증조건(선납금)</span> 
+                                </div>
+                                <div class="radio-wrap">
+                                    <div class="radio">
+                                        <input type="radio" id="radio8" name="radio8" value="" checked/>
+                                        <label for="radio8"> 0%</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio9" name="radio8" value=""/>
+                                        <label for="radio9"> 10%</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio10" name="radio8" value=""/>
+                                        <label for="radio10"> 20%</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio11" name="radio8" value=""/>
+                                        <label for="radio11"> 30%</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-item">
+                                <div class="tit-wrap">
+                                    <span>보증조건(보증금)</span>
+                                </div>
+                                <div class="radio-wrap">
+                                    <div class="radio">
+                                        <input type="radio" id="radio12" name="radio12" value="" checked/>
+                                        <label for="radio12"> 0%</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio13" name="radio12" value=""/>
+                                        <label for="radio13"> 10%</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio14" name="radio12" value=""/>
+                                        <label for="radio14"> 20%</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio15" name="radio12" value=""/>
+                                        <label for="radio15"> 30%</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-wrap">
+                            <button type="button" class="accordion-header">보증조건에 대해 궁금하신가요?</button>
+                            <div class="accordion-content">
+                                <div class="grey-box">
+                                    <div>
+                                        <p class="tit">선납금이란?</p>
+                                        <p class="txt">선납금은 차량가격의 10%, 20%, 30% 중 선택할 수 있으며, 계약 종료시 돌려받을 수 없는 보증조건입니다.</p>
+                                        <ul class="info-txt">
+                                            <li>선납금 설정 시 대여료 인하효과도 있으며, 신용등급에 따라 필수 보증 설정이 필요할 수 있습니다.</li>
+                                        </ul>
+                                        <article class="recommend-box">
+                                            <p class="tit">이런 고객님들께 <span>추천합니다!</span></p>
+                                            <p class="txt">선납금은 계약 만기 후 차량 인수 또는 반납 시 환불되지 않습니다. 월대여료 일부를 미리 납부하는 조건으로 매달 납부하는 대여료의 부담을 줄이고 싶은 고객님들이 많이 선택 하시는 조건입니다.</p>
+                                        </article>
+                                    </div>
+                                    <div>
+                                        <p class="tit">보증금이란?</p>
+                                        <p class="txt">
+                                            차량 소비자 판매 가격의 %금액으로 계약 종료 시 환급 받으실 수 있으며, 차량 인수 시 인수비용과 상계처리가 가능합니다.
+                                        </p>
+                                        <ul class="info-txt">
+                                            <li>신용등급에 따라 필수보증조건이 존재할 수 있으며, 선납/보증금에 따라서 월 대여비용이 달라질 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button type="button" class="close-button">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-sec">
+                        <h3>보험 조건 선택</h3>
+                        <!-- tip -->
+                        <article class="tip-wrap">
+                            <span>TIP</span><p>현재 인기 운전자 범위는 표준 조건으로 선택입니다. </p>
+                        </article>
+                        <div class="input-wrap">
+                            <div class="flex">
+                                <div class="input-item">
+                                    <div class="tit-wrap">
+                                        <span>보험연령</span>
+                                    </div>
+                                    <div class="radio-wrap">
+                                        <div class="radio">
+                                            <input type="radio" id="radio16" name="radio16" value="" checked/>
+                                            <label for="radio16">만 21세 이상</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" id="radio17" name="radio16" value=""/>
+                                            <label for="radio17"> 만 26세 이상</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-item">
+                                    <div class="tit-wrap">
+                                        <span>대물배상</span> 
+                                    </div>
+                                    <div class="radio-wrap">
+                                        <div class="radio">
+                                            <input type="radio" id="radio18" name="radio18" value="" checked/>
+                                            <label for="radio18">1억원</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" id="radio19" name="radio18" value=""/>
+                                            <label for="radio19">2억원</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-item">
+                                <div class="tit-wrap">
+                                    <span>운전자범위</span> 
+                                </div>
+                                <div class="radio-wrap">
+                                    <div class="radio">
+                                        <input type="radio" id="radio20" name="radio20" value="" checked/>
+                                        <label for="radio20">표준</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio21" name="radio20" value=""/>
+                                        <label for="radio21">누구나</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ex-box">
+                                <div class="tit">기타 보험조건</div>
+                                <ul>
+                                    <li>
+                                        <div class="tit-wrap">자손
+                                            <button type="button">
+                                                <p class="ir">툴팁열기</p>
+                                                <!--  툴팁 운전자범위 -->
+                                                <article class="tip-box arrow-up">
+                                                    <p class="tit">자손이란?</p>
+                                                    <ul class="info-txt">
+                                                        <li>자기신체사고는 피보험자가 죽거나 다친 경우에 보상하며, 보상은 사망-가입금액/
+                                                            부상-급수별/후유장애-등급별로 가입금액 한도 내에서 치료비 등의 실제 손해액을
+                                                            지급합니다.</li>
+                                                    </ul>
+                                                </article>
+                                            </button>
+                                        </div>
+                                        <span>자손 1억원</span>
+                                    </li>
+                                    <li>
+                                        <div class="tit-wrap">무보험차상해
+                                            <button type="button">
+                                                <p class="ir">툴팁열기</p>
+                                                <!--  툴팁 무보험차상해 -->
+                                                <article class="tip-box arrow-up">
+                                                    <p class="tit">무보험차 상해란?</p>
+                                                    <ul class="info-txt">
+                                                        <li>무보험자동차상해는 종합보험 미가입 또는 미적용되는 무보험차에 의해 피해를 입은 경우 책임보험 초과손해를 한도 내에서 보상합니다.</li>
+                                                        <li>단, 차량 탑승 중 사고에 대해서만 적용되며, 부모/배우자/자녀가 가입한 종합보험이 존재하는 경우 비례보상합니다.</li>
+                                                    </ul> 
+                                                </article>
+                                            </button>
+                                        </div>
+                                        <span>2억원/1인당</span>
+                                    </li>
+                                    <li>
+                                        <div class="tit-wrap">자기부담금
+                                            <button type="button">
+                                                <p class="ir">툴팁열기</p>
+                                                <!--  툴팁 자기부담금 -->
+                                                <article class="tip-box arrow-up">
+                                                    <p class="tit">자기부담금이란?</p>
+                                                    <ul class="info-txt">
+                                                        <li>본인 과실 사고 발생 시 보험료 할증이나 별도의 사고처리 비용 없이 설정된 자기부담금만 납부하여 차량 수리를 받으실 수 있도록 처리 해드리는 혜택입니다.</li>
+                                                    </ul>
+                                                </article>
+                                            </button>
+                                        </div>
+                                        <span>50만원</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- s: 1030 실속정비상품 추가 -->
+                        <div class="check-img-wrap">
+                            <div class="check-wrap round-big-grey type01">
+                                <input type="checkbox" id="checkAll01" class="checkAll" checked/>
+                                <label for="checkAll01">실속정비상품</label>
+                            </div>
+                            <div class="img-cont">
+                                <img src="images/rent_new/check_img_content.png" alt="실속정비상품 혜택">
+                            </div>
+                        </div>
+                        <!-- e: 1030 실속정비상품 추가 -->
+                        <div class="accordion-wrap">
+                            <button type="button" class="accordion-header">보험조건에 대해 궁금하신가요?</button>
+                            <div class="accordion-content">
+                                <div class="grey-box">
+                                    <div>
+                                        <p class="tit">운전자범위란?</p>
+                                        <p class="txt">표준 : 계약자 본인 및 배우자, 계약자와 배우자의 직계 가족 및 형제자매(개인사업자의 경우 계약자 사업장의 임직원 포함)</p>
+                                        <p class="txt">누구나 : 계약자 및 계약자가 지정한 누구나</p>
+                                    </div>
+                                    <div>
+                                        <p class="tit">보험연령이란?</p>
+                                        <p class="txt">보험연령은 만 21세/26세 이상 중 선택 가능하며, 보험조건에 따라 월 대여료는 변동 됩니다.</p>
+                                        <p class="txt">실운전자의 만 나이가 계약된 보험조건과 상이할 경우 보험 처리가 되지 않으므로 실운전자 보험연령에 맞게 꼭 변경하시기 바랍니다.</p>
+                                        <ul class="info-txt">
+                                            <li>신용등급에 따라 필수보증조건이 존재할 수 있으며, 선납/보증금에 따라서 월 대여비용이 달라질 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button type="button" class="close-button">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap-round">
+                        <button type="reset" class="bt-common-type3">초기화</button>
+                        <button type="button" class="bt-common-type2">견적 저장</button>
+                    </div> 
+                </div>
+                <div class="float-wrap">
+                    <div class="inner">
+                        <div class="car-thumb">
+                            <div class="img-wrap">
+                                <img src="images/rent_new/process_test_img.png" alt="테스트 이미지">
+                            </div>
+                            <dl>
+                                <dt>제네시스 더 올뉴 G80 3.5 가솔린 2WD 기본형</dt>
+                                <dd>2020.10</dd>
+                                <dd>4,542km</dd>
+                                <dd>하이브리드</dd>
+                                <dd>1,998cc</dd>
+                            </dl>
+                        </div>
+                        <ul class="info-list-flex">
+                            <li>
+                                <p>계약기간</p>
+                                <span>12개월</span>
+                            </li>
+                            <li>
+                                <p>주행거리</p>
+                                <span>~ 1만km</span>
+                            </li>
+                            <li>
+                                <p>보험연령</p>
+                                <span>만 21세 이상</span>
+                            </li>
+                            <li>
+                                <p>대물배상</p>
+                                <span>1억원</span>
+                            </li>
+                            <li>
+                                <p>운전자범위</p>
+                                <span>표준</span>
+                            </li>
+                            <li>
+                                <p>정비상품</p>
+                                <span>실속정비</span>
+                            </li>
+                        </ul>
+                        <ul class="info-list">
+                            <li>
+                                <p>신차가</p>
+                                <span>48,500,000원</span>
+                            </li>
+                            <li>
+                                <p>선납금</p>
+                                <span>7,650,000원 (30%)</span>
+                            </li>
+                            <li>
+                                <p>보증금</p>
+                                <span>0원 (0%)</span>
+                            </li>
+                            <li>
+                                <p>인수가</p>
+                                <span>17,650,000원</span>
+                            </li>
+                        </ul>
+                        <div class="price-wrap">
+                            <button type="button" class="btn-recalc">변경 조건으로 다시 계산하기</button>
+                            <div class="price">
+                                <div class="tit">
+                                    <p>월 대여료</p>
+                                    <span>(세금 및 보험료 포함)</span>
+                                </div>
+                                <strong>600,000원</strong>
+                            </div>
+                            <a href="#">
+                                제휴카드 할인가 <span>월 570,000원</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button">상담신청</button>
+                        <button type="button" class="on">다이렉트 계약하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+</body>
+</html>

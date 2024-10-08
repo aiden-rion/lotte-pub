@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body>
+
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter">
+    </main>
+
+
+    <!--  팝업   -->
+    <div class="layer_popup_wrappper rent-pop" id="alertPop01" style="display: block;">
+        <div class="layer_popup detail-pop">
+            <div class="pop_inner">
+                <div class="pop-head">
+                    <h2>차량정보 확인</h2>
+                    <button class="ir btn-close" onclick="ui.modalPopClose(alertPop01);">팝업닫기</button>
+                </div>
+                <div class="pop-contents">
+                    <ul class="info-list">
+                        <li>
+                            <p>대여차종</p>
+                            <span>제네시스 G80 가솔린 2.5 AWD</span>
+                        </li>
+                        <li>
+                            <p>계약대수</p>
+                            <span>1대</span>
+                        </li>
+                        <li>
+                            <p>대여기간</p>
+                            <span>차량 인도일로 부터 48개월</span>
+                        </li>
+                        <li>
+                            <p>월대여료(VAT포함)</p>
+                            <span>682,700원</span>
+                        </li>
+                        <li>
+                            <p>외장색상</p>
+                            <span>스노우화이트펄</span>
+                        </li>
+                        <li>
+                            <p>내장색상</p>
+                            <span>코튼베이지</span>
+                        </li>
+                        <li>
+                            <p>옵션</p>
+                            <span>(기아) 내비게이션 선택항목 <br/>
+                                A/T<br/>
+                                기본가<br/>
+                                드라이브와이즈<br/>
+                                스노우화이트펄<br/>
+                                [블랙박스] 뷰게라 8000L [썬팅] 루마<br/>
+                                GG(전면 35%, 측후면 15%)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+</body>
+</html>

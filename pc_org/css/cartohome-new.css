@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+/* cartohome insert */
+.cartohome-insert-container {position:relative;width:1240px;margin:0 auto;padding-right:400px;}
+.cartohome-insert-container .sec-cth-step {position:relative;padding-top:35px;margin-top:40px;border-top:3px solid #E9E9E9;}
+.cartohome-insert-container .sec-cth-step .sec-title {font-size:24px;font-weight:700}
+.cartohome-insert-container .sec-cth-step .sec-title small {font-size:12px;color:#666;font-weight:300;display:inline-block;margin-left:20px;vertical-align:middle;}
+.cartohome-insert-container .sec-cth-step .sec-title .ck-wrap {display:inline-block;margin:-7px 0 0 15px;vertical-align:middle;}
+.cartohome-insert-container .sec-summary {opacity:0;}
+.cartohome-insert-container .step-content {margin-top:20px;}
+.cartohome-insert-container .insert-form-group {max-width:750px;}
+.cartohome-insert-container .sec-stitle {font-size:20px;padding-bottom:10px;font-weight:700}
+.cartohome-insert-container .step-content.bg {padding:30px;background:#F3F3F3;}
+.cartohome-insert-container .step-content .agree-content {padding-bottom: 10px;border:1px solid #E9E9E9;background:#F9F9F9;}
+.cartohome-insert-container .step-content .agr-group {margin:0;padding:0px 20px}
+.cartohome-insert-container .step-content .agr-group label {font-weight:400 !important}
+.cartohome-insert-container .step-content .agr-check-total {padding:20px 20px;margin-bottom: 15px;border-bottom: 1px solid #E9E9E9;background:#fff;}
+.cartohome-insert-container .step-content .agr-check .ck-wrap {width:100%;}
+.cartohome-insert-container .step-content .agr-term {padding:20px;background:#fff;border:1px solid #E9E9E9;}
+.cartohome-insert-container .step-content .bt-term-view {position:absolute;right:0;top:0;text-decoration:underline;font-size:12px;}
+.cartohome-insert-container .step-content .bt-term-view:after {display:none !important}
+.cartohome-insert-container .step-btn {margin-top:60px;}
+.cartohome-insert-container .sec-total-price {position:absolute;width:340px;right:0;top:127px;transition:bottom .3s}
+.cartohome-insert-container .sec-total-price.fixed {position:fixed;top:0;left:50%;margin-left:280px;z-index:100;}
+.cartohome-insert-container .sec-total-price.relate {position:absolute;top:auto;bottom:0;}
+.cartohome-insert-container .sec-total-price .sec-inner {background:#fff;border:1px solid #E9E9E9;border-radius:5px;}
+.cartohome-insert-container .sec-total-price .car-thumb {width:280px;height:210px;}
+.cartohome-insert-container .sec-total-price .car-thumb img {display:block;width:100%;height:100%;}
+.cartohome-insert-container .sec-total-price .car-info {padding:30px 30px 15px 30px;}
+.cartohome-insert-container .sec-total-price .car-detail {margin-top:12px;}
+.cartohome-insert-container .sec-total-price .car-detail .car-title {font-size:18px;}
+.cartohome-insert-container .sec-total-price .car-detail .car-option {margin-top:3px;}
+.cartohome-insert-container .sec-total-price .car-detail .car-option span {position:relative;font-size:12px;color:#666}
+.cartohome-insert-container .sec-total-price .car-detail .car-option span + span {padding-left:6px;margin-left:3px;}
+.cartohome-insert-container .sec-total-price .car-detail .car-option span:before {content:"";position:absolute;left:0;top:50%;margin-top:-4px;display:inline-block;width:1px;height:8px;background:#E9E9E9;}
+.cartohome-insert-container .sec-total-price .btn-group {margin-top:10px}
+.cartohome-insert-container .sec-total-price .btn-group button {min-width:165px;}
+.cartohome-insert-container .sec-total-price .car-price ul {}
+.cartohome-insert-container .sec-total-price .car-price li  {border-top:1px solid #E9E9E9;}
+.cartohome-insert-container .sec-total-price .car-price .flx {min-height:60px;padding:0 30px;display:flex;justify-content:space-between;align-items:center;}
+.cartohome-insert-container .sec-total-price .car-price .detail {padding:12px 0;background:#F9F9F9}
+.cartohome-insert-container .sec-total-price .car-price .detail .flx {min-height:30px;}
+.cartohome-insert-container .sec-total-price .car-price .detail .t {font-weight:300}
+.cartohome-insert-container .sec-total-price .car-price .detail .prc {font-size:16px;color:#666;font-weight:400}
+.cartohome-insert-container .sec-total-price .car-price .prc {font-size:20px;}
+.cartohome-insert-container .sec-total-price .car-price .total * {color:#DA291C;font-weight:700;}
+.cartohome-insert-container .sec-total-price .link-box {margin-top:20px;}
+.cartohome-insert-container .inner-gray-box .ck-wrap {margin-left:0;}
+.cartohome-insert-container .state-list {display:flex;align-items:center;height:60px;padding:0 30px;border:1px solid #E9E9E9;background:#fff;}
+.cartohome-insert-container .state-list .t {font-size:16px;font-weight:700;}
+.cartohome-insert-container .state-list .c {font-size:16px;font-weight:700;color:#DA291C;}
+.cartohome-insert-container .tb-common-wrap {max-width:820px;}
+.cartohome-insert-container .payment-calculator .inner-gray-box {margin-top:0;}
+.cartohome-insert-container .step-value {position:absolute;top:45px;right:135px;font-size:24px;color:#DA291C;font-weight:700;}
+.cartohome-insert-container .insert-form-group .ipt-tit {position:absolute;left:0;top:19px;}
+.cartohome-insert-container .insert-form-group .ipt-cont {min-height:60px}
+.cartohome-insert-container .insert-form-group .input-item {padding-left:160px;}
+.cartohome-insert-container .insert-form-group .ipt-tit + .ipt-cont .ck-wrap {margin-top:18px;}
+.cartohome-insert-container .ip-wrap {position:relative;}
+.cartohome-insert-container .ip-wrap .unit {position:absolute;right:20px;top:18px;font-size:16px;color:#666;font-weight:300}
+/* step plan */
+.step-cth-plan .link-box {margin-top:10px;}
+.step-cth-plan .play-type {display:flex;justify-content:center;}
+.step-cth-plan .play-type li {margin:0 20px;}
+.step-cth-plan .play-type li a {position:relative;display:block;width:290px;height:320px;background:#F3F3F3;border-radius:10px;text-align:center;}
+.step-cth-plan .play-type li a.selected {background:url("../images/elements/bg-cartohome-plan-selected.png") no-repeat 50% 50%;background-size:122%;}
+.step-cth-plan .play-type li dl {position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);background:url("../images/icon/ico-crown-gray.svg") no-repeat 50% 0;}
+.step-cth-plan .play-type li a.selected dl {background:url("../images/icon/ico-crown-white.svg") no-repeat 50% 0;}
+.step-cth-plan .play-type li a.selected dt,
+.step-cth-plan .play-type li a.selected dd {color:#fff}
+.step-cth-plan .play-type li a.selected dd {border-top:1px solid #FF9255}
+.step-cth-plan .play-type li dl dt {padding-top:20px;font-size:30px;text-align:center;font-weight:700}
+.step-cth-plan .play-type li dl dd {width:193px;padding-top:40px;border-top:1px solid #fff;margin:20px auto 0 auto;font-size:20px;text-align:center;}
+.step-cth-plan .play-type li .not-used {background:none}
+.step-cth-plan .play-type li .not-used dt {font-size:20px;;}
+.step-cth-plan .play-type li .not-used dd {width:auto;border:0 !important;padding-top:25px;margin-top:0;font-size:14px;}
+/* step payment */
+.step-cth-payment .step-content {position:relative;}
+.step-cth-payment .step-content .ck-group.pos-r {position:absolute;right:30px;top:30px}
+.step-cth-payment .step-content .ck-group label {font-weight:700;color:#DA291C}
+.step-cth-payment .step-content .ck-group a {text-decoration:underline;color:#999;font-size:14px;font-weight:700;margin-left:10px;}
+.step-cth-payment .red {color:#DA291C !important}
+.step-cth-payment .payment-calculator .price-total {position:relative;display:flex;justify-content:space-between;align-items:center;margin-bottom:-2px;padding:15px 30px;margin-top:20px;background:#fff;border:1px solid #E9E9E9;border-radius:5px 5px 0 0;z-index:10;}
+.step-cth-payment .payment-calculator .price-total .t {font-size:18px;font-weight:700;color:#DA291C}
+.step-cth-payment .payment-calculator .price-total .prc {font-size:24px;font-weight:700;color:#DA291C;text-align:right;}
+.step-cth-payment .payment-calculator .price-total .prc small {display:block;font-size:12px;font-weight:700}
+.step-cth-payment .payment-calculator .price-est {display:flex;justify-content:space-between;align-items:center;padding:15px 30px;}
+.step-cth-payment .payment-calculator .price-est .t {font-size:16px;font-weight:700}
+.step-cth-payment .payment-calculator .price-est .ip-wrap {width:410px;}
+.step-cth-payment .payment-calculator .price-est .ip-wrap input {height:60px;padding-right:45px;font-size:16px;text-align:right;border-radius:5px;}
+.step-cth-payment .payment-calculator .price-detail {margin-bottom:10px;background:#F9F9F9;border:1px solid #E9E9E9;border-radius:5px;}
+.step-cth-payment .payment-calculator .price-detail dl {padding:20px 30px;border-top:1px solid #E9E9E9;}
+.step-cth-payment .payment-calculator .price-detail dt {position:relative;margin-bottom:5px;font-size:14px;font-weight:700;}
+.step-cth-payment .payment-calculator .price-detail dt .prc {position:absolute;right:0;top:0;}
+.step-cth-payment .payment-calculator .price-detail dd {width:100%;overflow:hidden;margin-top:15px;}
+.step-cth-payment .payment-calculator .price-detail dd .t {float:left;font-size:14px}
+.step-cth-payment .payment-calculator .price-detail dd .ck-wrap {float:left;}
+.step-cth-payment .payment-calculator .price-detail dd .prc {float:right;font-size:16px;}
+.step-cth-payment .payment-calculator .price-detail dd label {font-size:14px; /*filter: grayscale(100%);*/}
+.step-cth-payment .payment-calculator .price-option {position:absolute;right:0;left:0;bottom:0;height:225px;background:#fff;border:1px solid #DA291C;}
+.step-cth-payment .payment-calculator .price-option .btns {padding:0 30px}
+.step-cth-payment .payment-calculator .price-summary {display:flex;justify-content:space-between;align-items:center}
+.step-cth-payment .payment-calculator .price-summary .t {font-size:16px;font-weight:700;}
+.step-cth-payment .payment-calculator .price-summary .ip-wrap input {height:50px;background:#fff;border:1px solid #E9E9E9;text-align:right;font-weight:700;font-size:16px;}
+.step-cth-payment .payment-calculator + .ck-group {margin-top:20px;}
+.step-cth-payment .payment-result {display:flex;justify-content:space-between;align-items:center;padding:0 50px;margin:30px -40px -30px -40px;height:80px;background:#000;color:#fff;font-size:20px;font-weight:700;}
+.step-cth-payment .state {display:flex;justify-content:space-between;align-items:center;height:50px;padding:0 20px;margin:0 30px;font-weight:700;background:#F3F3F3;font-size:14px;}
+.step-cth-payment .inner-gray-box {position:relative;padding:40px 0 0 0;}
+.step-cth-payment .payment-inst {display:flex;align-items:center;justify-content:space-between;padding:23px 30px;border:1px solid #E9E9E9;border-radius:5px;}
+.step-cth-payment .payment-inst .tit {display:inline-flex;align-items:center;font-size:20px;}
+.step-cth-payment .payment-inst .tit p {margin-left:20px;font-size:14px;color:#666;}
+.step-cth-payment .payment-inst.type-jb {background:#F3FAFD;border-color:#F3FAFD;}
+.step-cth-payment .payment-inst.type-jb .t1 {color:#303030;font-weight:400}
+.badge-state {display:inline-block;height:22px;line-height:23px;margin-left:20px;padding:0 6px;font-size:12px;font-weight:400}
+.badge-state.type1 {border-radius:2px;background:#F3F3F3;color:#666}
+.badge-state.type2 {border-radius:2px;background:#fbf4f4;color:#DA291C}
+.step-cth-payment .payment-inst + .payment-inst {margin-top:20px;}
+.step-cth-payment .payment-inst .t1 {font-size:18px;font-weight:700;}
+.step-cth-payment .payment-inst .t1 small {display:block;margin-top:5px;font-size:12px;color:#DA291C;}
+.step-cth-payment .payment-inst .t2 {font-size:18px;padding:0 20px;font-weight:700;}
+.step-cth-payment .payment-inst .t3 {font-size:14px;font-weight:700;}
+.step-cth-payment .payment-inst .prc {font-size:20px;padding:0 20px;font-weight:700;}
+.step-cth-payment .payment-inst .con {display:inline-flex;align-items:center;}
+.step-cth-payment .payment-inst .con .ip-wrap {margin-left:20px;}
+.step-cth-payment .payment-inst .con .ip-wrap input {width:250px;padding-right:110px;height:60px;font-size:16px;text-align:right;border:1px solid #E9E9E9;border-radius:5px;}
+.step-cth-payment .payment-inst .con .bt-max {position:absolute;right:15px;top:50%;margin-top:-15px;min-width:65px;height:30px;padding:0 10px;border-radius:2px;font-size:11px;font-weight:700;color:#303030;border:1px solid #303030;background: #fff;}
+.step-cth-payment .payment-inst .con .bt-max + .unit {right:90px}
+.step-cth-payment .payment-inst .con .bt-capital {position:relative;padding:0 30px 0 45px;font-size:16px;font-weight:700;}
+.step-cth-payment .payment-inst .con .bt-capital img {display:block;position:absolute;left:0;top:50%;transform:translateY(-50%)}
+.step-cth-payment .payment-inst .con .bt-capital span {display:block;color:#035AA7;font-weight:700}
+.step-cth-payment .payment-inst .con .bt-capital:after {content:"";position:absolute;right:0;top:50%;display:block;width:10px;height:10px;margin-top:-6px;border:1px solid #999;transform:rotate(45deg);border-bottom:0;border-left:0;}
+.step-cth-payment .payment-inst button.noline {border-width:0 !important}
+/* step paycheck */
+.step-cth-paycheck .pay-summary {display:flex;justify-content:space-between;}
+.step-cth-paycheck .pay-summary .tit {font-size:20px;font-weight:700}
+.step-cth-paycheck .pay-summary .price {font-size:20px;font-weight:700;color:#DA291C}
+.step-cth-paycheck .payment-check {display:flex;height:60px;padding:20px;margin-top:20px;justify-content:space-between;align-items:center;background:#fff;border:1px solid #E9E9E9;}
+.step-cth-paycheck .payment-check .acct-num {font-weight:700;font-size:14px;}
+.step-cth-paycheck .payment-check .pay-state {color:#DA291C;font-weight:700}
+/* step insurance */
+.step-cth-insurance .insert-form-group {margin-top:0;max-width:100%;}
+.step-cth-insurance .insert-form-group .input-item {position:relative;display:flex;justify-content:space-between;align-items:center;white-space:nowrap;min-height:75px;margin:0;}
+.step-cth-insurance .insert-form-group .input-item + .input-item {border-top:1px solid #E9E9E9}
+.step-cth-insurance .insert-form-group .input-item .ipt-tit {margin-bottom:0;font-size:20px;}
+.step-cth-insurance .insert-form-group .input-item .ipt-cont {width:calc(100% - 190px)}
+.step-cth-insurance .insert-form-group .input-item .ipt-cont .ipt-val {color:#DA291C;font-weight:700;font-size:20px;}
+.step-cth-insurance .insert-form-group .input-item .bt-file {margin-right:10px;}
+.step-cth-insurance .insert-form-group .input-item .pos-r {min-width:126px !important;position:absolute;right:0;top:13px;}
+/* step notice */
+.step-cth-notice .inner-gray-box {padding-top:30px;}
+.step-cth-notice .desc-list {margin-top:30px;padding-top:30px;border-top:1px solid #E9E9E9;}
+/* step refund */
+.step-cth-refund dl + dl {padding-top:20px;margin-top:20px;border-top:1px solid #E9E9E9}
+.step-cth-refund dt {font-weight:700}
+.step-cth-refund dd {margin-top:15px;}
+.step-cth-refund .btns button {min-width:200px !important;margin-right:5px}
+/* step step result */
+.step-cth-result dl {padding:30px 20px 20px 20px;margin-top:10px;border-top:1px solid #E9E9E9;}
+.step-cth-result dt {display:flex;justify-content:space-between;padding-bottom:5px;font-weight:700;font-size:16px;}
+.step-cth-result dd {margin-top:15px;font-size:12px;display:flex;justify-content:space-between;font-weight:700}
+.step-cth-result ul {padding:15px 0 30px 0;}
+.step-cth-result li {font-size:16px;display:flex;justify-content:space-between;font-weight:700}
+.step-cth-result li + li {margin-top:25px;}
+.step-cth-result li .t {margin-left:20px;}
+.step-cth-result dd .t {margin-left:20px;}
+.step-cth-result .price-total {display:flex;justify-content:space-between;align-items:center;padding:0 20px;height:60px;font-size:16px;font-weight:700;}
+.step-cth-result .price-total.bg {margin:0 -20px -20px -20px;padding:0 40px;background:#000;color:#fff;}
+.step-cth-result .price-total.bg.red {background:#DA291C}
+.step-cth-result .price-total .prc {font-size:20px;}
+/* popup cartohome cancel check */
+.pop-cartohome-cancel {width:800px;}
+.pop-cartohome-cancel .ck-group {width:100%;display:flex;flex-wrap:wrap}
+.pop-cartohome-cancel .ck-wrap {width:50%;margin:10px 0;}
+.pop-cash-receipt .inner.flx {display:flex;justify-content:space-between;}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body>
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter mypage">
+        <div class="cont-wrap">
+            <div class="float-page-wrap">
+                <div class="float-wrap">
+                    <div class="user-wrap">
+                        <dl>
+                            <dt>
+                                <span>개인회원</span>
+                                <p>
+                                    <b>김렌탈(lotte123)</b> 회원님, <br/>
+                                    반갑습니다!
+                                </p>
+                            </dt>
+                            <dd>
+                                <a href="#"  class="business">사업자 회원으로 전환</a>
+                            </dd>
+                            <dd>
+                                <a href="#"  class="edit">회원 정보 수정</a>
+                            </dd>
+                        </dl>
+                        <div class="sevice-list">
+                            <p class="tit">나의 서비스</p>
+                            <ul>
+                                <!-- 텍스트 변경 -->
+                                <li>
+                                    <a href="#">
+                                        <p>나의 계약</p>
+                                        <span>1</span>
+                                    </a>
+                                </li>
+                                <!-- 텍스트 변경 -->
+                                <li>
+                                    <a href="#">
+                                        <p>견적보관함</p>
+                                        <span>7</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>관심차량</p>
+                                        <span>3</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>최근본차량</p>
+                                        <span>20</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="float-banner">
+                        <a href="#">    
+                            <img src="images/rent_new/mypage/banner_test.png" alt="배너이미지">
+                        </a>
+                    </div>
+                </div>
+                <div class="option-wrap">
+                    <section>
+                        <div class="sec-tit">
+                            <!-- 텍스트 변경 -->
+                            <h3>나의 계약</h3>
+                            <!-- 텍스트 변경 -->
+                            <button type="button">전체보기</button>
+                        </div>
+                        
+                        
+                        <!-- 견적 내용 없을때 -->
+                        <article class="cont-none">
+                            <div class="img-wrap"></div>
+                            <p>
+                                계약중인 차량이 없어요.
+                            </p>
+                            <button type="button">차량 둘러보기</button>
+                        </article>
+                        <!-- 계약내용 없을때 -->
+                        
+                        <div class="sec-cont">
+                            <div class="car-thumb-mypage">
+                                <div class="img-wrap">
+                                    <img src="images/rent_new/mypage/test_car_top.png" alt="테스트이미지">
+                                </div>
+                                <div class="txt-wrap">
+                                    <div class="car-info">
+                                        <dl>
+                                            <dt>기아 CARNIVAL KA4 (D)2.2(D)2.2(D)2.2</dt>
+                                            <dd>2020년식</dd>
+                                            <dd>가솔린</dd>
+                                            <dd>162하 12222</dd>
+                                        </dl>
+                                        <button type="button" class="btn-more">자세히 보기</button>
+                                    </div>
+                                    <ul class="info-list">
+                                        <li>
+                                            <p>보증금</p>
+                                            <span>12,009,000원 (30%)</span>
+                                        </li>
+                                        <li>
+                                            <p>선납금</p>
+                                            <span>0원 (0%)</span>
+                                        </li>
+                                        <li>
+                                            <p>인수가</p>
+                                            <span>18,800,000원</span>
+                                        </li>
+                                        <li class="price">
+                                            <p>월 대여료<span>(세금 및 보험료 포함)</span></p>
+                                            <strong>450,000원</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grey-box">
+                                    <span class="badge red">운행중</span>
+                                    <p><b>계약기간</b>: 2023년 01월 01일 ~ 2027년 01월 20일 <span>D+135</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sec-tit">
+                            <h3>견적보관함</h3>
+                            <button type="button">전체보기</button>
+                        </div>
+                        <article class="tip-wrap">
+                            <span>TIP</span><p>견적보관함은 10일동안 보관 가능합니다.</p>
+                        </article>
+
+
+                        <!-- 견적 내용 없을때 -->
+                        <article class="cont-none">
+                            <div class="img-wrap"></div>
+                            <p>
+                                진행중인 견적이 없어요.
+                            </p>
+                            <button type="button">차량 둘러보기</button>
+                        </article>
+                        <!-- 견적 내용 없을때 -->
+
+
+                        <div class="car-thumb-mypage">
+                            <div class="top-bar">
+                                <span class="badge blue">심사승인</span>
+                                <p class="acess-num">견적번호 : 6989472</p>
+                                <button class="btn-cancel">삭제</button>
+                            </div>
+                            <div class="img-wrap">
+                                <img src="images/rent_new/mypage/test_car_top.png" alt="테스트이미지">
+                            </div>
+                            <div class="txt-wrap">
+                                <div class="car-info">
+                                    <dl class="detail">
+                                        <dt>현대 팰리세이드</dt>
+                                        <dd>3.8 하이브리드 AWD 프레스티지</dd>
+                                        <dd>2020년식</dd>
+                                        <dd>가솔린</dd>
+                                        <dd>162하 12222</dd>
+                                    </dl>
+                                    <button type="button" class="btn-more">자세히 보기</button>
+                                </div>
+                                <ul class="info-list">
+                                    <li>
+                                        <p>보증금</p>
+                                        <span>12,009,000원 (30%)</span>
+                                    </li>
+                                    <li>
+                                        <p>선납금</p>
+                                        <span>0원 (0%)</span>
+                                    </li>
+                                    <li>
+                                        <p>인수가</p>
+                                        <span>18,800,000원</span>
+                                    </li>
+                                    <li class="price">
+                                        <p>월 대여료<span>(세금 및 보험료 포함)</span></p>
+                                        <strong>450,000원</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-wrap">
+                                <button type="button" class="bt-common-type3">견적 자세히 보기</button>
+                                <button type="button" class="bt-common-type2">다이렉트 계약하기</button>
+                            </div>
+                        </div>
+                        <div class="car-thumb-mypage">
+                            <div class="top-bar">
+                                <span class="badge green">견적</span>
+                                <p class="acess-num">견적번호 : 6989472</p>
+                                <button class="btn-cancel">삭제</button>
+                            </div>
+                            <div class="img-wrap">
+                                <img src="images/rent_new/mypage/test_car_top.png" alt="테스트이미지">
+                            </div>
+                            <div class="txt-wrap">
+                                <div class="car-info">
+                                    <dl class="detail">
+                                        <dt>현대 팰리세이드</dt>
+                                        <dd>3.8 하이브리드 AWD 프레스티지</dd>
+                                        <dd>2020년식</dd>
+                                        <dd>가솔린</dd>
+                                        <dd>162하 12222</dd>
+                                    </dl>
+                                    <button type="button" class="btn-more">자세히 보기</button>
+                                </div>
+                                <ul class="info-list">
+                                    <li>
+                                        <p>보증금</p>
+                                        <span>12,009,000원 (30%)</span>
+                                    </li>
+                                    <li>
+                                        <p>선납금</p>
+                                        <span>0원 (0%)</span>
+                                    </li>
+                                    <li>
+                                        <p>인수가</p>
+                                        <span>18,800,000원</span>
+                                    </li>
+                                    <li class="price">
+                                        <p>월 대여료<span>(세금 및 보험료 포함)</span></p>
+                                        <strong>450,000원</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-wrap">
+                                <button type="button" class="bt-common-type3">견적 자세히 보기</button>
+                                <button type="button" class="bt-common-type2">다이렉트 계약하기</button>
+                            </div>
+                        </div>
+                        <div class="car-thumb-mypage">
+                            <div class="top-bar">
+                                <span class="badge red">심사부결</span>
+                                <p class="acess-num">견적번호 : 6989472</p>
+                                <button class="btn-cancel">삭제</button>
+                            </div>
+                            <div class="img-wrap">
+                                <img src="images/rent_new/mypage/test_car_top.png" alt="테스트이미지">
+                            </div>
+                            <div class="txt-wrap">
+                                <div class="car-info">
+                                    <dl class="detail">
+                                        <dt>현대 팰리세이드</dt>
+                                        <dd>3.8 하이브리드 AWD 프레스티지</dd>
+                                        <dd>2020년식</dd>
+                                        <dd>가솔린</dd>
+                                        <dd>162하 12222</dd>
+                                    </dl>
+                                    <button type="button" class="btn-more">자세히 보기</button>
+                                </div>
+                                <ul class="info-list">
+                                    <li>
+                                        <p>보증금</p>
+                                        <span>12,009,000원 (30%)</span>
+                                    </li>
+                                    <li>
+                                        <p>선납금</p>
+                                        <span>0원 (0%)</span>
+                                    </li>
+                                    <li>
+                                        <p>인수가</p>
+                                        <span>18,800,000원</span>
+                                    </li>
+                                    <li class="price">
+                                        <p>월 대여료<span>(세금 및 보험료 포함)</span></p>
+                                        <strong>450,000원</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <article class="alert-txt">
+                                <p>보증금 조건을 상향 해주세요.</p>
+                            </article>
+                            <div class="btn-wrap">
+                                <button type="button" class="bt-common-type3">견적 자세히 보기</button>
+                                <button type="button" class="bt-common-type2">다이렉트 계약하기</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+</body>
+</html>

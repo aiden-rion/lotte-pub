@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body>
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter process full">
+        <div class="cont-wrap">
+            <div class="icon-complete"></div>
+            <div class="page-tit">
+                <h2>다이렉트 계약 신청이 완료되었어요!</h2>
+                <p>계약이 완료된 차량은 마이카에서 확인 가능합니다.</p>
+            </div>
+            <section>
+                <ul class="info-list-flex">
+                    <li>
+                        <p>보증금</p>
+                        <span>0원 (0%)</span>
+                    </li>
+                    <li>
+                        <p>선납금</p>
+                        <span>3,000,000원 (10%)</span>
+                    </li>
+                    <li>
+                        <p>입금기한</p>
+                        <span>2023년 10월 31일</span>
+                    </li>
+                    <li>
+                        <p>입금(가상)계좌</p>
+                        <span>신한은행/110-333-123456</span>
+                    </li>
+                </ul>
+                <ul class="desc-list">
+                    <li>해당 가상 계좌로 입금하시면 계약 완료 되며, 고객님을 관리 해주실 영업매니저가 배정됩니다.</li>
+                    <li>일부 차량은 당사 및 제조사 사정에 따라 조건 변경 및 계약 취소 요청을 드릴 수 있습니다.</li>
+                </ul>
+            </section>
+            <div class="btn-wrap-round">
+                <button class="bt-common-type3">이용후기 작성</button>
+                <button class="bt-common-type2">마이카</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+</body>
+</html>

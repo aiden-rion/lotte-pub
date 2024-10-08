@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body>
+
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter">
+    </main>
+
+
+    <!--  팝업   -->
+    <div class="layer_popup_wrappper rent-pop" id="alertPop01" style="display: block;">
+        <div class="layer_popup detail-pop">
+            <div class="pop_inner">
+                <div class="pop-head">
+                    <h2>차량 상세정보</h2>
+                    <button class="ir btn-close" onclick="ui.modalPopClose(alertPop01);">팝업닫기</button>
+                </div>
+                <div class="pop-contents">
+                    <div class="swiper-container mycar-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="img-wrap">
+                                    <img src="images/rent_new/mypage/swiper_test.png" alt="테스트이미지">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="img-wrap">
+                                    <img src="images/rent_new/mypage/swiper_test.png" alt="테스트이미지">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="img-wrap">
+                                    <img src="images/rent_new/mypage/swiper_test.png" alt="테스트이미지">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination-custom"></div>
+                    </div>
+                    <div class="info-wrap">
+                        <p class="info-tit">기본 사양정보</p>
+                        <ul class="info-list">
+                            <li>
+                                <p>연식</p>
+                                <span>2019년식</span>
+                            </li>
+                            <li>
+                                <p>주행거리</p>
+                                <span>12,780km</span>
+                            </li>
+                            <li>
+                                <p>연료</p>
+                                <span>가솔린</span>
+                            </li>
+                            <li>
+                                <p>배기량</p>
+                                <span>3,300cc</span>
+                            </li>
+                            <li>
+                                <p>인승</p>
+                                <span>5인승</span>
+                            </li>
+                            <li>
+                                <p>변속기</p>
+                                <span>오토</span>
+                            </li>
+                            <li>
+                                <p>최초등록일</p>
+                                <span>2019.02.28</span>
+                            </li>
+                            <li>
+                                <p>차량번호</p>
+                                <span>00하0000</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-wrap">
+                        <p class="info-tit">차량 옵션 및 상세 점검 내역</p>
+                        <ul class="info-list">
+                            <li>
+                                <p>색상</p>
+                                <span>외장  : 녹턴 그레이 <br/>
+                                    내장 : 검정색</span>
+                            </li>
+                            <li>
+                                <p>주요옵션</p>
+                                <span>에어백 / 네비게이션 / 후방센서 <br/>
+                                    블루투스 / 열선시트 / 열선 스티어링 <br/>
+                                    AUX / 후방카메라 / 파워윈도우</span>
+                            </li>
+                            <li>
+                                <p>성능점검</p>
+                                <span>단순수리 : 없음 <br/>
+                                    사고이력 : 없음</span>
+                            </li>
+                            <li>
+                                <p>보험이력</p>
+                                <span>내차피해 : 1회<br/>
+                                    상대차피해 : 없음<br/>
+                                    침수 보험사고 : 없음<br/>
+                                    소유자변경 : 없음<br/>
+                                    차량번호변경 : 없음<br/>
+                                    특수용도이력 : 있음</span>
+                            </li>
+                            <li>
+                                <p>관리이력</p>
+                                <span>2023.07.04 | 엔진오일 교환<br/>
+                                    2023.07.04 | 실내클리너</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+
+    <script>
+        const mycarSwiper = new Swiper('.mycar-slider', {
+            slidesPerView: '1',
+            grabCursor: true,
+            spaceBetween: 26,
+            loop: false,
+            pagination: {
+                el: '.mycar-slider .swiper-pagination-custom',
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return ('0' + number).slice(-2);
+                },
+                formatFractionTotal: function (number) {
+                    return ('0' + number).slice(-2);
+                },
+                renderFraction: function (currentClass, totalClass) {
+                    return '<span class="' + currentClass + '"></span>' +
+                        ' / ' +
+                        '<span class="' + totalClass + '"></span>';
+                },
+            }
+        });
+    </script>
+</body>
+</html>

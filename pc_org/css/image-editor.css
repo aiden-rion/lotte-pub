@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* image editor layout */
+.image-editor-container {width:1162px;height:740px;background:#000;border-radius:20px;overflow:hidden;}
+.image-editor-head {position:relative;height:80px;background:#333}
+.image-editor-head h3 {padding:25px 0 0 42px;font-size:30px;line-height:30px;color:#fff;}
+.image-editor-head .btns {position:absolute;right:20px;top:21px;text-align:right;}
+.image-editor-head .btns .bt-imgeditor-func {width:45px;height:40px;}
+.image-editor-head .btns .bt-imgeditor-func span {display:block;padding-top:24px;text-align:center;font-size:12px;color:#fff}
+.image-editor-head .btns .bt-cancel {background:url("../images/imageeditor/ico-cancel.png") no-repeat 50% 0;background-size:20.5px;}
+.image-editor-head .btns .bt-save {background:url("../images/imageeditor/ico-save.png") no-repeat 50% 0;background-size:22px;}
+.image-editor-body {position:relative;height:660px;}
+
+.editor-img-list {position:absolute;top:30px;left:30px;width:180px;max-height:600px;overflow:hidden;z-index:20;background:#333 url("../images/imageeditor/bg-image-list.png") no-repeat 0 0;background-size:180px;}
+.editor-img-list li {position:relative;float:left;width:90px;height:60px;}
+.editor-img-list li:hover:before,
+.editor-img-list li.on:before {content:"";position:absolute;top:0;left:0;right:0;bottom:0;display:block;border:2px solid #E60012}
+.editor-img-list li img {display:block;width:90px;height:60px;}
+.editor-img-list .bt-del-photo {position:absolute;opacity:0;right:0;bottom:0;z-index:10;display:block;width:18px;height:18px;background:url("../images/imageeditor/ico-del-photo.svg") no-repeat 50% 50%;background-size:100%}
+.editor-img-list li.on .bt-del-photo,
+.editor-img-list li:hover .bt-del-photo {opacity:1}
+
+.editor-buttons {position:absolute;top:30px;left:210px;width:123px;height:600px;padding-left:20px;background:#000;z-index:20;}
+.editor-buttons .button-group button {width:100px;height:198px;background:url("../images/imageeditor/bg-editor-button.png") no-repeat 50% 100%;background-size:100px;}
+.editor-buttons .button-group button span {display:block;color:#ccc;font-size:14px;}
+.editor-buttons .button-group button .ico-rotate-right {padding-top:27px;background:url("../images/imageeditor/ico-rotate-right.png") no-repeat 50% 0;background-size:26.5px;}
+.editor-buttons .button-group button.on .ico-rotate-right {color:#E60012;background:url("../images/imageeditor/ico-rotate-right-on.png") no-repeat 50% 0;background-size:26.5px;}
+.editor-buttons .button-group button .ico-crop {padding-top:27px;background:url("../images/imageeditor/ico-crop.png") no-repeat 50% 0;background-size:31.5px;}
+.editor-buttons .button-group button .ico-bright {padding-top:27px;background:url("../images/imageeditor/ico-bright.png") no-repeat 50% 0;background-size:30px;}
+.editor-buttons .button-group button + button {margin-top:3px;}
+.editor-buttons .button-sub-func {position:absolute;left:20px;top:0;width:100px;height:600px;text-align:center;background:#333 url("../images/imageeditor/bg-editor-button.png") no-repeat 50% 100%;}
+.editor-buttons .button-sub-func .inner {position:absolute;top:50%;left:0;right:0;text-align:center;transform:translateY(-50%)}
+.editor-buttons .button-sub-func button {width:70px;height:20px;border-radius:5px;font-size:12px;color:#fff;font-weight:700}
+.editor-buttons .button-sub-func button + button {margin-top:6px;}
+.editor-buttons .button-sub-func .bt-type1 {background:#E60012}
+.editor-buttons .button-sub-func .bt-type2 {background:#909090}
+
+.brightness-controller {position:relative;height:220px;margin:20px auto 50px auto;width:2px;border:1px solid #E60012 !important;}
+.brightness-controller:before {content:"";position:absolute;top:-30px;left:-11px;display:block;width:22px;height:22px;background:url("../images/imageeditor/ico-brightness-up.png") no-repeat 50% 50%;background-size:22px;}
+.brightness-controller:after {content:"";position:absolute;bottom:-21px;left:-7px;display:block;width:14px;height:14px;background:url("../images/imageeditor/ico-brightness-down.png") no-repeat 50% 50%;background-size:14px;}
+.brightness-controller .ui-slider-handle {left:-9px;border-radius:50%;background:#E60012;border:2px solid #fff}
+
+.editor-img-area {position:absolute;top:30px;left:333px;width:800px;height:600px;z-index:20;}
+.editor-img-area .img-container {width:800px; height: 600px;}
+.editor-img-area .img-container img {display:block;width:100%;}
+
+/*dropzone*/
+.editor-img-drop {width:1102px;height:600px;position:absolute;top:30px;left:30px;background:#333 url("../images/imageeditor/bg-image-list.png") no-repeat 0 0;background-size:180px;}
+.editor-img-drop .dropzone {position:relative;padding:0 920px 0 0;width:100%;height:600px;border:0;overflow:hidden;}
+.editor-img-drop .dropzone .dz-message {display:none;}
+.editor-img-drop .dropzone .dz-preview {display:none;}
+.editor-img-drop .dropzone .dz-preview {position:relative;float:left;width:90px;height:60px;padding:0;cursor:pointer;border:0;background:#333;margin:0;overflow:hidden;}
+.editor-img-drop .dropzone .dz-preview.on:before,
+.editor-img-drop .dropzone .dz-preview:hover:before {content:"";position:absolute;top:0;left:0;right:0;bottom:0;display:block;border:2px solid #E60012;z-index:10}
+.editor-img-drop .dropzone .dz-preview .dz-details {width:100%;height:100%;padding:0;}
+.editor-img-drop .dropzone .dz-preview.on:before,
+.editor-img-drop .dropzone .dz-preview:hover:before {content:"";position:absolute;top:0;left:0;right:0;bottom:0;display:block;border:2px solid #E60012}
+.editor-img-drop .dropzone .dz-preview img {position:absolute;top:0;left:0;display:block;width:90px;height:60px;}
+.editor-img-drop .dropzone .dz-preview .dz-progress {height:10px;opacity:0.5}
+.editor-img-drop .dropzone .dz-image {width:10rem;height:10rem;border-radius:0;}
+.editor-img-drop .dropzone .dz-remove {position:absolute;right:0;bottom:0;width:18px;height:18px;opacity:0;background:url('../images/imageeditor/ico-del-photo.svg') no-repeat 50% 50%;text-indent:-9999px;overflow:hidden;z-index:20;}
+.editor-img-drop .dropzone .dz-preview:hover .dz-remove,
+.editor-img-drop .dropzone .dz-preview.on .dz-remove {opacity:1;}
+.editor-img-drop .dropzone .dz-button {position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:13rem !important;height:4.2rem !important;border:1px solid #5757DA !important;border-radius:4px !important;color:#5757DA !important;text-align:center;background:#fff !important}
+
+.editor-img-drop .drop-msg {position:absolute;top:40%;left:303px;right:0;transform:translateY(-50%);padding-top:170px;background:url("../images/imageeditor/ico-drop-image.png") no-repeat 50% 50%;background-size:38.5px;font-size:22px;color:#999;font-weight:700;text-align:center;}
+.editor-img-drop .drop-msg small {display:block;padding-top:10px;text-align:center;font-size:12px;color:#999;font-weight:400}
+.editor-img-drop .dropzone .dz-dz-size {display:none}
+.editor-img-drop .dropzone .dz-filename {display:none}
+
+/*loading*/
+.loading-pop {width:500px;height:500px;}
+.loading-pop .pop_inner {height:100%;}
+.lds-ring {position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:160px;height:190px;border-radius:10px;background:#fff;display: inline-block;z-index:1000}
+.lds-ring .msg {position:absolute;left:0;top:140px;right:0;text-align:center;font-size:18px;}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top:40px;
+    left:40px;
+    width: 80px;
+    height: 80px;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    background:url("../images/imageeditor/ico-loading.png") no-repeat 50% 50%;background-size:100%;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* cropper.min css style 재정의 */
+.cropper-face {
+    background:transparent
+}
+.cropper-bg {
+    background:transparent !important;
+}
+.cropper-dashed {
+    border:2px solid #E60012;
+    border-top-width:2px !important;
+    border-bottom-width:2px !important;
+    opacity:1 !important
+}
+.cropper-dashed.dashed-v {
+    border-left-width:2px !important;
+    border-right-width:2px !important;
+    opacity:1 !important
+}
+.cropper-viewer {
+    outline: none;
+    border:2px solid #E60012;
+}
+.cropper-view-box {
+    outline: 2px solid #E60012;
+    outline-color: #E60012;
+}
+.cropper-point {
+    background-color: #E60012;
+    height: 16px !important;
+    opacity: 1 !important;
+    width: 16px !important;
+    border: 2px solid #fff;
+}
+.cropper-point.point-nw {
+    top:0;
+    left:0;
+}
+.cropper-point.point-sw {
+    bottom:0;
+    left:0;
+}
+.cropper-point.point-se {
+    right:0;
+    bottom:0;
+}
+.cropper-point.point-ne {
+    top:0;
+    right:0;
+}
+.cropper-point.point-n {
+    margin-left:-8px;
+    top:0;
+    display:none
+}
+.cropper-point.point-w {
+    margin-top:-8px;
+    left:0;
+    display:none
+}
+.cropper-point.point-s {
+    margin-left:-8px;
+    bottom:0;
+    display:none
+}
+.cropper-point.point-e {
+    right:0;
+    display:none
+}

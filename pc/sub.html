@@ -1,0 +1,2944 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="description" content="롯데렌터카가 직접 관리하고 진단한 중고차를 실속있는 렌탈료로 이용하세요! 허위 매물 걱정 Zero, 편리한 방문정비 서비스, 인수/반납 타보고 결정">
+	<meta name="keywords" content="롯데렌터카마이카세이브, 롯데렌터카세이브, 롯데렌터카마이카, 중고차렌트, 중고차렌탈, 중고차장기렌탈, 중고차장기렌트, 롯데렌터카중고차장기렌터카, 롯데렌터카중고차, 중고차장기렌터카, 중고차구매, 중고차시세, 관리중고차, 진단중고차, 인증중고차, 중고차, 중고차거래, 중고차비교, 중고차견적, 중고차사이트, 중고차플랫폼">
+	<meta property="og:title" content="롯데렌터카 마이카 세이브">
+	<meta property="og:site_name" content="롯데렌터카 마이카 세이브">
+	<meta name="og:description" content="롯데렌터카가 직접 관리하고 진단한 중고차를 실속있는 렌탈료로 이용하세요! 허위 매물 걱정 Zero, 편리한 방문정비 서비스, 인수/반납 타보고 결정">
+	<meta property="og:image" content="https://mycarsave.lotterentacar.net/images/common/logo.png">
+	<link rel="shortcut icon" sizes="192x192" href="/images/icon/android.png">
+	<link rel="icon" type="image/x-icon" href="https://mycarsave.lotterentacar.net/pc/images/icon/favicon.ico">
+
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta id="_csrf" name="_csrf" content="e0f721a0-f4ca-4e8b-b351-846e7d0a6c7b">
+	<!-- default header name is X-CSRF-TOKEN -->
+	<meta id="_csrf_header" name="_csrf_header" content="X-CSRF-TOKEN">
+
+	<!-- th:block layout:fragment="title"></th:block-->
+	<title>롯데렌터카 마이카 세이브</title>
+
+	<!-- 공통 링크 s -->
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/fonts.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/jquery-ui.min.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/swiper.min.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/jquery.mCustomScrollbar.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/et_ux.css?version=f450d3443c71493fa90f649d39b31283">
+
+	
+		<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/common_new.css?version=f450d3443c71493fa90f649d39b31283" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+	
+
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/search-list.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/main.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/sub.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/car-insert.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/car-check-view.css?version=f450d3443c71493fa90f649d39b31283">
+
+	<!-- 추가 css -->
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/popup.css?version=f450d3443c71493fa90f649d39b31283">	
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/process.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/mypage.css?version=f450d3443c71493fa90f649d39b31283">
+
+<!--	<th:block th:if="${isCarToHomeCancel != null}">-->
+<!--		<link rel="stylesheet" th:href="@{|https://mycarsave.lotterentacar.net/pc/css/cartohome.css?version=${staticVersion}|}" />-->
+<!--	</th:block>-->
+<!--	<th:block th:unless="${isCarToHomeCancel != null}">-->
+<!--		<link rel="stylesheet" th:href="@{|https://mycarsave.lotterentacar.net/pc/css/cartohome-new.css?version=${staticVersion}|}" />-->
+<!--	</th:block>-->
+
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/custom.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/react-360-view.css?version=f450d3443c71493fa90f649d39b31283">
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/landing.css?version=f450d3443c71493fa90f649d39b31283">
+	<!-- photo upload library -->
+<!--	<link rel="stylesheet" th:href="@{|https://mycarsave.lotterentacar.net/pc/js/dropzone/dropzone.css?version=${staticVersion}|}" />-->
+<!--	<link rel="stylesheet" th:href="@{|https://mycarsave.lotterentacar.net/pc/js/cropper/cropper.min.css?version=${staticVersion}|}" />-->
+
+	<!-- cropper library css -->
+<!--	<th:block th:if="${hasImageEditor != null}">-->
+<!--		<link rel="stylesheet" th:href="@{|https://mycarsave.lotterentacar.net/pc/css/image-editor.css?version=${staticVersion}|}" type="text/css"/>-->
+<!--	</th:block>-->
+	<script src="https://mycarsave.lotterentacar.net/pc/js/jquery-3.4.1.min.js"></script>
+	<script src="https://mycarsave.lotterentacar.net/pc/js/jquery-ui.min.js"></script>
+	<script src="https://mycarsave.lotterentacar.net/pc/js/swiper.min.js"></script>
+<!--	스와이퍼 번들추가-->
+	<script src="https://mycarsave.lotterentacar.net/pc/js/swiper-bundle.min.js"></script>
+<!--	<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/jquery.panzoom.min.js}"></script>-->
+	<script src="https://mycarsave.lotterentacar.net/pc/js/jquery.mousewheel.js"></script>
+	<script src="https://mycarsave.lotterentacar.net/pc/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!--	<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/imagesloaded.pkgd.min.js}"></script>-->
+<!--	<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/masonry.pkgd.min.js}"></script>-->
+	<script src="https://mycarsave.lotterentacar.net/pc/js/const.js?version=f450d3443c71493fa90f649d39b31283"></script>
+	<!--<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/jquery-1.10.2.min.js}"></script>-->
+<!--	<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/modernizr-2.7.1-csstransforms3d-canvas-touch.js}"></script>-->
+<!--	<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/megapix-image.js}"></script>-->
+<!--	<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/three.min.js}"></script>-->
+<!--	<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/Detector.js}"></script>-->
+<!--	<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/CSS3DRenderer.js}"></script>-->
+<!--	<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/theta-viewer.js}"></script>-->
+<!--	<th:block th:if="${hasImageEditor != null}">-->
+<!--		<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/dropzone/dropzone.min.js}"></script>-->
+<!--		<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/cropper/cropper.min.js}"></script>-->
+<!--		<script th:src="@{https://mycarsave.lotterentacar.net/pc/js/cropper/jquery-cropper.js}"></script>-->
+<!--	</th:block>-->
+	<!-- image editor style -->
+	<!--<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>-->
+	
+	<link rel="stylesheet" href="https://mycarsave.lotterentacar.net/pc/css/search-list.css">
+
+
+	<!-- 퍼블용 -->
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+	<script src="../pc/js/jquery-3.4.1.min.js"></script>
+	<script src="../pc/js/slick.min.js"></script>
+	
+
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+	<link rel="stylesheet" type="text/css" href="../pc/css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="../pc/css/slick-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../pc/css/aos.css" />	
+	<link rel="stylesheet" type="text/css" href="../pc/css/renew.css">
+	<link rel="stylesheet" type="text/css" href="../pc/css/sub_renew.css">
+	<!-- //퍼블용 -->
+
+
+</head>
+<body>
+
+<div id="wrap" class="layout--wrap">
+
+	<header id="header">
+		<!-- layout--header -->
+		<section class="layout--header-new scroll">
+			<header>
+				<h1 class="logo-wrap"><a href="/" class="ir">롯데렌터카 마이카 세이브</a></h1>
+				<nav>
+					<ul>
+						<li class="depth1"><a href="#">구매하기</a></li>
+						<li class="depth1"><a href="/cr/search/list">중고차렌트</a></li>
+						<li class="depth1"><a href="/rental/new">신차렌트</a></li>
+						<!-- <li class="depth1"><a href="/rental/lease">오토리스</a></li> -->
+						<li class="depth1"><a href="https://www.lotterentacar.net/hp/kor/usedCar/sellmycar/myCarSellApply.do" target="_blank">내차팔기</a></li>
+						<li class="btn-login"><button type="button" class="bt-btn-login">로그인</button></li>							
+						
+						<li class="btn-more">
+							<button>더보기</button>
+							<ul class="sub-menu">
+								<li><a href="/cs/noti/list">공지사항</a></li>
+								<li><a href="/cs/faq/list">FAQ</a></li>
+								<!-- <li><a href="/cs/event/list">이벤트</a></li> -->
+								<li><a href="/cr/theme/list">기획전</a></li>
+								<li><a href="/co/compare/main">비교하기</a></li>
+								<!-- <li><a href="/mypage/interest/rcntList">최근 본 차량</a></li>-->
+								<!-- <li th:if="${loginYn == 'Y'}"><a href="/mypage/interest/intrsList">관심차량</a></li>-->
+								<li><a href="/cr/review/list">고객후기</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<!-- 				
+			<div id="reactLoginMenu"><div class="layer_popup_wrappper rent-pop" id="alertMainPopup"><div class="layer_popup login-pop"><div class="pop_inner"><div class="pop-head"><h2>로그인</h2><button class="ir btn-close">팝업닫기</button></div><div class="pop-contents"><div class="login-wrap"><h3>로그인 방식을 선택해 주세요!</h3><ul class="sns-login-list"><li><button class="login-btn pass">휴대폰 번호인증</button></li><li><button class="login-btn naver">네이버</button><button type="button" id="naverIdLogin" style="display: none;"><a id="naverIdLogin_loginButton" href="#"><img src="https://static.nid.naver.com/oauth/small_w_in.PNG?version=js-2.0.1" height="49"></a></button></li><li><button class="login-btn kakao">카카오</button></li><li><button class="login-btn lpoint">엘포인트 통합회원</button></li></ul><ul class="join-link"><li><a href="#">회원가입</a></li><li><a href="#">아이디찾기</a></li><li><a href="#">비밀번호 찾기</a></li></ul></div></div></div></div></div></div> -->
+		</section>
+		<script>
+			/* 헤더 검색 UI */
+	
+			// 더보기메뉴
+			$(document).ready(function() {
+				$(".btn-more").click(function() {
+					$(this).toggleClass("on");
+				});
+			});
+	
+		</script>
+	</header>
+
+	<div id="container">
+		<div id="reactMainPage">
+			<div>
+				<div class="full-banner-area" style="display: none;">
+					<div class="banner-slider swiper-container swiper-initialized swiper-horizontal">
+						<div class="swiper-wrapper" id="swiper-wrapper-6a723483d6f7445a" aria-live="off"
+							style="transition-duration: 650ms;">
+							<div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" role="group"
+								aria-label="1 / 5"
+								style="background-image: url(&quot;https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025077920240829124001.png&quot;); background-position: center top; background-size: auto 100%;">
+							</div>
+							<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" role="group"
+								aria-label="2 / 5"
+								style="background-image: url(&quot;https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/24/LFILE_000015592220240424170001.webp&quot;); background-position: center top; background-size: auto 100%;">
+							</div>
+							<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" role="group"
+								aria-label="3 / 5"
+								style="background-image: url(&quot;https://img-mycarsave.lotterentacar.net/uploadFile/2024/01/16/LFILE_000008826520240116142751.webp&quot;); background-position: center top; background-size: auto 100%;">
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="3" role="group" aria-label="4 / 5"
+								style="background-image: url(&quot;https://img-mycarsave.lotterentacar.net/uploadFile/2024/01/16/LFILE_000008826620240116142803.webp&quot;); background-position: center top; background-size: auto 100%;">
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="4" role="group" aria-label="5 / 5"
+								style="background-image: url(&quot;https://img-mycarsave.lotterentacar.net/uploadFile/2023/12/28/LFILE_000007671720231228125542.webp&quot;); background-position: center top; background-size: auto 100%;">
+							</div>
+						</div>
+						<div class="swiper-pagination-area">
+							<div class="swiper-pagination-wrap">
+								<div class="wrap">
+									<div class="ir bt-img-prev swiper-button-prev" tabindex="0" role="button"
+										aria-label="Previous slide" aria-controls="swiper-wrapper-6a723483d6f7445a"></div>
+									<div class="swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal">
+										<span class="swiper-pagination-current">2</span> / <span
+											class="swiper-pagination-total">5</span></div>
+									<div class="ir bt-img-next swiper-button-next" tabindex="0" role="button"
+										aria-label="Next slide" aria-controls="swiper-wrapper-6a723483d6f7445a"></div>
+								</div>
+							</div>
+						</div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+					</div>
+				</div>
+				<div class="layout--container ctn-search-list" style="margin-top: 80px;">
+					<div class="search-list-container">
+						<div class="search-element">
+							<h4 class="total_num">전체차량 <strong>1,121</strong> 대</h4>
+							<div class="condition-item item-lotteService unfold" data-fold="foldable">
+								<ul class="svc-box-wrap">
+									<li class="svc-box "><img class="active"
+											src="../pc/images/icon/ico-certification.png"><img class="inactive"
+											src="../pc/images/icon/ico-certification-inactive.png"><span>인증차</span>
+										<div class="common-layer-group posTop">
+											<div class="common-layer-tooptip custom-tooltip" style="width: 420px;">
+												<h4>인증차란?</h4>
+												<p>주요골격(프레임) 사고이력이 없는 <u>무사고 진단차량</u> 입니다.</p>
+											</div>
+										</div>
+									</li>
+									<li class="svc-box "><img class="active" src="../pc/images/icon/ico-diagnosis.png"><img
+											class="inactive"
+											src="../pc/images/icon/ico-diagnosis-inactive.png"><span>진단차</span>
+										<div class="common-layer-group posTop">
+											<div class="common-layer-tooptip custom-tooltip" style="width: 420px;">
+												<h4>진단차란?</h4>
+												<p>롯데렌터카에서 <u>직접성능점검한 정보가 제공되는 차량</u>입니다.</p>
+											</div>
+										</div>
+									</li>
+									<li class="svc-box "><img class="active" src="../pc/images/icon/ico-management.png"><img
+											class="inactive"
+											src="../pc/images/icon/ico-management-inactive.png"><span>관리차</span>
+										<div class="common-layer-group posTop">
+											<div class="common-layer-tooptip custom-tooltip" style="width: 420px;">
+												<h4>관리차란?</h4>
+												<p>신차 출고부터 지금까지 롯데렌터카에서 <u>정기관리한 차량</u> 입니다.</p>
+											</div>
+										</div>
+									</li>
+									<li class="svc-box "><img class="active" src="../pc/images/icon/ico-direct.png"><img
+											class="inactive" src="../pc/images/icon/ico-direct-inactive.png"><span>다이렉트</span>
+										<div class="common-layer-group posTop">
+											<div class="common-layer-tooptip custom-tooltip" style="width: 420px;">
+												<h4>다이렉트란?</h4>
+												<p>온라인을 통해 직접 심사부터 전자계약까지 가능한 <br><u>비대면 전용 차량</u>입니다.</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="search-condition">
+								<div id="carTypeField" class="condition-item item-cartype unfold" data-fold="foldable">
+									<h3 class="item-title">차종<button type="button" class="ir bt-flip">목록열기</button></h3>
+									<ul class="select-type-checked">
+										<li><input type="checkbox" name="chkCartype" id="chkCartype1" value="002001" checked="checked"><label
+												for="chkCartype1">경차</label></li>
+										<li><input type="checkbox" name="chkCartype" id="chkCartype3" value="002002"><label
+												for="chkCartype3">소형차</label></li>
+										<li><input type="checkbox" name="chkCartype" id="chkCartype5" value="002003"><label
+												for="chkCartype5">준중형차</label></li>
+										<li><input type="checkbox" name="chkCartype" id="chkCartype7" value="002004"><label
+												for="chkCartype7">중형차</label></li>
+										<li><input type="checkbox" name="chkCartype" id="chkCartype9" value="002005"><label
+												for="chkCartype9">대형차</label></li>
+										<li><input type="checkbox" name="chkCartype" id="chkCartype2" value="002008"><label
+												for="chkCartype2">SUV</label></li>
+										<li><input type="checkbox" name="chkCartype" id="chkCartype4" value="002007"><label
+												for="chkCartype4">RV</label></li>
+										<li><input type="checkbox" name="chkCartype" id="chkCartype8" value="002009"><label
+												for="chkCartype8">승합차</label></li>
+									</ul>
+								</div>
+								<div class="condition-item item-model unfold" data-fold="foldable">
+									<h3 class="item-title">제조사/모델</h3><button type="button" class="ir bt-flip">목록열기</button>
+									<div>
+										<ul class="select-type-checked mnfc">
+											<li><input type="checkbox" id="br5"><label for="br5"><img class="logo"
+														src="../pc/images/common/logo/logo-hyundai.png">현대</label><var
+													class="count">257</var>
+												<p class="icon_toggle"><img class="logo"
+														src="../pc/images/icon/ico-arrow-down.svg"></p>
+											</li>
+											<li><input type="checkbox" disabled="" id="br146"><label for="br146"><img
+														class="logo"
+														src="../pc/images/common/logo/logo-genesis.png">제네시스</label><var
+													class="count"></var></li>
+											<li><input type="checkbox" id="br2"><label for="br2"><img class="logo"
+														src="../pc/images/common/logo/logo-kia.png">기아</label><var
+													class="count">210</var>
+												<p class="icon_toggle"><img class="logo"
+														src="../pc/images/icon/ico-arrow-down.svg"></p>
+											</li>
+											<li><input type="checkbox" id="br4"><label for="br4"><img class="logo"
+														src="../pc/images/common/logo/logo-kgmobility.png">KG모빌리티(쌍용)</label><var
+													class="count">18</var>
+												<p class="icon_toggle"><img class="logo"
+														src="../pc/images/icon/ico-arrow-down.svg"></p>
+											</li>
+											<li><input type="checkbox" id="br1"><label for="br1"><img class="logo"
+														src="../pc/images/common/logo/logo-chevrolet.png">쉐보레(GM대우)</label><var
+													class="count">46</var>
+												<p class="icon_toggle"><img class="logo"
+														src="../pc/images/icon/ico-arrow-down.svg"></p>
+											</li>
+											<li><input type="checkbox" id="br3"><label for="br3"><img class="logo"
+														src="../pc/images/common/logo/logo-renault.png">르노코리아(삼성)</label><var
+													class="count">2</var>
+												<p class="icon_toggle"><img class="logo"
+														src="../pc/images/icon/ico-arrow-down.svg"></p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="priceField" class="condition-item item-price unfold" data-fold="foldable">
+									<h3 class="item-title">월 대여료</h3><button type="button" class="ir bt-flip">목록열기</button>
+									<div class="type-group range">
+										<div class="range-bts"><button type="button" class="rg-bt">전체</button><button
+												type="button" class="rg-bt on">~50만원</button><button type="button"
+												class="rg-bt">~60만원</button><button type="button"
+												class="rg-bt">~70만원</button></div>
+									</div>
+									<div class="type-group direct">
+										<div class="select-type-input has-bt"><span class="ip_wrap"><input type="text"
+													inputmode="numeric" name="minRentPrice"
+													value="0"><small>만원</small></span><span class="sb">~</span><span
+												class="ip_wrap"><input type="text" inputmode="numeric" name="maxRentPrice"
+													value="50"><small>만원</small></span></div>
+									</div>
+								</div>
+								<div class="condition-item item-distance unfold" data-fold="foldable">
+									<h3 class="item-title">주행거리<button type="button" class="ir bt-flip">목록열기</button></h3>
+									<div class="type-group range">
+										<div class="range-bts"><button type="button" class="rg-bt on">전체</button><button
+												type="button" class="rg-bt">3만</button><button type="button"
+												class="rg-bt">5만</button><button type="button"
+												class="rg-bt">7만</button><button type="button" class="rg-bt">10만</button>
+										</div>
+									</div>
+									<div class="type-group direct">
+										<div class="select-type-input has-bt"><span class="ip_wrap"><input type="text"
+													inputmode="numeric" id="minMileageInput"
+													value=""><small>km</small></span><span class="sb">~</span><span
+												class="ip_wrap"><input type="text" inputmode="numeric" id="minMileageInput"
+													value=""><small>km</small></span></div>
+									</div>
+								</div>
+								<div id="yearField" class="condition-item item-year unfold" data-fold="foldable">
+									<h3 class="item-title">연식</h3><button type="button" class="ir bt-flip">목록열기</button>
+									<div class="type-group range">
+										<div class="range-bts"><button type="button" class="rg-bt on">전체</button><button
+												type="button" class="rg-bt">~3년</button><button type="button"
+												class="rg-bt">~4년</button><button type="button" class="rg-bt">~5년</button>
+										</div>
+									</div>
+									<div class="select-type-input"><span class="sl_wrap"><select name="year1" id="minYear">
+												<option value="">최소</option>
+												<option value="2025">2025년</option>
+												<option value="2024">2024년</option>
+												<option value="2023">2023년</option>
+												<option value="2022">2022년</option>
+												<option value="2021">2021년</option>
+												<option value="2020">2020년</option>
+												<option value="2019">2019년</option>
+												<option value="2018">2018년</option>
+												<option value="2017">2017년</option>
+												<option value="2016">2016년</option>
+												<option value="2015">2015년</option>
+												<option value="2014">2014년</option>
+												<option value="2013">2013년</option>
+												<option value="2012">2012년</option>
+												<option value="2011">2011년</option>
+												<option value="2010">2010년</option>
+												<option value="2009">2009년</option>
+												<option value="2008">2008년</option>
+												<option value="2007">2007년</option>
+												<option value="2006">2006년</option>
+												<option value="2005">2005년</option>
+												<option value="2004">2004년</option>
+												<option value="2003">2003년</option>
+												<option value="2002">2002년</option>
+												<option value="2001">2001년</option>
+												<option value="2000">2000년</option>
+												<option value="1999">1999년</option>
+												<option value="1998">1998년</option>
+												<option value="1997">1997년</option>
+												<option value="1996">1996년</option>
+												<option value="1995">1995년</option>
+												<option value="1994">1994년</option>
+												<option value="1993">1993년</option>
+												<option value="1992">1992년</option>
+												<option value="1991">1991년</option>
+												<option value="1990">1990년</option>
+												<option value="1989">1989년</option>
+												<option value="1988">1988년</option>
+												<option value="1987">1987년</option>
+												<option value="1986">1986년</option>
+												<option value="1985">1985년</option>
+												<option value="1984">1984년</option>
+												<option value="1983">1983년</option>
+												<option value="1982">1982년</option>
+												<option value="1981">1981년</option>
+												<option value="1980">1980년</option>
+											</select></span><span class="sb">~</span><span class="sl_wrap"><select
+												name="maxYear" id="maxYear">
+												<option value="">최대</option>
+												<option value="2025">2025년</option>
+												<option value="2024">2024년</option>
+												<option value="2023">2023년</option>
+												<option value="2022">2022년</option>
+												<option value="2021">2021년</option>
+												<option value="2020">2020년</option>
+												<option value="2019">2019년</option>
+												<option value="2018">2018년</option>
+												<option value="2017">2017년</option>
+												<option value="2016">2016년</option>
+												<option value="2015">2015년</option>
+												<option value="2014">2014년</option>
+												<option value="2013">2013년</option>
+												<option value="2012">2012년</option>
+												<option value="2011">2011년</option>
+												<option value="2010">2010년</option>
+												<option value="2009">2009년</option>
+												<option value="2008">2008년</option>
+												<option value="2007">2007년</option>
+												<option value="2006">2006년</option>
+												<option value="2005">2005년</option>
+												<option value="2004">2004년</option>
+												<option value="2003">2003년</option>
+												<option value="2002">2002년</option>
+												<option value="2001">2001년</option>
+												<option value="2000">2000년</option>
+												<option value="1999">1999년</option>
+												<option value="1998">1998년</option>
+												<option value="1997">1997년</option>
+												<option value="1996">1996년</option>
+												<option value="1995">1995년</option>
+												<option value="1994">1994년</option>
+												<option value="1993">1993년</option>
+												<option value="1992">1992년</option>
+												<option value="1991">1991년</option>
+												<option value="1990">1990년</option>
+												<option value="1989">1989년</option>
+												<option value="1988">1988년</option>
+												<option value="1987">1987년</option>
+												<option value="1986">1986년</option>
+												<option value="1985">1985년</option>
+												<option value="1984">1984년</option>
+												<option value="1983">1983년</option>
+												<option value="1982">1982년</option>
+												<option value="1981">1981년</option>
+												<option value="1980">1980년</option>
+											</select></span></div>
+								</div>
+								<div id="fuelField" class="condition-item item-cartype unfold" data-fold="foldable">
+									<h3 class="item-title">연료<button type="button" class="ir bt-flip">목록열기</button></h3>
+									<ul class="select-type-checked">
+										<li style="width: 100%;"><input type="checkbox" class="check-input"
+												id="filterFuel01" value="01"><label for="filterFuel01">가솔린</label></li>
+										<li style="width: 100%;"><input type="checkbox" class="check-input"
+												id="filterFuel02" value="02"><label for="filterFuel02">디젤</label></li>
+										<li style="width: 100%;"><input type="checkbox" class="check-input"
+												id="filterFuel03" value="03"><label for="filterFuel03">LPG</label></li>
+										<li style="width: 100%;"><input type="checkbox" class="check-input"
+												id="filterFuel06" value="06"><label for="filterFuel06">하이브리드</label></li>
+										<li style="width: 100%;"><input type="checkbox" class="check-input"
+												id="filterFuel05" value="05"><label for="filterFuel05">전기(EV)</label></li>
+									</ul>
+								</div>
+								<div id="colorField" class="condition-item item-color-outside unfold" data-fold="foldable">
+									<h3 class="item-title">색상<button type="button" class="ir bt-flip">목록열기</button></h3>
+									<ul class="select-type-color">
+										<li><button type="button" id="color_C001" class="bt-item" value="C001"><var
+													style="background-color: rgb(0, 0, 0);"></var><span>검정</span></button>
+										</li>
+										<li><button type="button" id="color_C005" class="bt-item" value="C005"><var
+													style="background-color: rgb(97, 97, 97);"></var><span>회색</span></button>
+										</li>
+										<li><button type="button" id="color_C006" class="bt-item" value="C006"><var
+													style="background-color: rgb(122, 119, 119);"></var><span>쥐색</span></button>
+										</li>
+										<li><button type="button" id="color_C003" class="bt-item" value="C003"><var
+													style="background-color: rgb(176, 176, 176);"></var><span>은색</span></button>
+										</li>
+										<li><button type="button" id="color_C002" class="bt-item" value="C002"><var
+													style="background-color: rgb(255, 255, 255);"></var><span>흰색</span></button>
+										</li>
+										<li><button type="button" class="bt-item bt-more"><var></var><span></span></button>
+										</li>
+										<div class="layer-view-color outcolor" id="outColorAll"
+											style="display: none; min-height: 345px;">
+											<h3 class="layer-title">외장 색상</h3><button type="button"
+												class="ir bt-close-option-layer">닫기</button>
+											<div class="inner">
+												<ul class="select-type-color">
+													<li><button type="button" id="color_C001" class="bt-item"
+															value="C001"><var
+																style="background-color: rgb(0, 0, 0);"></var><span>검정</span></button>
+													</li>
+													<li><button type="button" id="color_C006" class="bt-item"
+															value="C006"><var
+																style="background-color: rgb(80, 76, 76);"></var><span>쥐색</span></button>
+													</li>
+													<li><button type="button" id="color_C005" class="bt-item"
+															value="C005"><var
+																style="background-color: rgb(176, 176, 176);"></var><span>회색</span></button>
+													</li>
+													<li><button type="button" id="color_C003" class="bt-item"
+															value="C003"><var
+																style="background-color: rgb(221, 221, 221);"></var><span>은색</span></button>
+													</li>
+													<li><button type="button" id="color_C002" class="bt-item"
+															value="C002"><var
+																style="background-color: rgb(255, 255, 255);"></var><span>흰색</span></button>
+													</li>
+													<li><button type="button" id="color_C022" class="bt-item"
+															value="C022"><var
+																style="background-color: rgb(245, 245, 220);"></var><span>미색</span></button>
+													</li>
+													<li><button type="button" id="color_C004" class="bt-item"
+															value="C004"><var
+																style="background-color: rgb(245, 245, 233);"></var><span>진주색</span></button>
+													</li>
+													<li><button type="button" id="color_C007" class="bt-item"
+															value="C007"><var
+																style="background-color: rgb(25, 65, 94);"></var><span>남색</span></button>
+													</li>
+													<li><button type="button" id="color_C012" class="bt-item"
+															value="C012"><var
+																style="background-color: rgb(51, 72, 148);"></var><span>청옥색</span></button>
+													</li>
+													<li><button type="button" id="color_C009" class="bt-item"
+															value="C009"><var
+																style="background-color: rgb(204, 15, 15);"></var><span>빨강</span></button>
+													</li>
+													<li><button type="button" id="color_C008" class="bt-item"
+															value="C008"><var
+																style="background-color: rgb(20, 90, 197);"></var><span>파랑</span></button>
+													</li>
+													<li><button type="button" id="color_C010" class="bt-item"
+															value="C010"><var
+																style="background-color: rgb(229, 96, 0);"></var><span>주황색</span></button>
+													</li>
+													<li><button type="button" id="color_C011" class="bt-item"
+															value="C011"><var
+																style="background-color: rgb(8, 121, 67);"></var><span>초록</span></button>
+													</li>
+													<li><button type="button" id="color_C020" class="bt-item"
+															value="C020"><var
+																style="background-color: rgb(193, 23, 105);"></var><span>자주색</span></button>
+													</li>
+													<li><button type="button" id="color_C014" class="bt-item"
+															value="C014"><var
+																style="background-color: rgb(128, 47, 13);"></var><span>갈색</span></button>
+													</li>
+													<li><button type="button" id="color_C015" class="bt-item"
+															value="C015"><var
+																style="background-color: rgb(209, 117, 195);"></var><span>분홍색</span></button>
+													</li>
+													<li><button type="button" id="color_C016" class="bt-item"
+															value="C016"><var
+																style="background-color: rgb(227, 206, 153);"></var><span>금색</span></button>
+													</li>
+													<li><button type="button" id="color_C017" class="bt-item"
+															value="C017"><var
+																style="background-color: rgb(239, 200, 63);"></var><span>노랑</span></button>
+													</li>
+													<li><button type="button" id="color_C018" class="bt-item"
+															value="C018"><var
+																style="background-color: rgb(201, 226, 225);"></var><span>명은색</span></button>
+													</li>
+													<li><button type="button" id="color_C019" class="bt-item"
+															value="C019"><var
+																style="background-color: rgb(124, 21, 160);"></var><span>보라색</span></button>
+													</li>
+													<li><button type="button" id="color_C013" class="bt-item"
+															value="C013"><var
+																style="background-color: rgb(193, 23, 105);"></var><span>자주</span></button>
+													</li>
+													<li><button type="button" id="color_C021" class="bt-item"
+															value="C021"><var></var><span>기타</span></button></li>
+												</ul>
+												<div class="btn-group mt30"><button type="button"
+														class="bt-common-type1 bt-m">확인</button></div>
+											</div>
+										</div>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="list-element">
+							<p class="breadcrumb-wrap"><a href="/cr/search/list">중고차렌트</a><a href="/cr/search/list"
+									class="active">전체</a></p>
+							<div class="list-search">
+								<div class="sch-group"><span class="ip-wrap"><input type="text" maxlength="32"
+											placeholder="차종 혹은 모델을 입력해주세요." value=""></span><button type="button"
+										class="btn-del" hidden="">삭제</button><button type="button"
+										class="bt-search">검색</button></div>
+								<div
+									class="keyword-tags swiper tagSubSlider swiper-initialized swiper-horizontal swiper-backface-hidden">
+									<div class="swiper-wrapper" id="swiper-wrapper-b1073b13cbb796e14" aria-live="polite">
+										<div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 5"
+											style="margin-right: 12px;"><span class="tag">옵션UP이벤트</span></div>
+										<div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 5"
+											style="margin-right: 12px;"><span class="tag">출고3년이내</span></div>
+										<div class="swiper-slide" role="group" aria-label="3 / 5"
+											style="margin-right: 12px;"><span class="tag">3만km이하</span></div>
+										<div class="swiper-slide" role="group" aria-label="4 / 5"
+											style="margin-right: 12px;"><span class="tag">친환경차</span></div>
+										<div class="swiper-slide" role="group" aria-label="5 / 5"
+											style="margin-right: 12px;"><span class="tag">통풍시트</span></div>
+									</div><span class="swiper-notification" aria-live="assertive"
+										aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive"
+										aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive"
+										aria-atomic="true"></span>
+								</div>
+							</div>
+							<div class="selected-option" style="display: block;">
+								<div class="items"><button type="button" class="bt-selected-item">월 렌트비:월 0 만원 ~ 50
+										만원</button></div><button type="button" class="ir bt-selected-refresh">검색조건색
+									초기화</button>
+							</div>
+							<div class="list-head">
+								<p class="list-total-count">판매중차량<var>(533 대)</var></p>
+								<div>
+									<ul class="list-solting">
+										<li><button type="button" class="solt-option up">최근등록순</button></li>
+										<li><button type="button" class="solt-option">연식</button></li>
+										<li><button type="button" class="solt-option">주행거리</button></li>
+										<li><button type="button" class="solt-option">가격</button></li>
+									</ul>
+									<div class="list-view-type"><button type="button"
+											class="list-view-btn ir list-view-img on">카드형 보기</button><button type="button"
+											class="list-view-btn ir list-view-list">목록형 보기</button></div>
+								</div>
+							</div>
+							<section class="promotionSale-wrap">
+								<div class="car-wt-container">
+									<div class="list-head">
+										<p class="list-tit">한정특가</p><a href="javascript:void(0);" class="btn-more">20대
+											<span>전체보기</span> <img src="../pc/images/icon/ico-arr-right2.svg"></a>
+									</div>
+									<div
+										class="list-content wt swiper-container-initialized swiper-container-horizontal promotionSale-list swiper-initialized swiper-horizontal">
+										<ul class="list-type-vertical swiper-wrapper n5"
+											id="swiper-wrapper-0975ebdd68d4f187" aria-live="polite"
+											style="transform: translate3d(0px, 0px, 0px);">
+											<li class="list-item swiper-slide swiper-slide-active" role="group" aria-label="1 / 20">
+												<div class="list-thumb"><img
+														src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/25/LFILE_000015717620240425143237.png/dims/resize/300x220"
+														alt="차량이미지">
+													<div class="timesaleWrap2"><span class="ico-timesale"></span><span
+															class="txt">한정 특가</span><span class="time">14 일 16 : 19 :
+															51</span></div>
+												</div>
+												<div class="list-detail">
+													<div class="badge"><span class="ele-badge badge-type3">관리차</span><span
+															class="ele-badge badge-type3">진단차</span><span
+															class="ele-badge badge-type3">인증차</span></div>
+													<div class="list-title"><a data-carid="8477" class="link-detail-view">현대
+															쏘나타(DN8) G2.0 모던</a></div>
+													<div class="list-option"><span class="year">2022/01(22년형)</span><span
+															class="dstc">55,316km</span></div>
+													<div class="list-price">
+														<p class="price2">월 418,000원</p>
+														<div class="price">
+															<p class="prc">월 <var>377,000</var>원</p> <span class="type">/
+																<em>24개월</em></span>
+														</div>
+														<div class="price-new">신차가 27,610,000원 </div>
+													</div>
+												</div>
+											</li>
+											<li class="list-item swiper-slide swiper-slide-next" role="group" aria-label="2 / 20">
+												<div class="list-thumb"><img
+														src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/22/LFILE_000015250520240422114453.png/dims/resize/300x220"
+														alt="차량이미지">
+													<div class="timesaleWrap2"><span class="ico-timesale"></span><span
+															class="txt">한정 특가</span><span class="time">14 일 16 : 19 :
+															51</span></div>
+												</div>
+												<div class="list-detail">
+													<div class="badge"><span class="ele-badge badge-type3">관리차</span><span
+															class="ele-badge badge-type3">진단차</span></div>
+													<div class="list-title"><a data-carid="8287" class="link-detail-view">기아
+															신형K5 2.0 가솔린 시그니처</a></div>
+													<div class="list-option"><span class="year">2021/03(21년형)</span><span
+															class="dstc">40,689km</span></div>
+													<div class="list-price">
+														<p class="price2">월 482,000원</p>
+														<div class="price">
+															<p class="prc">월 <var>434,000</var>원</p> <span class="type">/
+																<em>24개월</em></span>
+														</div>
+														<div class="price-new">신차가 35,140,000원 </div>
+													</div>
+												</div>
+											</li>
+											<li class="list-item swiper-slide" role="group" aria-label="3 / 20">
+												<div class="list-thumb"><img
+														src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/04/25/LFILE_000015655920240425125513.png/dims/resize/300x220"
+														alt="차량이미지">
+													<div class="timesaleWrap2"><span class="ico-timesale"></span><span
+															class="txt">한정 특가</span><span class="time">14 일 16 : 19 :
+															51</span></div>
+												</div>
+												<div class="list-detail">
+													<div class="badge"><span class="ele-badge badge-type3">진단차</span><span
+															class="ele-badge badge-type3">인증차</span></div>
+													<div class="list-title"><a data-carid="8103" class="link-detail-view">기아
+															신형K5 1.6 가솔린 터보 노블레스</a></div>
+													<div class="list-option"><span class="year">2020/08(20년형)</span><span
+															class="dstc">49,515km</span></div>
+													<div class="list-price">
+														<p class="price2">월 438,000원</p>
+														<div class="price">
+															<p class="prc">월 <var>395,000</var>원</p> <span class="type">/
+																<em>24개월</em></span>
+														</div>
+														<div class="price-new">신차가 31,270,000원 </div>
+													</div>
+												</div>
+											</li>
+									
+										</ul>
+										<div class="swiper-pagination-area">
+											<div class="swiper-button-prev swiper-button-disabled" tabindex="-1"
+												role="button" aria-label="Previous slide" aria-disabled="true"
+												aria-controls="swiper-wrapper-0975ebdd68d4f187"></div>
+											<div class="swiper-button-next" tabindex="0" role="button"
+												aria-label="Next slide" aria-disabled="false"
+												aria-controls="swiper-wrapper-0975ebdd68d4f187"></div>
+										</div><span class="swiper-notification" aria-live="assertive"
+											aria-atomic="true"></span><span class="swiper-notification"
+											aria-live="assertive" aria-atomic="true"></span>
+									</div>
+								</div>
+							</section>
+							<div class="list-content">
+								<ul class="list-type-vertical n3">
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-9ae18d51ec448d39"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000024999920240829092552.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025000020240829092553.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025000120240829092554.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025000220240829092555.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025000320240829092556.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025000420240829092557.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025000520240829092558.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025000620240829092558.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025000720240829092600.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025000820240829092601.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025000920240829092602.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025001020240829092603.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025001120240829092604.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025001220240829092605.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025001320240829092606.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025001420240829092607.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025001520240829092608.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025001620240829092609.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025001720240829092611.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025001820240829092612.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-9ae18d51ec448d39"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-9ae18d51ec448d39"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"><span class="ele-badge badge-type1">다이렉트 전용</span></div>
+												<div class="list-title"><a data-carid="12598" class="link-detail-view">기아 신형
+														카니발 9인승 디젤 노블레스</a></div>
+												<div class="list-option"><span class="year">2020/09(21년형)</span><span
+														class="dstc">39,039km</span><span class="fuel">디젤</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>420,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 38,430,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-aaac41ab109ec7b6c"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024717520240826104618.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024717620240826104619.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024717720240826104619.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024717820240826104620.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024717920240826104621.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024718020240826104622.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024718120240826104622.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024718220240826104624.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024718320240826104625.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024718420240826104626.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024718520240826104627.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024718620240826104628.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024718720240826104628.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024718820240826104629.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024718920240826104630.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024719020240826104631.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024719120240826104632.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024719220240826104633.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024719320240826104634.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/26/LFILE_000024719420240826104635.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-aaac41ab109ec7b6c"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-aaac41ab109ec7b6c"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"><span class="ele-badge badge-type3">관리차</span></div>
+												<div class="list-title"><a data-carid="12490" class="link-detail-view">기아 더
+														뉴 K3 1.6 가솔린 트렌디</a></div>
+												<div class="list-option"><span class="year">2022/03(22년형)</span><span
+														class="dstc">13,229km</span><span class="fuel">가솔린</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>318,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 18,350,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-a4365d158afd9fcc"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023820120240813094835.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023820220240813094835.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023820320240813094836.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023820420240813094837.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023820520240813094838.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023820620240813094839.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023820720240813094840.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023820820240813094840.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023820920240813094842.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023821020240813094844.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023821120240813094845.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023821220240813094847.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023821320240813094848.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023821420240813094850.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023821520240813094851.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023821620240813094852.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023821720240813094854.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023821820240813094856.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023821920240813094858.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/13/LFILE_000023822020240813094900.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-a4365d158afd9fcc"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-a4365d158afd9fcc"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12139" class="link-detail-view">현대 더
+														뉴그랜저IG 가솔린 2.5 캘리그래피</a></div>
+												<div class="list-option"><span class="year">2020/06(20년형)</span><span
+														class="dstc">63,521km</span><span class="fuel">가솔린</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>443,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 42,950,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-91ca4db56baab9e8"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025012620240829094715.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025012720240829094717.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025012820240829094718.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025012920240829094719.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025013020240829094720.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025013120240829094721.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025013220240829094722.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025013320240829094723.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025013420240829094724.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025013520240829094726.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025013620240829094728.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025013920240829094729.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025014020240829094808.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025014120240829094809.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025014220240829094810.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025014320240829094810.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025014420240829094811.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025014520240829094812.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025014620240829094814.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025014720240829094815.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-91ca4db56baab9e8"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-91ca4db56baab9e8"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12591" class="link-detail-view">현대
+														쏘나타(DN8) G2.0 프리미엄 플러스</a></div>
+												<div class="list-option"><span class="year">2022/08(22년형)</span><span
+														class="dstc">35,485km</span><span class="fuel">가솔린</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>473,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 28,980,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-43c8a23895967b14"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025056620240829105635.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025056720240829105636.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025056820240829105637.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025056920240829105638.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025057020240829105638.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025057120240829105639.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025057220240829105640.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025057320240829105641.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025057420240829105641.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025057520240829105642.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025057620240829105643.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025057720240829105644.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025057820240829105645.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025057920240829105645.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025058020240829105646.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025058120240829105647.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025058220240829105648.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025058320240829105649.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025058420240829105650.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025058520240829105650.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-43c8a23895967b14"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-43c8a23895967b14"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12595" class="link-detail-view">현대
+														아반떼(CN7) 1.6 가솔린 모던</a></div>
+												<div class="list-option"><span class="year">2021/12(22년형)</span><span
+														class="dstc">44,999km</span><span class="fuel">가솔린</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>366,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 21,740,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-419f58a4948568101"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025046220240829103353.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025046320240829103354.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025046420240829103355.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025046520240829103356.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025046620240829103356.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025046720240829103357.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025046820240829103358.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025046920240829103359.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025047020240829103359.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025047120240829103400.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025047220240829103401.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025047320240829103402.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025047420240829103402.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025047520240829103403.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025047620240829103404.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025047720240829103405.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025047820240829103406.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025047920240829103406.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025048020240829103407.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025048120240829103408.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-419f58a4948568101"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-419f58a4948568101"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12596" class="link-detail-view">현대
+														쏘나타(DN8) G2.0 프리미엄 플러스</a></div>
+												<div class="list-option"><span class="year">2021/09(22년형)</span><span
+														class="dstc">34,416km</span><span class="fuel">가솔린</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>415,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 28,550,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item inprogress"><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-b52876d1bac8f1fc"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025040020240829102539.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025040120240829102540.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025040220240829102540.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025040320240829102541.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025040420240829102542.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025040520240829102543.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025040620240829102543.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025040720240829102544.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025040820240829102545.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025040920240829102546.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025041020240829102547.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025041120240829102547.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025041220240829102548.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025041320240829102549.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025041420240829102550.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025041520240829102550.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025041620240829102551.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025041720240829102552.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025041820240829102553.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025041920240829102554.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-b52876d1bac8f1fc"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-b52876d1bac8f1fc"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"><span class="ele-badge badge-type3">진단차</span><span
+														class="ele-badge badge-type3">인증차</span></div>
+												<div class="list-title"><a data-carid="12597" class="link-detail-view">현대
+														아반떼(CN7) 1.6 가솔린 스마트</a></div>
+												<div class="list-option"><span class="year">2021/01(21년형)</span><span
+														class="dstc">86,770km</span><span class="fuel">가솔린</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>302,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 20,120,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-19bd33047c20b144"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025025220240829100611.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025025320240829100612.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025025420240829100612.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025025520240829100613.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025025620240829100614.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025025720240829100615.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025025820240829100615.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025025920240829100616.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025026020240829100617.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025026120240829100618.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025026220240829100619.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025026320240829100619.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025026420240829100620.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025026520240829100621.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025026620240829100622.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025026720240829100623.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025026820240829100624.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025026920240829100624.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025027020240829100625.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025027120240829100626.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-19bd33047c20b144"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-19bd33047c20b144"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12600" class="link-detail-view">기아 더
+														뉴쏘렌토 디젤 R2.2 2WD 노블레스</a></div>
+												<div class="list-option"><span class="year">2019/10(20년형)</span><span
+														class="dstc">61,437km</span><span class="fuel">디젤</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>386,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 35,660,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-0a8f12c3d7ca8714"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025019020240829095845.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025019120240829095845.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025019220240829095846.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025019320240829095847.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025019420240829095848.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025019520240829095849.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025019620240829095849.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025019720240829095850.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025019820240829095851.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025019920240829095852.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025020020240829095853.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025020120240829095854.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025020220240829095854.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025020320240829095855.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025020420240829095856.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025020520240829095857.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025020620240829095858.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025020720240829095859.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025020820240829095900.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025020920240829095901.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-0a8f12c3d7ca8714"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-0a8f12c3d7ca8714"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12601" class="link-detail-view">현대
+														쏘나타(DN8) 하이브리드 2.0 HEV 프리미엄 패밀리</a></div>
+												<div class="list-option"><span class="year">2020/06(21년형)</span><span
+														class="dstc">71,570km</span><span class="fuel">하이브리드</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>456,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 36,440,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-f3c5531cea2c6040"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025014820240829095025.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025014920240829095026.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025015020240829095026.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025015120240829095027.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025015220240829095028.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025015320240829095029.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025015420240829095029.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025015520240829095030.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025015620240829095031.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025015720240829095032.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025015820240829095032.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025015920240829095033.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025016020240829095034.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025016120240829095035.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025016220240829095035.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025016320240829095036.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025016420240829095037.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025016520240829095038.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025016620240829095039.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025016720240829095039.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-f3c5531cea2c6040"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-f3c5531cea2c6040"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12602" class="link-detail-view">현대 더
+														뉴그랜저IG 하이브리드 2.4 HEV 프리미엄 초이스</a></div>
+												<div class="list-option"><span class="year">2020/08(20년형)</span><span
+														class="dstc">98,854km</span><span class="fuel">하이브리드</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>448,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 38,860,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-768104d010ddc8102b"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025066620240829111018.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025066720240829111019.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025066820240829111020.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025066920240829111021.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025067020240829111021.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025067120240829111022.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025067220240829111023.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025067320240829111024.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025067420240829111025.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025067520240829111026.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025067620240829111027.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025067720240829111028.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025067820240829111029.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025067920240829111029.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025068020240829111030.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025068120240829111031.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025068220240829111032.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025068320240829111033.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025068420240829111034.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025068520240829111035.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-768104d010ddc8102b"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-768104d010ddc8102b"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12605" class="link-detail-view">현대 더
+														뉴그랜저IG 가솔린 3.3 익스클루시브</a></div>
+												<div class="list-option"><span class="year">2022/04(22년형)</span><span
+														class="dstc">42,706km</span><span class="fuel">가솔린</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>487,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 41,900,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-9e29eccdf5f3b8e7"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025050420240829104848.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025050520240829104849.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025050620240829104850.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025050720240829104850.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025050820240829104851.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025050920240829104852.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025051020240829104853.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025051120240829104853.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025051220240829104854.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025051320240829104855.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025051420240829104856.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025051520240829104857.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025051620240829104858.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025051720240829104859.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025051820240829104900.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025051920240829104901.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025052020240829104902.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025052120240829104903.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025052220240829104905.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025052320240829104907.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-9e29eccdf5f3b8e7"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-9e29eccdf5f3b8e7"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12612" class="link-detail-view">기아
+														신형K5 2.0 가솔린 트렌디</a></div>
+												<div class="list-option"><span class="year">2021/05(21년형)</span><span
+														class="dstc">72,921km</span><span class="fuel">가솔린</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>372,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 27,080,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-fb59a143c3fbc0be"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025048220240829103839.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025048320240829103840.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025048420240829103841.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025048520240829103842.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025048620240829103843.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025048720240829103844.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025048820240829103845.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025048920240829103846.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025049020240829103847.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025049120240829103849.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025049220240829103850.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025049320240829103852.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025049420240829103853.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025049520240829103855.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025049620240829103857.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025049720240829103858.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025049820240829103900.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025049920240829103902.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025050020240829103903.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025050120240829103905.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-fb59a143c3fbc0be"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-fb59a143c3fbc0be"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12613" class="link-detail-view">기아 더
+														뉴니로 1.6 GDI HEV 프레스티지</a></div>
+												<div class="list-option"><span class="year">2020/09(20년형)</span><span
+														class="dstc">49,405km</span><span class="fuel">하이브리드</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>402,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 29,730,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-e48ffb13ef48b86d"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025044220240829102957.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025044320240829102958.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025044420240829102959.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025044520240829103001.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025044620240829103002.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025044720240829103003.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025044820240829103004.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025044920240829103005.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025045020240829103007.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025045120240829103008.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025045220240829103009.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025045320240829103011.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025045420240829103012.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025045520240829103014.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025045620240829103015.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025045720240829103017.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025045820240829103018.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025045920240829103020.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025046020240829103022.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025046120240829103023.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-e48ffb13ef48b86d"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-e48ffb13ef48b86d"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12614" class="link-detail-view">기아 올
+														뉴K3 1.6 가솔린 트렌디</a></div>
+												<div class="list-option"><span class="year">2020/04(20년형)</span><span
+														class="dstc">60,543km</span><span class="fuel">가솔린</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>215,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 16,110,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+									<li class="list-item "><a href="javascript:void(0)">
+											<div class="list-thumb">
+												<div
+													class="car-thumb-slider swiper-container swiper-initialized swiper-horizontal">
+													<div class="swiper-wrapper" id="swiper-wrapper-2ea4d7422b35a9101"
+														aria-live="polite">
+														<div class="swiper-slide swiper-slide-active" role="group"
+															aria-label="1 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025042020240829102646.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide swiper-slide-next" role="group"
+															aria-label="2 / 20" style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025042120240829102647.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="3 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025042220240829102648.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="4 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025042320240829102649.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="5 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025042420240829102650.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="6 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025042520240829102651.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="7 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025042620240829102652.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="8 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025042720240829102653.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="9 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025042820240829102654.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="10 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025042920240829102655.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="11 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025043020240829102656.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="12 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025043120240829102657.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="13 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025043220240829102658.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="14 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025043320240829102700.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="15 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025043420240829102702.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="16 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025043520240829102704.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="17 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025043620240829102706.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="18 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025043720240829102708.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="19 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025043820240829102710.png/dims/resize/300x220">
+														</div>
+														<div class="swiper-slide" role="group" aria-label="20 / 20"
+															style="width: 280px;"><img
+																src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025043920240829102712.png/dims/resize/300x220">
+														</div>
+													</div>
+													<div class="swiper-nav-group slide-btn">
+														<div class="ir bt-img-prev swiper-button-prev swiper-button-disabled"
+															tabindex="-1" role="button" aria-label="Previous slide"
+															aria-controls="swiper-wrapper-2ea4d7422b35a9101"
+															aria-disabled="true"></div>
+														<div class="ir bt-img-next swiper-button-next" tabindex="0"
+															role="button" aria-label="Next slide"
+															aria-controls="swiper-wrapper-2ea4d7422b35a9101"
+															aria-disabled="false"></div>
+													</div><span class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span><span class="swiper-notification"
+														aria-live="assertive" aria-atomic="true"></span><span
+														class="swiper-notification" aria-live="assertive"
+														aria-atomic="true"></span>
+												</div>
+											</div>
+											<div class="list-detail">
+												<div class="badge"></div>
+												<div class="list-title"><a data-carid="12615" class="link-detail-view">현대
+														그랜저IG 3.0 GDi 익스클루시브 스페셜</a></div>
+												<div class="list-option"><span class="year">2019/10(19년형)</span><span
+														class="dstc">90,366km</span><span class="fuel">가솔린</span></div>
+												<div class="list-price">
+													<div class="price">
+														<p class="prc">월 <var>365,000</var>원 </p><span class="type">/
+															<em>24개월</em></span>
+													</div>
+													<div class="price-new">신차가 38,730,000원 </div>
+												</div>
+											</div>
+										</a>
+										<div class="list-func" id="listFunction"><button type="button"
+												class="bt-list-func cursor-pointer bt-compare" style="display: block;"><span
+													class="ir">비교하기</span></button><button type="button"
+												class="bt-list-func cursor-pointer bt-dibs" style="display: block;"><span
+													class="ir">찜하기</span></button></div>
+									</li>
+								</ul>
+							</div>
+							<div class="pagination"><span class="page"><a href="javascript:void(0)" class="active">1</a><a
+										href="javascript:void(0)">2</a><a href="javascript:void(0)">3</a><a
+										href="javascript:void(0)">4</a><a href="javascript:void(0)">5</a><a
+										href="javascript:void(0)">6</a><a href="javascript:void(0)">7</a><a
+										href="javascript:void(0)">8</a><a href="javascript:void(0)">9</a><a
+										href="javascript:void(0)">10</a></span><span class="next"><button
+										type="button"></button></span><span class="next pg"><button
+										type="button"></button></span></div>
+						</div>
+					</div>
+					<div class="search-detail-wrapper">
+						<div class="search-detail-container"><button type="button" class="ir bt-close-detail-view">창
+								닫기</button>
+							<div class="layer_popup_wrappper vM" id="sharePop">
+								<div class="layer_popup bg pop-share">
+									<div class="pop_inner"><a href="javascript:void(0)" class="ir pop_close">닫기</a>
+										<div class="pop-head">
+											<h3 class="pop-title">공유하기</h3>
+										</div>
+										<div class="pop-contents">
+											<div class="sns-share-func"><button type="button"
+													class="sns-kakaotalk"><span></span>카카오톡</button><button type="button"
+													class="sns-facebook"><span></span>페이스북</button><button type="button"
+													class="sns-naver"><span></span>네이버</button><button type="button"
+													class="sns-copyurl"><span></span>URL 복사</button></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="search-detail-mask"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+
+	<footer class="footer-content new" style="display:block">
+		<section class="footer-top">
+			<div class="footer-link">
+				<div class="inner">
+					<ul>
+						<li>
+							<!--<a href="https://lotterentacar.net/hp/kor/main/index.do" target="_blank">롯데렌터카 </a>-->
+							<a href="#" onclick="goLotteRenterCar()">롯데렌터카</a>
+						</li>
+						<li>
+							<!--<a href="https://direct.lotterentacar.net/main/main.do?utm_source=lotterentacar&utm_medium=footer&utm_campaign=FamilySite&utm_content=%EC%8B%A0%EC%B0%A8%EC%9E%A5%EB%8B%A4%EC%9D%B4%EB%A0%89%ED%8A%B8" target="_blank">롯데렌터카 마이카</a>-->
+							<a href="#" onclick="goDirect()">롯데렌터카 마이카</a>
+						</li>
+						<li>
+							<!--<a href="https://manager.lotterentacar.net/main.do" target="_blank">롯데렌터카 마이카 멤버십</a>-->
+							<a href="#" onclick="goMembership()">롯데렌터카 마이카 멤버십</a>
+						</li>
+						<li>
+							<!--<a href="https://business.lotterental.com/login.do?utm_source=lotterentacar&utm_medium=main&utm_campaign=footer&utm_content=%EB%A1%AF%EB%8D%B0%EB%A0%8C%ED%83%88%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4" target="_blank">롯데렌터카 비즈카</a>-->
+							<a href="#" onclick="goRentalBusiness()">롯데렌터카 비즈카</a>
+						</li>
+						<li>
+							<a href="https://www.lotte-autoglobal.net/co/main/mainView.do" target="_blank">롯데오토글로벌</a>
+						</li>
+						<li>
+							<a href="https://www.lotte-autolease.com" target="_blank">롯데오토리스</a>
+						</li>
+						<li>
+							<a href="https://www.lotteautocare.com/?utm_source=lotterentacar&amp;utm_medium=main&amp;utm_campaign=footer&amp;utm_content=%EB%A1%AF%EB%8D%B0%EC%98%A4%ED%86%A0%EC%BC%80%EC%96%B4" target="_blank">롯데오토케어</a>
+						</li>
+						<li>
+							<!--<a href="http://www.greencar.co.kr" target="_blank">그린카</a>-->
+							<a href="#" onclick="goGreenCar()">그린카</a>
+						</li>
+						<li>
+							<a href="https://recruit.lotterental.net" target="_blank">인재채용</a>
+						</li>
+					</ul>
+					<div class="family">
+						<button type="button" class="family-btn">FAMILY SITE</button>
+						<div class="family-cont">
+							<div class="detail-layer-in">
+								<ul class="list-wrap">
+									<li>
+										<p><a href="#" class="tit">식품부문</a></p>
+										<div class="detail-layer-list">
+											<ul>
+												<li>
+													<a href="https://www.lotteconf.co.kr/" target="_blank">롯데제과</a>
+												</li>
+												<li>
+													<a href="https://company.lottechilsung.co.kr/kor/main/index.do" target="_blank">롯데칠성음료
+														(음료BG)</a>
+												</li>
+												<li>
+													<a href="https://company.lottechilsung.co.kr/kor/main/index.do" target="_blank">롯데칠성음료
+														(주류BG)</a>
+												</li>
+												<li>
+													<a href="http://www.lottefoods.co.kr/" target="_blank">롯데웰푸드</a>
+												</li>
+												<li>
+													<a href="http://www.lotte.co.kr/business/compDetail.do?compCd=L105" target="_blank">롯데네슬레</a>
+												</li>
+												<li>
+													<a href="http://www.asahibeerk.com/" target="_blank">롯데아사히주류</a>
+												</li>
+												<li>
+													<a href="https://www.lottelmsc.com/" target="_blank">롯데유통사업본부</a>
+												</li>
+												<li>
+													<a href="https://www.lotternd.com/KOR/" target="_blank">롯데중앙연구소</a>
+												</li>
+												<li>
+													<a href="https://www.lottegrs.com/main.jsp" target="_blank">롯데지알에스</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<p><a href="#" class="tit">유통부문</a></p>
+										<div class="detail-layer-list">
+											<ul>
+												<li>
+													<a href="https://www.lotteshopping.com/" target="_blank">롯데백화점</a>
+												</li>
+												<li>
+													<a href="https://www.lotteon.com/p/display/main/lottemart?mall_no=4&amp;ch_no=100195&amp;ch_dtl_no=1000617" target="_blank">롯데마트</a>
+												</li>
+												<li>
+													<a href="https://www.lotteon.com/p/display/main/lottefresh?mall_no=5&amp;ch_no=100195&amp;ch_dtl_no=1000617" target="_blank">롯데슈퍼</a>
+												</li>
+												<li>
+													<a href="https://www.7-eleven.co.kr/" target="_blank">코리아세븐</a>
+												</li>
+												<li>
+													<a href="http://www.e-himart.co.kr/app/display/showDisplayShop?originReferrer=himartindex" target="_blank">롯데하이마트</a>
+												</li>
+												<li>
+													<a href="http://www.lottehomeshopping.com/user/main/index.lotte" target="_blank">롯데홈쇼핑</a>
+												</li>
+												<li>
+													<a href="https://www.lotteon.com/p/display/main/lotteon?mall_no=1" target="_blank">롯데쇼핑e커머스</a>
+												</li>
+												<li>
+													<a href="https://www.lotteon.com/p/display/main/lottelohbs?mall_no=7&amp;ch_no=100195&amp;ch_dtl_no=1000617" target="_blank">롭스</a>
+												</li>
+												<li>
+													<a href="http://www.lottemembers.com/" target="_blank">롯데멤버스</a>
+												</li>
+												<li>
+													<a href="https://www.lottecultureworks.com" target="_blank">롯데컬쳐웍스</a>
+												</li>
+												<li>
+													<a href="https://www.lottecinema.co.kr" target="_blank">롯데시네마</a>
+												</li>
+												<li>
+													<a href="https://www.charlottetheater.co.kr" target="_blank">샤롯데씨어터</a>
+												</li>
+												<li>
+													<a href="http://www.lotte.co.kr/business/compDetail.do?compCd=L210" target="_blank">에프알엘코리아</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<p><a href="#" class="tit">화학/건설/제조 부문</a></p>
+										<div class="detail-layer-list">
+											<ul>
+												<li>
+													<a href="https://www.lottemcc.com/index.do" target="_blank">롯데엠시시</a>
+												</li>
+												<li>
+													<a href="http://www.lottecon.co.kr/" target="_blank">롯데건설</a>
+												</li>
+												<li>
+													<a href="https://www.lottecm.com/ko/main.do" target="_blank">롯데CM사업본부</a>
+												</li>
+												<li>
+													<a href="http://www.lottelem.co.kr/" target="_blank">롯데기공</a>
+												</li>
+												<li>
+													<a href="https://www.lotteal.co.kr/" target="_blank">롯데알미늄</a>
+												</li>
+												<li>
+													<a href="https://www.lottefinechem.com/" target="_blank">롯데정밀화학</a>
+												</li>
+												<li>
+													<a href="https://www.lottechem.com" target="_blank">롯데케미칼</a>
+												</li>
+												<li>
+													<a href="http://www.lotteineos.com/" target="_blank">롯데이네오스화학</a>
+												</li>
+												<li>
+													<a href="https://kr.canon/ " target="_blank">캐논코리아</a>
+												</li>
+												<li>
+													<a href="http://www.kpchemtech.co.kr/html/00_main/main.php" target="_blank">케이피캠텍</a>
+												</li>
+												<li>
+													<a href="http://www.lotte.co.kr/business/compDetail.do?compCd=L311" target="_blank">한국후지필름</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<p><a href="#" class="tit">관광/서비스/금융부문</a></p>
+										<div class="detail-layer-list flex">
+											<ul>
+												<li>
+													<a href="https://www.lotteglogis.com/" target="_blank">롯데글로벌지스</a>
+												</li>
+												<li>
+													<a href="https://www.lotterental.com" target="_blank">롯데렌탈</a>
+												</li>
+												<li>
+													<a href="https://www.lotteresort.com/main/ko/index" target="_blank">롯데리조트</a>
+												</li>
+												<li>
+													<a href="https://kr.lottedfs.com/main/index.do" target="_blank">롯데면세점</a>
+												</li>
+												<li>
+													<a href="http://www.lotte.co.kr/business/compDetail.do?compCd=L406" target="_blank">롯데문화재단</a>
+												</li>
+												<li>
+													<a href="http://www.lottepnd.com/main.do" target="_blank">롯데물산</a>
+												</li>
+												<li>
+													<a href="http://www.lotte.co.kr/business/compDetail.do?compCd=L408" target="_blank">롯데미래전략연구소</a>
+												</li>
+												<li>
+													<a href="https://www.lottefoundation.or.kr/" target="_blank">롯데복지재단</a>
+												</li>
+												<li>
+													<a href="https://www.lotte.co.kr/business/compDetail.do?compCd=L410" target="_blank">롯데삼동복지재단</a>
+												</li>
+												<li>
+													<a href="https://www.lotteskyhill.com/" target="_blank">롯데스카이힐CC</a>
+												</li>
+												<li>
+													<a href="http://www.lotteworld.com/gate.html" target="_blank">롯데월드</a>
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<a href="https://ez.lotteacademy.co.kr/login/loginForm.do" target="_blank">롯데인재개발원</a>
+												</li>
+												<li>
+													<a href="http://www.lotte.co.kr/business/compDetail.do?compCd=L415" target="_blank">롯데자산개발</a>
+												</li>
+												<li>
+													<a href="https://www.giantsclub.com/html/" target="_blank">롯데자이언츠</a>
+												</li>
+												<li>
+													<a href="https://www.lottefoundation.or.kr/" target="_blank">롯데장학재단</a>
+												</li>
+												<li>
+													<a href="https://www.ldcc.co.kr/" target="_blank">롯데정보통신</a>
+												</li>
+												<li>
+													<a href="http://www.lottejtb.com/" target="_blank">롯데제이티비</a>
+												</li>
+												<li>
+													<a href="https://www.lottecap.com/ma/ma/MAMA00100" target="_blank">롯데캐피탈</a>
+												</li>
+												<li>
+													<a href="https://www.lottehotel.com/global/ko.html" target="_blank">롯데호텔</a>
+												</li>
+												<li>
+													<a href="https://www.daehong.com/" target="_blank">대홍기획</a>
+												</li>
+												<li>
+													<a href="https://www.lottehotel.com/busan-hotel/ko.html" target="_blank">부산롯데호텔</a>
+												</li>
+												<li>
+													<a href="https://www.lotteintl.co.kr//" target="_blank">롯데상사</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="footer-cs">
+			<div class="footer-inner">
+				<dl>
+					<dt>고객센터 <span>(평일 09:00 ~ 18:00)</span></dt>
+					<dd><a href="tel:031-322-8000">031. 322. 8000</a></dd>
+				</dl>
+				<div class="footer-sns">
+					<p>공식 SNS 채널</p>
+					<button type="button" class="ir insta" onclick="location.href='https://www.instagram.com/lotte_rentacar'">Instagram</button>
+					<button type="button" class="ir facebook" onclick="location.href='https://www.facebook.com/official.lotterental'">Facebook</button>
+					<button type="button" class="ir kakao" onclick="location.href='https://pf.kakao.com/_gVmbl'">Kakao</button>
+					<button type="button" class="ir blog" onclick="location.href='https://blog.naver.com/official_lotterental'">blog</button>
+					<button type="button" class="ir utube" onclick="location.href='https://www.youtube.com/channel/UCih7WKy20DaLIibm32uAQAg'">utube</button>
+				</div>
+				<div class="qr-wrap">
+					<div class="img-wrap">
+						<img src="https://mycarsave.lotterentacar.net/pc/images/rent_new/icon/qr.svg" alt="qrcode">
+					</div>
+					<dl>
+						<dt>APP 다운로드</dt>
+						<dd>지금 롯데렌터카 앱을 다운받고<br>다양한 혜택을 만나보세요.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="footer-address">
+			<div class="footer-inner">
+				<h1 class="logo"><img src="https://mycarsave.lotterentacar.net/pc/images/rent_new/logo/logo_footer.svg"></h1>
+				<div>
+					<ul class="footer-info">
+						<li>
+							<span><b>대표이사</b> : 최진환</span>
+							<span><b>E-mail</b> : <a href="mailto:lotteautomarket@lotte.net">lotteautomarket@lotte.net</a></span>
+							<span><b>사업자등록번호</b> : 214-87-79183</span>
+							<span><b>통신판매업신고번호</b> : 제2010-경기안양-420호</span>
+						</li>
+						<li><span><b>사업장 </b> : 서울시 강남구 테헤란로 422 KT타워 10 / 경기도 안양시 동안구 전파로 88, 8층(호계동, 신원비젼타워)</span></li>
+						<li>
+							<button onclick="ui.modalPopOpen('#certificatePopup');" type="button" style="text-decoration: underline;">대출성 금융상품판매대리ㆍ중개업자등록증</button>
+						</li>
+					</ul>
+					<ul class="footer-link">
+						<li><a href="https://www.lotterentacar.net/hp/kor/compInfo.do">회사소개</a></li>
+						<li><a href="https://www.lotterentacar.net/hp/kor/terms/use.do" target="_blank">이용약관</a></li>
+						<li><a href="/cs/privacy" class="emp" target="_blank"><b>개인정보처리방침</b></a></li>
+						<li><a href="https://www.lotterentacar.net/hp/kor/terms/videoInfo.do" class="emp" target="_blank"><b>영상정보처리방침</b></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+</body>
+</html>

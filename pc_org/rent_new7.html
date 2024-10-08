@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body>
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter process">
+        <div class="cont-wrap step">
+            <div class="page-tit">
+                <h2>계약정보 확인</h2>
+                <ul class="step-sec">
+                    <li class="complete">1</li>
+                    <li class="complete">2</li>
+                    <li class="on">3</li>
+                </ul>
+            </div>
+            <div class="process-cont-wrap">
+                <div class="option-wrap">
+                    <h3 class="contract-num">승인번호 1357913579</h3>
+                    <div class="option-sec">
+                        <div class="sec-tit">
+                            <h3>보증금/선납금 입금 정보</h3>
+                        </div>
+                        <ul class="complete-list-flex mb-0">
+                            <li>
+                                <p>보증금</p>
+                                <span>0원 (0%)</span>
+                            </li>
+                            <li>
+                                <p>보증증권</p>
+                                <span>0원 (0%)</span>
+                            </li>
+                            <li>
+                                <p>선납금</p>
+                                <span>3,000,000원 (10%)</span>
+                            </li>
+                            <li>
+                                <p>입금기한</p>
+                                <span>2023년 10월 31일</span>
+                            </li>
+                        </ul>
+                        <div class="step-grey-box">
+                            <p class="alert-txt">확인해주세요</p>
+                            <ul class="info-txt">
+                                <li>계약 완료 시 가상계좌번호가 고객님의 휴대전화 번호로 발송됩니다.</li>
+                                <li>입금기한 내(영업일기준 3일 이내)에 입금 확인되지 않으면 계약이 취소될 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="option-sec">
+                        <div class="sec-tit">
+                            <h3>월 대여료 결제정보</h3>
+                        </div>
+                        <ul class="complete-list-flex">
+                            <li>
+                                <p>결제방법</p>
+                                <span>CMS 자동이체</span>
+                            </li>
+                            <li>
+                                <p>결제월(매월)</p>
+                                <span>15일</span>
+                            </li>
+                            <li>
+                                <p>결제은행</p>
+                                <span>우리은행 <br/>
+                                    1002-652-222222</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="option-sec">
+                        <div class="sec-tit">
+                            <h3>기본정보</h3>
+                        </div>
+                        <ul class="complete-list-flex mb-0">
+                            <li>
+                                <p>이름</p>
+                                <span>김롯데</span>
+                            </li>
+                            <li>
+                                <p>휴대전화</p>
+                                <span>010-1234-5678</span>
+                            </li>
+                            <li class="full">
+                                <p>이메일</p>
+                                <span>kimlotte@lotte.net</span>
+                            </li>
+                            <li class="full">
+                                <p>자택주소</p>
+                                <span>(06193) 서울시 강남구 테헤란로 422 KT타워 6~9층</span>
+                            </li>
+                            <li class="full">
+                                <p>차량배송지 주소</p>
+                                <span>(06193) 서울시 강남구 테헤란로 422 KT타워 6~9층</span>
+                            </li>
+                        </ul>
+                        <div class="step-grey-box">
+                            <p class="alert-txt">확인해주세요</p>
+                            <ul class="info-txt">
+                                <li>차량 배송 전 계약 담당자가 연락 드리고 배송을 도와드리며 해당 시점에 배송장소 및 일시 변경이 필요하신 고객님께서는 <br/>
+                                    영업매니저에게 요청 부탁드립니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="option-sec">
+                        <div class="sec-tit">
+                            <h3>운전면허 정보</h3>
+                        </div>
+                        <ul class="complete-list-flex">
+                            <li>
+                                <p>면허종류</p>
+                                <span>2종보통</span>
+                            </li>
+                            <li>
+                                <p>면허증 번호</p>
+                                <span>00-00-******-00</span>
+                            </li>
+                            <li>
+                                <p>발급일</p>
+                                <span>2023년 09월 15일</span>
+                            </li>
+                            <li>
+                                <p>갱신일</p>
+                                <span>2023년 09월 15일</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="float-wrap">
+                    <div class="inner">
+                        <div class="car-thumb border-none">
+                            <div class="img-wrap">
+                                <img src="images/rent_new/test_img2.png" alt="테스트 이미지">
+                            </div>
+                            <dl>
+                                <dt>제네시스 더 올뉴 G80 3.5 가솔린 2WD 기본형</dt>
+                                <dd>2020.10</dd>
+                                <dd>4,542km</dd>
+                                <dd>하이브리드</dd>
+                                <dd>1,998cc</dd>
+                            </dl>
+                        </div>
+                        <button type="button" class="btn-preview">계약서 미리보기</button>
+                        <div class="price-wrap">
+                            <div class="price">
+                                <div class="tit">
+                                    <p>월 대여료</p>
+                                    <span>(세금 및 보험료 포함)</span>
+                                </div>
+                                <strong>600,000원</strong>
+                            </div>
+                            <a href="#">
+                                제휴카드 할인가 <span>월 570,000원</span>
+                            </a>
+                        </div>
+                        <div class="agree-box">
+                            <div class="check-wrap round-normal">
+                                <input type="checkbox" id="checkOnOff">
+                                <label for="checkOnOff">본인은 본 계약 내용에 대하여 동의합니다.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="off" id="toggleButton">전자서명 진행</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+</body>
+</html>

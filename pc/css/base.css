@@ -1,0 +1,387 @@
+﻿﻿@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6, input, textarea, select { font-family: 'noto', sans-serif; }
+
+@font-face {
+	font-family:'noto';
+	font-style:normal;
+	font-weight:400;
+	src:url(../font/noto/notokr-regular.eot);
+	src:local('notokr-regular'),
+	url(../font/noto/notokr-regular.eot?#iefix) format('embedded-opentype'),
+	url(../font/noto/notokr-regular.woff) format('woff'),
+    url(../font/noto/notokr-regular.ttf) format('truetype');
+    
+
+}
+
+@font-face {
+	font-family:'noto';
+	font-style:normal;
+	font-weight:500;
+	src:url(../font/noto/notokr-medium.eot);
+	src:local('notokr-medium'),
+	url(../font/noto/notokr-medium.eot?#iefix) format('embedded-opentype'),
+	url(../font/noto/notokr-medium.woff) format('woff'),
+	url(../font/noto/notokr-medium.ttf) format('truetype');
+}
+
+@font-face {
+	font-family:'noto';
+	font-style:normal;
+	font-weight:700;
+	src:url(../font/noto/notokr-bold.eot);
+	src:local('notokr-bold'),
+	url(../font/noto/notokr-bold.eot?#iefix) format('embedded-opentype'),
+	url(../font/noto/notokr-bold.woff) format('woff'),
+	url(../font/noto/notokr-bold.ttf) format('truetype');
+}
+
+
+/*
+@font-face {
+	font-family:'noto';
+	font-style:normal;
+	font-weight:300;
+	src:url(../font/noto/notokr-regular.eot);
+	src:local('notokr-regular'),
+	url(../font/noto/notokr-regular.eot?#iefix) format('embedded-opentype'),
+	url(../font/noto/notokr-regular.woff) format('woff'),
+    url(../font/noto/notokr-regular.ttf) format('truetype');
+    
+
+}
+
+@font-face {
+	font-family:'noto';
+	font-style:normal;
+	font-weight:500;
+	src:url(../font/noto/notokr-medium.eot);
+	src:local('notokr-medium'),
+	url(../font/noto/notokr-medium.eot?#iefix) format('embedded-opentype'),
+	url(../font/noto/notokr-medium.woff) format('woff'),
+	url(../font/noto/notokr-medium.ttf) format('truetype');
+}
+
+@font-face {
+	font-family:'noto';
+	font-style:normal;
+	font-weight:800;
+	src:url(../font/noto/notokr-bold.eot);
+	src:local('notokr-bold'),
+	url(../font/noto/notokr-bold.eot?#iefix) format('embedded-opentype'),
+	url(../font/noto/notokr-bold.woff) format('woff'),
+	url(../font/noto/notokr-bold.ttf) format('truetype');
+}
+
+*/
+html, body {
+    word-break: keep-all;
+    width: 100%;
+    height: 100%;
+    font-family: 'noto','돋움','Dotum','Helvetica','Apple SD Gothic Neo','sans-serif';
+    /*
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    */
+    line-height: 1.8em;
+}
+body, h1, h2, h3, h4, h5, h6, input, textarea, select { font-family: 'noto', sans-serif; }
+
+* {
+    margin : 0;
+    padding : 0;
+    line-height : 1.3em;
+    font-family:'noto','돋움','Dotum','Helvetica','Apple SD Gothic Neo','sans-serif';
+    vertical-align: baseline;
+    letter-spacing: -0.025em;
+    }
+    body {
+ 
+    line-height: 1.8em;
+    font-family: 'noto';
+    }
+    html > body {
+    overflow-y : scroll;
+    }
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, big, cite, code, del, dfn, em, img, ins, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin : 0;
+    padding : 0;
+    border : 0;
+		font-family: '-apple-system', 'BlinkMacSystemFont','noto';
+    }  
+    address, caption, cite, code, dfn, em, strong, th, var {
+    font-style : normal;
+    }
+    ul, li {
+    list-style : none;
+    }
+    a {
+    color : black;
+    text-decoration : none;
+    border : none;
+    }
+    a img {
+    border : none;
+    }
+    /*
+    a:link, a:visited {
+    text-decoration : none;
+    border : none;
+    }
+    */
+    select, input {
+    text-decoration : none;
+    }
+    table, tr, td {
+    border : 0;
+    border-spacing : 0;
+    border-collapse : collapse;
+    }
+    div {
+    margin : 0;
+    padding : 0;
+    }
+    fieldset {
+    border : 0;
+    }
+    legend {
+    display : none;
+    }
+    input, select {
+    vertical-align : middle;
+    }
+    img {
+    border : none;
+    vertical-align : middle;
+    }
+
+.skip {display:none;}
+.mtImg{vertical-align:middle; margin-top:-2px;}
+.ellipsis{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+
+.ovh{overflow:hidden !important;}
+.ovv{overflow:visible !important;}
+
+/*scroll*/
+.scroll_on{overflow:auto !important;}
+.scroll_off{overflow:hidden !important;}
+.scroll_y_on{overflow-x:hidden !important; overflow-y:auto !important;}
+.scroll_x_on{overflow-y:hidden !important; overflow-x:auto !important;}
+.scroll_fix{overflow:scroll !important;}
+.scroll_y_fix{overflow-x:hidden !important; overflow-y:scroll !important;}
+.scroll_x_fix{overflow-y:hidden !important; overflow-x:scroll !important;}
+
+/*position*/
+.posi_re {position:relative !important;}
+.posi_ab {position:absolute !important;}
+.posi_fix {position:fixed !important;}
+.posi_inh {position:inherit !important;}
+
+/*table*/
+.tl_auto table{table-layout:auto !important;}
+.blind{display:inline-block !important;position:absolute;top:0;left:0;margin:0 !important;padding:0 !important;font-size:0;line-height:0;border:0 !important;overflow:hidden !important}
+
+
+/* Floating */
+.fl {float:left !important;}
+.fr {float:right !important;}
+.cl {clear:both !important;}
+
+/*각 자식요소들 floating 지정으로 높이 인식못하는거 해결*/
+.clear:after{content:"";display:block;clear:both;height:0;visibility:hidden;}
+
+/* display */
+.dp_ib {display:inline-block !important;}
+.dp_i {display:inline !important;}
+.dp_b {display:block !important;}
+
+/* visibility */
+.vv {visibility:visible;}
+.vh {visibility:hidden;}
+
+/* Align */
+.al {text-align:left !important;}
+.ac {text-align:center !important;}
+.ar {text-align:right !important;}
+
+.vt {vertical-align:top !important;}
+.vm {vertical-align:middle !important;}
+.vb {vertical-align:bottom !important;}
+
+.lh14{line-height:14px !important;}
+.lh15{line-height:15px !important;}
+.lh16{line-height:16px !important;}
+.lh17{line-height:17px !important;}
+.lh18{line-height:18px !important;}
+.lh20{line-height:20px !important;}
+.lh23{line-height:23px !important;}
+.lh24{line-height:24px !important;}
+.lh32{line-height:32px !important;}
+
+
+.text_line {text-decoration:underline;}
+
+
+/* Font color */
+.text_blue{color:#2380ff;}
+.text_red{color:#ff4e4e;}
+
+/* Font color + hover 2020-02-17 추가 Pudd grid*/
+.text_dblue{color:#000; font-weight:bold;}
+.text_dblue:hover{color:#1d5ad6; }
+
+
+/* border color */
+.brn {border:none !important;}
+.brrn {border-right:none !important;}
+.brln {border-left:none !important;}
+.brtn {border-top:none !important;}
+.brbn {border-bottom:none !important;}
+
+/* auto */
+.hei_auto {height:auto !important;}
+.wid_auto {height:auto !important;}
+
+/*letter-spacing*/
+.let0 {letter-spacing:0px !important;}
+.let1 {letter-spacing:-1px;}
+
+/* Font size */
+.f11 {font-size:11px !important;}
+.f12 {font-size:12px !important;}
+.f13 {font-size:13px !important;}
+.f14 {font-size:14px !important;}
+.f15 {font-size:15px !important;}
+.f16 {font-size:16px !important;}
+.f17 {font-size:17px !important;}
+.f19 {font-size:19px !important;}
+.f18 {font-size:18px !important;}
+.f20 {font-size:20px !important;}
+.f23 {font-size:23px !important;}
+.f24 {font-size:24px !important;}
+.f30 {font-size:30px !important;}
+
+/* Font weight */
+.fwb {font-weight:bold !important;}
+.fwn {font-weight:normal !important;}
+
+/* word-break */
+.word_b{word-break:break-all;}
+
+/* Padding, Margin style */ 
+/* 특별한 case외에 사용 자제 */
+.p0 {padding:0 !important;}
+.p10 {padding:10px !important;}
+.p15 {padding:15px !important;}
+
+.pt0 {padding-top:0 !important;}
+.pt5 {padding-top:5px !important;}
+.pt8 {padding-top:8px !important;}
+.pt10 {padding-top:10px !important;}
+.pt15 {padding-top:15px !important;}
+.pt20 {padding-top:20px !important;}
+.pt25 {padding-top:25px !important;}
+.pt30 {padding-top:30px !important;}
+.pt35 {padding-top:35px !important;}
+.pt40 {padding-top:40px !important;}
+.pt45 {padding-top:45px !important;}
+.pt50 {padding-top:50px !important;}
+.pt70 {padding-top:70px !important;}
+
+.pb0 {padding-bottom:0 !important;}
+.pb5 {padding-bottom:5px !important;}
+.pb10 {padding-bottom:10px !important;}
+.pb15 {padding-bottom:15px !important;}
+.pb20 {padding-bottom:20px !important;}
+.pb25 {padding-bottom:25px !important;}
+.pb30 {padding-bottom:30px !important;}
+.pb35 {padding-bottom:35px !important;}
+.pb40 {padding-bottom:40px !important;}
+.pb45 {padding-bottom:45px !important;}
+.pb50 {padding-bottom:50px !important;}
+
+.pl0 {padding-left:0px !important;}
+.pl5 {padding-left:5px !important;}
+.pl10 {padding-left:10px !important;}
+.pl15 {padding-left:15px !important;}
+.pl20 {padding-left:20px !important;}
+.pl25 {padding-left:25px !important;}
+.pl30 {padding-left:30px !important;}
+.pl35 {padding-left:35px !important;}
+.pl40 {padding-left:40px !important;}
+.pl45 {padding-left:45px !important;}
+.pl50 {padding-left:50px !important;}
+
+.pr0 {padding-right:0px !important;}
+.pr5 {padding-right:5px !important;}
+.pr10 {padding-right:10px !important;}
+.pr15 {padding-right:15px !important;}
+.pr20 {padding-right:20px !important;}
+.pr25 {padding-right:25px !important;}
+.pr30 {padding-right:30px !important;}
+.pr35 {padding-right:35px !important;}
+.pr40 {padding-right:40px !important;}
+.pr45 {padding-right:45px !important;}
+.pr50 {padding-right:50px !important;}
+
+.m0auto {margin:0px auto !important;}
+.m0 {margin:0px !important;}
+.m5 {margin:5px !important;}
+
+.mt-7{margin-top:-7px !important;}
+.mt0 {margin-top:0px !important;}
+.mt5 {margin-top:5px !important;}
+.mt7 {margin-top:7px !important;}
+.mt10 {margin-top:10px !important;}
+.mt15 {margin-top:15px !important;}
+.mt20 {margin-top:20px !important;}
+.mt25 {margin-top:25px !important;}
+.mt30 {margin-top:30px !important;}
+.mt35 {margin-top:35px !important;}
+.mt40 {margin-top:40px !important;}
+.mt45 {margin-top:45px !important;}
+.mt50 {margin-top:50px !important;}
+.mt60 {margin-top:60px !important;}
+
+.mb0 {margin-bottom:0px !important;}
+.mb5 {margin-bottom:5px !important;}
+.mb7 {margin-bottom:7px !important;}
+.mb10 {margin-bottom:10px !important;}
+.mb15 {margin-bottom:15px !important;}
+.mb20 {margin-bottom:20px !important;}
+.mb25 {margin-bottom:25px !important;}
+.mb30 {margin-bottom:30px !important;}
+.mb35 {margin-bottom:35px !important;} 
+.mb40 {margin-bottom:40px !important;}
+.mb45 {margin-bottom:45px !important;}
+.mb50 {margin-bottom:50px !important;}
+
+.ml0 {margin-left:0px !important;}
+.ml5 {margin-left:5px !important;}
+.ml7 {margin-left:7px !important;}
+.ml10 {margin-left:10px !important;}
+.ml15 {margin-left:15px !important;} 
+.ml20 {margin-left:20px !important;}
+.ml25 {margin-left:25px !important;}
+.ml30 {margin-left:30px !important;}
+.ml35 {margin-left:35px !important;}
+.ml40 {margin-left:40px !important;}
+.ml45 {margin-left:45px !important;}
+.ml50 {margin-left:50px !important;}
+
+.mr0 {margin-right:0px !important;}
+.mr5 {margin-right:5px !important;}
+.mr7 {margin-right:7px !important;}
+.mr10 {margin-right:10px !important;}
+.mr15 {margin-right:15px !important;}
+.mr20 {margin-right:20px !important;}
+.mr25 {margin-right:25px !important;}
+.mr26 {margin-right:26px !important;}
+.mr30 {margin-right:30px !important;}
+.mr35 {margin-right:35px !important;}
+.mr40 {margin-right:40px !important;}
+.mr45 {margin-right:45px !important;}
+.mr50 {margin-right:50px !important;}
+
+p a{text-decoration: underline !important;color:blue !important;}
+p a:hover{text-decoration: underline !important;color:#551a8b !important;} 
