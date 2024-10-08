@@ -23,7 +23,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .layout--header-new .sub-menu li a:hover{background:#F5F7FA;border-radius:10px;}
 
 /* 비쥬얼 */
-.mainCon1{background:#FFC85A;}
+.mainCon1{background:#333;}
 .mainCon2{position:relative;z-index:5;background:#fff;}
 .mainCon3{position:relative;z-index:10;background:#fff;} 
 .mainVisualBx{position:relative;min-width:1200px; }
