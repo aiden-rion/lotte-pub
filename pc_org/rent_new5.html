@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body>
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter process">
+        <div class="cont-wrap step">
+            <div class="page-tit">
+                <h2>계약정보 입력</h2>
+                <ul class="step-sec">
+                    <li class="on">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+            <div class="process-cont-wrap">
+                <div class="option-wrap">
+                    <div class="option-sec">
+                        <div class="sec-tit">
+                            <h3>기본정보</h3>
+                            <a href="#" class="btn-edit">기본정보 수정</a>
+                        </div>
+                        <ul class="complete-list-flex">
+                            <li>
+                                <p>이름</p>
+                                <span>김롯데</span>
+                            </li>
+                            <li>
+                                <p>휴대전화</p>
+                                <span>010-1234-5678</span>
+                            </li>
+                            <li class="full">
+                                <p>이메일</p>
+                                <span>kimlotte@lotte.net</span>
+                            </li>
+                            <li class="full">
+                                <p>자택주소</p>
+                                <span>(06193) 서울시 강남구 테헤란로 422 KT타워 6~9층 </span>
+                            </li>
+                        </ul>
+                        <ul class="complete-list-flex">
+                            <li class="full">
+                                <p>대표자명</p>
+                                <span>김롯데</span>
+                            </li>
+                            <li>
+                                <p>사업자명 (상호명)</p>
+                                <span>주식회사 롯데렌탈</span>
+                            </li>
+                            <li>
+                                <p>사업자번호</p>
+                                <span>100-00-00000</span>
+                            </li>
+            
+                            <li>
+                                <p>업태</p>
+                                <span>도소매</span>
+                            </li>
+                            <li>
+                                <p>업종</p>
+                                <span>정보통신서비스</span>
+                            </li>
+                        </ul>
+                        <div class="tab-wrap">
+                            <p class="tab-tit">차량배송지 선택</p>
+                            <div class="tab type01">
+                                <button type="button" data-tab="tab1" class="on">자택주소와 동일</button>
+                                <button type="button" data-tab="tab2" class="">직접입력</button>
+                            </div>
+                            <div class="tab-content none" id="tab1"></div>
+                            <div class="tab-content" id="tab2">
+                                <div class="input-item">
+                                    <div class="input-list">
+                                        <div class="input-search">
+                                            <input type="number" placeholder="우편번호" id="test04" class="input-search" />
+                                            <button type="button" class="btn-search" >주소찾기</button>
+                                        </div>
+                                        <input type="number" placeholder="주소" id="test05" />
+                                        <input type="number" placeholder="상세주소 입력" id="test06" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-sec">
+                        <div class="sec-tit">
+                            <h3>운전면허 정보</h3>
+                        </div>
+                        <div class="sec-cont">
+                            <div class="input-wrap">
+                                <div class="flex">
+                                    <div class="input-item">
+                                        <p class="tit">면허종류</p>
+                                        <select id="hasHolder">
+                                            <option value="" selected disabled>선택</option>
+                                            <option value="">1종</option>
+                                            <option value="">2종</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-item">
+                                        <p class="tit">면허증 번호</p>
+                                        <div class="input flex">
+                                            <div><input type="number" placeholder="" /></div>
+                                            <span class="sb">-</span>
+                                            <div><input type="number" placeholder="" /></div>
+                                            <span class="sb">-</span>
+                                            <div class="flex2"><input type="number" placeholder="" /></div>
+                                            <span class="sb">-</span>
+                                            <div><input type="number" placeholder="" /></div>
+                                        </div>
+                                        <p class="desc">*2014년 07월 02일 이후 발급 면허는 숫자 코드로 <br/> 지역 입력합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="input-item">
+                                        <div class="tit">발급일<em class="ess"></em></div>
+                                        <div class="datebox-wrap">
+                                            <div class="dateBox basic">
+                                                <span class="ip-wrap"><input type="text" class="datePickerBasic" placeholder="YYYY-MM-DD" readonly /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-item">
+                                        <div class="tit">갱신일<em class="ess"></em></div>
+                                        <div class="datebox-wrap">
+                                            <div class="dateBox basic">
+                                                <span class="ip-wrap"><input type="text" class="datePickerBasic" placeholder="YYYY-MM-DD" readonly /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-sec">
+                        <div class="sec-tit">
+                            <h3>월 대여료 결제 정보</h3>
+                        </div>
+                        <div class="sec-cont">
+                            <div class="tab-wrap">
+                                <div class="tab type01">
+                                    <button type="button" data-tab="tab1" class="">신용카드 자동이체</button>
+                                    <button type="button" data-tab="tab2" class="">출금 자동이체 (CMS)</button>
+                                </div>
+                                <div class="tab-content" id="tab1">
+                                    <div class="input-wrap">
+                                        <div class="input-item">
+                                            <p class="tit">결제일 (매월)</p>
+                                            <select name="select01">
+                                                <option value="" disabled selected>선택</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="input-item">
+                                                <p class="tit">카드종류</p>
+                                                <select name="select02">
+                                                    <option value="" disabled selected>선택</option>
+                                                    <option value="">체크</option>
+                                                    <option value="">신용</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-item">
+                                                <p class="tit">카드번호</p>
+                                                <div class="text-wrap">
+                                                    <input type="number" placeholder="0000-0000-0000-0000" id="card" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-item">
+                                            <p class="tit">유효기간</p>
+                                            <div class="flex">
+                                                <select name="select03">
+                                                    <option value="" disabled selected>년</option>
+                                                    <option value="2023">2023</option>
+                                                    <option value="2022">2022</option>
+                                                </select>
+                                                <select name="select04">
+                                                    <option value="" disabled selected>월</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                            </div>
+                                            <ul class="desc-list">
+                                                <li>카드 자동이체 납부를 원하실 경우, 반드시 신용카드를 등록해주세요. 체크카드는 자동이체 처리가 되지 않습니다.</li>
+                                                <li>체크카드 등록으로 인한 대여료 미납 시 연체이자 등 불이익이 발생 할 수 있습니다.</li>
+                                                <li>카드 자동이체는 세금계산서가 발행되지 않습니다. 세금계산서 발행을 원하는 경우 출금자동이체(CMS)를 선택해주세요.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="agree-box">
+                                            <div class="check-wrap round-normal">
+                                                <input type="checkbox" id="agree03">
+                                                <label for="agree03">신용카드 자동이체에 동의합니다.</label>
+                                            </div>
+                                            <button type="button" class="btn-more">자세히보기 ></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="tab2">
+                                    <div class="input-wrap">
+                                        <div class="input-item">
+                                            <p class="tit">결제일 (매월)</p>
+                                            <select name="select05" id="select05">
+                                                <option value="" disabled selected>선택</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-item">
+                                            <p class="tit">결제은행</p>
+                                            <select name="select06" id="select06">
+                                                <option value="" disabled selected>선택</option>
+                                                <option value="01">신한</option>
+                                                <option value="02">농협</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-item">
+                                            <p class="tit">계좌번호</p>
+                                            <div class="text-wrap">
+                                                <input type="text" placeholder="" id="bank-num" />
+                                            </div>
+                                        </div>
+                                        <div class="input-item">
+                                            <p class="tit">자동이체인증</p>
+                                            <div class="input-list">
+                                                <select name="select07" id="select07">
+                                                    <option value="" disabled selected>통신사 </option>
+                                                    <option value="kt">kt</option>
+                                                    <option value="skt">skt</option>
+                                                </select>
+                                                <div class="input-search">
+                                                    <input type="number" placeholder="000-0000-0000" id="test06" class="input-search" />
+                                                    <button type="button" class="btn-search">인증하기</button>
+                                                </div>
+                                            </div>
+                                            <ul class="desc-list">
+                                                <li>자동이체의 경우 계약자의 이름(개인사업자는 대표자명)과 CMS계좌 예금주가 일치해야 합니다. 예금주명이 상이하거나 사업자명이 포함된 경우 정상적인 인증이 되지 않습니다.</li>
+                                                <li>계좌번호는 계좌 개설 당시의 계좌번호로만 입력해주세요. 임의로 생성된 평생계좌 번호(휴대폰 번호 등)는 자동이체 불가합니다. 이로 인한 대여료 미납 시 연등 불이익이 발생할 수 있습니다.</li>
+                                                <li>한국은행, 수출입은행, 지역농축협, 상호저축은행은 ARS인증이 불가합니다. 다른 은행 계좌로 진행해 주세요.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="agree-box">
+                                            <div class="check-wrap round-normal">
+                                                <input type="checkbox" id="agree02">
+                                                <label for="agree02">출금 자동이체에 동의합니다.</label>
+                                            </div>
+                                            <button type="button" class="btn-more">자세히보기 ></button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="float-wrap">
+                    <div class="inner">
+                        <div class="car-thumb border-none">
+                            <div class="img-wrap">
+                                <img src="images/rent_new/test_img2.png" alt="테스트 이미지">
+                            </div>
+                            <dl>
+                                <dt>제네시스 더 올뉴 G80 3.5 가솔린 2WD 기본형</dt>
+                                <dd>2020.10</dd>
+                                <dd>4,542km</dd>
+                                <dd>하이브리드</dd>
+                                <dd>1,998cc</dd>
+                            </dl>
+                        </div>
+                        <button type="button" class="btn-more">차량정보 더보기 ></button>
+                        <ul class="info-list">
+                            <li>
+                                <p>신차가</p>
+                                <span>48,500,000원</span>
+                            </li>
+                            <li>
+                                <p>선납금</p>
+                                <span>7,650,000원 (30%)</span>
+                            </li>
+                            <li>
+                                <p>보증금</p>
+                                <span>0원 (0%)</span>
+                            </li>
+                            <li>
+                                <p>인수가</p>
+                                <span>17,650,000원</span>
+                            </li>
+                        </ul>
+                        <div class="price-wrap">
+                            <div class="price">
+                                <div class="tit">
+                                    <p>월 대여료</p>
+                                    <span>(세금 및 보험료 포함)</span>
+                                </div>
+                                <strong>600,000원</strong>
+                            </div>
+                            <a href="#">
+                                제휴카드 할인가 <span>월 570,000원</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="on">다음</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+</body>
+</html>

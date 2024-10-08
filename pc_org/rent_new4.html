@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body>
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter bottom-fixed">
+        <div class="cont-wrap complete">
+            <div class="page-tit">
+                <h2>심사가 완료되었습니다!</h2>
+                <p>2023년 9월 22일 까지 간편하게 계약진행이 가능합니다.</p>
+            </div>
+            <div class="complete-thumb">
+                <div class="img-wrap">
+                    <img src="images/rent_new/test_img.png" alt="차량 이미지">
+                </div>
+                <div class="car-info">
+                    <dl>
+                        <dt>제네시스 더 올뉴G80 </dt>
+                        <dd>3.5 가솔린 AWD 기본형</dd>
+                        <dd>2020.10</dd>
+                        <dd>24,542km</dd>
+                        <dd>하이브리드</dd>
+                        <dd>1,998cc</dd>
+                    </dl>
+                    <div class="price">
+                        <p><b>월 대여료</b> (세금 및 보험료 포함)</p>
+                        <strong>277,225원</strong>
+                    </div>
+                </div>
+                <div class="pop-txt">
+                    <span>월 -4,500원</span> 우수등급 추가 할인되었어요!
+                </div>
+            </div>
+            <section>
+                <h3 class="sec-tit">계약조건 상세내용</h3>
+                <div class="sec-cont">
+                    <ul class="complete-list-flex">
+                            <li>
+                                <p>계약기간</p>
+                                <span>48개월</span>
+                            </li>
+                            <li>
+                                <p>선납금</p>
+                                <span>0원 (0%)</span>
+                            </li>
+                            <li>
+                                <p>보증금</p>
+                                <span>0원 (0%)</span>
+                            </li>
+                            <li>
+                                <p>인수가</p>
+                                <span>17,200,000원</span>
+                            </li>
+                            <li>
+                                <p>보험연령</p>
+                                <span>만 26세</span>
+                            </li>
+                            <li>
+                                <p>주행거리</p>
+                                <span>1만km/년</span>
+                            </li>
+                            <li>
+                                <p>대물배상</p>
+                                <span>010-1234-5678</span>
+                            </li>
+                            <li>
+                                <p>자손</p>
+                                <span>자손1억/부상1.5천</span>
+                            </li>
+                            <li>
+                                <p>무보험차상해</p>
+                                <span>2억원/1인당</span>
+                            </li>
+                            <li>
+                                <p>자기부담금</p>
+                                <span>50만원</span>
+                            </li>
+                            <li>
+                                <p>운전자범위</p>
+                                <span>계약자 본인 및 배우자, 계약자와 배우자의 직계 가족 및 형제 자매 (개인사업자의 경우 계약자 사업장의 임직원 포함)</span>
+                            </li>
+                            <li>
+                                <p>실속정비상품</p>
+                                <span>가입</span>
+                            </li>
+                    </ul>
+                </div>
+            </section>
+            
+                
+            </section>
+            
+        </div>
+    </main>
+
+    <div class="bottom-wrap-fixed">
+        <div class="inner-wrap">
+            <div class="price">
+                <p>최종 심사내용은 10일동안 유효하며, 10일 후 견적 내용은 삭제됩니다.</p>
+                <strong>월 277,000원</strong>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="bt-common-type3">상담신청</button>
+                <button type="button" class="bt-common-type2">다이렉트 계약하기</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+</body>
+</html>

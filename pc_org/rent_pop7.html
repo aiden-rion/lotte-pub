@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body class="rent-renewal">
+
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter">
+    </main>
+
+
+    <!--  팝업   -->
+    <div class="layer_popup_wrappper rent-pop" id="alertPop01" style="display: block;">
+        <div class="layer_popup detail-pop">
+            <div class="pop_inner">
+                <div class="pop-head">
+                    <h2>신차장 IoT 단말기 부착 여부 확인</h2>
+                    <button class="ir btn-close" onclick="ui.modalPopClose(alertPop01);">팝업닫기</button>
+                </div>
+                <div class="pop-contents">
+                    <div class="input-item">
+                        <div class="radio-tit">신차장 IoT 단말기(위치정보 수집장치) 부착 여부를 확인해 주세요.</div>
+                        <div class="radio-wrap">
+                            <div class="radio">
+                                <input type="radio" id="blackbox1" name="blackbox" value="" checked/>
+                                <label for="blackbox1"> 부착</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" id="onOff" name="blackbox" value=""/>
+                                <label for="onOff"> 부착하지 않음</label>
+                            </div>
+                        </div>
+                        <ul class="desc-list">
+                            <li>위치정보 수집장치 부착 차량임을 안내 받고 확인 하였습니다.</li>
+                            <li>위치정보는 정비 및 멤버십 서비스의 원활한 제공을 위하여 고객이 신청하였을 경우에만 수집하게 됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="off" id="toggleButton">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body class="rent-renewal">
+
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter">
+    </main>
+
+
+    <!--  팝업   -->
+    <div class="layer_popup_wrappper rent-pop" id="alertPop01" style="display: block;">
+        <div class="layer_popup detail-pop">
+            <div class="pop_inner">
+                <div class="pop-head">
+                    <h2>계약 주요 안내사항을 확인해 주세요.</h2>
+                    <button class="ir btn-close" onclick="ui.modalPopClose(alertPop01);">팝업닫기</button>
+                </div>
+                <div class="pop-contents">
+                    <div class="txt-wrap">
+                        <p class="tit">차량계약</p>
+                        <p class="txt">
+                            차량출고 전 정부/지자체의 개별 소비세 및 보조금 정책이 변경되거나 제조사의 차량 단산, 연식/엔진 변경 등으로 차량 소비자 가격이 변경될 경우 대여료는 [변동금액/계약개월 수]에 따라 변경되며, 원치 않는 경우 계약이 철회 될 수 있습니다.
+                        </p>
+                    </div>
+                    <div class="txt-wrap">
+                        <p class="tit">위약금</p>
+                        <p class="txt">위약금율 : 30% <br/>
+                            계약기간 중 중도 반납시 잔여대여료에 대해 적용합니다.<br/>
+                            [약관 제3조 제②항 제1조]<br/>
+                            -계산식 : [월 대여료(VAT제외)x12÷365]x미경과일수x위약금율</p>
+                    </div>
+                    <div class="txt-wrap">
+                        <p class="tit">초과운행부담금</p>
+                        <p class="txt">차량의 운행거리가 약정주행거리를 초과한 경우에 대해 적용합니다. <br/>
+                            [약관 제14조 참조] <br/>
+                            -계산식 : 초과운행거리(km)xkm당 초과운행료 <br/>
+                            -기본공제거리 : 2,000km, 초과운행료 : 국산차량 100원/km, 수입·외산차량 200원/km <br/>
+                            ※테슬라 차량의 경우 약정주행거리 초과시 초과운행부담금은 1,000km공제 후, 1km당 450원이며, 추후 연장이 불가합니다.</p>
+                    </div>
+                    <div class="txt-wrap">
+                        <p class="tit">보험조건 및 운전자 범위</p>
+                        <p class="txt">
+                            ① ”자동차 임대차 계약서"상에 명시된 “보험조건 및 운전자 범위"를 인지하여 주십시요.<br/>
+                            ② 만약, 운전자 범위 외의 제3자 운전 및 이에 따른 사고 발생시, 당사 약관 “제5조 운전자 자격요건"과 “제8조 금지 행위"에 근거하여, 보험 보상 처리는 되지 않으며, 사고액 전액에 대해 고객님께서 부담하셔야 됩니다.
+                        </p>
+                    </div>
+                    <div class="txt-wrap">
+                        <p class="tit">연체이자</p>
+                        <p class="txt">약정 결제일까지 대여료 등의 납부가 지연될 경우 [연체이율(4)를 적용하여 이자를 청구합니다. [약관 제4조 제③항]</p>
+                    </div>
+                    <div class="txt-wrap">
+                        <p class="tit">반환지연</p>
+                        <p class="txt">
+                            ① 위약금과 별개로 계약 종료일 다음날부터 반납일까지 대여료 상당액을 지급하여야 합니다. [약관 제4조 제⑦항 참조]<br/>
+                            ② 차량을 반환하지 않고 운행하는 중 생긴 사고는 고객이 손해배상 책임을 부담합니다. [약관 제4조 제⑤항 참조]② 차량을 반환하지 않고 운행하는 중 생긴 사고는 고객이 손해배상 책임을 부담합니다. [약관 제4조 제⑤항 참조] <br/>
+                            ③ 차량의 무단 담보제공·처분·해체 등의 사유로 반환하지 않은 때에는 고객이 형사 처벌을 받을 수 있으며, 그 행위로 인하여 임대인에게 손해가 발생한 때에는 고객이 그 일체의 손해 전부를 배상하여야 합니다. [약관 제8조 제③항 참조]
+                        </p>
+                    </div>
+                    <div class="txt-wrap">
+                        <p class="tit">계약해지</p>
+                        <p class="txt">
+                            ① 고객의 귀책사유로 발생한 예상 차량 수리비가 장부가액의 80%를 초과하는 경우에는 계약이 자동해지되며 고객은 위약금을 지급하고 차량의 손해를 배상하여야 합니다. [약관 제10조 제③항 참조] <br/>
+                            ② 고객의 귀책사유 없이 발생한 차량 수리비가 장부가액의 80%를 초과하는 경우에는 회사는 계약을 해지할 수 있습니다. [약관 제10조 제④항 참조] <br/>
+                            ③ 법규로 금지된 행위(음주운전, 음주측정거부, 무면허운전, 도주(사고 후 미조치 포함), 뺑소니) 발생 또는 차량 인도일로부터 누적 5회 이상 보험사고 발생에 해당한 때에는 당사 약관 “제8조 금지행윙"와 “제10조 계약의 중도해지 및 종료"에 근거하여, 회사는 계약을 해지하고 당해 차량의 반환을 청구하거나 회수할 수 있습니다.
+                        </p>
+                    </div>
+                    <div class="txt-wrap">
+                        <p class="tit">계약승계</p>
+                        <p class="txt">고객이 본 계약을 제3자에게 승계하기를 희망하는 경우, 별도로 승계 고객을 구하여 회사의 동의를 받아야 합니다. 계약 승계 시 본 계약의 중도 해지에 따른 위약금은 납부하지 않을 수 있습니다. 단, 고객 및 상품유형에 따라 동일 계약조건으로 승계가 불가능할 수 있으며, 승계시 별도의 수수료는 고객이 납부합니다.<br/>
+                            [약관 제3조 제②항 2호 참조] <br/>
+                            -승계수수료 : 33만원(VAT포함), 전자계약 이용시 16.5만원(VAT포함)</p>
+                    </div>
+                    <div class="txt-wrap">
+                        <p class="tit">차량반환</p>
+                        <p class="txt">
+                            계약 종료 시 고객은 임대인에게 차량을 최초 인도 받은 상태(판금, 도장을 필요로 하지 않는 양호한 상태)로 반환하여야 합니다. <br/>
+                            [약관 제6조 제①항 참조] <br/>
+                            -승계수수료 : 33만원(VAT포함), 전자계약 이용시 16.5만원(VAT포함)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+</body>
+</html>

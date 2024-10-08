@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>롯데오토마켓</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- front UI css -->
+    <link rel="stylesheet" href="css/default.css" type="text/css" />
+    <link rel="stylesheet" href="css/rent_new/main.css" type="text/css" />
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+
+    <!-- layout--header -->
+    <section class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="/" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/cr/search/list'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li>
+                    <li class="btn-more">
+                        <a href="#">더보기</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">기획전</a></li>
+                            <li><a href="#">최근 본 차량</a></li>
+                            <li><a href="#">관심차량</a></li>
+                            <li><a href="#">이용후기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    
+    
+    <!-- layout--visual -->
+    <section class="layout--visual">
+        <div class="swiper visual-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: url('./images/rent_new/main/main_visual_01.jpg') no-repeat center top;background-size: auto 100%;"></div>
+                <div class="swiper-slide" style="background: url('./images/rent_new/main/main_visual_01.jpg') no-repeat center top;background-size: auto 100%;"></div>
+                <div class="swiper-slide" style="background: url('./images/rent_new/main/main_visual_01.jpg') no-repeat center top;background-size: auto 100%;"></div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="main--container">
+        
+        <section class="layout-row flex-between">
+            <!-- 차량선택 전체 -->
+            <div class="brand-area">
+                <h2 class="blind">차량선택</h2>
+                <div class="title">
+                    <p><strong>5,852대</strong>의 차량이 기다리고 있어요!</p>
+                </div>
+        
+                <!-- 차량선택 -->
+                <article class="brand-filter">
+                    <!-- 필터 헤드탭 -->
+                    <div class="tab-wrap">
+                        <div class="tab header-tab">
+                            <button type="button" data-tab="tab1" class="on">브랜드별</button>
+                            <button type="button" data-tab="tab2" class="">차종별</button>
+                            <button type="button" data-tab="tab3" class="">가격별</button>
+                            <button type="button" data-tab="tab4" class="">관리차</button>
+                        </div>
+                        <div class="tab-content on" id="tab1">
+                            <div class="sub-tab-wrap">
+                                <div class="sub-tab">
+                                    <button class="on" data-tab="subtab1">브랜드 선택</button>
+                                    <button data-tab="subtab2">모델 선택</button>
+                                    <button data-tab="subtab3">세부모델 선택</button>
+                                    <a href="#" class="btn-more"><span>000</span>대 차량보기</a>
+                                </div>
+                                <div class="sub-tab-content on" id="subtab1">
+                                    <ul class="brand-list">
+                                        <li>
+                                            <a href="#">현대</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">기아</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">제네시스</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">쉐보레</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">KG모빌리티 <br>(쌍용)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">르노코리아 <br> (삼성)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sub-tab-content" id="subtab2">
+                                    <div class="swiper car-list">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_01.png" alt="아반떼">
+                                                    <p>아반떼</p>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_02.png" alt="쏘나타">
+                                                    <p>쏘나타</p>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_03.png" alt="그랜저">
+                                                    <p>그랜저</p>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_04.png" alt="코나">
+                                                    <p>코나</p>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_05.png" alt="투싼">
+                                                    <p>투싼</p>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_05.png" alt="투싼">
+                                                    <p>투싼</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-scrollbar"></div>
+                                    </div>
+                                </div>
+                                <div class="sub-tab-content" id="subtab3">
+                                    <div class="swiper detail-car-list">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_01.png" alt="아반떼">
+                                                    <p>더 뉴 아반떼N</p>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_02.png" alt="쏘나타">
+                                                    <p>더 뉴 아반떼(CN7)</p>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_03.png" alt="그랜저">
+                                                    <p>더 뉴 아반떼(CN7)
+                                                        Hybrid</p>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_04.png" alt="코나">
+                                                    <p>더 뉴 아반떼AD</p>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_05.png" alt="투싼">
+                                                    <p>아반떼AD</p>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <img src="images/rent_new/main/car_list_test_05.png" alt="투싼">
+                                                    <p>친환경</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-scrollbar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab2">
+                            <div class="car-type">
+                                <div class="tit-wrap">
+                                    <!-- 선택전 안내텍스트 -->
+                                    <p>원하시는 차종을 선택해주세요. <span>(중복 선택 가능)</span></p>
+        
+                                    <!-- 선택시 생성태그-->
+                                    <!-- <ul class="car-tag">
+                                            <li><a href="#">경차·소형차</a><button type="button" class="btn-close ir">닫기</button></li>
+                                            <li><a href="#">준중형차</a><button type="button" class="btn-close ir">닫기</button></li>
+                                            <li><a href="#">중형차</a><button type="button" class="btn-close ir">닫기</button></li>
+                                            <li><a href="#">대형차</a><button type="button" class="btn-close ir">닫기</button></li>
+                                            <li><a href="#">SUV·RV</a><button type="button" class="btn-close ir">닫기</button></li>
+                                            <li><a href="#">친환경(전기차)</a><button type="button" class="btn-close ir">닫기</button></li>
+                                        </ul> -->
+        
+                                    <a href="#" class="btn-more">5,852대 차량 보기</a>
+                                </div>
+                                <div class="content-wrap">
+                                    <ul>
+                                        <li>
+                                            <input type="checkbox" name="car" id="car1">
+                                            <label htmlFor="car1">경차·소형차</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="car" id="car2">
+                                            <label htmlFor="car2">준중형차</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="car" id="car3">
+                                            <label htmlFor="car3">중형차
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="car" id="car4">
+                                            <label htmlFor="car4">대형차</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="car" id="car5">
+                                            <label htmlFor="car5">SUV·RV</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="car" id="car6">
+                                            <label htmlFor="car6">친환경(전기차)</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="tab-content" id="tab3">
+                            <div class="price-range-wrap">
+                                <div class="tit-wrap">
+                                    <div class="input-wrap">
+                                        <div class="row">
+                                            <p>최저</p>
+                                            <input type="number" placeholder="직접입력" id="rowPrice">
+                                        </div>
+                                        <div class="high">
+                                            <p>최대</p>
+                                            <input type="number" placeholder="직접입력" id="highPrice">
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn-more">차량 보기</a>
+                                </div>
+        
+                                <div class="content-wrap">
+                                    <div class="range-cont">
+                                        <div class="range">
+                                            <div id="slider-range"></div>
+                                        </div>
+                                        <ul class="range-txt">
+                                            <li>0원</li>
+                                            <li>30만원</li>
+                                            <li>40만원</li>
+                                            <li>50만원</li>
+                                            <li>60만원</li>
+                                            <li>70만원+</li>
+                                        </ul>
+                                    </div>
+                                    <article class="hash-tag">
+                                        <ul>
+                                            <li><a href="#">월 30만원 미만</a></li>
+                                            <li><a href="#">월 30만원대</a></li>
+                                            <li><a href="#">월 40만원대</a></li>
+                                            <li><a href="#">월 50만원대</a></li>
+                                            <li><a href="#">월 60만원대</a></li>
+                                            <li><a href="#">월 60만원 이상</a></li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab4">
+                            <div class="search-name-wrap">
+                                <div class="tit-wrap">
+                                    <input type="text" placeholder="검색어를 입력해주세요." id="CarName">
+                                    <a href="#" class="btn-more">차량 보기</a>
+                                </div>
+                                <div class="content-wrap">
+                                    <!-- 검색 전 -->
+                                    <div class="search-list">
+                                        <ul>
+                                            <li>
+                                                <p>찾으시는 <strong>브랜드명, 모델명, 연료명 등</strong>을 입력해주세요.</p>
+                                                <span>ex) 쏘나타, 그랜저, 하이브리드 등</span>
+                                            </li>
+                                            <li>
+                                                <p>찾으시는 차량의 <strong>차량번호</strong>를 알고계시나요? 차량번호로 검색도 가능합니다.</p>
+                                                <span>ex) 123하 1234 등</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 검색 결과 -->
+                                    <!-- <div class="result-list" id="result-list">
+                                            <ul>
+                                                <li>더 뉴 아반떼N</li>
+                                                <li>더 뉴 아반떼(CN7)</li>
+                                                <li>더 뉴 아반떼(CN7)</li>
+                                                <li>더 뉴 아반떼(CN7)</li>
+                                                <li>더 뉴 아반떼(CN7)</li>
+                                                <li>더 뉴 아반떼(CN7)</li>
+                                            </ul>
+                                        </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                </article>
+        
+                <!-- 해시태그 -->
+                <div class="swiper tag-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">#출고3년이내</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">#3만Km이하</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">#법인차량</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">#테마PICK</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">#오늘만이가격</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">#인증차</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">#진단차</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">#롯데</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">#중고차</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">#다이렉트</a>
+                        </div>
+                    </div>
+                    <div class="custom-wrap">
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 인기모델 -->
+            <article class="models-area">
+                <h2>인기모델</h2>
+                <div class="btn-custom">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+        
+                <div class="swiper models-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide theme-01">
+                            <article class="card-slide">
+                                <div class="page-num">01</div>
+                                <dl>
+                                    <dt><img src="./images/rent_new/brand/brand_hd_small.png" alt=""></dt>
+                                    <dt>CASPER</dt>
+                                    <dt>현대 캐스퍼</dt>
+                                    <dd>월 180,000원부터</dd>
+                                </dl>
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/models_slide_casper.png' alt="CASPER" />
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide theme-02">
+                            <article class="card-slide">
+                                <div class="page-num">02</div>
+                                <dl>
+                                    <dt><img src="./images/rent_new/brand/brand_hd_small.png" alt=""></dt>
+                                    <dt>CASPER</dt>
+                                    <dt>현대 캐스퍼</dt>
+                                    <dd>월 180,000원부터</dd>
+                                </dl>
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/models_slide_casper.png' alt="CASPER" />
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide theme-03">
+                            <article class="card-slide">
+                                <div class="page-num">03</div>
+                                <dl>
+                                    <dt><img src="./images/rent_new/brand/brand_hd_small.png" alt=""></dt>
+                                    <dt>CASPER</dt>
+                                    <dt>현대 캐스퍼</dt>
+                                    <dd>월 180,000원부터</dd>
+                                </dl>
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/models_slide_casper.png' alt="CASPER" />
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide theme-04">
+                            <article class="card-slide">
+                                <div class="page-num">04</div>
+                                <dl>
+                                    <dt><img src="./images/rent_new/brand/brand_hd_small.png" alt=""></dt>
+                                    <dt>CASPER</dt>
+                                    <dt>현대 캐스퍼</dt>
+                                    <dd>월 180,000원부터</dd>
+                                </dl>
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/models_slide_casper.png' alt="CASPER" />
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide theme-05">
+                            <article class="card-slide">
+                                <div class="page-num">05</div>
+                                <dl>
+                                    <dt><img src="./images/rent_new/brand/brand_hd_small.png" alt=""></dt>
+                                    <dt>CASPER</dt>
+                                    <dt>현대 캐스퍼</dt>
+                                    <dd>월 180,000원부터</dd>
+                                </dl>
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/models_slide_casper.png' alt="CASPER" />
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+
+        <!-- 배너 -->
+        <section class="layout-row">
+            <div class="banner-area">
+                <a href="#"><img src="./images/rent_new/main/main_banner_01.jpg" alt="중고차 장기 렌터카 안내-중고차를 이용하는 합리적인 방법"></a>
+                <a href="#"><img src="./images/rent_new/main/main_banner_02.jpg" alt="인수옵션형 상품 안내-마이카 세이브 판매상품 안내"></a>
+            </div>
+        </section>
+
+
+        <!-- 조회수 많은 차량 -->
+        <section class="layout-row">
+            <div class="popular-area popular-slider">
+                <h2>조회수 많은 차량</h2>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/popular_slide_01.jpg' alt="1"/>
+                                </div>
+                                <div class="txt-wrap">
+                                    <div class="badge">
+                                        <ul>
+                                            <li class="certification">인증차</li>
+                                            <li class="diagnosis">진단차</li>
+                                            <li class="officer">관리차</li>
+                                        </ul>
+                                    </div>
+                                    <dl>
+                                        <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스노블레스</dt>
+                                        <dd>2020.10</dd>
+                                        <dd>4,542km</dd>
+                                        <dd>가솔린</dd>
+                                    </dl>
+                                    <p>월 682,000원 <span>/ 24개월</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/popular_slide_02.jpg' alt="2"/>
+                                </div>
+                                <div class="txt-wrap">
+                                    <div class="badge">
+                                        <ul>
+                                            <li class="certification">인증차</li>
+                                            <li class="officer">관리차</li>
+                                        </ul>
+                                    </div>
+                                    <dl>
+                                        <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                        <dd>2020.10</dd>
+                                        <dd>4,542km</dd>
+                                        <dd>가솔린</dd>
+                                    </dl>
+                                    <p>월 682,000원 <span>/ 24개월</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/popular_slide_03.jpg' alt="3"/>
+                                </div>
+                                <div class="txt-wrap">
+                                    <div class="badge">
+                                        <ul>
+                                            <li class="diagnosis">진단차</li>
+                                        </ul>
+                                    </div>
+
+                                    <dl>
+                                        <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                        <dd>2020.10</dd>
+                                        <dd>4,542km</dd>
+                                        <dd>가솔린</dd>
+                                    </dl>
+                                    <p>월 682,000원 <span>/ 24개월</span></p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/popular_slide_04.jpg' alt="4"/>
+                                </div>
+                                <div class="txt-wrap">
+                                    <div class="badge">
+                                        <ul>
+                                            <li class="officer">관리차</li>
+                                        </ul>
+                                    </div>
+
+                                    <dl>
+                                        <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                        <dd>2020.10</dd>
+                                        <dd>4,542km</dd>
+                                        <dd>가솔린</dd>
+                                    </dl>
+                                    <p>월 682,000원 <span>/ 24개월</span></p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/popular_slide_05.jpg' alt="5"/>
+                                </div>
+                                <div class="txt-wrap">
+                                    <div class="badge">
+                                        <ul>
+                                            <li class="officer">관리차</li>
+                                        </ul>
+                                    </div>
+                                    <dl>
+                                        <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                        <dd>2020.10</dd>
+                                        <dd>4,542km</dd>
+                                        <dd>가솔린</dd>
+                                    </dl>
+                                    <p>월 682,000원 <span>/ 24개월</span></p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/popular_slide_01.jpg' alt="6"/>
+                                </div>
+                                <div class="txt-wrap">
+                                    <div class="badge">
+                                        <ul>
+                                            <li class="officer">관리차</li>
+                                        </ul>
+                                    </div>
+                                    <dl>
+                                        <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                        <dd>2020.10</dd>
+                                        <dd>4,542km</dd>
+                                        <dd>가솔린</dd>
+                                    </dl>
+                                    <p>월 682,000원 <span>/ 24개월</span></p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/rent_new/main/popular_slide_02.jpg' alt="7"/>
+                                </div>
+                                <div class="txt-wrap">
+                                    <div class="badge">
+                                        <ul>
+                                            <li class="officer">관리차</li>
+                                        </ul>
+                                    </div>
+                                    <dl>
+                                        <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                        <dd>2020.10</dd>
+                                        <dd>4,542km</dd>
+                                        <dd>가솔린</dd>
+                                    </dl>
+                                    <p>월 682,000원 <span>/ 24개월</span></p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+
+        <!-- 테마 기획전 -->
+        <section class="layout-row">
+            <div class="tit-flex">
+                <h2>테마 기획전</h2>
+                <button class="btn-more">더보기 +</button>
+            </div>
+            <div class="theme-area theme-slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/rent_new/main/main_slide_banner_01.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./images/rent_new/main/main_slide_banner_02.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 인증차,진단차,관리차 -->
+        <section class="layout-row">
+            <h2 class="blind">인증차,진단차,관리차</h2>
+            <div class="car-list-area accodianSlide">
+                <div class="acc-title accoianTitle">
+                    <ul>
+                        <li class="active">
+                            <dl>
+                                <dt>인증차</dt>
+                                <dd>
+                                    <div class="txt-wrap">
+                                        <strong>인증차</strong>란?<br />
+                                        주요골격(프레임) 사고이력이 없는<br />
+                                        <strong class="point">무사고 진단차량</strong> 입니다.
+                                    </div>
+                                    <a href="#">차량 더보기</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>진단차</dt>
+                                <dd>
+                                    <div class="txt-wrap">
+                                        진단차란?<br />
+                                        롯데렌터카에서 <strong class="point">직접 성능점검한
+                                        정보가 제공되는 차량</strong>입니다.
+                                    </div>
+                                    <a href="#">차량 더보기</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>관리차</dt>
+                                <dd>
+                                    <div class="txt-wrap">
+                                        관리차란?<br />
+                                        신차 출고부터 지금까지<br />
+                                        <strong class="point">롯데렌터카에서 정기관리한 차량</strong>
+                                        입니다.
+                                    </div>
+                                    <a href="#">차량 더보기</a>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 리스트 -->
+                <div class="acc-contents">
+                    <div class="inner-scroll accoianContents active">
+                        <div class="total-num">총 <span>121</span>대</div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inner-scroll accoianContents">
+                        <div class="total-num">총 <span>121</span>대</div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inner-scroll accoianContents">
+                        <div class="total-num">총 <span>121</span>대</div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-wrap">
+                                        <img src='./images/rent_new/main/popular_slide_03.jpg' alt=""/>
+                                    </div>
+                                    <div class="txt-wrap">
+                                        <dl>
+                                            <dt>기아 쏘렌토 하이브리드 1.6 HEV 2WD 노블레스</dt>
+                                            <dd>월 682,000원 <span>/ 24개월</span></dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 다른 고객 후기 -->
+        <div class="customer-reviews">
+            <section class="layout-row">
+                <hgroup>
+                    <h2>다른 고객 후기</h2>
+                    <a href="#">더보기 +</a>
+                </hgroup>
+
+                <div class="review-area review-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-wrap"><img src='./images/rent_new/main/main_review_dummy.jpg' alt=""/></div>
+                                    <div class="car-info">
+                                        <div class='txt-wrap'>
+                                            <p class="car-name">기아 K8 하이브리드 좋아요</p>
+                                            <div class="rating">
+                                                <ul>
+                                                    <li class="star full"></li>
+                                                    <li class="star full"></li>
+                                                    <li class="star full"></li>
+                                                    <li class="star half"></li>
+                                                    <li class="star"></li>
+                                                </ul>
+                                                <p class="rate">(4.5)</p>
+                                            </div>
+                                        </div>
+                                        <div class="user-info">
+                                            <p>차량가격도 잘 설명해주시고 다른 곳에 팔아도 크게 차이 없을꺼 같아서 그냥 롯데렌터카에서 구매했습니다.차량가격도 잘 설명해주시고</p>
+                                            <div class="user-name">
+                                                <span>서**님</span>
+                                                <span class="date">2022.09.06</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-wrap"><img src='./images/rent_new/main/main_review_dummy.jpg' alt=""/></div>
+                                    <div class="car-info">
+                                        <div class='txt-wrap'>
+                                            <p class="car-name">기아 K8 하이브리드 좋아요</p>
+                                            <div class="rating">
+                                                <ul>
+                                                    <li class="star full"></li>
+                                                    <li class="star full"></li>
+                                                    <li class="star full"></li>
+                                                    <li class="star half"></li>
+                                                    <li class="star"></li>
+                                                </ul>
+                                                <p class="rate">(4.5)</p>
+                                            </div>
+                                        </div>
+                                        <div class="user-info">
+                                            <p>차량가격도 잘 설명해주시고 다른 곳에 팔아도 크게 차이 없을꺼 같아서 그냥 롯데렌터카에서 구매했습니다.차량가격도 잘 설명해주시고</p>
+                                            <div class="user-name"><span>서**님</span><span class="date">2022.09.06</span></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-wrap"><img src='./images/rent_new/main/main_review_dummy.jpg' alt=""/></div>
+                                    <div class="car-info">
+                                        <div class='txt-wrap'>
+                                            <p class="car-name">역시 제네시스</p>
+                                            <div class="rating">
+                                                <ul>
+                                                    <li class="star full"></li>
+                                                    <li class="star full"></li>
+                                                    <li class="star full"></li>
+                                                    <li class="star half"></li>
+                                                    <li class="star"></li>
+                                                </ul>
+                                                <p class="rate">(4.5)</p>
+                                            </div>
+                                        </div>
+                                        <div class="user-info">
+                                            <p>제네시스 너무 좋아요 제네시스 너무 좋아요 제네시스 너무 좋아요 제네시스 너무 좋아요 제네시스 너무 좋아요 제네시스 너무 좋아요 제네시스 너무 좋아요 제네시스 너무 좋아요 </p>
+                                            <div class="user-name"><span>서**님</span><span class="date">2022.09.06</span></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-wrap"><img src='./images/rent_new/main/main_review_dummy.jpg' alt=""/></div>
+                                    <div class="car-info">
+                                        <div class='txt-wrap'>
+                                            <p class="car-name">차가 친절하고 직원분이 깨끗해요</p>
+                                            <div class="rating">
+                                                <ul>
+                                                    <li class="star full"></li>
+                                                    <li class="star full"></li>
+                                                    <li class="star full"></li>
+                                                    <li class="star half"></li>
+                                                    <li class="star"></li>
+                                                </ul>
+                                                <p class="rate">(4.5)</p>
+                                            </div>
+                                        </div>
+                                        <div class="user-info">
+                                            <p>처음엔 그냥 둘러보려고 들어왔다가 설명잘해주고 판매자가 얼굴이 잘생겨서 마음이 훅 가긴 했습니다. 계약 잘 하고 갑니다~</p>
+                                            <div class="user-name"><span>서**님</span><span class="date">2022.09.06</span></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-wrap"><img src='./images/rent_new/main/main_review_dummy.jpg' alt=""/></div>
+                                    <div class="car-info">
+                                        <div class='txt-wrap'>
+                                            <p class="car-name">기아 K8 하이브리드 좋아요</p>
+                                            <div class="rating">
+                                                <ul>
+                                                    <li class="star full"></li>
+                                                    <li class="star full"></li>
+                                                    <li class="star full"></li>
+                                                    <li class="star half"></li>
+                                                    <li class="star"></li>
+                                                </ul>
+                                                <p class="rate">(4.5)</p>
+                                            </div>
+                                        </div>
+                                        <div class="user-info">
+                                            <p>차량가격도 잘 설명해주시고 다른 곳에 팔아도 크게 차이 없을꺼 같아서 그냥 롯데렌터카에서 구매했습니다.차량가격도 잘 설명해주시고</p>
+                                            <div class="user-name"><span>서**님</span><span class="date">2022.09.06</span></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+
+    <!-- footer -->
+    <footer class="footer-content">
+
+        <section class="footer-customer">
+            <div class="footer-cs">
+                <dl>
+                    <dt>고객센터</dt>
+                    <dd><a href="tel:031-322-8000">031. 322. 8000</a></dd>
+                    <dd>(평일 09:00 ~ 18:00)</dd>
+                </dl>
+                <div class="footer-sns">
+                    <button type="button" class="ir insta" onClick="location.href='https://www.instagram.com/lotte_rentacar'">Instagram</button>
+                    <button type="button" class="ir facebook" onClick="location.href='https://www.facebook.com/lotterentacar'">Facebook</button>
+                    <button type="button" class="ir kakao" onClick="location.href='https://pf.kakao.com/_gVmbl'">Kakao</button>
+                </div>
+            </div>
+        </section>
+        <section class="footer-inner">
+            <div class="footer-address">
+                <h1> 롯데렌탈(주)</h1>
+                <ul class="footer-info">
+                    <li>
+                        <span><b>대표이사</b> : 최진환</span>
+                        <span><b>E-mail</b> : <a href="mailto:lotteautomarket@lotte.net">lotteautomarket@lotte.net</a></span>
+                    </li>
+                    <li>
+                        <span><b>개인정보관리책임자</b>  :최근영</span>
+                        <span><b>사업자등록번호</b> : 214-87-79183</span>
+                        <span><b>통신판매업신고번호</b> : 제2010-경기안양-420호</span>
+                    </li>
+                    <li><span><b>사업장 </b> : 서울시 강남구 테헤란로 422 KT타워 10 / 경기도 안양시 동안구 전파로 88, 8층(호계동, 신원비젼타워)</span></li>
+                </ul>
+                <div class="footer-link">
+                    <ul>
+                        <li><a href="https://www.lotterentacar.net/hp/kor/compInfo.do">회사소개</a></li>
+                        <li><a href="https://www.lotterentacar.net/hp/kor/terms/use.do" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.lotterentacar.net/hp/kor/terms/personalInfo.do" class="emp" target="_blank"><b>개인정보처리방침</b></a></li>
+                        <li><a href="https://www.lotterentacar.net/hp/kor/terms/videoInfo.do" class="emp" target="_blank"><b>영상정보처리방침</b></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="qr-wrap">
+                <div class="img-wrap">
+                    <img src="/pc/images/rent_new/icon/qr.png" alt="qrcode">
+                </div>
+                <dl>
+                    <dt>APP 다운로드</dt>
+                    <dd>지금 롯데렌터카 앱을 다운받고<br>다양한 혜택을 만나보세요.</dd>
+                </dl>
+            </div>
+        </section>
+    </footer>
+
+
+
+
+    
+    <!-- front UI js// -->
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+
+    <script>
+
+        // 헤더 더보기
+        // 더보기메뉴
+        $(document).ready(function() {
+            $(".btn-more").click(function() {
+                $(this).toggleClass("on");
+            });
+        });
+
+        // 검색필터 가격레인지
+        $(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 20,
+                max: 70,
+                values: [0, 70],
+                step: 10,
+                slide: function (event, ui) {
+                    if (ui.values[0] < 30) {
+                    ui.values[0] = 0;
+                    }
+                    if (ui.values[1] < 30) {
+                    ui.values[1] = 0;
+                    }
+                $("#rowPrice").val(ui.values[0]);
+                $("#highPrice").val(ui.values[1]);
+                }
+            });
+        });
+
+        // 해시태그 슬라이드 
+        const tagSwiper = new Swiper('.tag-slider', {
+            slidesPerView: "auto",
+            spaceBetween: 12,
+            slidesOffsetAfter: 50,
+            navigation: {
+                nextEl: '.swiper-button-next',
+            },
+        });
+
+        // 필터 탭
+        $(".tab button").click(function (){
+			const tabGroup = $(this).closest(".tab-wrap");
+			const tabIndex = $(this).index();
+
+			tabGroup.find(".tab button").removeClass("on");
+			tabGroup.find(".tab-content").removeClass("on");
+
+			$(this).addClass("on");
+			tabGroup.find(".tab-content").eq(tabIndex).addClass("on");
+		});
+
+		$(".sub-tab button").click(function (){
+			const tabGroup = $(this).closest(".sub-tab-wrap");
+			const tabIndex = $(this).index();
+
+			tabGroup.find(".sub-tab button").removeClass("on");
+			tabGroup.find(".sub-tab-content").removeClass("on");
+
+			$(this).addClass("on");
+			tabGroup.find(".sub-tab-content").eq(tabIndex).addClass("on");
+		});
+                                
+        // 비쥬얼
+        const visualSwiper = new Swiper('.visual-slider', {
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: '.visual-slider .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.visual-slider .swiper-button-next',
+                prevEl: '.visual-slider .swiper-button-prev',
+            },
+        });
+
+        // 인기모델
+        const modelSwiper = new Swiper('.models-slider', {
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    translate: [0, 0, 0],
+                },
+                next: {
+                    translate: [0, 1, 0],
+                },
+            },
+            autoplay: {
+                delay: 3000, 
+                disableOnInteraction:false,
+            },
+            navigation: {
+                nextEl: '.models-area .swiper-button-next',
+                prevEl: '.models-area .swiper-button-prev',
+            },
+            rewind: true,
+        });
+
+
+        // 조회 수 많은 차량
+        const popularSwiper = new Swiper('.popular-slider .swiper', {
+            slidesPerView: 5,
+            spaceBetween: 24,
+            loop: false,
+            navigation: {
+                nextEl: '.popular-slider .swiper-button-next',
+                prevEl: '.popular-slider .swiper-button-prev',
+            },
+        });
+
+        // 테마 기획전
+        const bannerSwiper = new Swiper('.theme-slider .swiper', {
+            slidesPerView: 1,
+            loop: false,
+            navigation: {
+                nextEl: '.theme-slider .swiper-button-next',
+                prevEl: '.theme-slider .swiper-button-prev',
+            },
+        });
+
+        // 다른 고객 후기
+        const reviewSwiper = new Swiper('.review-area .swiper', {
+            slidesPerView: 3,
+            spaceBetween: 24,
+            loop: false,
+            navigation: {
+                nextEl: '.review-area .swiper-button-next',
+                prevEl: '.review-area .swiper-button-prev',
+            },
+        });
+
+        // 필터_모델검색
+        const filerCarSwiper = new Swiper('.brand-filter .car-list', {
+            slidesPerView: 5,
+            spaceBetween: 0,
+            observer: true,
+            observeParents: true,
+            loop: false,
+            scrollbar: {
+                el: ".car-list .swiper-scrollbar",
+                hide: false,
+            },
+        });
+
+        // 필터_모델검색
+        const filerDetailCarSwiper = new Swiper('.brand-filter .detail-car-list', {
+            slidesPerView: 5,
+            spaceBetween: 0,
+            loop: false,
+            observer: true,
+            observeParents: true,
+            scrollbar: {
+                el: ".detail-car-list .swiper-scrollbar",
+                hide: false,
+            },
+        });
+    </script>
+</body>
+</html>

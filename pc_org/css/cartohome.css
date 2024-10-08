@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/* cartohome insert */
+.cartohome-insert-container {width:1240px;margin:0 auto;}
+.cartohome-insert-container .sec-cth-step {position:relative;max-height:125px;overflow:hidden;padding:40px 0;border-bottom:1px solid #E9E9E9;}
+.cartohome-insert-container .sec-cth-step .bt-step-toggle {position:absolute;right:0;top:20px;left:0;height:80px;background:url("../images/icon/ico-toggle-arr-bot.svg") no-repeat 100% 50%;z-index:10}
+.cartohome-insert-container .sec-cth-step.open .bt-step-toggle {background:url("../images/icon/ico-toggle-arr-top.svg") no-repeat 100% 50%;}
+.cartohome-insert-container .sec-cth-step .step-badge {position:absolute;top:53px;right:45px;display:inline-block;text-align:center;font-weight:700;width:70px;height:20px;line-height:20px;border-radius:5px;font-size:12px;background:#999;color:#fff;}
+.cartohome-insert-container .sec-cth-step.open .step-badge {background:#DA291C;color:#fff;}
+.cartohome-insert-container .sec-summary {opacity:0;}
+.cartohome-insert-container .step-content {margin-top:40px;}
+.cartohome-insert-container .insert-form-group {max-width:575px;}
+.cartohome-insert-container .sec-stitle {font-size:20px;padding-bottom:10px;font-weight:700}
+.cartohome-insert-container .sec-cth-step.open {max-height:3500px;}
+.cartohome-insert-container .sec-cth-step.open .sec-summary {opacity:1;}
+.cartohome-insert-container .sec-cth-step.open .step-content {margin-top:30px;}
+.cartohome-insert-container .step-content.bg {padding:30px;background:#F3F3F3;}
+.cartohome-insert-container .step-btn {margin-top:60px;}
+.cartohome-insert-container .sec-total-price {position:relative;display:flex;width:100%;align-items:center;margin-top:30px;padding:23px;background:#F3F3F3;}
+.cartohome-insert-container .sec-total-price h3 {position:absolute;left:20px;top:20px;font-size:20px;font-weight:700}
+.cartohome-insert-container .sec-total-price h3 + .inner {margin-top:40px;}
+.cartohome-insert-container .sec-total-price .inner {display:flex;width:100%;align-items:center;}
+.cartohome-insert-container .sec-total-price .car-thumb {width:208px;height:155px;}
+.cartohome-insert-container .sec-total-price .car-thumb img {display:block;width:100%;height:100%;}
+.cartohome-insert-container .sec-total-price .car-detail {padding:0 230px 0 30px;}
+.cartohome-insert-container .sec-total-price .car-detail .car-title {font-size:16px;;}
+.cartohome-insert-container .sec-total-price .car-detail .car-option {margin-top:3px;}
+.cartohome-insert-container .sec-total-price .car-detail .car-option span {position:relative;font-size:11px;}
+.cartohome-insert-container .sec-total-price .car-detail .car-option span + span {padding-left:6px;margin-left:3px;}
+.cartohome-insert-container .sec-total-price .car-detail .car-option span:before {content:"";position:absolute;left:0;top:50%;margin-top:-4px;display:inline-block;width:1px;height:8px;background:#E9E9E9;}
+.cartohome-insert-container .sec-total-price .car-price {position:absolute;right:0;top:0;bottom:0;width:400px;}
+.cartohome-insert-container .sec-total-price .car-price .price {position:absolute;top:50%;left:0;right:40px;transform:translateY(-50%);text-align:right;}
+.cartohome-insert-container .sec-total-price .car-price .price .t {font-size:30px;font-weight:700;}
+.cartohome-insert-container .sec-total-price .car-price .price .prc {font-size:30px;font-weight:700;color:#DA291C}
+.cartohome-insert-container .sec-total-price .car-price .price .tip {font-size:16px;}
+.cartohome-insert-container .sec-total-price .link-box {margin-top:20px;}
+.cartohome-insert-container .inner-gray-box .ck-wrap {margin-left:0;}
+.cartohome-insert-container .state-list {display:flex;align-items:center;height:60px;padding:0 30px;border:1px solid #E9E9E9;background:#fff;}
+.cartohome-insert-container .state-list .t {font-size:16px;font-weight:700;}
+.cartohome-insert-container .state-list .c {font-size:16px;font-weight:700;color:#DA291C;}
+.cartohome-insert-container .tb-common-wrap {max-width:820px;}
+.cartohome-insert-container .payment-calculator .inner-gray-box {margin-top:0;}
+.cartohome-insert-container .step-value {position:absolute;top:45px;right:135px;font-size:24px;color:#DA291C;font-weight:700;}
+/* step term */
+.sec-agreement .agr-group {margin-left:10px;}
+.sec-agreement .agr-group .agr-check .ck-wrap label {min-width:200px;}
+/* step owner */
+.step-cth-owner .inner-gray-box {width:1240px}
+/* step plan */
+.step-cth-plan .link-box {margin-top:10px;}
+.step-cth-plan .play-type {display:flex;justify-content:center;}
+.step-cth-plan .play-type li {margin:0 20px;}
+.step-cth-plan .play-type li a {position:relative;display:block;width:290px;height:320px;background:#F3F3F3;border-radius:10px;text-align:center;}
+.step-cth-plan .play-type li a.selected {background:url("../images/elements/bg-cartohome-plan-selected.png") no-repeat 50% 50%;background-size:122%;}
+.step-cth-plan .play-type li dl {position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);background:url("../images/icon/ico-crown-gray.svg") no-repeat 50% 0;}
+.step-cth-plan .play-type li a.selected dl {background:url("../images/icon/ico-crown-white.svg") no-repeat 50% 0;}
+.step-cth-plan .play-type li a.selected dt,
+.step-cth-plan .play-type li a.selected dd {color:#fff}
+.step-cth-plan .play-type li a.selected dd {border-top:1px solid #FF9255}
+.step-cth-plan .play-type li dl dt {padding-top:20px;font-size:30px;text-align:center;font-weight:700}
+.step-cth-plan .play-type li dl dd {width:193px;padding-top:40px;border-top:1px solid #fff;margin:20px auto 0 auto;font-size:20px;text-align:center;}
+.step-cth-plan .play-type li .not-used {background:none}
+.step-cth-plan .play-type li .not-used dt {font-size:20px;;}
+.step-cth-plan .play-type li .not-used dd {width:auto;border:0 !important;padding-top:25px;margin-top:0;font-size:14px;}
+/* step payment */
+.step-cth-payment .step-content {position:relative;}
+.step-cth-payment .step-content .ck-group.pos-r {position:absolute;right:30px;top:30px}
+.step-cth-payment .step-content .ck-group label {font-weight:700;color:#DA291C}
+.step-cth-payment .step-content .ck-group a {text-decoration:underline;color:#999;font-size:14px;font-weight:700;margin-left:10px;}
+.step-cth-payment .red {color:#DA291C !important}
+.step-cth-payment .payment-calculator {display:flex;flex-wrap:wrap;margin-top:30px;}
+.step-cth-payment .payment-calculator .payment-group {width:48%;position:relative;padding-bottom:230px;border:1px solid #E9E9E9;}
+.step-cth-payment .payment-calculator .payment-group:nth-child(1) {margin-right:2%;}
+.step-cth-payment .payment-calculator .payment-group:nth-child(2) {margin-left:2%;}
+.step-cth-payment .payment-calculator .payment-group h4 {margin-bottom:20px;font-size:20px;font-weight:700;}
+.step-cth-payment .payment-calculator .payment-group h4 small {font-size:14px;color:#666;;}
+.step-cth-payment .payment-calculator .payment-group h4 a {margin-left:3px;text-decoration:underline}
+.step-cth-payment .payment-calculator .price-detail {margin-top:20px;padding:60px 30px 0 30px;background:#F3F3F3}
+.step-cth-payment .payment-calculator .price-detail dl {padding-bottom:20px;}
+.step-cth-payment .payment-calculator .price-detail dt {position:relative;font-size:16px;font-weight:700;}
+.step-cth-payment .payment-calculator .price-detail dt .prc {position:absolute;right:0;top:0;}
+.step-cth-payment .payment-calculator .price-detail dd {width:100%;overflow:hidden;margin-top:15px;}
+.step-cth-payment .payment-calculator .price-detail dd .t {float:left;}
+.step-cth-payment .payment-calculator .price-detail dd .ck-wrap {float:left;}
+.step-cth-payment .payment-calculator .price-detail dd .prc {float:right;font-size:12px;font-weight:700;}
+.step-cth-payment .payment-calculator .price-detail dd label {font-size:12px;font-weight:700}
+.step-cth-payment .payment-calculator .price-option {position:absolute;right:0;left:0;bottom:0;height:225px;background:#fff;border:1px solid #DA291C;}
+.step-cth-payment .payment-calculator .price-option .btns {padding:0 30px}
+.step-cth-payment .payment-calculator .price-total {display:flex;justify-content:space-between;align-items:center;padding:0 30px;height:60px;background:#DA291C;color:#fff}
+.step-cth-payment .payment-calculator .price-total.noBg {background:#fff;color:#000}
+.step-cth-payment .payment-calculator .price-total.top {position:absolute;left:0;top:0;right:0;bottom:auto;background:#fff;color:#000;border-bottom:1px solid #E9E9E9;}
+.step-cth-payment .payment-calculator .price-total .t {font-size:16px;font-weight:700;}
+.step-cth-payment .payment-calculator .price-total .prc {font-size:20px;font-weight:700;}
+.step-cth-payment .payment-calculator .price-summary {display:flex;justify-content:space-between;align-items:center}
+.step-cth-payment .payment-calculator .price-summary .t {font-size:16px;font-weight:700;}
+.step-cth-payment .payment-calculator .price-summary .ip-wrap input {height:50px;background:#fff;border:1px solid #E9E9E9;text-align:right;font-weight:700;font-size:16px;}
+.step-cth-payment .payment-calculator + .ck-group {margin-top:20px;}
+.step-cth-payment .payment-result {display:flex;justify-content:space-between;align-items:center;padding:0 50px;margin:30px -40px -30px -40px;height:80px;background:#000;color:#fff;font-size:20px;font-weight:700;}
+.step-cth-payment .state {display:flex;justify-content:space-between;align-items:center;height:50px;padding:0 20px;margin:0 30px;font-weight:700;background:#F3F3F3;font-size:14px;}
+.step-cth-payment .inner-gray-box {position:relative;padding:40px 0 0 0;}
+.step-cth-payment .payment-inst {text-align:center;padding:50px 0;}
+.step-cth-payment .payment-inst .t1 {font-size:24px;font-weight:700;}
+.step-cth-payment .payment-inst .t2 {margin-top:10px;font-size:18px;color:#666;font-weight:300}
+/* step paycheck */
+.step-cth-paycheck .pay-summary {display:flex;justify-content:space-between;}
+.step-cth-paycheck .pay-summary .tit {font-size:20px;font-weight:700}
+.step-cth-paycheck .pay-summary .price {font-size:20px;font-weight:700;color:#DA291C}
+.step-cth-paycheck .payment-check {display:flex;height:60px;padding:20px;margin-top:20px;justify-content:space-between;align-items:center;background:#fff;border:1px solid #E9E9E9;}
+.step-cth-paycheck .payment-check .acct-num {font-weight:700;font-size:14px;}
+.step-cth-paycheck .payment-check .pay-state {color:#DA291C;font-weight:700}
+/* step insurance */
+.step-cth-insurance .insert-form-group {margin-top:0;max-width:100%;}
+.step-cth-insurance .insert-form-group .input-item {position:relative;display:flex;justify-content:space-between;align-items:center;white-space:nowrap;min-height:75px;margin:0;}
+.step-cth-insurance .insert-form-group .input-item + .input-item {border-top:1px solid #E9E9E9}
+.step-cth-insurance .insert-form-group .input-item .ipt-tit {margin-bottom:0;font-size:20px;}
+.step-cth-insurance .insert-form-group .input-item .ipt-cont {width:calc(100% - 190px)}
+.step-cth-insurance .insert-form-group .input-item .ipt-cont .ipt-val {color:#DA291C;font-weight:700;font-size:20px;}
+.step-cth-insurance .insert-form-group .input-item .bt-file {margin-right:10px;}
+.step-cth-insurance .insert-form-group .input-item .pos-r {min-width:126px !important;position:absolute;right:0;top:13px;}
+/* step notice */
+.step-cth-notice .inner-gray-box {padding-top:30px;}
+.step-cth-notice .desc-list {margin-top:30px;padding-top:30px;border-top:1px solid #E9E9E9;}
+/* step refund */
+.step-cth-refund dl + dl {padding-top:20px;margin-top:20px;border-top:1px solid #E9E9E9}
+.step-cth-refund dt {font-weight:700}
+.step-cth-refund dd {margin-top:15px;}
+.step-cth-refund .btns button {min-width:200px !important;margin-right:5px}
+/* step step result */
+.step-cth-result dl {padding:30px 20px 20px 20px;margin-top:10px;border-top:1px solid #E9E9E9;}
+.step-cth-result dt {display:flex;justify-content:space-between;padding-bottom:5px;font-weight:700;font-size:16px;}
+.step-cth-result dd {margin-top:15px;font-size:12px;display:flex;justify-content:space-between;font-weight:700}
+.step-cth-result ul {padding:15px 0 30px 0;}
+.step-cth-result li {font-size:16px;display:flex;justify-content:space-between;font-weight:700}
+.step-cth-result li + li {margin-top:25px;}
+.step-cth-result li .t {margin-left:20px;}
+.step-cth-result dd .t {margin-left:20px;}
+.step-cth-result .price-total {display:flex;justify-content:space-between;align-items:center;padding:0 20px;height:60px;font-size:16px;font-weight:700;}
+.step-cth-result .price-total.bg {margin:0 -20px -20px -20px;padding:0 40px;background:#000;color:#fff;}
+.step-cth-result .price-total.bg.red {background:#DA291C}
+.step-cth-result .price-total .prc {font-size:20px;}
+/* popup cartohome cancel check */
+.pop-cartohome-cancel {width:800px;}
+.pop-cartohome-cancel .ck-group {width:100%;display:flex;flex-wrap:wrap}
+.pop-cartohome-cancel .ck-wrap {width:50%;margin:10px 0;}

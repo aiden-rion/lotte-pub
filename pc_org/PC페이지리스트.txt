@@ -1,0 +1,46 @@
+[PC퍼블 HTML 파일 리스트]
+
+rent_new1.html _ 다이렉트견적_첫화면
+rent_new2.html _ 간편인증팝업_인증
+rent_new3.html _ 간편인증팝업_인증완료시
+rent_new4.html _ 심사완료 
+rent_new5.html _계약정보입력
+rent_new6.html _약관동의
+rent_new7.html _계약정보확인
+rent_new8.html _계약신청완료
+rent_new9.html _ 개인사업자 등록
+
+
+mypage1.html _ 마이페이지_첫화면
+mypage2.html _ 마이카
+mypage3.html _ 견적보관함
+
+
+rent_pop1.html _ 신용카드 자동이체 동의
+rent_pop2.html _ 출금 자동이체 동의
+rent_pop3.html _ 자동이체 ARS 인증
+rent_pop4.html _ 차량정보 확인
+rent_pop5.html _ 보험조건 확인
+rent_pop6.html _ 장비조건 확인
+rent_pop7.html _ 신차장 IoT 단말기 부착 여부 확인
+rent_pop8.html _ 계약 주요 안내사항을 확인
+rent_pop9.html _ 전자서명
+rent_pop10.html _ 심사반려_보증금상향
+rent_pop11.html _ 심사반려_선납금상향
+rent_pop12.html _ 심사반려_보증금+선납금상향
+rent_pop13.html _ 심사반려_계약진행불가
+rent_pop14.html _ 심사반려_추가소득확인필요
+rent_pop15.html _ 심사진행내역 존재 시 
+rent_pop16.html _ 심사완료내역 존재 시
+rent_pop17.html _ 진행중인계약 존재 시
+rent_pop18.html _ 주소검색
+rent_pop19.html _ 주소검색결과
+rent_pop20.html _ 차량 상세정보
+rent_pop21.html _ 후기작성
+rent_pop22.html _ 내가남긴후기
+rent_pop23.html _ 계약서 pdf 보기
+rent_pop24.html _ 견적자세히보기 
+
+login1_html
+login2_html
+login3_html

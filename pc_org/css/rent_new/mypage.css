@@ -1,0 +1,764 @@
+@charset "utf-8";
+
+
+.layout--containter.business {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+.layout--containter.business .cont-wrap {
+    max-width: 792px;
+    width: 100%;
+}
+.business .sec-tit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.business .sec-tit h3 {
+    margin-bottom: 0;
+}
+.business .sec-tit .btn-edit {
+    padding-right: 16px;
+    position: relative;
+    font-size: 16px;
+    color: #666;
+}
+.business .sec-tit .btn-edit:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background: url("../../images/rent_new/icon/arr_r_grey.svg") center/cover;
+}
+.business .complete-list-flex li p {
+    min-width: 180px;
+}
+.business section + section {
+    margin-top: 64px;
+}
+.business .flex {
+    display: flex;
+    align-items: baseline;
+}
+.business .flex .input-item {
+    flex: 1;
+}
+.business .input-item .caption {
+    margin: 8px 0px 0px;
+    color: #999;
+}
+.business .form-wrap-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 0;
+}
+.business .form-wrap-flex .input-item {
+    width: calc(50% - 12px);
+    margin-bottom: 0;
+}
+.business .form-wrap-flex .input-item.full {
+    width: 100%;
+}
+.business .check-all {
+    width: 100%;
+}
+.layout--containter.business .btn-wrap-round button {
+    width: 384px;
+    margin: 80px auto 0;
+}
+
+/* 마이페이지 */
+.layout--containter.mypage {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    background: #F5F7FA;
+}
+.float-page-wrap {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+.mypage .float-page-wrap .float-wrap {
+    position: sticky;
+    min-width: 384px;
+    top: 110px;
+    left: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+.float-wrap .user-wrap {
+    margin-bottom: 30px;
+    padding: 40px 40px 50px;
+    background: #fff;
+    border-radius: 16px;
+}
+.float-wrap .user-wrap dl {
+    margin-bottom: 40px;
+}
+.float-wrap .user-wrap dl dt span {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 4px 8px;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #666;
+}
+.float-wrap .user-wrap dl dt p {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+.float-wrap .user-wrap dl dd a {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 16px 26px;
+    font-size: 16px;
+    color: #666;
+    border-bottom: 1px solid #e6e6e6;
+}
+.float-wrap .user-wrap dl dd a:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+.float-wrap .user-wrap dl dd a:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: url("../../images/rent_new/icon/arr_r_grey.svg") center/cover no-repeat;
+}
+.float-wrap .user-wrap dl .business:before {
+    background: url("../../images/rent_new/mypage/icon_business_user.svg") center/cover no-repeat;
+}
+.float-wrap .user-wrap dl .edit:before {
+    background: url("../../images/rent_new/mypage/icon_edit.svg") center/cover no-repeat;
+}
+.float-wrap .sevice-list .tit {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.float-wrap .sevice-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 43px 0;
+}
+.float-wrap .sevice-list ul li {
+    width: 50%;
+}
+.float-wrap .sevice-list ul li a {
+    position: relative;
+    display: block;
+    padding-left: 56px;
+}
+.float-wrap .sevice-list ul li a::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #F5F7FA;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.float-wrap .sevice-list ul li:nth-child(1) a::before {
+    background-image: url("../../images/rent_new/mypage/icon_list.svg");
+}
+.float-wrap .sevice-list ul li:nth-child(2) a::before {
+    background-image: url("../../images/rent_new/mypage/icon_calc.svg");
+}
+.float-wrap .sevice-list ul li:nth-child(3) a::before {
+    background-image: url("../../images/rent_new/mypage/icon_heart.svg");
+}
+.float-wrap .sevice-list ul li:nth-child(4) a::before {
+    background-image: url("../../images/rent_new/mypage/icon_car.svg");
+}
+.float-wrap .sevice-list ul li a span {
+    font-size: 20px;
+    color: #f33;
+    font-weight: 700;
+}
+.float-wrap .float-banner {
+    height: 240px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.float-wrap .float-banner img {
+    border-radius: 16px;
+    object-fit: contain;
+}
+
+.mypage section + section {
+    margin-top: 64px;
+}
+.mypage .option-wrap .sec-tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.mypage .option-wrap .sec-tit button {
+    position: relative;
+    padding-right: 20px;
+    font-size: 14px;
+}
+.mypage .option-wrap .sec-tit button:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url("../../images/rent_new/icon/arr_r_grey.svg") center/cover;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+.mypage .option-wrap .sec-tit  h3 {
+    margin-bottom: 0;
+}
+.mypage .option-wrap .sec-cont {
+    background: #fff;
+    border-radius: 16px;
+}
+.mypage .option-wrap .car-thumb-mypage {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 32px 26px;
+    background: #fff;
+    border-radius: 16px;
+}
+.mypage .option-wrap .car-thumb-mypage .img-wrap {
+    margin-right: 30px;
+    max-width: 156px;
+    height: 110px;
+}
+.mypage .option-wrap .car-thumb-mypage .img-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: contain;
+}
+.mypage .option-wrap .car-thumb-mypage .txt-wrap {
+    width: calc(100% - 165px - 30px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mypage .option-wrap .car-thumb-mypage .badge {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.mypage .option-wrap .car-thumb-mypage dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+.mypage .option-wrap .car-thumb-mypage dl dt {
+    width: 90%;
+    margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.mypage .option-wrap .car-thumb-mypage dl dd {
+    position: relative;
+    font-size: 14px;
+    padding-right: 17px;
+}
+.mypage .option-wrap .car-thumb-mypage .detail dd:first-of-type {
+    width: 100%;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    font-size: 16px;
+}
+.mypage .option-wrap .car-thumb-mypage .detail dd:nth-child(3):before {
+    display: none;
+}
+.mypage .option-wrap .car-thumb-mypage dl dd + dd::before {
+    position: absolute;
+    display: block;
+    content:'';
+    width: 1px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -9px;
+    background: #E6E6E6 ;
+}
+.mypage .option-wrap .car-thumb-mypage .btn-more {
+    position: relative;
+    font-size: 14px;
+    color: #999;
+    padding-right: 16px;
+}
+.mypage .option-wrap .car-thumb-mypage .btn-more:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background: url("../../images/rent_new/icon/arr_r_grey.svg") center/cover no-repeat;
+}
+.mypage .option-wrap .car-thumb-mypage .car-info {
+    position: relative;
+    flex: 1;
+}
+
+.mypage .option-wrap .car-thumb-mypage .info-list {
+    flex: 1;
+    background: #Fff;
+    padding: 0 0 0 28px;
+    border-left: 1px solid #e6e6e6;
+}
+.mypage .option-wrap .car-thumb-mypage .info-list p {
+    font-size: 14px;
+}
+.mypage .option-wrap .car-thumb-mypage .info-list p span {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    font-weight: 400;
+}
+.mypage .option-wrap .car-thumb-mypage .info-list strong {
+    font-size: 22px;
+    font-weight: 800;
+    color: #f33;
+}
+.mypage .option-wrap .car-thumb-mypage .info-list .price {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+.mypage .grey-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+    width: 100%;
+    font-size: 14px;
+}
+.mypage .option-wrap .car-thumb-mypage .grey-box .badge{
+    margin: 0 8px 0 0;
+}
+.mypage .option-wrap .car-thumb-mypage .top-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.mypage .option-wrap .car-thumb-mypage .top-bar button {
+    position: relative;
+    margin-left: auto;
+    padding-right: 20px;
+    color: #666;
+}
+.mypage .option-wrap .car-thumb-mypage + .car-thumb-mypage {
+    margin-top: 16px;
+}
+.mypage .option-wrap .car-thumb-mypage .top-bar button::after {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    content: '';
+    background: url("../../images/rent_new/icon/icon_delete.svg") center/cover;
+    top: 2px;
+    right: 0;
+}
+.mypage .option-wrap .car-thumb-mypage .btn-wrap {
+    margin: 32px auto 0;
+}
+.mypage .option-wrap .car-thumb-mypage .btn-wrap button {
+    height: 56px;
+    width: 180px;
+    font-size: 16px;
+    padding: 0;
+}
+.mypage .grey-box span {
+    color: #f33;
+    font-weight: 700;
+}
+.mypage .tip-wrap {
+    padding: 0;
+    margin-bottom: 16px;
+}
+.mypage .tip-wrap p {
+    font-size: 16px;
+}
+
+.mypage .car-list .badge-wrap {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
+    gap: 8px;
+}
+.mypage .badge {
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+}
+.mypage .badge.red {
+    background: #FFEBEB;
+    color: #f33;
+    font-weight: 700;
+}
+.mypage .badge.blue {
+    background: #EDF4FF;
+    color: #3D87FF;
+}
+.mypage .badge.green {
+    background: #ECFAFB;
+    color: #3FD0DA;
+}
+.mypage .car-list dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+.mypage .car-list dl dt {
+    display: -webkit-box;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.mypage .car-list dl dd {
+    position: relative;
+    padding-right: 18px;
+    font-size: 16px;
+}
+.mypage .car-list dl dd:first-of-type {
+    position: static;
+    width: 100%;
+    margin-bottom: 16px;
+    color: #666;
+    padding-right: 0;
+}
+.mypage .car-list dl dd:first-of-type:after {
+    display: none;
+}
+.mypage .car-list dl dd:last-of-type::after {
+    display: none;
+}
+.mypage .car-list dl dd:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 1px;
+    height: 12px;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background: #E6E6E6;
+}
+
+/* 마이카 */
+.mypage h2 {
+    font-size: 40px;
+}
+.mypage .mycar-list {
+    margin-top: 40px;
+}
+.mypage .mycar-list > li {
+    background: #fff;
+    padding-bottom: 40px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    border: 1px solid #e6e6e6;
+}
+.mypage .mycar-list .top-bar {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.mypage .mycar-list .top-bar .badge {
+    margin-right: 12px;
+}
+.mypage .mycar-list .top-bar .acess-num {
+    position: relative;
+    padding-right: 25px;
+    font-size: 16px;
+}
+.mypage .mycar-list .top-bar .acess-num:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+}
+.mypage .mycar-list .top-bar .date {
+    font-size: 16px;
+}
+.mypage .mycar-list .top-bar .date strong {
+    color: #f33;
+}
+.mypage .mycar-list .top-bar .btn-cancel, .mypage .mycar-list .top-bar .btn-delete {
+    position: relative;
+    margin-left: auto;
+    color: #666;
+    padding-right: 20px;
+}
+.mypage .mycar-list .top-bar .btn-delete:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    right: 0px;
+    background: url("../../images/rent_new/icon/icon_delete.svg") center/contain no-repeat;
+}
+.mypage .mycar-list .top-bar .btn-cancel:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -18px;
+    background: url("../../images/rent_new/icon/icon_close_grey.svg") center/cover no-repeat;
+}
+.mypage .mycar-list .car-thumb {
+    padding: 24px 40px;
+    display: flex;
+    gap: 24px;
+}
+.mypage .mycar-list .car-thumb .img-wrap {
+    margin-bottom: 0;
+    min-width: 129px;
+    width: 129px;
+    height: 87px;
+}
+.mypage .mycar-list .car-thumb .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+.mypage .mycar-list .car-thumb dl dt {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.mypage .mycar-list .car-thumb dl dt p {
+    display: -webkit-box;
+    max-width: 70%;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.mypage .mycar-list .car-thumb dl dt button {
+    position: relative;
+    margin-left: auto;
+    color: #666;
+    padding-right: 20px;
+}
+.mypage .mycar-list .car-thumb dl dt button::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url("../../images/rent_new/icon/arr_r_grey.svg") center/contain no-repeat;
+    top: 3px;
+    right: 0;
+}
+.mypage .mycar-list .car-thumb dl dd:first-of-type {
+    position: static;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+.mypage .mycar-list .car-thumb dl dd {
+    font-size: 14px;
+}
+.mypage .mycar-list .car-thumb dl dd::after {
+    height: 12px;
+}
+
+.mypage .mycar-list .info-list-flex {
+    font-size: 16px;
+    margin: 0px 40px;
+    padding: 24px 0px;
+    border-top: 1px solid #e6e6e6;
+}
+.mypage .mycar-list .info-list-flex li {
+    justify-content: flex-start;
+}
+.mypage .mycar-list .info-list-flex li p {
+    min-width: 108px;
+    margin-right: 24px;
+    font-size: 14px;
+}
+.mypage .mycar-list .info-list-flex li span {
+    font-size: 14px;
+}
+.mypage .mycar-list .guide-box {
+    margin: 0 40px 32px;
+    border-radius: 8px;
+}
+.mypage .mycar-list .guide-box p {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    justify-content: center;
+    font-size: 16px;
+}
+.guide-box.red {
+    background: #FFEBEB;
+}
+.guide-box.blue {
+    background: #EDF4FF;
+}
+.guide-box.grey {
+    background: #F5F7FA;
+}
+.mypage .mycar-list .btn-wrap {
+    margin: 16px auto 0;
+    width: 328px;
+    height: 56px;
+}
+.mypage .mycar-list .btn-wrap button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 103px;
+    height: 100%;
+    font-size: 16px;
+    padding: 0;
+}
+.mypage .mycar-list .btn-wrap-one {
+    display: flex;
+    justify-content: center;
+    margin: 8px auto 0;
+}
+.mypage .mycar-list .btn-wrap-one button {
+    width: 180px;
+    height: 56px;
+    padding: 0;
+}
+.mypage .mycar-list .price-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+.mypage .mycar-list .price-box dt {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.mypage .mycar-list .price-box dt p {
+    font-weight: 700;
+}
+.mypage .mycar-list .price-box dt span {
+    color: #666;
+    font-size: 13px;
+}
+.mypage .mycar-list .price-box dd {
+    font-size: 24px;
+    color: #f33;
+    font-weight: 800;
+}
+.mypage .alert-txt {
+    width: 100%;
+    margin-top: 24px;
+    text-align: center;
+}
+.mypage .alert-txt p {
+    display: inline;
+    position: relative;
+    padding: 8px 0;
+    color: #F33;
+    text-align: center;
+    font-size: 16px;
+}
+.mypage .alert-txt p::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    left: -20px;
+    background: url("../../images/rent_new/icon/icon_alert.svg")center/cover no-repeat;
+}
+
+.mypage .cont-none {
+    width: 100%;
+    text-align: center;
+}
+.mypage .cont-none .img-wrap {
+    margin: 40px auto 16px;
+    width: 40px;
+    height: 40px;
+    background: url("../../images/rent_new/icon/ico_alert_grey.svg") center/cover no-repeat;
+}
+.mypage .cont-none p {
+    color: #999;
+    font-size: 16px;
+}
+.mypage .cont-none button {
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 56px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}

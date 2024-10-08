@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데오토마켓</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css -->
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+</head>
+<body>
+
+    <!-- layout--header -->
+    <div class="layout--header-new">
+        <header>
+            <h1 class="logo-wrap"><a href="#" class="ir">롯데렌터카 마이카 세이브</a></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'><b>중고차렌트</b></a></li>
+                    <li><a href="/rental/new">신차렌트</a></li>
+                    <li><a href="" >오토리스</a></li>
+                    <li><a href="/finance/rent" >차량승계</a></li>
+                    <li class="depth1"><a href="/sell/sise" >내차팔기</a></li>
+                    <li th:if="${loginYn == 'N'}" class="btn-login"><a href="#">로그인</a></li>
+                    <!-- <li th:if="${loginYn == 'Y'}" class="btn-login"><a href="/auth/logout">로그아웃</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+    <!-- 컨텐츠 시작 -->
+    <main class="layout--containter">
+    </main>
+
+
+    <!--  팝업   -->
+    <div class="layer_popup_wrappper rent-pop" id="alertPop01" style="display: block;">
+        <div class="layer_popup detail-pop">
+            <div class="pop_inner">
+                <div class="pop-head">
+                    <h2>신용카드 자동이체 동의</h2>
+                    <button class="ir btn-close" onclick="ui.modalPopClose(alertPop01);">팝업닫기</button>
+                </div>
+                <div class="pop-contents">
+                    <ul class="caption-list">
+                        <li>상기 신청인(이하 "고객")이 납부하여야 할 대여료, 연체이자 및 기타 계약상의 납부금액에 대하여 귀 신용카드사 앞으로 청구가 있는 경우에는 별도의 통지 없이 결제요청일에 자동결제 승인처리되며, 승인된 금액은 신용카드사에서 "고객"의 카드결제일에 청구합니다.</li>
+                        <li>본 신청서는 고객 본인명의(이름)의 신용카드를 대상으로 하며, 고객이 타인의 신용카드를 무단으로 사용하여 기입, 작성한 경우 롯데렌탈(주)(이하 "회사" 또는 "수납기관")은 렌탈계약을 해지(직권해지)할 수 있으며, 고객은 무단사용에 대한 민사, 형사상의 책임을 부담하여야 합니다.</li>
+                        <li>신용카드가 변경되거나 유효기간이 만료되는 경우 고객은 지체없이 회사에 통보하고 회사가 정한 절차에 따라 변경을 완료하여야 합니다. 통보 및 변경의 미이행, 지연 등으로 인한 불이익은 통보 및 변경 의무자인 고객이 부담합니다.</li>
+                        <li>신용카드의 이용한도 초과, 유효기간의 경과, 이용정지 등으로 인하여 결제(승인)가 이루어지지 아니함으로 인하여 발생하는 손해는 고객의 부담으로 합니다.</li>
+                        <li>신용카드자동결제는 고객이 정한 결제요청일에 승인처리되며, 승인처리되지 않은 경우(승인거절된 경우) 해당결제일 이후 매월 5일, 15일, 25일에 승인처리될 수 있습니다.</li>
+                        <li>결제(승인)가 지정일(결제요청일)에 승인되지 않는 경우 연체이자가 부과되며, 연체이자를 포함하여 청구 및 승인(결제)될 수 있습니다.</li>
+                        <li>신용카드자동결제가 신청된 계약의 결제요청일은 본 신청서에 정한 결제요청일로 변경됩니다.</li>
+                        <li>회사가 본 신용카드자동결제 신청을 승인하는 때에는 당해계약에 연체유예일수는 적용되지 않으며 연체(카드승인지체)에 대하여 연체이자가 부과됩니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- front UI js// -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+    <!-- //front UI js -->
+</body>
+</html>

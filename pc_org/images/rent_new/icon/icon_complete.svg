@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon">
+<g id="Ellipse 1253" filter="url(#filter0_b_4078_28330)">
+<circle cx="32.0003" cy="31.9998" r="29.3333" fill="white"/>
+<circle cx="32.0003" cy="31.9998" r="29.3333" stroke="#1A1A1A" stroke-width="2"/>
+</g>
+<path id="vector" d="M18.667 33.2726L27.0371 41.3332L45.3337 22.6665" stroke="#FF3333" stroke-width="2" stroke-linecap="round"/>
+</g>
+<defs>
+<filter id="filter0_b_4078_28330" x="-2.33301" y="-2.3335" width="68.667" height="68.6665" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_4078_28330"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_4078_28330" result="shape"/>
+</filter>
+</defs>
+</svg>

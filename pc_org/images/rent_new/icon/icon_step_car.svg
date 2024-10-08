@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon">
+<path id="Vector 342" d="M25.5996 12.8L27.9996 12" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
+<path id="Vector 343" d="M6.40039 12.8L4.00039 12" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
+<path id="Rectangle 959130" d="M4.53229 16.1346L6.24656 12.75H25.7534L27.4677 16.1346C27.982 17.15 28.25 18.2722 28.25 19.4104V22.25H3.75V19.4104C3.75 18.2722 4.01799 17.15 4.53229 16.1346Z" fill="white" stroke="#1A1A1A" stroke-width="1.5"/>
+<path id="Rectangle 959132" d="M22.75 22.25H28.25V24.5C28.25 25.1904 27.6904 25.75 27 25.75H24C23.3096 25.75 22.75 25.1904 22.75 24.5V22.25Z" fill="white" stroke="#1A1A1A" stroke-width="1.5"/>
+<path id="Rectangle 959135" d="M3.75 22.25H9.25V24.5C9.25 25.1904 8.69036 25.75 8 25.75H5C4.30964 25.75 3.75 25.1904 3.75 24.5V22.25Z" fill="white" stroke="#1A1A1A" stroke-width="1.5"/>
+<circle id="Ellipse 1276" cx="8.66634" cy="17.2" r="1.33333" fill="#FF3333"/>
+<circle id="Ellipse 1277" cx="23.3333" cy="17.2" r="1.33333" fill="#FF3333"/>
+<rect id="Rectangle 959133" x="12.667" y="16.5332" width="6.66667" height="1.33333" rx="0.666667" fill="#1A1A1A"/>
+<path id="Rectangle 959134" d="M7.76325 8.26857C8.07557 7.36002 8.93031 6.75 9.89105 6.75H22.109C23.0697 6.75 23.9244 7.36002 24.2367 8.26857L25.9491 13.25H6.05089L7.76325 8.26857Z" fill="white" stroke="#1A1A1A" stroke-width="1.5"/>
+</g>
+</svg>
