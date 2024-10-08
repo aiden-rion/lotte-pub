@@ -1575,6 +1575,37 @@
             return 'ir bt-list-filter' + (this.props.isChange ? ' on' : '');
         }
 
+        const input = document.querySelector('.search-input');
+        const placeholders = ['기아 카니발', '제네시스 G80', '그랜저 하이브리드'];
+        let currentPlaceholderIndex = 0;
+        let currentText = '';
+
+        function typePlaceholder() {
+            if (currentText.length < placeholders[currentPlaceholderIndex].length) {
+                currentText += placeholders[currentPlaceholderIndex][currentText.length];
+                input.placeholder = currentText;
+                setTimeout(typePlaceholder, 200); // 글자 타이핑 간격
+            } else {
+                // 글자가 다 나타나면 잠시 대기 후 지우기 시작
+                setTimeout(() => {
+                    erasePlaceholder();
+                }, 1000); // 1초 대기
+            }
+        }
+
+        function erasePlaceholder() {
+            // 현재 글자를 한 번에 지우기
+            input.placeholder = ''; // placeholder를 빈 문자열로 설정
+            setTimeout(() => {
+                currentPlaceholderIndex = (currentPlaceholderIndex + 1) % placeholders.length;
+                currentText = ''; // 다음 placeholder를 위해 초기화
+                typePlaceholder(); // 다음 placeholder 타이핑 시작
+            }, 300); // 0.3초 대기 후 다음 타이핑 시작
+        }
+
+        // 타이핑 시작
+        typePlaceholder();
+
     </script>
 
 </body>

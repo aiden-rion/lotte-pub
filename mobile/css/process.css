@@ -1017,6 +1017,24 @@ section.border-bt:last-child {
 .detail-list li.contract .img-wrap {
     background-image: url("../images/rent_new/icon/list_info.svg ");
 }
+
+.detail-list li.carinfo .img-wrap {
+    background-image: url("../images/renew/mo-icon-car.svg");
+}
+.detail-list li.caroption .img-wrap {
+    background-image: url("../images/renew/mo-icon-note.svg");
+}
+.detail-list li.history .img-wrap {
+    background-image: url("../images/renew/mo-icon-spin.svg");
+}
+.detail-list li.carcheck .img-wrap {
+    background-image: url("../images/renew/mo-icon-board.svg");
+}
+.detail-list li.inshistory .img-wrap {
+    background-image: url("../images/renew/mo-icon-check.svg ");
+}
+
+
 .detail-list p {
     width: 70%;
     font-size: 14px;
