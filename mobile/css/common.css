@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* reset */
-* {margin:0;padding:0;box-sizing:border-box;font-family: 'SUIT','Noto Sans KR' ;font-feature-settings: "tnum"}
+* {margin:0;padding:0;box-sizing:border-box;font-family:'pretendard', 'Noto Sans KR', sans-serif;font-feature-settings: "tnum"}
 html {background: #fff !important;}
 html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a {line-height:1.5;color:#1A1A1A;font-size:14px;font-weight:400;}
 html, body {
@@ -888,6 +888,32 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
 .page-error .link {padding-top:30px;text-align:center;}
 
 /* list-common */
+.list-tab ul{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:1px solid #1A1A1A;
+}
+.list-tab li{
+    width:100%;
+    text-align:center;
+    height:48px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-top:1px solid #ddd;
+    border-right:1px solid #ddd;
+}
+.list-tab li.on{
+    background:#1A1A1A;
+    color:#fff;
+    border-right:1px solid #1A1A1A;
+}
+.list-tab li.on button{
+    color:#fff;
+}
+
 /* ### 230719 수정 */
 .list-head {height: 48px;padding: 0 20px; position:relative; border-top: 1px solid #efefef;background-color: #fff;/*background-color: #f1f1f1;*/display: flex; justify-content: space-between; align-items: center;}
 /* .list-head.active {z-index: 100; position: fixed; top: 0px; left: 0; right: 0; margin-top: 0; box-shadow: 0 1px 8px rgba(0,0,0,0.12); border-top: none;} */
@@ -1035,6 +1061,10 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
     -webkit-border-radius: 8px;
     border-radius: 8px;
     z-index: 2;
+}
+.list-search .sch-group input::placeholder{
+    color: #555;
+    opacity: 1;
 }
 .list-search .sch-group .typed-text-area{
     position:absolute;
@@ -1322,6 +1352,62 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
 .list-type-common .list-thumb .swiper-container{
     position:relative;
 }
+.list-type-common .list-thumb.rentType:after{
+    content:'렌트';
+    display: block;
+    position: absolute;
+    left: 6px;
+    bottom: 7px;
+    padding: 5px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: #333;
+    border-radius: 15px;
+}
+.list-type-common .list-thumb.saleType:after{
+    content:'구매';
+    display: block;
+    position: absolute;
+    left: 6px;
+    bottom: 7px;
+    padding: 5px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: #EE2929;
+    border-radius: 15px;
+}
+
+.img-wrap.rentType:before{
+    content:'렌트';
+    display: block;
+    position: absolute;
+    left: 16px;
+    bottom: 6px;
+    padding: 5px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: #333;
+    border-radius: 15px;
+    z-index:11;
+}
+.img-wrap.saleType:before{
+    content:'구매';
+    display: block;
+    position: absolute;
+    left: 16px;
+    bottom: 6px;
+    padding: 5px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: #EE2929;
+    border-radius: 15px;
+    z-index:11;
+}
+
 
 .list-item.inprogress .list-thumb::after {
     content: '상담진행중';

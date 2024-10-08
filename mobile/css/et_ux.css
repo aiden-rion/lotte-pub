@@ -55,13 +55,18 @@
 .popular-slider .img-wrap.impending {width: 100%;border:2px solid #4B87FF;}
 .popular-slider .swiper .img-wrap img {width: 100%;}
 
-.ico-timesale1 {background: url('https://mycarsave.lotterentacar.net/mobile/images/icon/ico-timesale.png') center;background-size: 16px auto;width: 16px;height: 16px;margin:0 5px}
+.ico-timesale1 {background: url('https://mycarsave.lotterentacar.net/mobile/images/icon/ico-timesale.png') center;background-size: 16px auto;width: 16px;height: 16px;margin:0}
 .ico-timesale2 {background: url('https://mycarsave.lotterentacar.net/mobile/images/icon/ico-timesale2.png') center;background-size: 16px auto;width: 16px;height: 16px;margin:0 5px}
 
 .time {font-weight: 700;}
 .timesaleWrap {position: absolute;left:0px;bottom:0px;background: linear-gradient(90deg, #2E70F0 0%, #29D1E7 100%);background-size:150% auto;height: 30px;color:#fff;display: flex;    align-items: center;    justify-content: center;    gap: 5px;    z-index: 10;    font-size:14px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    animation: gradient2 1.5s linear infinite;    width: 100%;}
-.timesaleWrap2 {position: absolute;left:0px;bottom:0px;background: #6eb1eb;height: 30px;color:#fff;display: flex;align-items: center;justify-content: center;gap: 5px;z-index: 10;    font-size:14px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    width: 100%;}
-
+.timesaleWrap2 {
+    position: absolute;
+    left:0px;bottom:0px;
+    background : linear-gradient(to right, #10D9C9, #1A63F3 );
+    height: 38px;color:#fff;display: flex;align-items: center;justify-content: center;gap: 5px;z-index: 10;font-size:14px;box-sizing: border-box;letter-spacing: -0.5px;overflow: hidden;width: 100%;
+    padding-left:20px;
+}
 .list-content .timesaleWrap3 {position: relative;background: linear-gradient(90deg, #2E70F0 0%, #29D1E7 100%);background-size:150% auto;height: 38px;color:#fff;display: flex;    align-items: center;    justify-content: center;    gap: 5px;    z-index: 10;    font-size:16px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;   animation: gradient2 1.5s linear infinite;    width: 100%;}
 .list-content .timesaleWrap2 {position: relative;background: #6eb1eb;height: 38px;color:#fff;display: flex;align-items: center;justify-content: center;gap: 5px;z-index: 10;    font-size:16px;    box-sizing: border-box;    letter-spacing: -0.5px;    overflow: hidden;    width: 100%;}
 
@@ -230,7 +235,7 @@
 .promotionSale-wrap .popular-sec .popular-slider .img-wrap img {height: 100%; width: 100%;max-height: 290px;}
 .promotionSale-wrap .popular-sec .popular-slider a img {width: 100%;    height: 180px;    object-fit: cover;    border-radius: 12px;    overflow: hidden;}
 .promotionSale-wrap .popular-sec .popular-slider dl {display: flex; flex-wrap: wrap; margin-bottom: 4px;}
-.promotionSale-wrap .popular-sec .popular-slider dl dt {width: 100%;    margin-bottom: 4px;    overflow: hidden;    font-size: 16px;    font-weight: 800;    letter-spacing: -0.32px;    display: -webkit-box; -webkit-box-orient: vertical;    -webkit-line-clamp: 1;    align-self: stretch;}
+.promotionSale-wrap .popular-sec .popular-slider dl dt {width: 100%;    margin-bottom: 4px;    overflow: hidden;    font-size: 16px;    font-weight: 700;    letter-spacing: -0.32px;    display: -webkit-box; -webkit-box-orient: vertical;    -webkit-line-clamp: 1;    align-self: stretch;}
 .promotionSale-wrap .popular-sec .popular-slider dl dd {position: relative;    margin-right: 16px;    color: #8b8b8b;    letter-spacing: -0.28px;}
 .promotionSale-wrap .popular-sec .popular-slider dl dd:after {position: absolute;    display: inline-block;    content: '';    width: 1px;    height: 10px;    top: 6px;    right: -8px;    background: #E6E6E6;}
 .promotionSale-wrap .popular-sec .popular-slider dl dd:last-child:after{display: none;}

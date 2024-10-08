@@ -151,8 +151,8 @@
         <div class="step-sec">
             <p>약관동의</p>
             <ul>
-                <li class="on">1</li>
-                <li>2</li>
+                <li class="complete"></li>
+                <li class="on">2</li>
                 <li>3</li>
             </ul>
         </div>
@@ -172,120 +172,143 @@
         <section>
             <div class="sec-tit">
                 <div class="flex">
-                    <h1>자동차 임대차 계약 주요 내용 설명서</h1>
+                    <h1>명의자 정보입력</h1>
+                </div>
+                <a href="" class="btn-more">기본정보 수정</a>
+            </div>
+            <div class="input-item">
+                <p class="tit">개인/사업자 선택<em class="ess">*</em></p>
+                <select id="income">
+                    <option value="" selected>(개인) 김롯데</option>
+                    <option value="">(사업자) 김롯데 사업자</option>
+                </select>
+            </div>
+            <div class="input-item">
+                <div class="tit">이름<em class="ess"></em></div>
+                <div class="datebox-wrap">
+                    <div class="dateBox basic">
+                        <span class="ip-wrap"><input type="text" placeholder="김롯데" readonly /></span>
+                    </div>
                 </div>
             </div>
-            <ul class="detail-list">
-                <li class="car">
-                    <a href="#">
-                        <div class="img-wrap"></div>
-                        <p>
-                            <strong>차량정보 확인</strong>
-                        </p>
-                    </a>
-                </li>
-                <li class="insurance">
-                    <a href="#">
-                        <div class="img-wrap"></div>
-                        <p>
-                            <strong>옵션정보 확인</strong>
-                        </p>
-                    </a>
-                </li>
-                <li class="maintenance">
-                    <a href="#">
-                        <div class="img-wrap"></div>
-                        <p>
-                            <strong>정비이력 확인</strong>
-                        </p>
-                    </a>
-                </li>
-                <li class="iot">
-                    <a href="#">
-                        <div class="img-wrap"></div>
-                        <p>
-                            <strong>성능점검 확인</strong>
-                        </p>
-                    </a>
-                </li>
-                <li class="contract">
-                    <a href="#">
-                        <div class="img-wrap"></div>
-                        <p>
-                            <strong>보험이력 확인</strong>
-                        </p>
-                    </a>
-                </li>
-            </ul>
-            <p class="agree-txt">
-            계약자는 본 계약을 체결함에 있어서 위의 차량 상세정보를 설명한 내용에 대해 충분히 설명듣고 이해 하였음을 확인합니다.
-            </p>
-            <div class="agree-box type01">
-                <div class="check-wrap round-big">
-                    <input type="checkbox" id="agree"/>
-                    <label for="agree">위 내용에 동의합니다.</label>
+            <div class="input-item">
+                <div class="tit">생년월일<em class="ess">*</em></div>
+                <div class="datebox-wrap">
+                    <div class="dateBox basic">
+                        <span class="ip-wrap"><input type="text" placeholder="1983-01-01" readonly /></span>
+                    </div>
                 </div>
+            </div>
+            <div class="input-item">
+                <p class="tit">성별<em class="ess">*</em></p>
+                <select id="income">
+                    <option value="" selected>선택</option>
+                    <option value="">남자</option>
+                    <option value="">여자</option>
+                </select>
+            </div>
+            <div class="input-item">
+                <div class="tit">휴대폰번호<em class="ess"></em></div>
+                <div class="datebox-wrap">
+                    <div class="dateBox basic">
+                        <span class="ip-wrap"><input type="text" placeholder="010-1234-1234" readonly /></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sec-tit">
+                <div class="flex">
+                    <h1>사업자정보</h1>
+                </div>
+            </div>
+            <div class="info-list">
+                <ul>
+                    <li>
+                        <p>대표자명</p>
+                        <span>김롯데</span>
+                    </li>
+                    <li>
+                        <p>사업자명 (상호명)</p>
+                        <span>주식회사 롯데렌탈</span>
+                    </li>
+                    <li>
+                        <p>사업자번호</p>
+                        <span>100-00-00000</span>
+                    </li>
+    
+                    <li>
+                        <p>업태</p>
+                        <span>도소매</span>
+                    </li>
+                    <li>
+                        <p>업종</p>
+                        <span>정보통신서비스</span>
+                    </li>
+                </ul>
             </div>
         </section>
 
+
         <section class="border-none">
-            <div class="sec-tit">
-                <div class="flex">
-                    <h1>약관동의</h1>
-                </div>
-            </div>
-            <div class="input-item check-all">
-                <div class="check-wrap round-big-grey">
-                    <input type="checkbox" id="checkAll" class="checkAll"/>
-                    <label for="checkAll">약관 전체동의</label>
-                </div>
-                <div class="check-list">
-                    <div class="check-item">
-                        <input type="checkbox" id="check02" class="check"/>
-                        <label for="check02"><span>[필수]</span> 자동차(장기) 임대차 약관</label>
-                        <a href="#" class="btn-more"></a>
-                    </div>
-                    <div class="check check-item">
-                        <input type="checkbox" id="check03" class="check"/>
-                        <label for="check03"><span>[필수]</span> 정비 패키지 이용약관</label>
-                        <a href="#" class="btn-more"></a>
+            <div class="tab-wrap mt10">
+                <div class="sec-tit">
+                    <div class="flex">
+                        <h1>공동명의 정보</h1>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="border-none">
-            <div class="sec-tit">
-                <div class="flex">
-                    <h1>개인(신용)정보 <br/>
-                        수집·이용·제공·조회 동의서</h1>
+                <div class="tab type01">
+                    <button type="button" data-tab="tab1" class="">단독명의로 구매해요</button>
+                    <button type="button" data-tab="tab2" class="on">공동명의자가 있어요</button>
                 </div>
-            </div>
-            <div class="input-item check-all">
-                <div class="check-wrap round-big-grey">
-                    <input type="checkbox" id="checkAll02" class="checkAll"/>
-                    <label for="checkAll02">전체동의</label>
-                </div>
-                <div class="check-list">
-                    <div class="check-item">
-                        <input type="checkbox" id="check04" class="check"/>
-                        <label for="check04"><span>[필수]</span> 개인(신용) 정보 수집·이용 동의</label>
-                        <a href="#" class="btn-more"></a>
+                <div class="tab-content" id="tab1"></div>
+                <div class="tab-content on" id="tab2">
+                    <div class="input-item">
+                        <p class="tit">개인/사업자 선택<em class="ess">*</em></p>
+                        <select id="income">
+                            <option value="" selected>(개인) 김롯데</option>
+                            <option value="">(사업자) 김롯데 사업자</option>
+                        </select>
                     </div>
-                    <div class="check check-item">
-                        <input type="checkbox" id="check05" class="check"/>
-                        <label for="check05"><span>[필수]</span> 고유 식별 정보 수집·이용 동의</label>
-                        <a href="#" class="btn-more"></a>
+                    <div class="input-item">
+                        <div class="tit">이름<em class="ess">*</em></div>
+                        <div class="datebox-wrap">
+                            <div class="dateBox basic">
+                                <span class="ip-wrap"><input type="text" placeholder="이름을 입력하세요"/></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="check-item">
-                        <input type="checkbox" id="check06" class="check"/>
-                        <label for="check06"><span>[필수]</span> 개인 (신용)정보 제공 동의</label>
-                        <a href="#" class="btn-more"></a>
+                    <div class="input-item">
+                        <div class="tit">생년월일<em class="ess">*</em></div>
+                        <div class="datebox-wrap">
+                            <div class="dateBox basic">
+                                <span class="ip-wrap"><input type="text" placeholder="YYYY-MM-DD"/></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="check check-item">
-                        <input type="checkbox" id="check07" class="check"/>
-                        <label for="check07">[선택] 선택적으로 동의할 수 있는 정보 <br/>
-                             수집·이용 동의</label>
-                        <a href="#" class="btn-more"></a>
+                    <div class="input-item">
+                        <p class="tit">성별<em class="ess">*</em></p>
+                        <select id="income">
+                            <option value="" selected>선택</option>
+                            <option value="">남자</option>
+                            <option value="">여자</option>
+                        </select>
+                    </div>
+                    <div class="input-item">
+                        <div class="tit">명의자 지분율<em class="ess">*</em></div>
+                        <div class="datebox-wrap">
+                            <div class="dateBox basic">
+                                <span class="ip-wrap"><input type="text" placeholder="명의자의 지분율 입력"/></span>
+                            </div>
+                        </div>
+                        <p class="desc">명의자 지분율 입력 시, 공동명의자 지분율이 자동 계산됩니다.</p>
+                    </div>
+                    <div class="input-item">
+                        <div class="tit">공동명의자 지분율</div>
+                        <div class="datebox-wrap">
+                            <div class="dateBox basic">
+                                <span class="ip-wrap"><input type="text" placeholder="공동명의자의 지분율" readonly /></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -337,7 +360,7 @@
         </div>
         <div class="btn-wrap">
             <button type="button">상담 신청하기</button>
-            <button type="button" class="contract" onclick='location.href="./direct_01_1.html"'>다음</button>
+            <button type="button" class="contract" onclick="location.href='./direct_01_2.html'">다음</button>
         </div>
     </div>
 </body>

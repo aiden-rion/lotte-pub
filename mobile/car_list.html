@@ -81,7 +81,7 @@
                                 <button type="button">회원정보 수정</button>
                             </div>
                             <a href="/mypage/mycarEstmate">
-                                <h3 class="user"><strong>김롯데</strong> 회원님, <br>반갑습니다!</h3>
+                                <h3 class="user"><strong>남홍식</strong> 회원님, <br>반갑습니다!</h3>
                             </a>
                             <a href="/mypage/soleProprietorPage" class="member-change">사업자 회원으로 등록하시겠어요?</a>
                         </div>
@@ -833,14 +833,14 @@
               </div>
               <div class="list-tab">
                 <ul>
-                  <li><button onclick='location.href="./car_list.html"'>전체</button></li>
-                  <li class="on"><button onclick='location.href="./buy_list.html"'>구매</button></li>
+                  <li class="on"><button onclick='location.href="./car_list.html"'>전체</button></li>
+                  <li><button onclick='location.href="./buy_list.html"'>구매</button></li>
                   <li><button onclick='location.href="./rent_list.html"'>렌트</button></li>
                 </ul>
               </div>
               <div class="list-head">
                 <p class="list-total-count">
-                  <var> 823 </var>대
+                  <var> 1,038 </var>대
                 </p>
                 <div class="list-filter">
                   <button type="button" class="bt-condition-align">
@@ -868,8 +868,8 @@
                     <div class="swiper-container popular-slider swiper-initialized swiper-horizontal swiper-ios">
                       <div class="swiper-wrapper" id="swiper-wrapper-4c57ed5d7b3494af" aria-live="polite" style="cursor: grab;">
                         <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 27" style="width: 284px; margin-right: 16px;" onclick="location.href='./car-detail.html'">
-                          <div class="img-wrap saleType">
-                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/05/10/LFILE_000016700820240510140623.png" alt="차량이미지">
+                          <div class="img-wrap rentType">
+                            <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/03/11/LFILE_000012420120240311112158.png" alt="차량이미지">
                             <div class="timesaleWrap2">
                               <span class="ico-timesale1"></span>
                               <span class="txt">한정 특가</span>
@@ -884,14 +884,14 @@
                                   <li class="certification">무사고</li>
                                 </ul>
                               </div>
-                              <dt>기아 신형K5 2.0 가솔린 프레스티지</dt>
-                              <dd>2023/04(23년형)</dd>
-                              <dd>24,896km</dd>
+                              <dt>현대 쏘나타(DN8) G2.0 프리미엄 플러스</dt>
+                              <dd>2022/08(22년형)</dd>
+                              <dd>36,975km</dd>
                             </dl>
                             <div>
-                              <p><var>14,468,000</var>원 <span></span>
+                              <p>월 <var>426,000</var>원 <span> / 24개월</span>
                               </p>
-                              <span class="price2"><var>12,000,000</var>원 </span>
+                              <span class="price2">월 <var>473,000</var>원 </span>
                             </div>
                           </div>
                         </div>
@@ -923,7 +923,7 @@
                           </div>
                         </div>
                         <div class="swiper-slide" role="group" aria-label="3 / 27" style="width: 284px; margin-right: 16px;" onclick="location.href='./car-detail.html'">
-                          <div class="img-wrap saleType">
+                          <div class="img-wrap rentType">
                             <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/06/17/LFILE_000019610520240617130359.png" alt="차량이미지">
                             <div class="timesaleWrap2">
                               <span class="ico-timesale1"></span>
@@ -943,9 +943,9 @@
                               <dd>43,702km</dd>
                             </dl>
                             <div>
-                              <p><var>13,424,000</var>원 <span></span>
+                              <p>월 <var>426,000</var>원 <span> / 24개월</span>
                               </p>
-                              <span class="price2"><var>12,471,000</var>원 </span>
+                              <span class="price2">월 <var>473,000</var>원 </span>
                             </div>
                           </div>
                         </div>
@@ -1227,7 +1227,7 @@
                     </li>
                     <li class="list-item ">
                       <a class="link-detail-view" href="./car-detail.html">
-                        <div class="list-thumb saleType">
+                        <div class="list-thumb rentType">
                           <img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/23/LFILE_000026415920240923095953.png/dims/resize/828x620" alt="차량이미지">
                         </div>
                         <div class="list-detail">
@@ -1238,7 +1238,8 @@
                           </div>
                           <div class="list-price">
                             <div class="price">
-                              <span class="prc"><var>15,428,000</var>원 </span>
+                              <span class="prc">월 <var>613,000</var>원 </span>
+                              <span class="period"> / 24개월</span>
                             </div>
                           </div>
                         </div>
@@ -1571,9 +1572,46 @@
 
         // 한정특가 timer interval
 
-        function isFiltered() {
-            return 'ir bt-list-filter' + (this.props.isChange ? ' on' : '');
+        const input = document.querySelector('.search-input');
+        const placeholders = ['기아 카니발', '제네시스 G80', '그랜저 하이브리드'];
+        let currentPlaceholderIndex = 0;
+        let currentText = '';
+
+        function typePlaceholder() {
+            if (currentText.length < placeholders[currentPlaceholderIndex].length) {
+                currentText += placeholders[currentPlaceholderIndex][currentText.length];
+                input.placeholder = currentText;
+                setTimeout(typePlaceholder, 200); // 글자 타이핑 간격
+            } else {
+                // 글자가 다 나타나면 잠시 대기 후 지우기 시작
+                setTimeout(() => {
+                    erasePlaceholder();
+                }, 1000); // 1초 대기
+            }
         }
+
+        function erasePlaceholder() {
+            // 현재 글자를 한 번에 지우기
+            input.placeholder = ''; // placeholder를 빈 문자열로 설정
+            setTimeout(() => {
+                currentPlaceholderIndex = (currentPlaceholderIndex + 1) % placeholders.length;
+                currentText = ''; // 다음 placeholder를 위해 초기화
+                typePlaceholder(); // 다음 placeholder 타이핑 시작
+            }, 300); // 0.3초 대기 후 다음 타이핑 시작
+        }
+
+        // 타이핑 시작
+        typePlaceholder();
+
+        // function isFiltered() {
+        //     const popup = document.getElementById('filterPopup');
+        //     popup.style.display = 'block'; // display를 block으로 설정
+        // }
+
+        // function closePopup() {
+        //     const popup = document.getElementById('filterPopup');
+        //     popup.style.display = 'none'; // display를 none으로 설정
+        // }
 
     </script>
 
