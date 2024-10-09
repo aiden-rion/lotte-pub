@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데렌터카</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/search-list.css" type="text/css" /><!-- for search-list style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/ui-search-list.js"></script>
+<script src="js/nayuda.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+<!-- layout--wrap// -->
+<div class="layout--wrap landing">
+	<!-- layout--header// -->
+	<div class="layout--header">
+		<header>
+			<h1 class="logo"><a href="main.html" class="ir">마이카세이브</a></h1>
+			<!-- <h2 class="page-title">회사소개</h2> -->
+			<button type="button" class= "ir bt-page-prev" onclick="history.back();">이전 페이지</button>
+			<div class="button-wrap"> <!-- 230818 button-wrap 추가 -->
+				<button type="button" class="bt-home" onclick="location.href='main.html'">홈</button> <!-- 230818 홈버튼 추가 -->
+				<button type="button" class="bt-sidemenu" onclick="event.stopPropagation();event.preventDefault();" >
+					<span class="line"></span><span class="line"></span><span class="line"></span>
+				</button>
+			</div>
+		</header>
+		<!-- 230524 햄버거 메뉴 추가 -->
+		<div class="side-menu " id="sideMenu">
+			<div class="container">
+				<ul>
+					<li><a href="main.html" class="mn">중고차렌트</a></li>
+					<li><a href="auto-lease.html" class="mn">오토리스</a></li>
+					<li><a href="sinchajang.html" class="mn">신차렌트</a></li>
+					<li><a href="rentcar-succeed.html" class="mn">차량승계</a></li>
+					<li><a href="sellcar-simple-step1.html" class="mn">내차팔기</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //layout-header -->
+
+	<!-- 230725 layout--container 추가// -->
+	<div class="layout--container">
+		<div class="area" style="background-color: #F5F4F4;">
+			<img src="images/page/landing-rent-01.png" alt="" >
+			<!-- 230731 추가 -->
+			<div class="btn btn-gotoList">
+				<a href="#" target="_blank"><img src="images/page/btn-gotoList-main.png" alt="량목록 보기" ></a>
+			</div>
+		</div>
+		<div class="area" style="background-color: #E85151;">
+			<img src="images/page/landing-rent-02.png" alt="" >
+		</div>
+		<div class="area" style="background-color: #1D1D1D;">
+			<img src="images/page/landing-rent-03.png" alt="" >
+		</div>
+
+		<!-- 231019 혜택 삭제 // -->
+		<!--
+		<div class="area" style="background-color: #FFFFFF;">
+			<img src="images/page/landing-rent-04.png" alt="" >
+		</div>
+		<div class="area" style="background-color: #EBEBEB;">
+			<img src="images/page/landing-rent-05.png" alt="" >
+			<div class="btn btn-benefit">
+				<a href="https://manager.lotterentacar.net/event/detail.do?clientSeq=2758" target="_blank"><img src="images/page/btn-benefit.png" alt="더 많은 혜택 보기" ></a>
+			</div>
+		</div>
+		-->
+		<!-- // 231019 혜택 삭제 -->
+
+		<div class="area" style="background-color: #FFFFFF;">
+			<img src="images/page/landing-rent-06.png" alt="" >
+		</div>
+		<!-- 230731 추가 -->
+		<div class="area bottom" style="background-color: #FFFFFF;">
+			<div class="btn">
+				<!--  230905 버튼 추가 -->
+				<a href="landing-option.html" ><img src="images/page/btn-gotoOptionPage.png" alt="렌터카 상품 자세히 보기" ></a>
+				<a href="main.html" ><img src="images/page/btn-gotoList.png" alt="차량목록 보기" ></a>
+			</div>
+		</div>
+	</div>
+	<!-- // 230725 layout--container -->
+
+
+	<!-- layout--footer// -->
+	<div class="layout--footer">
+		<!-- 230524 scroll-top 버튼 추가 -->
+		<div class="floating-page-top">
+			<button type="button" class="ir" onclick="nayuda.scrollTo(0)">TOP</button>
+		</div>
+	</div>
+	<!-- //layout-footer -->
+	
+</div>
+<!-- //layout--wrap -->
+
+</body>
+</html>
+	
+

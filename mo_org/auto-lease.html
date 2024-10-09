@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데렌터카</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/search-list.css" type="text/css" /><!-- for search-list style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/ui-search-list.js"></script>
+<script src="js/nayuda.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+<!-- layout--wrap// -->
+<div class="layout--wrap main-list">
+	
+	<!-- layout--header// -->
+	<div class="layout--header main nl sub">
+		<header>
+			<h1 class="logo"><a href="main.html" class="ir">마이카세이브</a></h1>
+			<h2 class="page-title">오토리스</h2>
+			<button type="button" class= "ir bt-page-prev" onclick="history.back();">이전 페이지</button>
+			<div class="button-wrap"> <!-- 230818 button-wrap 추가 -->
+				<button type="button" class="bt-sidemenu" onclick="event.stopPropagation();event.preventDefault();" >
+					<span class="line"></span><span class="line"></span><span class="line"></span>
+				</button>
+			</div>
+		</header>
+		<!-- 230524 햄버거 메뉴 추가 -->
+		<div class="side-menu " id="sideMenu">
+			<div class="container">
+				<ul>
+					<li><a href="main.html" class="mn">중고차렌트</a></li>
+					<li><a href="auto-lease.html" class="mn">오토리스</a></li>
+					<li><a href="sinchajang.html" class="mn">신차렌트</a></li>
+					<li><a href="rentcar-succeed.html" class="mn">차량승계</a></li>
+					<li><a href="sellcar-simple-step1.html" class="mn">내차팔기</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //layout-header -->
+	
+
+	<!-- layout--container// -->
+	<div class="layout--container ctn-car-list">
+		
+		<!-- search list container//-->
+		<div class="search-list-container">
+
+			<!-- list element// -->
+			<div class="list-element">
+				<!-- 230519 검색바 추가 -->
+				<div class="list-search">
+					<div class="sch-group">
+						<button type="button" class="bt-search">검색</button><!-- 220901 : class명 삭제 -->
+						<!-- <span class="ip-wrap"> -->
+						<button type="button" class="btn-del hidden"
+							onclick="$('#listSchKwd').val('');$('.btn-del').addClass('hidden');$('.list-search').removeClass('autoComplete')">삭제</button> <!-- 230525 텍스트 전체삭제 아이콘 추가 -->
+				
+						<!-- 230526 input 이벤트는 임의로 작성한것이니 기능만 참고해주시고, 기존코드 및 신규로 수정/적용 부탁드립니다. -->
+						<input type="text" placeholder="차종 혹은 모델을 입력해주세요." id="listSchKwd"
+							oninput="this.setAttribute('value', this.value); 
+							if(this.value.length > 0) { $('.btn-del').removeClass('hidden'); $('.list-search').addClass('autoComplete');}
+							else { $('.btn-del').addClass('hidden'); $('.list-search').removeClass('autoComplete'); }"
+							onblur="$('.btn-del').addClass('hidden'); $('.list-search').removeClass('autoComplete');"
+						/>
+
+						<!-- 필터 위치 이동 -->
+						<button type="button" class="ir bt-list-filter on" onclick="ui.modalPopOpen(filterPopup);">
+							<span>필터</span>
+							<img src="images/icon/ico-list-filter-white.svg">
+						</button>
+
+						<!-- </span> -->
+						<div class="sch-result">
+							<div class="custom-scroller" data-mcs-theme="custom-theme">
+								<div class="sch-cate-group">
+									<div class="kwd">
+										<a href="#">더 뉴 그렌저 IG <em>하이</em>브리드 (19~현재)</a>
+										<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+										<a href="#">그렌저 IG <em>하이</em>브리드 (17~19)</a>
+										<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+										<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+	
+										<a href="#">더 뉴 그렌저 IG <em>하이</em>브리드 (19~현재)</a>
+										<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+										<a href="#">그렌저 IG <em>하이</em>브리드 (17~19)</a>
+										<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+										<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+										<a href="#">더 뉴 그렌저 IG <em>하이</em>브리드 (19~현재)</a>
+										<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+										<a href="#">그렌저 IG <em>하이</em>브리드 (17~19)</a>
+										<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+										<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+										<a href="#">더 뉴 그렌저 IG <em>하이</em>브리드 (19~현재)</a>
+										<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+										<a href="#">그렌저 IG <em>하이</em>브리드 (17~19)</a>
+										<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+										<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 검색바 추가 -->
+
+				<div class="list-head" style="background-color: #fff;"><!-- 220927 : 리스트 헤더영역 추가 -->
+					<!-- 230523 텍스트 수정 (전체차량 -> 총) -->
+					<!-- <p class="list-total-count">전체 차량 <var>23,183</var>대</p> -->
+					<p class="list-total-count">총 <var>3</var>대</p>
+					<div class="list-filter">
+						<!-- 230522 정렬/필터 추가 -->
+						<button type="button" class="bt-condition-align" onclick="ui.modalPopOpen(sortPopup);">
+							<span>최근등록</span>
+							<img src="images/icon/ico-sort.png">
+						</button>
+					</div>													
+				</div>
+
+				<!-- 230524 정렬 추가 -->
+				<div class="sort-menu layer_popup_wrappper" id="sortPopup" style="display:none;">
+					<div class="layer_popup bg-bottom">
+						<div class="pop_inner">
+							<div class="pop-head">
+								<h3 class="pop-title">정렬</h3>
+								<a href="javascript:void(0)" class="ir pop_close" onclick="ui.modalPopClose(sortPopup);">닫기</a>
+							</div>
+							<div class="pop-contents">
+								<!-- 라디오버튼 선택시, 정렬 적용 후, "자동 창닫기" 개발요청 -->
+								<ul class="sort-wrap">
+									<li>
+										<input type="radio" name="sort" value="1" id="sort_01" checked>
+										<label for="sort_01" class="custom-radio-button">최근 등록순</label>
+									</li>
+									<li>
+										<input type="radio" name="sort" value="2" id="sort_02">
+										<label for="sort_02" class="custom-radio-button">오래된 등록순</label>
+									</li>
+									<li>
+										<input type="radio" name="sort" value="3" id="sort_03">
+										<label for="sort_03" class="custom-radio-button">최신 연식순</label>
+									</li>
+									<li>
+										<input type="radio" name="sort" value="4" id="sort_04">
+										<label for="sort_04" class="custom-radio-button">오래된 연식순</label>
+									</li>
+									<li>
+										<input type="radio" name="sort" value="5" id="sort_05">
+										<label for="sort_05" class="custom-radio-button">짧은 주행거리</label>
+									</li>
+									<li>
+										<input type="radio" name="sort" value="6" id="sort_06">
+										<label for="sort_06" class="custom-radio-button">많은 주행거리</label>
+									</li>
+									<li>
+										<input type="radio" name="sort" value="7" id="sort_07">
+										<label for="sort_07" class="custom-radio-button">낮은 가격순</label>
+									</li>
+									<li>
+										<input type="radio" name="sort" value="8" id="sort_08">
+										<label for="sort_08" class="custom-radio-button">높은 가격순</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 230524 필터 추가 -->
+				<div class="filter-menu layer_popup_wrappper" id="filterPopup" style="display:none;">
+					<div class="layer_popup bg-bottom">
+						<div class="pop_inner">
+							<div class="pop-head">
+								<h3 class="pop-title">필터</h3>
+								<a href="javascript:void(0)" class="ir pop_close" onclick="ui.modalPopClose(filterPopup);">닫기</a>
+							</div>
+							<div class="pop-contents">
+
+
+								<!-- 최신 퍼블리싱 파일이 없어 임의로 하드코딩하였으니, 삭제 후 재작업 요청드립니다. -->
+								<!-- layout--container// -->
+								<div class="layout--container ctn-search">
+									
+									<!-- search list container//-->
+									<div class="search-list-container">
+										
+										<!-- search element// -->
+										<div class="search-element">
+											<div class="search-condition">
+												<!-- 차종 --><!-- 221026 : 차종 선택 순서 상단으로 이동 -->
+												<div class="condition-item item-cartype">
+													<h3 class="item-title">차종<button type="button" class="ir bt-flip">목록열기</button></h3>
+												</div>
+
+												<!-- 제조사/모델 -->
+												<div class="condition-item item-model">
+													<h3 class="item-title">제조사/모델</h3>
+													<button type="button" class="bt-flip-text">
+														<img src="images/icon/ico-search-blue.svg" alt="검색아이콘" /> <!-- 검색아이콘 추가 -->
+														제조사/모델 찾아보기 <span>더보기</span>
+													</button><!-- 221026 : 제조사 선택 버튼 변경 -->
+												</div>
+												
+												<!-- 주행거리 -->
+												<div class="condition-item item-distance">
+													<h3 class="item-title">주행거리</h3>
+													<div class="type-group range">
+														<div class="range-bts">
+															<button type="button" class="rg-bt">1만</button>
+															<button type="button" class="rg-bt">3만</button>
+															<button type="button" class="rg-bt">5만</button>
+															<button type="button" class="rg-bt">7만</button>
+															<button type="button" class="rg-bt">10만</button>
+														</div>
+													</div>
+													<div class="type-group direct">
+														<div class="select-type-input has-bt">
+															<span class="ip_wrap">
+																<input type="text" />
+																<small>km</small>
+															</span>
+															<span class="sb">~</span>
+															<span class="ip_wrap">
+																<input type="text" />
+																<small>km</small>
+															</span>
+															<button type="button" class="bt-submit">확인</button>
+														</div>
+													</div>
+												</div>
+												<!-- 가격 -->
+												<div class="condition-item item-price"><!-- 220915 : 가격 검색 방식 변경 -->
+													<h3 class="item-title">가격</h3>
+													<div class="type-tab n2">
+														<button type="button" class="on">판매가</button>
+														<button type="button">월 비용</button>
+													</div>
+													<div class="type-group"><!-- case : 판매가 선택 시 노출 -->
+														<div class="select-type-input has-bt">
+															<span class="ip_wrap">
+																<input type="text" />
+																<small>만원</small>
+															</span>
+															<span class="sb">~</span>
+															<span class="ip_wrap">
+																<input type="text" />
+																<small>만원</small>
+															</span>
+															<button type="button" class="bt-submit">확인</button>
+														</div>
+													</div>
+												</div>
+												<!-- 연식 -->
+												<div class="condition-item item-year unfold" data-fold="foldable">
+													<h3 class="item-title">연식</h3>
+													<div class="select-type-input">
+														<span class="sl_wrap">
+															<select>
+																<option value="">최소</option>
+															</select>
+														</span>
+														<span class="sb">~</span>
+														<span class="sl_wrap">
+															<select>
+																<option value="">최대</option>
+															</select>
+														</span>
+													</div>
+												</div>
+												<!-- 연료 -->
+												<div class="condition-item item-fuel" data-fold="foldable">
+													<h3 class="item-title">연료<button type="button" class="ir bt-flip">목록열기</button></h3>
+												</div>
+												<!-- 옵션 -->
+												<div class="condition-item item-option" data-fold="foldable">
+													<h3 class="item-title">옵션<button type="button" class="ir bt-flip">목록열기</button></h3>
+												</div>
+												<!-- 외장 색상 -->
+												<div class="condition-item item-color-outside" data-fold="foldable">
+													<h3 class="item-title">외장 색상<button type="button" class="ir bt-flip">목록열기</button></h3>
+												</div>
+												<!-- 내장 색상 -->
+												<div class="condition-item item-color-inside" data-fold="foldable">
+													<h3 class="item-title">내장 색상<button type="button" class="ir bt-flip">목록열기</button></h3>
+												</div>
+												<!-- 판매자 구분 -->
+												<div class="condition-item item-seller" data-fold="foldable">
+													<h3 class="item-title">차량번호/판매자</h3>
+													<div class="select-type-input">
+														<span class="ip_wrap w-full">
+															<input type="text" placeholder="모델명/차량번호/연락처" />
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- //search element -->
+
+										<div class="search-btn">
+											<button type="button" class="bt-condition-reset">초기화</button> <!-- 230621 초기화 버튼 수정 -->
+											<button type="button" class="bt-condition-search">검색(232,403대)</button>
+										</div>
+
+									</div>
+									<!-- //search list container-->
+
+									<script src="js/ui-search-list.js"></script><!-- 검색/리스트 ui js 입니다. 개발시 삭제/변경 무관 -->
+									
+								</div>
+								<!-- layout--container -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="list-content">
+					<ul class="list-type-common">
+						<!-- loop// -->
+						<li class="list-item">
+							<div class="list-thumb" style="background-color: #f3f3f3;">
+								<img src="images/dummy/@car-lease-01.png" alt="" />
+							</div>
+							<div class="list-detail">
+								<div class="badge"><!-- 220927 : 뱃지 워딩수정, 리스트 뱃지 마크업위치 이동 -->
+									<span class="ele-badge badge-type4">오토리스</span>
+								</div>
+								<div class="list-title">
+									STARIA (D) 2.2 카고 3인승 모던
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="">2,992cc</span><!-- 230523 요약정보 변경 (지역X -> 배기량) -->
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<span class="prc"><var>285,000</var>원</span>
+									</div>
+								</div>
+								<!-- 230523 태그 위치이동 -->
+								<div class="list-tag" style="display: none;">
+									<span class="tag on">#프리미엄</span>
+									<span class="tag on">#1인소유</span>
+									<span class="tag">#비흡연</span>
+									<span class="tag">#법인임원차량</span>
+									<span class="tag">#무사고</span>
+									<span class="tag">#관리이력</span>
+									<span class="tag">#신차급</span>
+									<span class="tag">#썬루프</span>
+									<span class="tag">#낮은주행거리</span>
+								</div>
+							</div>
+						</li>
+						<!-- //loop -->
+						<li class="list-item">
+							<div class="list-thumb" style="background-color: #f3f3f3;">
+								<img src="images/dummy/@car-lease-02.png" alt="" />
+							</div>
+							<div class="list-detail">
+								<div class="badge">
+									<span class="ele-badge badge-type4">오토리스</span>
+								</div>
+								<div class="list-title">
+									PORTER II (D) 2.5 일반캡 초장축 스마트 2WD
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="" >2,992cc</span>
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<span class="prc"><var>335,000</var>원</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div class="list-thumb" style="background-color: #f3f3f3;">
+								<img src="images/dummy/@car-lease-03.png" alt="" />
+							</div>
+							<div class="list-detail">
+								<div class="badge">
+									<span class="ele-badge badge-type4">오토리스</span>
+								</div>
+								<div class="list-title">
+									BONGO (E) 1톤 킹캡 초장축 2WD GLS
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="" >2,992cc</span>
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<span class="prc"><var>235,000</var>원</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<!-- //list element -->
+
+		</div>
+		<!-- //search list container-->
+	</div>
+	<!-- layout--container -->
+
+
+	<!-- layout--footer// -->
+	<div class="layout--footer">
+		<!-- 230524 scroll-top 버튼 추가 -->
+		<div class="floating-page-top">
+			<button type="button" class="ir" onclick="nayuda.scrollTo(0)">TOP</button>
+		</div>
+	</div>
+	<!-- //layout-footer -->
+	
+</div>
+<!-- //layout--wrap -->
+
+</body>
+</html>
+	
+

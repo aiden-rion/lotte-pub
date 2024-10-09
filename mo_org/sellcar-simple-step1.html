@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데렌터카</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" /><!-- for sub style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+<!-- layout--wrap// -->
+<div class="layout--wrap">
+	
+	<!-- layout--header// -->
+	<div class="layout--header">
+		<header>
+			<h1 class="logo"><a href="main.html" class="ir">마이카세이브</a></h1>
+			<h2 class="page-title">내차팔기</h2>
+			<button type="button" class= "ir bt-page-prev" onclick="history.back();">이전 페이지</button>
+			<div class="button-wrap"> <!-- 230818 button-wrap 추가 -->
+				<button type="button" class="bt-sidemenu" onclick="event.stopPropagation();event.preventDefault();" >
+					<span class="line"></span><span class="line"></span><span class="line"></span>
+				</button>
+			</div>
+		</header>
+		<!-- 230524 햄버거 메뉴 추가 -->
+		<div class="side-menu " id="sideMenu">
+			<div class="container">
+				<ul>
+					<li><a href="main.html" class="mn">중고차렌트</a></li>
+					<li><a href="auto-lease.html" class="mn">오토리스</a></li>
+					<li><a href="sinchajang.html" class="mn">신차렌트</a></li>
+					<li><a href="rentcar-succeed.html" class="mn">차량승계</a></li>
+					<li><a href="sellcar-simple-step1.html" class="mn">내차팔기</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //layout-header -->
+	
+	<!-- layout--container// -->
+	<div class="layout--container ctn-sellcar-simple bg-gray">
+		
+		<!-- sellcar simple container//-->
+		<div class="sellcar-simple-container">
+
+			<div class="page-title-group">
+				<h2 class="page-title al_c type2"><em>전문가에게 진단받고 제값에 내차팔기!</em></h2>
+				<!-- <p class="page-summary al_c type2">롯데오토마켓의 전문 차량평가사 방문해 <br/>견적가를 제시해요.</p> --> <!-- 230727 hidden -->
+			</div>
+
+			<section class="sec-sellcar-simple">
+
+				<!-- step : 고객정보 입력 -->
+				<div class="step-content">
+
+					<ul class="step-info-desc mt20">
+						<li style="background-image:url('images/icon/ico-simple-info1.png')">
+							<span>STEP1</span>
+							<p>차량정보 입력</p>
+						</li>
+						<li style="background-image:url('images/icon/ico-simple-info2.png')">
+							<span>STEP2</span>
+							<!-- <p>차량평가사 방문</p> -->
+							<p>차량평가사 견적상담</p>  <!-- 230727 텍스트 수정 -->
+						</li>
+						<li style="background-image:url('images/icon/ico-simple-info3.png')">
+							<span>STEP3</span>
+							<p>견적제시</p>
+						</li>
+						<li style="background-image:url('images/icon/ico-simple-info4.png')">
+							<span>STEP4</span>
+							<p>확정 후 차량판매</p>
+						</li>
+					</ul>
+
+					<div class="insert-form-group mt30">
+						<div class="input-item">
+							<div class="ipt-tit">이름(소유주명)</div>
+							<div class="ipt-cont">
+								<span class="ip-wrap"><input type="text" placeholder="이름을 입력하세요" /></span>
+							</div>
+						</div>
+						<div class="input-item">
+							<div class="ipt-tit">차량번호<em class="ess"></em></div>
+							<div class="ipt-cont">
+								<span class="ip-wrap"><input type="text" placeholder="차량번호를 입력하세요" /></span>
+							</div>
+						</div>
+					</div>
+					<div class="agree-content">
+						<div class="agr-group">
+							<div class="agr-check">
+								<span class="ck-wrap">
+									<input type="checkbox" id="agrCont5" name="agrCont"><label for="agrCont5">[필수] 개인정보 수집/이용 동의</label>
+									<a href="#" onclick="ui.modalPopOpen(agrtermPop);">내용보기</a>
+								</span>
+							</div>
+						</div>
+						<!-- 230727 hidden -->
+						<!--
+						<div class="agr-group">
+							<div class="agr-check">
+								<span class="ck-wrap">
+									<input type="checkbox" id="agrCont6" name="agrCont"><label for="agrCont6">[선택] 마케팅 활용 동의</label>
+									<a href="#">내용보기</a>
+								</span>
+							</div>
+						</div>
+						-->
+
+					</div>
+	
+					<div class="btn-group mt30">
+						<button type="button" class="bt-common-type1 bt-full rnd">차량정보조회</button>
+					</div>
+
+				</div>
+
+			</section>
+
+		</div>
+		<!-- //sellcar simple container-->
+		
+	</div>
+	<!-- layout--container -->
+
+	<!-- layout--footer// -->
+	<div class="layout--footer">
+		<footer>
+			
+		</footer>	
+	</div>
+	<!-- //layout-footer -->
+	
+</div>
+<!-- //layout--wrap -->
+
+
+<!-- 230802 개인정보 수집 및 이용동의 팝업 추가 // -->
+<div class="popup-agr-term popup layer_popup" id="agrtermPop">
+	<div class="layout--header">
+		<header>
+			<h1 class="logo blind"><a href="/" class="ir">롯데렌터카</a></h1>
+			<h2 class="page-title">개인정보 수집 및 이용 동의</h2>
+			<button type="button" class="ir bt-page-close" onclick="ui.modalPopClose(agrtermPop);">페이지 닫기</button>
+		</header>
+	</div>
+	<div class="layout--container ctn-terms">
+		<div class="terms-container">
+			<div class="term-content">
+				<dl>
+					<dt>1. 개인정보의 수집 항목</dt>
+					<dd>성명, 연락처(휴대폰), 거주지역, 차량정보(차량번호, 차량명, 색상, 연식, 유종, 주행거리, 최초등록일, 배기량, 압류/저당)</dd>
+				</dl>
+				<dl>
+					<dt>2. 이용목적</dt>
+					<dd>중고차 판매신청 견적상담, 신청서비스의 제공, 본인여부 확인, 분쟁 및 민원 처리</dd>
+				</dl>
+				<dl>
+					<dt class="emp">3. 이용 및 보관기간 : 1년</dt>
+					<dd class="emp">원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우(홈페이지 개인정보처리방침 참고) 일정한 기간 동안 회원정보를 보관합니다.</dd>
+				</dl>
+				<dl>
+					<dt>동의 거부권 및 불이익</dt>
+					<dd>귀하는 위와 같은 본인의 개인정보 수집∙이용에 관한 동의를 거부할 권리가 있습니다. 내차팔기 서비스을 위해 필요한 최소한의 정보인 필수사항의 수집∙이용에 관한 동의를 거부하는 경우에는 서비스 이용이 제한됩니다.</dd>
+				</dl>
+			</div>
+			<div class="btn-group mt30">
+				<button type="button" class="bt-common-type1 bt-full rnd">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // 230802 개인정보 수집 및 이용동의 팝업 추가 -->
+
+</body>
+</html>
+	
+

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>마이카세이브</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" /><!-- for sub style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+<!-- layout--wrap// -->
+<div class="layout--wrap">
+
+	<!-- layout--header// -->
+	<div class="layout--header nl relative main sub seller">
+		<header>
+			<h1 class="logo"><a href="main.html" class="ir">마이카세이브</a></h1>
+			<h2 class="page-title">중고차영업1지점</h2>
+			<button type="button" class= "ir bt-page-prev" onclick="history.back();">이전 페이지</button>
+			<div class="button-wrap"> <!-- 230818 button-wrap 추가 -->
+				<button type="button" class="bt-sidemenu" onclick="event.stopPropagation();event.preventDefault();" >
+					<span class="line"></span><span class="line"></span><span class="line"></span>
+				</button>
+			</div>
+		</header>
+		<!-- 230524 햄버거 메뉴 추가 -->
+		<div class="side-menu " id="sideMenu">
+			<div class="container">
+				<ul>
+					<li><a href="main.html" class="mn">중고차렌트</a></li>
+					<li><a href="auto-lease.html" class="mn">오토리스</a></li>
+					<li><a href="sinchajang.html" class="mn">신차렌트</a></li>
+					<li><a href="rentcar-succeed.html" class="mn">차량승계</a></li>
+					<li><a href="sellcar-simple-step1.html" class="mn">내차팔기</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //layout-header -->
+	
+	<!-- layout--container// -->
+	<div class="layout--container ctn-seller ctn-car-list">
+		
+		<!-- 차량대수 요약 -->
+		<section class="sec-seller-info">
+			<div class="seller-profile">
+				<div class="pic"><img src="images/common/logo_dynamic.png" alt="롯데렌터카로고" /></div>
+				<div class="desc">
+					<p class="name">중고차영업1지점</p>
+					<div class="info" onclick="ui.modalPopOpen(officePop)">
+						<span>경기도 수원시 권선구 권선로 308-5</span>
+						<span>도이치오토월드 301호</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="seller-car-summary">
+				<p class="item sell">판매중 <span><var>20,124</var> 대</span></p>
+				<p class="item wt">등록예정 <span><var>114</var> 대</span></p>
+				<!-- <p class="item sold">판매완료 <span><var>124</var> 대</span></p> --> <!-- 231006 판매완료 hidden -->
+			</div>
+
+			<!-- <button type="button" class="bt-common-type8 bt-full rnd">판매중 차량 보기</button> -->
+			<button type="button" class="bt-common-type8 bt-full bt-tel">0505-1258-2515</button>
+		</section>
+
+		<!-- list element// -->
+		<div class="list-element">
+			<!-- 230719 중고차렌트 타이틀 추가 -->
+			<h4 class="total-num">전체차량 <var>23,183</var> 대</h4>
+
+			<!-- 230519 검색바 추가 -->
+			<div class="list-search">
+				<div class="sch-group">
+					<button type="button" class="bt-search">검색</button><!-- 220901 : class명 삭제 -->
+					<!-- <span class="ip-wrap"> -->
+					<button type="button" class="btn-del hidden"
+						onclick="$('#listSchKwd').val('');$('.btn-del').addClass('hidden');$('.list-search').removeClass('autoComplete')">삭제</button> <!-- 230525 텍스트 전체삭제 아이콘 추가 -->
+			
+					<!-- 230526 input 이벤트는 임의로 작성한것이니 기능만 참고해주시고, 기존코드 및 신규로 수정/적용 부탁드립니다. -->
+					<input type="text" placeholder="차종 혹은 모델을 입력해주세요." id="listSchKwd"
+						oninput="this.setAttribute('value', this.value); 
+						if(this.value.length > 0) { $('.btn-del').removeClass('hidden'); $('.list-search').addClass('autoComplete');}
+						else { $('.btn-del').addClass('hidden'); $('.list-search').removeClass('autoComplete'); }"
+						onblur="$('.btn-del').addClass('hidden'); $('.list-search').removeClass('autoComplete');"
+					/>
+
+					<!-- 필터 위치 이동 -->
+					<button type="button" class="ir bt-list-filter on" onclick="ui.modalPopOpen(filterPopup);">
+						<span>필터</span>
+						<img src="images/icon/ico-list-filter-white.svg"> <!-- 230720 이미지 변경 -->
+					</button>
+
+					<div class="sch-result">
+						<div class="custom-scroller" data-mcs-theme="custom-theme">
+							<div class="sch-cate-group">
+								<div class="kwd">
+									<a href="#">더 뉴 그렌저 IG <em>하이</em>브리드 (19~현재)</a>
+									<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+									<a href="#">그렌저 IG <em>하이</em>브리드 (17~19)</a>
+									<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+									<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+
+									<a href="#">더 뉴 그렌저 IG <em>하이</em>브리드 (19~현재)</a>
+									<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+									<a href="#">그렌저 IG <em>하이</em>브리드 (17~19)</a>
+									<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+									<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+									<a href="#">더 뉴 그렌저 IG <em>하이</em>브리드 (19~현재)</a>
+									<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+									<a href="#">그렌저 IG <em>하이</em>브리드 (17~19)</a>
+									<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+									<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+									<a href="#">더 뉴 그렌저 IG <em>하이</em>브리드 (19~현재)</a>
+									<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+									<a href="#">그렌저 IG <em>하이</em>브리드 (17~19)</a>
+									<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+									<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--
+				<div class="keyword-tags">
+					<button type="button" class="tag">#출고3년이내</button>
+					<button type="button" class="tag on">#3만km이하</button>
+					<button type="button" class="tag on">#1인소유</button>
+					<button type="button" class="tag">#법인임원차량</button>
+					<button type="button" class="tag">#무사고</button>
+				</div>
+				-->
+			</div>
+			<!-- // 검색바 추가 -->
+
+			<div class="list-head"><!-- 220927 : 리스트 헤더영역 추가 -->
+				<!-- 230720 텍스트 수정 ("총" -> "판매중") -->
+				<p class="list-total-count">총 <var>23,183</var> 대</p>
+				<div class="list-filter">
+					<!-- 230711 등록예정 -->
+					<button type="button" class="bt-wtCar">
+						<input class="switch-input sm" type="checkbox" id="switch-wt" onclick="$('.list-content').toggleClass('main');" />
+						<label class="switch" for="switch-wt">등록예정</label>
+					</button>
+
+					<!-- 230522 정렬/필터 추가 -->
+					<button type="button" class="bt-condition-align" onclick="ui.modalPopOpen(sortPopup);">
+						<span>최근등록</span><img src="images/icon/ico-sort.png">
+					</button>
+				</div>													
+			</div>
+
+			<!-- 230727 case : 검색결과없음 (+ 이미지 랜덤출력 js 참고요청) -->
+			<div class="list-content" style="display: none;">
+				<div class="empty-result-common">
+					<div class="img"><img id="randomImg-01" src="images/elements/search-fail-img-01.png" alt="검색결과없음"></div> 
+					<p class="msg">검색된 차량이 없습니다.</p>
+				</div>
+			</div>
+
+			<!-- content -->
+			<div class="list-content" style="display: block;">
+				<ul class="list-type-common">
+					<!-- loop// -->
+					<li class="list-item">
+						<div class="list-thumb"><!-- 220905 : 카드형 썸네일 슬라이더 추가 -->
+							<a href="#" onclick="event.preventDefault();"><!-- 230515 onclick 이벤트 추가 - list-item 클릭가능 영역을 리스트 전체로 확장 -->
+								<div class="car-thumb-slider swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_1.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_2.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_3.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_4.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_5.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_6.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_7.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_1.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_2.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_3.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_4.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_5.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_6.jpg" alt="차량대표이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/dummy/@detail-car-image2_7.jpg" alt="차량대표이미지" />
+										</div>
+									</div>
+									<div class="swiper-pagination-wrap"> <!-- 230810 추가 -->
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="list-detail">
+							<!-- 230712 : 뱃지 스타일 수정 (진단파/인증차/관리차) -->
+							<div class="badge">
+								<span class="ele-badge badge-type1">인증차</span>
+								<span class="badge-lotte-cert">진단차</span>
+								<span class="ele-badge badge-type3">관리차</span>
+							</div>
+							<div class="list-title">
+								제네시스 G80 (G) 3.3 프리미엄 럭셔리
+							</div>
+							<div class="list-option">
+								<span class="year">2019/11(19년형)</span>
+								<span class="dstc">32,588km</span>
+								<span class="fuel">가솔린</span>
+								<!-- <span class="loc">경기</span> -->
+								<span class="">2,992cc</span><!-- 230523 요약정보 변경 (지역X -> 배기량) -->
+							</div>
+							<!-- 230523 태그 위치이동 -->
+							<div class="list-price">
+								<div class="price">
+									<!-- 230621 "인수형" -> "24개월" 태그 수정 -->
+									<span class="period">24개월/ </span>
+									<span class="prc">월 <var>635,000</var>원</span>
+								</div>
+							</div>
+							<!-- 230523 태그 위치이동 -->
+							<div class="list-tag" style="display: none;">
+								<!-- 230526 검색조건으로 선택시, addclass "on" -->
+								<span class="tag on">#출고3년이내</span>
+								<span class="tag on">#3만km이하</span>
+								<span class="tag">#1인소유</span>
+								<span class="tag">#법인임원차량</span>
+								<span class="tag">#무사고</span>
+							</div>
+						</div>
+					</li>
+					<!-- //loop -->
+					<li class="list-item">
+						<div class="list-thumb">
+							<img src="images/dummy/@detail-car-image3.jpg" alt="" />
+						</div>
+						<div class="list-detail">
+							<div class="badge">
+								<span class="ele-badge badge-type1">인증차</span>
+								<span class="badge-lotte-cert">진단차</span>
+								<span class="ele-badge badge-type3">관리차</span>
+							</div>
+							<div class="list-title">
+								KG모빌리티(쌍용) 티볼리 TX 2WD
+							</div>
+							<div class="list-option">
+								<span class="year">2019/11(19년형)</span>
+								<span class="dstc">32,588km</span>
+								<span class="fuel">가솔린</span>
+								<span class="" >2,992cc</span>
+							</div>
+							<div class="list-price">
+								<div class="price">
+									<span class="period">24개월 /</span>
+									<span class="prc">월 <var>635,000</var>원</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<div class="list-thumb">
+							<img src="images/dummy/@detail-car-image4.jpg" alt="" />
+						</div>
+						<div class="list-detail">
+							<div class="badge">
+								<span class="badge-lotte-cert">진단차</span>
+								<span class="ele-badge badge-type3">관리차</span>
+							</div>
+							<div class="list-title">
+								현대 소나타 DN8 (G) 1.6 터보 프리미엄 패밀리
+							</div>
+							<div class="list-option">
+								<span class="year">2019/11(19년형)</span>
+								<span class="dstc">32,588km</span>
+								<span class="fuel">가솔린</span>
+								<span class="" >2,992cc</span>
+							</div>
+							<div class="list-price">
+								<div class="price">
+									<span class="period">24개월 /</span>
+									<span class="prc">월 <var>635,000</var>원</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<div class="list-thumb">
+							<img src="images/dummy/@detail-car-image2.jpg" alt="" />
+						</div>
+						<div class="list-detail">
+							<div class="badge">
+								<span class="ele-badge badge-type1">인증차</span>
+								<span class="badge-lotte-cert">진단차</span>
+								<span class="ele-badge badge-type3">관리차</span>
+							</div>
+							<div class="list-title">
+								제네시스 G80 (G) 3.3 프리미엄 럭셔리
+							</div>
+							<div class="list-option">
+								<span class="year">2019/11(19년형)</span>
+								<span class="dstc">32,588km</span>
+								<span class="fuel">가솔린</span>
+								<span class="" >2,992cc</span>
+							</div>
+							<div class="list-price">
+								<div class="price">
+									<span class="period">24개월/ </span>
+									<span class="prc">월 <var>635,000</var>원</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<div class="list-thumb">
+							<img src="images/dummy/@detail-car-image5.jpg" alt="" />
+						</div>
+						<div class="list-detail">
+							<div class="badge">
+								<span class="badge-lotte-cert">진단차</span>
+								<span class="ele-badge badge-type3">관리차</span>
+							</div>
+							<div class="list-title">
+								현대 더 뉴 그랜저 (G) 2.5 캘리그래피
+							</div>
+							<div class="list-option">
+								<span class="year">2019/11(19년형)</span>
+								<span class="dstc">32,588km</span>
+								<span class="fuel">가솔린</span>
+								<span class="" >2,992cc</span>
+							</div>
+							<div class="list-price">
+								<div class="price">
+									<span class="period">24개월 /</span>
+									<span class="prc">월 <var>635,000</var>원</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<div class="list-thumb">
+							<img src="images/dummy/@detail-car-image3.jpg" alt="" />
+						</div>
+						<div class="list-detail">
+							<div class="badge">
+								<span class="ele-badge badge-type1">인증차</span>
+								<span class="badge-lotte-cert">진단차</span>
+								<span class="ele-badge badge-type3">관리차</span>
+							</div>
+							<div class="list-title">
+								KG모빌리티(쌍용) 티볼리 TX 2WD
+							</div>
+							<div class="list-option">
+								<span class="year">2019/11(19년형)</span>
+								<span class="dstc">32,588km</span>
+								<span class="fuel">가솔린</span>
+								<span class="" >2,992cc</span>
+							</div>
+							<div class="list-price">
+								<div class="price">
+									<span class="period">24개월 /</span>
+									<span class="prc">월 <var>635,000</var>원</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<div class="list-thumb">
+							<img src="images/dummy/@detail-car-image-gray.png" alt="" />
+						</div>
+						<div class="list-detail">
+							<div class="badge">
+								<span class="badge-lotte-cert">진단차</span>
+								<span class="ele-badge badge-type3">관리차</span>
+							</div>
+							<div class="list-title">
+								KG모빌리티(쌍용) 티볼리 TX 2WD
+							</div>
+							<div class="list-option">
+								<span class="year">2019/11(19년형)</span>
+								<span class="dstc">32,588km</span>
+								<span class="fuel">가솔린</span>
+								<span class="" >2,992cc</span>
+							</div>
+							<div class="list-price">
+								<div class="price">
+									<span class="period">24개월 /</span>
+									<span class="prc">월 <var>635,000</var>원</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<script>
+						$(".list-item").on("click", function(){ location.href='car-detail.html' })
+					</script>
+				</ul>
+
+				<!-- 230711 등록예정차량 영역 추가 -->
+				<ul class="list-type-wt list-type-common">
+					<li class="list-item">
+						<div class="list-thumb empty"> <!-- 클래스 empty 추가 (차량이미지 없는 경우) -->
+							<img src="images/cars/@car-wt.png" alt="이미지없음" />  <!-- 이미지 경로 수정 (차량이미지 없는 경우) -->
+						</div>
+						<div class="list-detail">
+							<!-- 230712 : 뱃지 스타일 수정 (진단파/인증차/관리차) -->
+							<div class="badge">
+								<span class="ele-badge badge-type1">인증차</span>
+								<span class="badge-lotte-cert">진단차</span>
+								<span class="ele-badge badge-type3">관리차</span>
+							</div>
+							<div class="list-title">
+								KG모빌리티(쌍용) 티볼리 TX 2WD
+							</div>
+							<div class="list-option">
+								<span class="year">2019/11(19년형)</span>
+								<span class="dstc">32,588km</span>
+								<span class="fuel">가솔린</span>
+								<span class="" >2,992cc</span>
+							</div>
+							<div class="list-price">
+								<div class="price">
+									<span class="prc none"><var>가격문의</var></span>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="list-item">
+						<div class="list-thumb">
+							<img src="images/cars/thumbs_grandeur.png" alt="그랜저" />
+						</div>
+						<div class="list-detail">
+							<!-- 230712 : 뱃지 스타일 수정 (진단파/인증차/관리차) -->
+							<div class="badge">
+								<span class="ele-badge badge-type1">인증차</span>
+								<span class="badge-lotte-cert">진단차</span>
+								<span class="ele-badge badge-type3">관리차</span>
+							</div>
+							<div class="list-title">
+								KG모빌리티(쌍용) 티볼리 TX 2WD
+							</div>
+							<div class="list-option">
+								<span class="year">2019/11(19년형)</span>
+								<span class="dstc">32,588km</span>
+								<span class="fuel">가솔린</span>
+								<span class="" >2,992cc</span>
+							</div>
+							<div class="list-price">
+								<div class="price">
+									<span class="prc none"><var>가격문의</var></span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				
+				<!-- 230907 더보기 버튼 추가 -->
+				<button type="button" class="bt-common-type8 bt-full bt-down" onclick=""><span>더보기</span></button>
+
+			</div>
+			<!-- // content -->
+		</div>
+		<!-- //list element -->
+	</div>
+	<!-- layout--container -->
+
+	<!-- layout--footer// -->
+	<div class="layout--footer">
+		<footer>
+		</footer>	
+	</div>
+	<!-- //layout-footer -->
+	
+</div>
+<!-- //layout--wrap -->
+
+
+<!-- 지도보기 -->
+<div class="layer_popup_wrappper vB" id="officePop">
+	<div class="layer_popup bg-bottom pop-reservation-detail">
+		<div class="pop_inner">
+			<div class="pop-head">
+				<h3 class="pop-title">지점 안내</h3>
+				<a href="javascript:void(0)" class="ir pop_close" onclick="ui.modalPopClose(officePop);">닫기</a>
+			</div>
+			<div class="pop-contents">
+				<div class="office-map">
+					<div>
+						<div id="kakao_map_container" style="width: 100%; height: 350px; position: relative; overflow: hidden; background: url(&quot;https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png&quot;);">
+							<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+								<div style="position: absolute;">
+									<div style="position: absolute; z-index: 0;"></div>
+									<div style="position: absolute; z-index: 1; transform: scale(1); left: 0px; top: 0px;">
+										<img src="https://map1.daumcdn.net/map_2d_hd/2303ksn/L3/1865/893.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -153px; top: 133px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+										<img src="https://map2.daumcdn.net/map_2d_hd/2303ksn/L3/1865/894.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 103px; top: 133px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+										<img src="https://map3.daumcdn.net/map_2d_hd/2303ksn/L3/1865/895.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 359px; top: 133px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+										<img src="https://map1.daumcdn.net/map_2d_hd/2303ksn/L3/1866/893.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -153px; top: -123px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+										<img src="https://map2.daumcdn.net/map_2d_hd/2303ksn/L3/1866/894.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 103px; top: -123px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+										<img src="https://map3.daumcdn.net/map_2d_hd/2303ksn/L3/1866/895.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 359px; top: -123px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+										<img src="https://map1.daumcdn.net/map_2d_hd/2303ksn/L3/1867/893.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -153px; top: -379px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+										<img src="https://map2.daumcdn.net/map_2d_hd/2303ksn/L3/1867/894.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 103px; top: -379px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+										<img src="https://map3.daumcdn.net/map_2d_hd/2303ksn/L3/1867/895.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 359px; top: -379px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+									</div>
+									<div style="position: absolute; z-index: 1;"></div>
+									<div style="width: 320px; height: 350px; position: absolute; z-index: 1;"></div>
+									<div style="position: absolute; z-index: 1; transform: scale(1);">
+										<svg version="1.1" style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; width: 1600px; height: 1750px; left: -640px; top: -700px;" viewBox="0 0 1600 1750">
+										<defs></defs></svg>
+									</div>
+									<div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);">
+										<div style="position: absolute; margin: -39px 0px 0px -14px; z-index: 0; left: 160px; top: 175px;">
+											<img draggable="false" src="https://t1.daumcdn.net/mapjsapi/images/2x/marker.png" alt="" role="presentation" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 29px, 42px, 0px); top: 0px; left: 0px; width: 29px; height: 42px;">
+											<img src="https://t1.daumcdn.net/mapjsapi/images/2x/transparent.gif" alt="" role="presentation" draggable="false" usemap="#daum.maps.Marker.Area:1" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; width: 29px; height: 42px;">
+											<map id="daum.maps.Marker.Area:1" name="daum.maps.Marker.Area:1"><area href="javascript:void(0)" alt="" role="presentation" shape="poly" coords="14,39,9,27,4,21,1,16,1,10,4,4,11,0,18,0,25,4,28,10,28,16,25,21,20,27" title="" style="-webkit-tap-highlight-color: transparent;"></map>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div style="position: absolute; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);">
+								<div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left; display: none;">
+									<div style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 46px;"></div>
+									<div style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">50m</div>
+								</div>
+								<div style="margin: 0px 4px; float: left;">
+									<a target="_blank" href="http://map.kakao.com/" title="Kakao 지도로 보시려면 클릭하세요." style="float: left; width: 32px; height: 10px;">
+										<img src="https://t1.daumcdn.net/mapjsapi/images/2x/m_bi_b.png" alt="Kakao 지도로 이동" style="float: left; width: 32px; height: 10px; border: none;">
+									</a>
+									<div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div>
+								</div>
+							</div>
+							<div style="position: absolute; z-index: 2; left: 0px; top: 0px;"></div>
+						</div>
+					</div>
+				</div>
+				<h4>중고차영업1지점</h4>
+				<ul class="rsv-detail">
+					<li>
+						<span class="t">전화번호</span>
+						<span class="c">031-322-8000</span>
+					</li>
+					<li>
+						<span class="t">주소</span>
+						<span class="c">경기도 수원시 권선구 권선로 308-5 도이치오토월드 301호</span>
+					</li>
+					<li>
+						<span class="t">영업시간</span>
+						<span class="c">09:00 ~ 18:00 (공휴일 휴무)</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // 지도보기 -->
+
+</body>
+</html>
+	
+

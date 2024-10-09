@@ -1,0 +1,387 @@
+/* 인수옵션형 안내페이지 */
+.layout--wrap.landing.optional .layout--container {
+    font-size: 0;
+    position: relative;
+    background-color: #3D72FE;
+}
+
+.layout--wrap.landing.optional .area {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.layout--wrap.landing.optional .area.card {
+    width: calc(100%  - 38px);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 16px;
+}
+
+/* 00. 메인 */
+/* title */
+.layout--wrap.landing.optional .area .title {
+    width: 80vw;
+    min-width: 80vw;
+    height: auto;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* car */
+.layout--wrap.landing.optional .area .car-wrap {
+    position: absolute;
+    top: 48vw;
+    left: 0;
+    right: 0;
+}
+
+.layout--wrap.landing.optional .area .car-wrap .car {
+    width: 78vw;
+    position: relative;
+    z-index: 1;
+    -webkit-animation: fade-in 0.25s linear; 
+    animation: fade-in 0.25s linear; 
+}
+
+@-webkit-keyframes fade-in {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@keyframes fade-in {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/* icon */
+.layout--wrap.landing.optional .area.main .car-wrap .icon { position: absolute; opacity: 0; }
+.layout--wrap.landing.optional .area.main .car-wrap .icon.icon01 { width: 15vw; top: 16vw; right: 21vw; }
+.layout--wrap.landing.optional .area.main .car-wrap .icon.icon02 { width: 19.5vw; top: 30vw; right: -5vw; }
+.layout--wrap.landing.optional .area.main .car-wrap .icon.icon03 {  width: 19.5vw; top: 29vw; left: -3vw; }
+.layout--wrap.landing.optional .area.main .car-wrap .icon.icon04 { width: 15vw; top: 16vw; left: 24vw; }
+
+/* on */
+.layout--wrap.landing.optional .area.main .car-wrap .icon.on { opacity: .9; }
+.layout--wrap.landing.optional .area.main .car-wrap .icon.icon01.on { -webkit-animation: slide-up 0.2s ease-in-out; animation: slide-up 0.2s ease-in-out; }
+.layout--wrap.landing.optional .area.main .car-wrap .icon.icon02.on {-webkit-animation: slide-up 0.4s ease-in-out; animation: slide-up 0.4s ease-in-out; }
+.layout--wrap.landing.optional .area.main .car-wrap .icon.icon03.on { -webkit-animation: slide-up 0.6s ease-in-out; animation: slide-up 0.6s ease-in-out; }
+.layout--wrap.landing.optional .area.main .car-wrap .icon.icon04.on { -webkit-animation: slide-up 0.8s ease-in-out; animation: slide-up 0.8s ease-in-out; }
+
+@-webkit-keyframes slide-up {
+    0% { -webkit-transform: translateY(5vw); opacity: 0; }
+    100% { -webkit-transform: translateY(0px); opacity: 1; }
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(5vw); opacity: 0; }
+    100% { transform: translateY(0px); opacity: 1; }
+}
+
+/* bg */
+.layout--wrap.landing.optional .area .bg-00 {
+    width: 100%;
+    height: 117vw;
+    position: relative;
+    z-index: -1;
+}
+
+
+/* 01. 중고차 장기렌터카란? */
+.layout--wrap.landing.optional .layout--container .area .contents {
+    width: 100%;
+    max-width: initial;
+    position: relative;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area01::before {
+    content: '';
+    width: 100%;
+    height: 55vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg,rgba(74,74,74,1), rgba(32,32,32,1));
+}
+
+/* car image wrap */
+/* 231019 수정 */
+.layout--wrap.landing.optional .layout--container .area.area01 .lotte-wrap {
+    height: 42vw;
+    position: absolute;
+    top: 32vw;
+    left: 15vw;
+    right: 20vw;
+    width: auto;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area01 .lotte-wrap::after {
+    content: '';
+    width: 50%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(../images/page/landing-optional-01-circle.png);
+    background-size: auto 42vw;
+    background-position: 0px 0px;
+    z-index: 1;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area01 .lotte-wrap::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    background: linear-gradient(45deg,#353535, #5D5D5D);
+}
+
+/* car */
+.layout--wrap.landing.optional .layout--container .area.area01 .lotte-wrap .car {
+    width: 65vw;
+    max-width: initial;
+    position: absolute;
+    bottom: 3vw;
+    left: -3vw;
+    z-index: 1;
+    /* animation: slide-right 0.2s linear; */
+}
+
+.layout--wrap.landing.optional .layout--container .area.area01 .lotte-wrap .car.on {
+    -webkit-animation: slide-right 0.3s linear;
+    animation: slide-right 0.33s linear;
+}
+
+@-webkit-keyframes slide-right {
+    0% { -webkit-transform: translateX(-5vw); opacity: 0; }
+    100% { -webkit-transform: translateX(0px); opacity: 1; }
+}
+
+@keyframes slide-right {
+    0% { transform: translateX(-5vw); opacity: 0; }
+    100% { transform: translateX(0px); opacity: 1; }
+}
+
+.layout--wrap.landing.optional .layout--container .area.area01 .lotte-wrap .bg-01 {
+    position: relative;
+    height: 42vw;
+    width: initial;
+    max-width: initial;
+}
+
+/* lotte mark */
+.layout--wrap.landing.optional .layout--container .area.area01 .lotte-wrap .lotte-mark {
+    width: 18vw;
+    position: absolute;
+    left: 2vw;
+    bottom: -3vw;
+    z-index: 2;
+}
+
+/* button */
+.layout--wrap.landing.optional .layout--container .area.area01 button {
+    position: relative;
+    margin-bottom: 30px;
+    height: 12vw;
+    line-height: 12vw;
+    -webkit-border-radius: 22px;
+    border-radius: 22px;
+    padding: 0 6vw;
+    font-size: 3.5vw;
+}
+
+
+/* 02. 이런 분들께 추천드려요! */
+.layout--wrap.landing.optional .layout--container .area.area02 .contents {  }
+
+/* blank */
+.layout--wrap.landing.optional .layout--container .area.area02 .blank-wrap {
+    max-width: 100%;
+    position: absolute;
+    top: 47vw;
+    left: 0;
+    right: 0;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area02 .blank-wrap .blank { width: 100%; max-width: initial; position: relative; height: auto; margin-top: -8px; opacity: 0; }
+.layout--wrap.landing.optional .layout--container .area.area02 .blank-wrap .blank.on { -webkit-animation: slide-up 0.2s linear; opacity: 1; animation-fill-mode:forwards; }
+
+
+/* banner */
+.layout--wrap.landing.optional .layout--container .area.area02 .banner-rent { width: 100%; font-size: 0; }
+.layout--wrap.landing.optional .layout--container .area.area02 .banner-rent { width: 100%; }
+
+
+/* 04. 자주 묻는 질문 */
+.layout--wrap.landing.optional .layout--container .area.area04  {
+    background-color: #07245F;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .contents {
+    width: 100%;
+    height: auto;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap {
+    width: 100%;
+    padding: 0 5vw 30vw;
+    position: relative;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq {
+    width: 100%;
+    text-align: left;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: #fff
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .bt-common-type1 {
+    margin-top: 60px;
+    height: 15vw;
+    line-height: 15vw;
+    padding: 0 6vw;
+    font-size: 4vw;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .tit {
+    font-size: 4vw;
+    font-weight: 700;
+    color: #000;
+    padding: 5.4vw 9vw 5.4vw 4.5vw;
+    cursor: pointer;
+    position: relative;
+    background-color: #DAE6FF;
+    letter-spacing: -0.1vw;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .tit::after {
+    content: "";
+    position: absolute;
+    right: 5vw;
+    top: 7vw;
+    display: inline-block;
+    width: 3vw;
+    height: 2vw;
+    background: url(../images/icon/ico-selectbox.svg) no-repeat 50% 50%;
+    background-size: 3vw;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .tit span { color: #DA291C; }
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt {
+    font-size: 3.5vw;
+    line-height: 5.6vw;
+    font-weight: 500;
+    color: #222;
+    padding: 0 4vw 6vw;
+    letter-spacing: -0.1vw;
+    display: none;
+}
+
+/* class on */
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq.on .tit { background-color: transparent; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq.on .tit::after { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq.on .txt { display: block; }
+
+/* txt */
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt li { /*margin-bottom: 30px;*/ letter-spacing: -0.15vw; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt li:last-child { margin-bottom: 0; }
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt li strong { font-weight: 700; word-break: keep-all; white-space: nowrap;}
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt .disc-wrap { display: flex; justify-content: flex-start; align-items: flex-start; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt .disc { list-style: disc; margin-left: 15px; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt .disc-wrap .disc strong {margin-right: 2vw; }
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt .ref { color: #999; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt .warn { color: #E60012; }
+
+/* table */
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq li.table-wrap {
+    min-width: 100%;
+    overflow-x: auto;
+    position: relative;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .table h4 {
+    font-weight: 700;
+    font-size: 4vw;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq li.table-wrap img.th { display: inline-block; width: auto; height: 100vw; position: sticky; left: 0; top: 0; z-index: 1; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq li.table-wrap img.td { display: inline-block; width: auto; height: 100vw; position: absolute; top: 0; }
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table,
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table th,
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table td {
+    /* border: 1px solid #CCD3E5; */
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr th,
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr td {
+    border-bottom: 1px solid #CCD3E5;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr th {
+    border-right: 1px solid #CCD3E5;
+    background-color: #E2E7F4;
+}
+
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table td u { font-weight: 700; }
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr th:last-child { border-right: none; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr th.blue { background-color: #AFD4FF; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr td.blue { background-color: rgba(175,212,255,0.3); color: #009DF5; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr th.purple { background-color: #C2AFF9; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr td.purple { background-color: rgba(194,175,249,0.3); color: #8218EC; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr td.none { color: #999; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table { /*min-width: 114vw;*/ border-top: 1px solid #030303; border-left: none; }
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table .col1 { width: 28vw; }
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr th,
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq table tr td {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    font-weight: 500;
+    padding: 2.8vw;
+    color: #000;
+    text-align: center;
+}
+
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt .disc.fix strong {
+    display: inline-block;
+    min-width: 200px; width: 200px;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt .disc.fix span {
+    display: inline-block;
+    min-width: 220px; width: 220px;
+}
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt .disc em { color: #E60012; }
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt .disc .blue { color: #3D72FE; font-weight: 700; }
+
+
+.layout--wrap.landing.optional .layout--container .area.area04 .faq-wrap .faq .txt li.ref {
+    color: #666;
+    border-top: 1px solid #CBCBCB;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 3.5vw;
+    line-height: 5.8vw;
+}

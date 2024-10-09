@@ -1,0 +1,3215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데렌터카</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" /><!-- 230330 sub.css추가 -->
+<link rel="stylesheet" href="css/sub.css" type="text/css" />
+<link rel="stylesheet" href="css/car-check-view.css" type="text/css" />
+<link rel="stylesheet" href="css/search-list.css" type="text/css" /><!-- for search-list style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/nayuda.js"></script> <!-- 230720 추가 (.floating-page-top 이벤트) -->
+<!-- 230412 : 360도뷰 cdn 추가 -->
+<script src="https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js"></script>
+<!-- //front UI js -->
+
+</head>
+<body>
+	<!-- layout--wrap// -->
+	<div class="layout--wrap"> <!-- 230801 클래스 추가 (가격문의 매물일 경우, 클래스 prc-none 추가) -->
+		<!-- 230412 #contents 추가 -->
+		<div id="contents">
+			<!-- layout--header// -->
+			<div class="layout--header">
+				<header>
+					<h2 class="page-title">129다4280</h2>
+					<button type="button" class= "ir bt-page-prev" onclick="history.back();">이전 페이지</button>
+					<div class="button-wrap">
+						<!-- <button type="button" class="bt-compare" onclick="ui.clsToggleFn(this, 'on')">비교</button> -->
+						<button type="button" class="bt-home" onclick="location.href='main.html'">홈</button> <!-- 230818 홈버튼 추가 -->
+						<button type="button" class="bt-share" onclick="ui.modalPopOpen(sharePop)">공유</button>
+					</div>
+					<!-- // 비교/공유 추가(위치이동) -->
+				</header>
+			</div>
+			<!-- //layout-header -->
+			
+			<!-- layout--container// -->
+			<div class="layout--container ctn-car-detail">  <!-- 230718 등록예정차량 상세페이지일 경우 .wt 추가 -->
+				<div class="detail-element">
+					<!-- detail-head// -->
+					<section class="detail-head">	
+
+						<!------------ 230412 : 01. 360도뷰 이미지 추가 ------------>
+						<div
+							id="viewer-360"
+							class="cloudimage-360"
+							data-folder="./images/dummy/"
+							data-image-list-x='[
+								"@detail-car-image2.jpg",
+								"@detail-car-image2_1.jpg",
+								"@detail-car-image2_2.jpg",
+								"@detail-car-image2_3.jpg",
+								"@detail-car-image2_4.jpg",
+								"@detail-car-image2_5.jpg",
+								"@detail-car-image2_6.jpg",
+								"@detail-car-image2_7.jpg"
+								]'
+							data-spin-reverse
+							data-speed="10"
+							data-autoplay
+							data-play-once
+							data-autoplay-reverse
+						>
+							<!-- 360도뷰 spin effect : 이미지 드래그시 삭제 -->
+							<div id="viewer-360-cover" class="cloudimage-360" data-amount-x="1"></div>
+
+							<!-- 360도뷰 버튼 추가 -->
+							<div class="btn-360view on" onclick="$('#viewer-360').hide();$('#img-slider').show();">
+								<img class="on" src="images/icon/btn-360view-on.png" alt="360도뷰버튼ON" />
+							</div>
+
+							<!-- 20장 전체보기 버튼 추가 -->
+							<div class="pagination-container on">
+								<p class="show-all" onclick="ui.modalPopOpen(seeAllPicPop);responsiveSwiper();">20장 전체보기</p>
+							</div>
+						</div>
+						
+						<script>
+							add360View('viewer-360');
+							add360View('viewer-360-cover');
+
+							function add360View(viewId) {
+								const new360View = document.getElementById(viewId);
+								new360View.classList.add("cloudimage-360");
+								window.CI360.add(viewId);
+							}
+						</script>
+						<!------------ // 01. 360도뷰 이미지 추가 ------------>
+
+						<!------------ 02. 이미지 스와이퍼 ------------>
+						<div class="car-image-slider swiper-container" id="img-slider" style="display:none;">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="images/dummy/@detail-car-image2.jpg" alt="차량대표이미지" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/dummy/@detail-car-image2_1.jpg" alt="차량대표이미지" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/dummy/@detail-car-image2_2.jpg" alt="차량대표이미지" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/dummy/@detail-car-image2_3.jpg" alt="차량대표이미지" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/dummy/@detail-car-image2_4.jpg" alt="차량대표이미지" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/dummy/@detail-car-image2_5.jpg" alt="차량대표이미지" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/dummy/@detail-car-image2_6.jpg" alt="차량대표이미지" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/dummy/@detail-car-image2_7.jpg" alt="차량대표이미지" />
+								</div>
+							</div>
+
+							<!-- 360도뷰 버튼 추가 -->
+							<div class="btn-360view" onclick="$('#viewer-360').show();$('#img-slider').hide();">
+								<img class="off" src="images/icon/btn-360view-off.png" alt="360도뷰버튼OFF" />
+							</div>
+
+							<!-- 전체보기 및 페이지네이션 추가 -->
+							<div class="pagination-container">
+								<div class="pagination-wrap">
+									<div class="swiper-pagination"></div>
+									<span onclick="ui.modalPopOpen(seeAllPicPop);responsiveSwiper();">전체보기</span>
+								</div>
+							</div>
+
+						</div>
+						<script>
+							//detail_slider
+							var detailSwiper = new Swiper('.car-image-slider', {
+								slidesPerView: 1,
+								loop: true,
+								speed: 400,
+								navigation: {
+									nextEl: '.swiper-button-next',
+									prevEl: '.swiper-button-prev',
+								},
+								disableOnInteraction: true,
+								observer: true, 
+								observeParents: true,
+								spaceBetween: 0,   //슬라이드 간격
+								pagination: {                       
+									el: '.swiper-pagination',
+									type: 'fraction',
+								},
+							});
+						</script>
+						<!------------ // 02. 이미지 스와이퍼 ------------>
+
+						<!--------- 230718 등록예정차량 이미지영역 추가 --------->
+						<div class="img-wt">
+							<img src="images/cars/@car-wt-big.png" alt="그랜저">
+						</div>
+						<!------------ // 230718 등록예정차량 이미지영역 ------------>
+
+					</section>
+					<!-- //detail-head -->
+
+					<!-- 230412 : 태그영역 추가 -->
+					<div class="tag-container">
+						<span>#1인소유</span>
+						<span>#비흡연</span>
+						<span>#완전무사고</span>
+						<span>#정기관리차</span>
+						<span>#신차급</span>
+						<span>#풀옵션</span>
+					</div>
+					<!-- // 태그영역 추가 -->
+
+
+					<!-- detail-body// -->
+					<section class="detail-body">
+						<div class="car-main-info">
+							<div class="wrap">  <!-- 230717 div 추가 -->
+								<div class="badge">
+									<!-- 230717 뱃지 수정 -->
+									<span class="ele-badge badge-type1">인증차</span>
+									<span class="badge-lotte-cert">진단차</span>
+									<span class="ele-badge badge-type3">관리차</span>
+								</div>
+								<span class="hits">342명</span> <!-- 230717 위치이동 -->
+							</div>
+							
+							<div class="car-model">
+								<h2>
+									제네시스 G80 (G) 3.3 프리미엄 럭셔리
+								</h2>
+							</div>
+							<div class="car-price">
+								<div class="price-wrap">
+									<span class="prc">월 <em>635,000</em>원</span>
+									<span class="car">신차가 30,400,000원</span> <!-- 230717 추가 -->
+								</div>
+							</div>
+							<span class="option">24개월 / 선납금 10%</span>
+							
+							<p class="car-price none"><span class="prc">가격문의</span></p> <!-- 230801 [가격문의] 추가 -->
+						</div>
+
+						<div class="car-detail-info">
+							<!-- 230412 라이브체크 배너영역 추가 -->
+							<!-- 230801 수정 -->
+							<div class="banner-container area">
+								<div class="banner-wrap">
+									<div class="img-wrap swiper-container">
+										<div class="swiper-wrapper">
+											<!-- 230817 확인요청 :: a 태그 위치 및 "자세히보기" 텍스트 삭제 -->
+											<div class="swiper-slide">
+												<a href="#"> <!-- 230810 a태그 추가 -->
+													<img src="images/elements/banner_sm01.png" alt="중고차 장기렌터카" />
+													<!-- <button type="button" onclick="">자세히보기</button> --> <!-- 230810 a태그 추가 -->
+												</a>
+											</div>
+											<div class="swiper-slide">
+												<a href="#"> <!-- 230810 a태그 추가 -->
+													<img src="images/elements/banner_sm02.png" alt="인증차·진단차·관리차" />
+													<!-- <button type="button" onclick="">자세히보기</button> --> <!-- 230810 a태그 추가 -->
+												</a>
+											</div>
+											<div class="swiper-slide">
+												<a href="#"> <!-- 230810 a태그 추가 -->
+													<img src="images/elements/banner_sm03.png" alt="방문정비 서비스" />
+													<!-- <button type="button" onclick="">자세히보기</button> -->
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<script>
+									// 230801 상세페이지 배너 슬라이더
+									let bannerSwiper = new Swiper('.img-wrap', {
+										// slidesPerView: 1,
+										slidesPerView: 'auto',
+										direction:"horizontal",
+										loop: true,
+										speed: 400,
+										// disableOnInteraction: true,
+										observer: true, 
+										observeParents: true,
+										autoplay: {
+											enabled: true,
+											delay: 3000,
+										},
+										spaceBetween: -10,   //슬라이드 간격
+									});
+								</script>
+							</div>
+
+							<!--// 라이브체크 배너영역 추가 -->
+
+							<!-- 230412 : 기본정보 area 클래스 추가-->
+							<div class="car-info-detail area">
+								<h3 class="s-title">기본정보</h3>
+								<!-- 230621 매물등록일 추가: 위치이동 -->
+								<p class="register-date">매물등록일 : 2023.04.23</p>
+								<!-- <p class="cert-num">제시번호 : 21-경기-000001</p> -->
+								<ul>
+									<li>
+										<span class="t">차량번호</span>
+										<span class="c">123가1234</span>
+									</li>
+									<li>
+										<span class="t">주행거리</span>
+										<span class="c">132,588km</span>
+									</li>
+									<li>
+										<span class="t">차종</span>
+										<span class="c">중형</span>
+									</li>
+									<li>
+										<span class="t">배기량</span>
+										<span class="c">1,955cc</span>
+									</li>
+									<li>
+										<span class="t">연식</span>
+										<span class="c">19년11월</span>
+									</li>
+									<li>
+										<span class="t">연료</span>
+										<span class="c">디젤</span>
+									</li>
+									<li>
+										<span class="t">색상</span>
+										<span class="c">흰색</span>
+									</li>
+									<li>
+										<span class="t">변속기</span>
+										<span class="c">오토</span>
+									</li>
+									<li>
+										<span class="t">인승</span>
+										<span class="c">7인승</span>
+									</li>
+									<li>
+										<span class="t">구동방식</span>
+										<span class="c">전륜구동</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="car-options-detail area"><!-- 221111 : 옵션정보 영역 순서 이동 -->
+								<h3 class="s-title">옵션정보</h3>
+								<div class="options">
+									<ul id="detailOntionMin">
+										<!-- 230717 옵션수정 -->
+										<li class="opt-navigation on"><span></span><p>네비게이션</p></li>
+										<li class="opt-hipass"><span></span><p>하이패스</p></li>
+										<li class="opt-rearcamera"><span></span><p>후방카메라</p></li>
+										<li class="opt-heatedseat on"><span></span><p>열선시트<br/>(운전/동승)</p></li>
+										<li class="opt-airseat on"><span></span><p>통풍시트<br/>(운전석)</p></li>
+										<li class="opt-sunroof"><span></span><p>썬루프</p></li>
+										<li class="opt-SCC on"><span></span><p>스마트<br>크루즈 컨트롤</p></li>
+										<li class="opt-hud"><span></span><p>헤드업<br>디스플레이</p></li>
+										<li class="opt-BSCW"><span></span><p>후측방<br>경보시스템</p></li>
+										<li><button type="button" class="bt-option-all" onclick="ui.modalPopOpen(optionDetailPop);">옵션<br>전체보기</button></li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- 230412 : 정기관리차량 추가 -->
+							<div class="car-checkup area">
+								<!-- 230628 텍스트 수정 -->
+								<h3 class="s-title">이 차량은 출고 이후<br/>롯데렌터카에서 <em><span>정기관리한 차량</span></em> 입니다.</h3>
+								<div class="checkup-box-wrap">
+									<ul class="checkup-box">
+										<!-- 230717 정보 수정 -->
+										<li>
+											<img src="images/icon/ico-checkup-1.png" alt="엔진오일" />
+											<h4 class="t-label">엔진오일</h4>
+											<p class="t-val"><strong>11</strong>회</p>
+										</li>
+										<!-- 230502 요약정보 변경 -->
+										<li>
+											<img src="images/icon/ico-checkup-2.png" alt="타이어" />
+											<h4 class="t-label">타이어</h4>
+											<p class="t-val"><strong>10</strong>회</p>
+										</li>
+										<li>
+											<img src="images/icon/ico-checkup-3.png" alt="배터리" />
+											<h4 class="t-label">배터리</h4>
+											<p class="t-val"><strong>1</strong>회</p>
+										</li>
+										<li>
+											<img src="images/icon/ico-checkup-4.png" alt="실내클리너" />
+											<h4 class="t-label">실내클리너</h4>
+											<p class="t-val"><strong>3</strong>회</p>
+										</li>
+									</ul>
+									<!-- 230803 더보기 버튼 hidden :: 위치수정 -->
+									<!-- <button type="button" class="bt-common-card" onclick="ui.modalPopOpen(carRepairPop)"><span>자세히보기</span></button> -->
+								</div>
+
+								<!--  231218 더보기 버튼 클래스명 수정 ("bt-common-rnd") -->
+								<button type="button" class="bt-common-rnd bt-l bt-full" onclick="ui.modalPopOpen(carRepairPop);"><span>관리이력 더 보기</span></button>
+							</div>
+							<!-- // 정기관리차량 -->
+
+							<!-- 230412 : 롯데인증검사 추가 -->
+							<div class="car-lotte-cert area" style="display: none;">
+								<h3 class="s-title">
+									롯데인증검사
+									<div class="common-layer-group posTop">
+										<button type="button" class="ir common-layer-bt">툴팁보기</button>
+										<div class="common-layer-tooptip custom-tooltip">
+											<h4>롯데인증검사란?</h4>
+											<p>
+												[롯데인증검사]는 법적성능점검을 포함 총 195항목을 롯데오토마켓이 직접 진단하고 인증한 매물을 말합니다.
+											</p>
+										</div>
+									</div>
+								</h3>
+								<ol class="list-contents">
+									<li>
+										<div>
+											<h4 class="t-label">외장</h4>
+											<p class="t-val none">양호</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<h4 class="t-label">내장</h4>
+											<p class="t-val"><Strong>1</Strong><span>건</span></p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<h4 class="t-label">엔진/미션</h4>
+											<p class="t-val none">양호</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<h4 class="t-label">제동/조향</h4>
+											<p class="t-val none">양호</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<h4 class="t-label">등화장치</h4>
+											<p class="t-val none">양호</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<span class="t-label">안전/편의</span>
+											<span class="t-val none">양호</span>
+										</div>
+									</li>
+								</ol>
+								<button type="button" class="bt-common-type8 bt-l bt-full" onclick="ui.modalPopOpen(lotteCertPop);"><span>195항목 점검결과 보기</span></button>
+							</div>
+							<!-- // 롯데인증검사 -->
+
+							<!-- 230412 : 성능점검 추가 -->
+							<div class="car-history area">
+								<div class="s-title-wrap">
+									<!-- 230628 텍스트 수정 -->
+									<h3 class="s-title">
+										성능점검
+										<div class="common-layer-group posTop">
+											<button type="button" class="ir common-layer-bt">툴팁보기</button>
+											<div class="common-layer-tooptip custom-tooltip">
+												<h4>성능점검이란?</h4> <!-- 230726 텍스트 수정 -->
+												<p>
+													자동차의 상태와 성능을 조사한 69개 체크항목에 대해 점검기준에 따른 상황을 점검한 기록부이다. 간단히 말해 중고차의 가격을 결정하는데 필요한 자동차의 주요 사항들을 기록한 기록부라 할 수 있다. 
+												</p>
+											</div>
+										</div>
+									</h3>
+									<!-- 230803 더보기 버튼 hidden :: 위치수정 -->
+									<!-- <a href="javascript:;" class="bt" onclick="ui.modalPopOpen(carCheckViewPop)"><span>더보기+</span></a> -->
+								</div>
+
+								<ol class="list-contents">
+									<li>
+										<div>
+											<span class="t-label">단순수리</span>
+											<span class="t-val none"><strong>없음</strong></span>
+										</div>
+									</li>
+									<li>
+										<div>
+											<span class="t-label">사고이력</span>
+											<span class="t-val"><strong>1</strong>건</span>
+										</div>
+									</li>
+								</ol>
+
+								<!-- 230817 추가 :: 무사고일경우, div.stamp 추가 -->
+								<p class="stamp">법정성능점검 결과<br/>단순수리와 사고이력이 없는<u>무사고 차량</u>입니다.</p>
+								<div class="car-check-area accident-free"></div> <!-- case : 무사고 차량인 경우 accident-free class명이 붙음 -->
+
+								<div class="car-check-area"> <!-- case : 판금, 교환, 용접, 부식 등 이력이 있는 차량인 경우 -->
+									<var class="i-mark type1" style="left:81px;top:25px;"></var>
+									<var class="i-mark type2" style="left:81px;top:65px;"></var>
+									<var class="i-mark type3" style="left:81px;top:168px;"></var>
+									<var class="i-mark type4" style="left:81px;top:243px;"></var>
+									<var class="i-mark type1" style="left:267px;top:46px;"></var>
+									<var class="i-mark type2" style="left:235px;top:60px;"></var>
+									<var class="i-mark type3" style="left:235px;top:73px;"></var>
+									<var class="i-mark type4" style="left:246px;top:66px;"></var>
+									<var class="i-mark type1" style="left:298px;top:60px;"></var>
+									<var class="i-mark type2" style="left:298px;top:73px;"></var>
+									<var class="i-mark type3" style="left:288px;top:66px;"></var>
+									<var class="i-mark type4" style="left:288px;top:66px;"></var>
+									<var class="i-mark type1" style="left:267px;top:81px;"></var>
+									<var class="i-mark type2" style="left:267px;top:91px;"></var>
+									<var class="i-mark type3" style="left:267px;top:162px;"></var>
+									<var class="i-mark type4" style="left:267px;top:192px;"></var>
+									<var class="i-mark type1" style="left:267px;top:215px;"></var>
+									<var class="i-mark type2" style="left:267px;top:232px;"></var>
+									<var class="i-mark type3" style="left:250px;top:216px;"></var>
+									<var class="i-mark type4" style="left:284px;top:216px;"></var>
+									<var class="i-mark type1" style="left:237px;top:214px;"></var>
+									<var class="i-mark type2" style="left:297px;top:214px;"></var>
+								</div>
+								<div class="caption">
+									<span><var class="i-mark type1"></var>판금<em>없음</em></e></span>
+									<span><var class="i-mark type2"></var>교환<em>없음</em></span>
+									<span><var class="i-mark type3"></var>용접<em>없음</em></span>
+									<span><var class="i-mark type4"></var>부식<em>없음</em></span>
+								</div>
+
+								<!-- 230803 더보기 버튼 위치수정 & 클래스명 수정 -->
+								<button type="button" class="bt-common-type8 bt-l bt-full" onclick="ui.modalPopOpen(carCheckViewPop);"><span>성능점검 더 보기</span></button>
+							</div>
+							<!-- // 성능점검 추가 -->
+
+							<!-- 230412 : 보험이력조회 추가 -->
+							<div class="car-insurance area">
+								<div class="s-title-wrap">
+									<h3 class="s-title">
+										보험이력조회
+										<div class="common-layer-group posTop">
+											<button type="button" class="ir common-layer-bt">툴팁보기</button>
+											<div class="common-layer-tooptip custom-tooltip">
+												<h4>보험이력조회란?</h4> <!-- 230726 텍스트 수정 -->
+												<p>
+													보험개발원에서 제공하는 보험사 기록 및 사고이력 정보를 통해, 카테고리별 차량 히스토리를 확인할 수 있습니다. 
+												</p>
+											</div>
+										</div>
+									</h3>
+									<!-- 230803 더보기 버튼 hidden :: 위치수정 -->
+									<!-- <a href="javascript:;" class="bt"  onclick="ui.modalPopOpen(carHistoryPop);"><span>더보기+</span></a> -->
+								</div>
+
+								<div class="isr-box">
+									<ul>
+										<li>
+											<img src="images/icon/ico-insurance-1.png" alt="내차피해 이미지" />
+											<h4 class="t-label">내차피해</h4>
+											<p class="t-val"><strong>1</strong><span>회</span></p>
+										</li>
+										<li>
+											<img src="images/icon/ico-insurance-2.png" alt="상대차피해 이미지" />
+											<h4 class="t-label">상대차 피해</h4>
+											<p class="t-val">없음</p>
+										</li>
+										<li>
+											<img src="images/icon/ico-insurance-3.png" alt="침수보험사고 이미지" />
+											<h4 class="t-label">침수 보험사고</h4>
+											<p class="t-val">없음</p>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<img src="images/icon/ico-insurance-4.png" alt="소유자변경 이미지" />
+											<h4 class="t-label">소유자 변경</h4>
+											<p class="t-val"><strong>2</strong><span>회</span></p>
+										</li>
+										<li>
+											<img src="images/icon/ico-insurance-5.png" alt="차량번호변경 이미지" />
+											<h4 class="t-label">차량번호 변경</h4>
+											<p class="t-val">있음</p>
+										</li>
+										<li>
+											<img src="images/icon/ico-insurance-6.png" alt="특수용도이력 이미지" />
+											<h4 class="t-label">특수 용도 이력</h4>
+											<p  class="t-val">있음</p>
+										</li>
+									</ul>
+								</div>
+								<p class="txt-noti">※ 자동차보험 사고기록이 없었다고 해서 반드시 <strong>무사고</strong>라고 할 수는 없습니다.</p>
+
+								<!-- 230803 더보기 버튼 위치수정 & 클래스명 수정 -->
+								<button type="button" class="bt-common-type8 bt-l bt-full" onclick="ui.modalPopOpen(carHistoryPop);"><span>보험이력 더 보기</span></button>
+							</div>
+							<!--// 보험이력조회 -->
+
+							<!-- 230623 혜택추가 -->
+							<div class="benefits-container">
+								<img src="images/elements/img-benefits.png" alt="구매혜택 이미지">
+							</div>
+
+							<!-- 판매자정보 -->
+							<div class="car-seller area">
+								<div class="seller-profile">
+									<div class="pic"><img src="images/common/logo_dynamic.png" alt="롯데렌터카 로고"></div>
+									<div class="info">
+										<!--  231005 수정 (매니저 배정이 없는 경우 대비, 지점명 먼저 노출) -->
+										<!-- <p class="name"><strong>강동규 대리</strong><a href="seller.html" class="shop">중고차영업1지점</a></p> --> <!-- 230914 수정(+ 지점명 p태그 -> a태그로 수정) -->
+										<p class="name">
+											<a href="seller.html" class="shop"><strong>중고차영업1지점</strong>강동규 대리</a>
+										</p>
+										
+										<p class="car">판매차량 <strong>1,244대</strong></p> <!-- 230914 수정 -->
+										<p class="car">등록예정 <strong>14대</strong></p> <!-- 230914 추가 -->
+										<!-- 230914 버튼 위치 이동 -->
+										<!--
+											<div class="btns">
+												<button type="button" class="bt-common-type5 bt-full bt-tel">0505-1258-2515</button>
+											</div>
+										-->
+									</div>
+								</div>
+								<!-- 230914 버튼 위치 이동 -->
+								<div class="btns">
+									<button type="button" class="bt-common-type3 bt-full bt-tel">031-322-8000</button> <!-- 230914 버튼 타입 수정 -->
+								</div>
+
+								<div class="seller-msg"><!-- case : class="view" 추가 시 설명영역 전체 노출 -->
+									<div class="inner">
+										▶▷선납금 10% 선택 시<br/>
+											12개월 : 495,834 원 / 24개월 : 627,917 원<br/><br/>
+
+											▶▷계약주요내용<br/>
+											계약기	간 : 24개월<br/>
+											담보율 : 차량가 10% (보증금/선납금 선택가능)<br/>
+											※신용에 따라 필요한 담보 조건 상이<br/><br/>
+
+											면책금:변동<br/>
+											약정주행거리 : 주행거리 무제한 <br/>
+											ㄴ계약기간 내타이어 4본 교체<br/>
+											ㄴ주기별 소모품교체<br/><br/>
+
+											▶▷보험정보<br/>
+											운전연령 : 만 26세<br/>
+											운전범위 : 개인: 표준(직계가족) / 법인: 임직원특약보험<br/>
+											대인보상 : 무제한<br/>
+											대물보상:1억원<br/>
+											자손보상 : 1억원<br/>
+											무보험차 : 2억원<br/>
+											※ 운전 연령 만 21세 / 운전 범위 누구나로 변경 시 월대여료 인상
+									</div>
+									<button type="button" class="bt-view-toggle" onclick="$('.seller-msg').toggleClass('view');$(this).toggleClass('view')">차량설명 전체보기</button>
+								</div>
+								<!-- 230502 신고하기 태그 위치이동 -->
+								<button type="button" class="bt-report" onclick="ui.modalPopOpen(reportPop);">허위매물 신고하기</button>
+							</div>
+							<!-- // 판매자정보 -->
+
+							<!-- 230412 유사한차량 추가 -->
+							<!-- list view type : vertical -->
+							<div class="list-content area">
+								<h3 class="s-title">유사한 차량</h3>
+								<ul class="list-type-vertical">
+									<!-- loop// -->
+									<li class="list-item">
+										<div class="list-thumb">
+											<a href="#">
+												<img src="images/dummy/@detail-car-image3.jpg" alt="차량대표이미지" />
+											</a>
+										</div>
+										<div class="list-detail">
+											<div class="badge">
+												<!-- 230717 뱃지 수정 -->
+												<span class="ele-badge badge-type1">인증차</span>
+												<span class="badge-lotte-cert">진단차</span>
+												<span class="ele-badge badge-type3">관리차</span>
+											</div>
+											<div class="list-title">
+												<a href="javascript:;" class="link-detail-view" >기아 스포티지 4세대 디젤 1.7 2WD 노블레스</a>
+											</div>
+											<div class="list-option">
+												<span class="year">19/11(19년형)</span>
+												<span class="dstc">32,588km</span>
+												<span class="fuel">가솔린</span>
+											</div>
+											<div class="list-price">
+												<div class="price">
+													<p class="prc">월 <em>635,000</em>원</p> <!-- 230717 태그(span->p) 수정 -->
+													<!-- 230720 수정 (선납금 노출X) -->
+													<span class="period">/ 24개월</span>
+													<!-- <span>24개월 / 선납금 10%</span> -->
+												</div>
+											</div>
+										</div>
+									</li>
+									<!-- //loop -->
+									<li class="list-item">
+										<div class="list-thumb">
+											<a href="#">
+												<img src="images/dummy/@detail-car-image4.jpg" alt="차량대표이미지" />
+											</a>
+										</div>
+										<div class="list-detail">
+											<div class="badge">
+													<!-- 230717 뱃지 수정 -->
+													<span class="badge-lotte-cert">진단차</span>
+													<span class="ele-badge badge-type3">관리차</span>
+											</div>
+											<div class="list-title">
+												<a href="javascript:;" class="link-detail-view">현대 그랜저 IG  하이브리드 익스클루시브 스페셜</a>
+											</div>
+											<div class="list-option">
+												<span class="year">19/11(19년형)</span>
+												<span class="dstc">32,588km</span>
+												<span class="fuel">하이브리드</span>
+											</div>
+											<div class="list-price">
+												<div class="price">
+													<p class="prc">월 <em>635,000</em>원</p> <!-- 230717 태그(span->p) 수정 -->
+													<span class="period">/ 24개월</span>
+													<!-- <span>24개월 / 선납금 10%</span> -->
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<!-- //detail-body -->
+
+					<div class="psc-btn-group bot-fixed fold" id="fixed-psc-group"> <!-- 클래스 추가 (확장버튼 클릭시, .fold 추가) -->
+						<!--  230831 scrollTop 버튼 위치 수정 -->
+						<div class="floating-page-top">
+							<button type="button" class="ir" onclick="nayuda.scrollTo(0)">TOP</button>
+						</div>
+					
+						<!-- 230621 가격정보 영역 추가 -->
+						<button class="btn_toggle" onclick="$('#fixed-psc-group').toggleClass('fold')">토글버튼</button>
+						<div class="info-wrap">
+							<!-- 기본형 -->
+							<div class="min-container">
+								<p class="blank">예상 견적 계산하기</p>
+								<p>
+									<!-- <span class="type">인수옵션형</span> --> <!-- 230717 인수옵션형 hidden -->
+									<span class="period"><em>24개월</em> / <em>선납금 10%</em></span>
+								</p>
+								<span class="prc">월 <em>635,000</em>원</span>
+							</div>
+
+							<!-- 확장형 -->
+							<div class="max-container">
+								<!-- 230619 탭 추가 :: 현재 반납형만 있으므로 탭 hidden, 추후 인수옵션형 추가시 참고바랍니다.-->
+								<div class="calc_tab">
+									<!-- Contents -->
+									<div class="tab-content-wrap">
+										<!-- 반납형 -->
+										<div id="tab01" class="tab-content active">
+											<div class="checkbox-container">
+												<div class="checkbox-wrap">
+													<h3 class="s-title">계약기간</h3>
+													<form>
+														<div class="check-item">
+															<input type="radio" name="r_period" value="12" id="r_period_12">
+															<label for="r_period_12" class="custom-radio-button">
+																<h4>12개월</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="r_period" value="24" id="r_period_24" checked>
+															<label for="r_period_24" class="custom-radio-button">
+																<h4>24개월</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="r_period" value="36" id="r_period_36" disabled>
+															<label for="r_period_36" class="custom-radio-button">
+																<h4>36개월</h4>
+															</label>
+														</div>
+													</form>
+												</div>
+												<div class="checkbox-wrap">
+													<div class="s-title-wrap">
+														<h3 class="s-title">
+															약정 주행거리
+															<div class="common-layer-group posTop">
+																<!-- 231123 툴팁보기 버튼 :: onclick 이벤트 추가 -->
+																<button type="button" class="ir common-layer-bt" onclick="ui.modalPopOpen(distanceTooltipPop);">툴팁보기</button>
+																<div class="common-layer-tooptip custom-tooltip" style="min-width: 90vw; display: none;"> <!-- 231128 수정 display: none 추가 -->
+																	<p>
+																		계약 종료 시 약정된 주행거리를 초과한 경우 초과운행부담금을 정산하여야 합니다.<br/>
+																		(국산차 100원/km , 수입차 200원/km, 테슬라 450원/km)<br/>
+																		계약 이후 약정주행거리는 변경 불가합니다.<br/>
+																		만기 후 인수시, 약정 주행거리는 무관합니다.
+																	</p>
+																</div>
+															</div>
+														</h3>
+														<!-- <span class="txt">반납형, 제한없음</span> -->
+													</div>
+													<form>
+														<div class="check-item">
+															<input type="radio" name="r_distance" value="1" id="r_distance_1" disabled>
+															<label for="r_distance_1" class="custom-radio-button">
+																<h4>~1만km</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="r_distance" value="2" id="r_distance_2" disabled>
+															<label for="r_distance_2" class="custom-radio-button">
+																<h4>~2만km</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="r_distance" value="3" id="r_distance_3" checked>
+															<label for="r_distance_3" class="custom-radio-button">
+																<h4>~3만km</h4>
+															</label>
+														</div>
+													</form>
+												</div>
+												<div class="checkbox-wrap">
+													<h3 class="s-title">
+														<input type="checkbox" name="r_advanceChk" id="r_chkAdvance" checked />
+														<label for="r_chkAdvance">
+															선납금
+														</label>
+														<div class="common-layer-group posTop">
+															<!-- 231123 툴팁보기 버튼 :: onclick 이벤트 추가 -->
+															<button type="button" class="ir common-layer-bt" onclick="ui.modalPopOpen(advanceTooltipPop);">툴팁보기</button>
+															<div class="common-layer-tooptip custom-tooltip" style="min-width: 90vw; display: none"> <!-- 231128 수정 display: none 추가 -->
+																<p>월 대여료 중 일부를 미리 납부하는 방식으로 계약 종료 시 돌려 받을 수 없는 보증조건입니다.</p>
+															</div>
+														</div>
+													</h3>
+													<form id="formAdvance">
+														<div class="check-item">
+															<input type="radio" name="r_advance" value="10" id="r_advance_10" checked>
+															<label for="r_advance_10" class="custom-radio-button">
+																<h4>10%</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="r_advance" value="20" id="r_advance_20">
+															<label for="r_advance_20" class="custom-radio-button">
+																<h4>20%</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="r_advance" value="30" id="r_advance_30">
+															<label for="r_advance_30" class="custom-radio-button">
+																<h4>30%</h4>
+															</label>
+														</div>
+													</form>
+												</div>
+												<div class="checkbox-wrap">
+													<h3 class="s-title">
+														<input type="checkbox" name="r_depositChk" id="r_chkDeposit" checked />
+														<label for="r_chkDeposit">
+															보증금
+														</label>
+														<div class="common-layer-group posTop">
+															<!-- 231123 툴팁보기 버튼 :: onclick 이벤트 추가 -->
+															<button type="button" class="ir common-layer-bt" onclick="ui.modalPopOpen(depositTooltipPop);">툴팁보기</button>
+															<div class="common-layer-tooptip custom-tooltip" style="min-width: 90vw;display: none;"> <!-- 231128 수정 display: none 추가 -->
+																<p>
+																	계약기간 만료 시 납부한 보증금 전액을 돌려 받으실 수 있습니다.
+																</p>
+															</div>
+														</div>
+													</h3>
+													<form id="formDeposit">
+														<div class="check-item">
+															<input type="radio" name="r_deposit" value="10" id="r_deposit_10" checked>
+															<label for="r_deposit_10" class="custom-radio-button">
+																<h4>10%</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="r_deposit" value="20" id="r_deposit_20">
+															<label for="r_deposit_20" class="custom-radio-button">
+																<h4>20%</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="r_deposit" value="30" id="r_deposit_30">
+															<label for="r_deposit_30" class="custom-radio-button">
+																<h4>30%</h4>
+															</label>
+														</div>
+													</form>
+												</div>
+
+												<!-- 231020 정비상품 추가 // -->
+												<div class="checkbox-wrap two">
+													<div class="s-title-wrap">
+														<h3 class="s-title">
+															정비상품
+															<div class="common-layer-group posTop">
+																<!-- 231123 툴팁보기 버튼 :: onclick 이벤트 추가 -->
+																<button type="button" class="ir common-layer-bt" onclick="ui.modalPopOpen(productTooltipPop);">툴팁보기</button>
+																<div class="common-layer-tooptip custom-tooltip" style="min-width: 90vw; display: none;"></div>
+															</div>
+														</h3>
+													</div>
+													<form>
+														<div class="check-item">
+															<input type="radio" name="r_product" value="0" id="r_product_p" checked>
+															<label for="r_product_p" class="custom-radio-button">
+																<h4>실속정비</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="r_product" value="1" id="r_product_a">
+															<label for="r_product_a" class="custom-radio-button">
+																<h4>고급형</h4>
+															</label>
+														</div>
+													</form>
+												</div>
+												<!-- // 231020 정비상품 추가 -->
+
+											</div>
+											
+											<h4 class="vat-txt">(VAT 포함)</h4> <!-- 230925 추가 -->
+											<ul class="psc-wrap">
+												<!-- <h4>(VAT 포함)</h4> -->  <!-- 230925 상단으로 위치 이동 -->
+												<li class="box" id="o_box">
+													<div id="o_advance_result" class="">
+														<span class="tit">선납금 <var>(10%)</var></span>
+														<span class="val"><var id="o_advance_total">4,000,000</var>원</span>
+													</div>
+												</li>
+												<li class="box" id="o_box"> <!-- 230925 보증금 추가 -->
+													<div id="o_advance_result" class="">
+														<span class="tit">보증금 <var>(10%)</var></span>
+														<span class="val"><var id="o_advance_total">4,000,000</var>원</span>
+													</div>
+												</li>
+												<li class="total_wrap">
+													<div class="prc_total">
+														<span class="tit">월 대여료</span>
+														<span class="val">월 <var id="o_result">685,000</var>원</span>
+													</div>
+												</li>
+												<!-- 230925 인수가 추가 -->
+												<button class="acq-area" onclick="$(this).addClass('active')">
+													<span class="info-txt">계약만료 후 차량 인수 희망 시,</span>
+													<p class="txt">인수가 확인하기</p>
+													<p class="val"><var>14,850,000</var>원</p>
+												</button>
+											</ul>
+										</div>
+										<!-- // 반납형 -->
+
+										<!-- 인수형 -->
+										<div id="tab02" class="tab-content">
+											<div class="checkbox-container">
+												<div class="checkbox-wrap">
+													<h3 class="s-title">계약기간</h3>
+													<form>
+														<div class="check-item">
+															<input type="radio" name="o_period" value="12" id="o_period_12">
+															<label for="o_period_12" class="custom-radio-button">
+																<h4>12개월</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="o_period" value="24" id="o_period_24" checked>
+															<label for="o_period_24" class="custom-radio-button">
+																<h4>24개월</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="o_period" value="36" id="o_period_36">
+															<label for="o_period_36" class="custom-radio-button">
+																<h4>36개월</h4>
+															</label>
+														</div>
+													</form>
+												</div>
+												<div class="checkbox-wrap">
+													<div class="s-title-wrap">
+														<h3 class="s-title">
+															약정 주행거리
+															<div class="common-layer-group posTop">
+																<button type="button" class="ir common-layer-bt">툴팁보기</button>
+																<div class="common-layer-tooptip custom-tooltip">
+																	<p>
+																		계약 종료 시 약정된 주행거리를 초과한 경우 초과운행부담금을 정산하여야 합니다.<br/>
+																		(국산차 100원/km , 수입차 200원/km, 테슬라 450원/km)<br/>
+																		계약 이후 약정주행거리는 변경 불가합니다.<br/>
+																		만기 후 인수시, 약정 주행거리는 무관합니다.
+																	</p>
+																</div>
+															</div>
+														</h3>
+													</div>
+													<form>
+														<div class="check-item">
+															<input type="radio" name="o_distance" value="1" id="o_distance_1">
+															<label for="o_distance_1" class="custom-radio-button">
+																<h4>~1만km</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="o_distance" value="2" id="o_distance_2">
+															<label for="o_distance_2" class="custom-radio-button">
+																<h4>~2만km</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="o_distance" value="3" id="o_distance_3" checked>
+															<label for="o_distance_3" class="custom-radio-button">
+																<h4>~3만km</h4>
+															</label>
+														</div>
+													</form>
+												</div>
+												<div class="checkbox-wrap">
+													<h3 class="s-title">
+														<input type="checkbox" name="o_advanceChk" id="o_chkAdvance" checked />
+														<label for="o_chkAdvance">
+															선납금
+														</label>
+														<div class="common-layer-group posTop">
+															<button type="button" class="ir common-layer-bt">툴팁보기</button>													
+															<div class="common-layer-tooptip custom-tooltip">
+																<p>
+																	월 대여료 중 일부를 미리 납부하는 방식으로 계약 종료 시 돌려 받을 수 없는 보증조건입니다.
+																</p>
+															</div>
+														</div>
+													</h3>
+													<form id="formAdvance">
+														<div class="check-item">
+															<input type="radio" name="o_advance" value="10" id="o_advance_10" checked>
+															<label for="o_advance_10" class="custom-radio-button">
+																<h4>10%</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="o_advance" value="20" id="o_advance_20">
+															<label for="o_advance_20" class="custom-radio-button">
+																<h4>20%</h4>
+															</label>
+														</div>
+														<div class="check-item">
+															<input type="radio" name="o_advance" value="30" id="o_advance_30">
+															<label for="o_advance_30" class="custom-radio-button">
+																<h4>30%</h4>
+															</label>
+														</div>
+													</form>
+												</div>
+											</div>
+											
+											<ul class="psc-wrap">
+												<h4>(VAT 포함)</h4>
+												<li class="box" id="o_box">
+													<div id="o_advance_result" class="">
+														<span class="tit">선납금 (10%)</span>
+														<span class="val"><var id="o_advance_total">4,000,000</var>원</span>
+													</div>
+												</li>
+												<li class="total_wrap">
+													<div id="acq_result" class="prc_acq">
+														<span class="tit">인수가</span>
+														<span class="val"><var>40,000,000</var>원</span>
+													</div>
+													<div class="prc_total">
+														<span class="tit">월 대여료</span>
+														<span class="val">월 <var id="o_result">685,000</var>원</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!-- //인수형 -->
+									</div>
+								</div>
+
+								<!-- 231110 텍스트 한줄씩 span 태그로 묶기 // -->
+								<p class="tips-box">
+									<span>· 보증·선납금을 제외한 정비, 보험, 세금 등이 포함된 금액입니다.</span>
+									<span>· 개인별 신용조건에 따라 담보 및 대여료가 달라질 수 있습니다.</span>
+									<span>· 보험연령 만 26세 이상 기준 표준대여료 입니다.</span>
+									<span> <!-- 231110 추가 -->
+										· 대인보상 : 무제한 / 대물배상 : 1억원 / 자손보상 : 1억원
+										<button class="btn-link">자세히보기</button> <!-- 231110 인수옵션형 안내페이지 FAQ > 보험조건으로 랜딩 -->
+									</span>
+								</p>
+								<!-- // 231110 텍스트 한줄씩 span 태그로 묶기 -->
+							</div>
+						</div>
+
+						<!-- 230804 info 추가 -->
+						<div class="info-box">
+							<img src="images/icon/ico-exclamation.svg" alt="느낌표 아이콘" />
+							다른 고객과 견적 상담이 진행중인 차량입니다.
+						</div>
+
+						<div class="btn-group"> <!-- 230621 div 추가-->
+							<!-- 230502 찜하기 hidden -->
+							<!-- <button type="button" class="bt-favorite" onclick="ui.clsToggleFn(this, 'on');ui.clsToggleFn($('.notification'),'active')">찜</button> -->
+							<button type="button" class="bt-common-type3" onclick="location.href='popup-reserve.html'">방문예약</button>
+							<button type="button" class="bt-common-type1"onclick="location.href='popup-quote.html'">상담신청</button>
+							<!-- // 230926 버튼 이벤트 수정 -->
+
+							<!-- 230804 : 상담신청 진행중 버튼 추가 -->
+							<!-- <button type="button" class="bt-common-type1" disabled >상담 진행중</button> -->
+						</div>
+					</div>
+
+					<!-- 230412 notification 추가 -->
+					<div class="notification">
+						<div class="wrap">
+							<span class="text">찜한 차량에 추가하였습니다.</span>
+							<button type="button" class="bt-underline">찜한 차량 보러가기</button>
+						</div>
+					</div>
+					<!-- // 얼랏 추가 -->
+				</div>
+
+
+			</div>
+			<!-- layout--container -->
+		</div>
+
+		<!--  230831 scrollTop 버튼 위치 수정 -->
+		<!--
+			<div class="floating-page-top">
+				<button type="button" class="ir" onclick="nayuda.scrollTo(0)">TOP</button>
+			</div>
+		-->
+		
+	</div>
+	<!-- //layout--wrap -->
+
+	<!-- layer-popup-wrappper(공유하기)// -->
+	<div class="layer_popup_wrappper vB" id="sharePop">
+		<div class="layer_popup bg-bottom pop-share">
+			<div class="pop_inner">
+				<div class="pop-head">
+					<h3 class="pop-title">공유하기</h3>
+					<a href="javascript:;" class="ir pop_close" onclick="ui.modalPopClose(sharePop);">닫기</a>
+				</div>
+				<div class="pop-contents">
+					<div class="sns-share-func">
+						<button type="button" class="sns-kakaotalk"><span></span>카카오톡</button>
+						<button type="button" class="sns-facebook"><span></span>페이스북</button>
+						<button type="button" class="sns-naver"><span></span>네이버</button>
+						<button type="button" class="sns-copyurl"><span></span>URL 복사</button>
+					</div>
+					<!--
+						<div class="pop-btn">
+							<button type="button" class="bt-pop-type1 bt-full rnd" onclick="ui.modalPopClose(sharePop);">닫기</button>
+						</div>
+					-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //layer-popup-wrappper(공유하기) -->
+
+	<!-- 지도보기 -->
+	<div class="layer_popup_wrappper vB" id="officePop">
+		<div class="layer_popup bg-bottom pop-reservation-detail">
+			<div class="pop_inner">
+				<div class="pop-head">
+					<h3 class="pop-title">지점 안내</h3>
+					<a href="javascript:void(0)" class="ir pop_close" onclick="ui.modalPopClose(officePop);">닫기</a>
+				</div>
+				<div class="pop-contents">
+					<div class="office-map">
+						<div>
+							<div id="kakao_map_container" style="width: 100%; height: 350px; position: relative; overflow: hidden; background: url(&quot;https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png&quot;);">
+								<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+									<div style="position: absolute;">
+										<div style="position: absolute; z-index: 0;"></div>
+										<div style="position: absolute; z-index: 1; transform: scale(1); left: 0px; top: 0px;">
+											<img src="https://map1.daumcdn.net/map_2d_hd/2303ksn/L3/1865/893.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -153px; top: 133px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+											<img src="https://map2.daumcdn.net/map_2d_hd/2303ksn/L3/1865/894.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 103px; top: 133px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+											<img src="https://map3.daumcdn.net/map_2d_hd/2303ksn/L3/1865/895.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 359px; top: 133px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+											<img src="https://map1.daumcdn.net/map_2d_hd/2303ksn/L3/1866/893.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -153px; top: -123px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+											<img src="https://map2.daumcdn.net/map_2d_hd/2303ksn/L3/1866/894.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 103px; top: -123px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+											<img src="https://map3.daumcdn.net/map_2d_hd/2303ksn/L3/1866/895.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 359px; top: -123px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+											<img src="https://map1.daumcdn.net/map_2d_hd/2303ksn/L3/1867/893.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -153px; top: -379px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+											<img src="https://map2.daumcdn.net/map_2d_hd/2303ksn/L3/1867/894.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 103px; top: -379px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+											<img src="https://map3.daumcdn.net/map_2d_hd/2303ksn/L3/1867/895.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 359px; top: -379px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+										</div>
+										<div style="position: absolute; z-index: 1;"></div>
+										<div style="width: 320px; height: 350px; position: absolute; z-index: 1;"></div>
+										<div style="position: absolute; z-index: 1; transform: scale(1);">
+											<svg version="1.1" style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; width: 1600px; height: 1750px; left: -640px; top: -700px;" viewBox="0 0 1600 1750">
+											<defs></defs></svg>
+										</div>
+										<div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);">
+											<div style="position: absolute; margin: -39px 0px 0px -14px; z-index: 0; left: 160px; top: 175px;">
+												<img draggable="false" src="https://t1.daumcdn.net/mapjsapi/images/2x/marker.png" alt="" role="presentation" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 29px, 42px, 0px); top: 0px; left: 0px; width: 29px; height: 42px;">
+												<img src="https://t1.daumcdn.net/mapjsapi/images/2x/transparent.gif" alt="" role="presentation" draggable="false" usemap="#daum.maps.Marker.Area:1" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; width: 29px; height: 42px;">
+												<map id="daum.maps.Marker.Area:1" name="daum.maps.Marker.Area:1"><area href="javascript:void(0)" alt="" role="presentation" shape="poly" coords="14,39,9,27,4,21,1,16,1,10,4,4,11,0,18,0,25,4,28,10,28,16,25,21,20,27" title="" style="-webkit-tap-highlight-color: transparent;"></map>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style="position: absolute; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);">
+									<div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left; display: none;">
+										<div style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 46px;"></div>
+										<div style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">50m</div>
+									</div>
+									<div style="margin: 0px 4px; float: left;">
+										<a target="_blank" href="http://map.kakao.com/" title="Kakao 지도로 보시려면 클릭하세요." style="float: left; width: 32px; height: 10px;">
+											<img src="https://t1.daumcdn.net/mapjsapi/images/2x/m_bi_b.png" alt="Kakao 지도로 이동" style="float: left; width: 32px; height: 10px; border: none;">
+										</a>
+										<div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div>
+									</div>
+								</div>
+								<div style="position: absolute; z-index: 2; left: 0px; top: 0px;"></div>
+							</div>
+						</div>
+					</div>
+					<h4>중고차영업1지점</h4>
+					<ul class="rsv-detail"><li><span class="t">전화번호</span>
+						<span class="c">031-322-8000</span></li>
+						<li>
+							<span class="t">주소</span>
+							<span class="c">경기도 수원시 권선구 권선로 308-5 도이치오토월드 301호</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 지도보기 -->
+
+	<!-- 230412 popup : 허위매물 신고하기 -->
+	<div class="popup" id="reportPop">
+		<div class="layout--header">
+			<header>
+				<h1 class="logo blind">
+					<a href="/" class="ir">롯데오토마켓</a>
+				</h1>
+				<h2 class="page-title">허위매물 신고</h2>
+				<button type="button" class="ir bt-page-close" onclick="ui.modalPopClose(reportPop);">페이지 닫기</button>
+			</header>
+		</div>
+		<div class="layout--container ctn-report">
+			<div>
+				<section class="sec-report">
+					<div class="sec-inner common-pd">
+						<div class="insert-form-group">
+							<div class="input-item">
+								<div class="ipt-tit">차량번호</div>
+								<div class="ipt-cont">
+									<span class="ip-wrap">
+										<input type="text" disabled="" value="128호8196">
+									</span>
+								</div>
+							</div>
+							<div class="input-item">
+								<div class="ipt-tit">차종</div>
+								<div class="ipt-cont">
+									<span class="ip-wrap">
+										<input type="text" disabled="" value="쉐보레(대우) 더 뉴스파크 LT 등급없음">
+									</span>
+								</div>
+							</div>
+							<div class="input-item">
+								<div class="ipt-tit">신고내용</div>
+								<div class="ipt-cont">
+									<span class="txt-wrap">
+										<textarea name="rejectMemo" id="rejectMemo" placeholder="허위매물 신고합니다."></textarea>
+									</span>
+								</div>
+							</div>
+						</div>
+						<p class="mt20" style="font-size: 11px; color: rgb(218, 41, 28);">
+							※ 관리자 확인 후 허위매물 확인시 해당매물은 판매목록에서 제외됩니다.
+						</p>
+						<div class="btn-group mt30">
+							<button type="button" class="bt-common-type1 bt-full rnd">신고하기</button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<!-- // popup : 허위매물 신고하기 -->
+
+	<!-- popup : 옵션 전체보기 -->
+	<div class="popup-car-option-all popup" id="optionDetailPop">
+		<div class="layout--header">
+			<header>
+				<h1 class="logo blind">
+					<a href="/" class="ir">롯데오토마켓</a>
+				</h1>
+				<h2 class="page-title">옵션정보</h2>
+				<button type="button" class="ir bt-page-prev" onclick="ui.modalPopClose(optionDetailPop)">이전 페이지</button>
+			</header>
+		</div>
+		<div class="layout--container">
+			<div class="car-option-detail">
+				<dl>
+					<dt>외장</dt>
+					<dd class="on">선루프</dd>
+					<dd class="">파노라마선루프</dd>
+					<dd class="on">알루미늄휠</dd>
+					<dd class="on">전동접이식 사이드미러</dd>
+					<dd class="">헤드램프(LED)</dd>
+					<dd class="">리어램프(LED)</dd>
+					<dd class="">어댑티드 헤드램프</dd>
+					<dd class="">헤드램프(HID/제논)</dd>
+					<dd class="">자동 슬라이딩 도어</dd>
+					<dd class="on">전동 사이드스탭</dd>
+					<dd class="">주간주행등(DLR)</dd>
+					<dd class="">하이빙 어시스트</dd>
+					<dd class="on">고스트 도어 클로징</dd>
+					<dd class="">루프랙</dd>
+				</dl>
+				<dl>
+					<dt>내장</dt>
+					<dd class="">통풍시트(뒷자석)</dd>
+					<dd class="">룸미러(하이패스)</dd>
+					<dd class="">스티어링 휠 리모컨</dd>
+					<dd class="">엠비언트라이트</dd>
+					<dd class="on">열선 스티어링 휠</dd>
+					<dd class="">워크인시트</dd>
+					<dd class="">전동 조절 스티어링 휠</dd>
+					<dd class="">파워 스티어링</dd>
+					<dd class="">파워 도어록</dd>
+					<dd class="on">풀오토 에어컨</dd>
+					<dd class="">룸미러(ECM)</dd>
+					<dd class="">패들쉬프트</dd>
+					<dd class="on">전동시트(운전석)</dd>
+					<dd class="on">전동시트(조수석)</dd>
+					<dd class="">전동시트(뒷좌석)</dd>
+					<dd class="on">열선시트(앞좌석)</dd>
+					<dd class="on">열선시트(뒷좌석)</dd>
+					<dd class="">메모리시트</dd>
+					<dd class="on">통풍시트(앞좌석)</dd>
+					<dd class="">안마시트</dd>
+				</dl>
+				<dl>
+					<dt>안전</dt>
+					<dd class="">ABS</dd>
+					<dd class="on">도난경보기</dd>
+					<dd class="on">블랙박스</dd>
+					<dd class="on">자동긴급제동(AEB)</dd>
+					<dd class="on">전방 카메라</dd>
+					<dd class="on">주차감지센서(전방)</dd>
+					<dd class="">에어백(운전석)</dd>
+					<dd class="">에어백(조수석)</dd>
+					<dd class="on">에어백(사이드)</dd>
+					<dd class="on">에어백(커튼)</dd>
+					<dd class="on">미끄럼방지(TCS)</dd>
+					<dd class="">어라운드뷰(AVM)</dd>
+					<dd class="on">전자제어서스펜션(ECS)</dd>
+					<dd class="on">차체자세 제어장치(ESC)</dd>
+					<dd class="on">전방감지센서</dd>
+					<dd class="on">무릎보호</dd>
+					<dd class="">전방감지센서</dd>
+					<dd class="">후방감지센서</dd>
+					<dd class="on">후방카메라</dd>
+					<dd class="on">차선이탈경보시스템(LDWS)</dd>
+					<dd class="">타이어공기압감지(TPMS)</dd>
+					<dd class="on">후측방경보시스템</dd>
+					<dd class="">어라운드뷰</dd>
+				</dl>
+				<dl>
+					<dt>편의</dt>
+					<dd class="on">레인센서 와이퍼</dd>
+					<dd class="on">무선충전</dd>
+					<dd class="">스마트폰 미러링</dd>
+					<dd class="">자동 도어잠금</dd>
+					<dd class="on">자동주차시스템</dd>
+					<dd class="on">커튼 블라인드</dd>
+					<dd class="">파워 윈도우</dd>
+					<dd class="">스마트키</dd>
+					<dd class="">전동트렁크</dd>
+					<dd class="">오토라이트</dd>
+					<dd class="on">내비게이션</dd>
+					<dd class="on">컨루즈컨트롤</dd>
+					<dd class="on">스마트크루즈컨트롤</dd>
+					<dd class="on">전자식 파킹브레이크(EPB)</dd>
+					<dd class="on">헤드업디스플레이(HUD)</dd>
+					<dd class="on">스탑앤고</dd>
+					<dd class="">AV시스템</dd>
+					<dd class="on">CD플레이어</dd>
+					<dd class="on">MP3</dd>
+					<dd class="">뒷자석 모니터</dd>
+					<dd class="">뒷자석USB포트</dd>
+					<dd class="">블루투스</dd>
+					<dd class="">AUX</dd>
+					<dd class="on">USB</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!--// popup : 옵션 전체보기 -->
+
+	<!-- 230412 : 라이브체크 신청하기 팝업 추가 -->
+	<!-- popup : 라이브체크 신청하기// -->
+	<div class="popup-live-check-enroll popup layer_popup" id="liveCheckPop">
+		<div class="layout--header video">
+			<header>
+				<h2 class="page-title">라이브체크</h2>
+				<a href="javascript:;" class="ir pop_close" onclick="ui.modalPopClose(liveCheckPop)">닫기</a>
+			</header>
+		</div>
+		<div class="layout--container">
+			<div>
+				<!-- 다른 고객의 라이브체크 -->
+				<div class="wrap area mg0"> <!-- 230720 클래스 area 추가 -->
+					<h2 class="title">다른 고객의 라이브체크</h2>
+					<div class="contents video">
+						<div class="video-area" id="video-area">
+							<div class="video-item">
+								<p class="thumb"><img src="images/dummy/thumb_live_01.jpg"></p>
+								<p class="tit">생생한 차량내부 라이브 영상 자세히보기</p>
+								<span class="date">2023.01.15</span>
+							</div>
+							<div class="video-item">
+								<p class="thumb"><img src="images/dummy/thumb_live_02.jpg"></p>
+								<p class="tit">직접 타봤습니다! G80 시승기</p>
+								<span class="date">2023.01.15</span>
+							</div>
+							<div class="video-item">
+								<p class="thumb"><img src="images/dummy/thumb_live_01.jpg"></p>
+								<p class="tit">라이브 영상 자세히보기</p>
+								<span class="date">2023.01.15</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 라이브체크 신청하기 -->
+				<div class="wrap area"> <!-- 230720 클래스 area 추가 -->
+					<h2 class="title">라이브체크 신청</h2>
+					<div class="contents enroll">
+						<div class="insert-form-group">
+							<div class="input-item">
+								<div class="ipt-tit">신청자명</div>
+								<div class="ipt-cont">
+									<span class="ip-wrap"><input type="text" value="홍길동" disabled/></span><!-- disabled -->
+								</div>
+							</div>
+							<div class="input-item">
+								<div class="ipt-tit">연락처</div>
+								<div class="ipt-cont">
+									<span class="ip-wrap"><input type="tel" value="010-1234-5678" disabled/></span><!-- disabled -->
+								</div>
+							</div>
+							<div class="input-item">
+								<div class="ipt-tit">라이브체크 희망일시</div>
+								<div class="ipt-cont">
+									<div class="ipt-flex btw">
+										<div class="dateBox basic" style="width:49%">
+											<!-- 230331 라이브체크 희망일시 input 달력아이콘 추가 -->
+											<span class="ip-wrap">
+												<input type="text" class="datePickerBasic" placeholder="YYYY-MM-DD" readonly />
+											</span>
+										</div>
+										<span class="sl-wrap" style="width:49%">
+											<select><option>시간 선택</option></select>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="agr-group">
+								<div class="agr-check">
+									<span class="ck-wrap">
+										<input type="checkbox" id="agrCont2" name="agrCont"><label for="agrCont2">[필수] 개인정보 수집 및 이용동의</label>
+										<a href="#">내용보기</a>
+									</span>
+								</div>
+							</div>
+						</div>			
+					</div>
+				</div>
+				<div class="pop-btn area">  <!-- 230720 위치이동 & 클래스 area 추가 -->
+					<button type="button" class="bt-pop-type1 bt-full rnd" onclick="ui.modalPopClose(liveCheckPop);">신청하기</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				//calendar 
+				datePickerBasic();
+			})
+
+			//datePickerBasic
+			function datePickerBasic(){
+				var dateFormat = "yymmdd",
+				datepicker = $( ".datePickerBasic").datepicker({
+					showOn: "button",
+					buttonImage: "images/icon/ico-calendar.svg",
+					numberOfMonths: 1,
+					dateFormat: "yymmdd",
+					dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+					dayNames: [ "(일요일)", "(월요일)", "(화요일)", "(수요일)", "(목요일)", "(금요일)", "(토요일)" ],
+					monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+					monthNamesShort: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+					changeMonth: true,
+					changeYear: true,
+					showOtherMonths: true,
+					selectOtherMonths: true
+				})
+				$(".hasDatepicker:disabled").siblings(".ui-datepicker-trigger").prop("disabled", true);
+			}
+		</script>
+	</div>
+	<!-- //popup : 라이브체크 신청하기 -->
+
+	<!-- 230412 popup : 성능상태점검기록부 -->
+	<div class="popup-car-check popup" id="carCheckViewPop">
+		<div class="layout--header">
+			<header>
+				<h1 class="logo blind"><a href="javascript:void(0)" class="ir">롯데오토마켓</a></h1>
+				<h2 class="page-title">중고차자동차성능·상태점검기록부</h2>
+				<button type="button" class="ir bt-page-close" onclick="ui.modalPopClose(carCheckViewPop)">페이지 닫기</button>
+			</header>
+		</div>
+		<div class="layout--container">
+			<div class="sec-car-check-view" id="carCheckViewPop">
+				<div class="car-check-view">
+					<div class="car-check-group">
+						<div class="tb full">
+							<h3>
+								기아 올뉴모닝(JA) 가솔린 디럭스<br>
+								<span>(성능번호 제 4723000457 호)</span>
+							</h3>
+							<table>
+								<tbody>
+									<tr>
+										<th>자동차등록번호</th>
+										<td><span class="t"></span></td>
+									</tr>
+									<tr>
+										<th>연식</th>
+										<td><span class="t">2018년</span></td>
+									</tr>
+									<tr>
+										<th>검사유효기간</th>
+										<td><span class="t"> ~ </span></td>
+									</tr>
+									<tr>
+										<th>최초등록일</th>
+										<td><span class="t">2018-07-11</span></td>
+									</tr>
+									<tr>
+										<th>변속기</th>
+										<td><span class="t">오토</span></td>
+									</tr>
+									<tr>
+										<th>연료</th>
+										<td><span class="t">가솔린</span></td>
+									</tr>
+									<tr>
+										<th>차대번호</th>
+										<td><span class="t">KNAB6511BJT329920</span></td>
+									</tr>
+									<tr>
+										<th>보증유형</th>
+										<td><span class="t"></span></td>
+									</tr>
+									<tr>
+										<th>원동기형식</th><td><span class="t">G3LA</span></td>
+									</tr>
+									<tr>
+										<th>가격산정 기준가격</th>
+										<td><span class="t">- 만원</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="car-check-group"><div class="tb full"><h3>자동차 종합상태</h3><table><tbody><tr><th>주행거리 및 계기상태</th><td><span class="t">양호</span></td></tr><tr><th>주행거리</th><td><span class="t">18,677km</span></td></tr><tr><th>차대번호상태</th><td><span class="t">양호</span></td></tr><tr><th>배출가스</th><td><span class="t">일산화탄소: 0.20% / 탄화수소: 22ppm</span></td></tr><tr><th>튜닝</th><td><span class="t">없음</span></td></tr><tr><th>특별이력</th><td><span class="t">없음</span></td></tr><tr><th>용도변경</th><td><span class="t">있음</span></td></tr><tr><th>색상</th><td><span class="t">무채색</span></td></tr><tr><th>주요옵션</th><td><span class="t">없음</span></td></tr><tr><th>리콜대상</th><td><span class="t">해당없음</span></td></tr></tbody></table></div></div>
+
+					<div class="car-check-group"><div class="tb full">
+						<h3>사고 · 교환 · 수리 등 이력</h3>
+					</div>
+					<div class="car-check-area">
+						<div class="check-car" id="CarCheckState">
+							<img src="images/checkcar/check_link_bg.png" class="check_link_bg" usemap="#Map">
+							<div>
+								<map id="checkMap" name="Map"><area shape="poly" coords="28,5,28,52,58,57,57,1,35,8" value="FL안개등" pos="1" posleft="82" postop="54" title="FL안개등" style="cursor: pointer;"><area shape="circle" coords="35,91,30" value="FL휠타이어" pos="2" posleft="82" postop="97" title="FL휠타이어" style="cursor: pointer;"><area shape="circle" coords="34,337,30" value="RL휠타이어" pos="12" posleft="82" postop="316" title="RL휠타이어" style="cursor: pointer;">
+									<area shape="rect" coords="28,385,56,434" value="RL안개등" pos="14" posleft="82" postop="400" title="RL안개등" style="cursor: pointer;"><area shape="poly" coords="100,256,106,340,120,335,138,303,144,257,100,256" value="RL윈도우" pos="10" posleft="259" postop="268" title="RL윈도우" style="cursor: pointer;"><area shape="poly" coords="183,10,208,1,230,-2,260,1,297,2,338,9,338,35,325,26,314,22,296,5,230,4,217,15,195,22,185,30,187,23" value="F범퍼" pos="15" posleft="214" postop="28" title="F범퍼" style="cursor: pointer;"><area shape="poly" coords="220,25,300,27,291,6,230,4,224,19" value="그릴/라디에이터 서포트" pos="16" posleft="265" postop="35" title="그릴/라디에이터 서포트" style="cursor: pointer;"><area shape="poly" coords="177,63,217,27,220,16,216,17,183,27,174,50" value="L램프" pos="17" posleft="215" postop="51" title="L램프" style="cursor: pointer;"><area shape="poly" coords="297,15,307,35,342,61,346,42,320,21,298,14" value="R램프" pos="18" posleft="317" postop="51" title="R램프" style="cursor: pointer;"><area shape="poly" coords="205,319,195,368,243,380,290,378,325,368,313,320,272,328,251,328,206,320" value="R윈도우" pos="24" posleft="265" postop="330" title="R윈도우" style="cursor: pointer;">
+									<area shape="poly" coords="179,135,152,165,164,187,190,165,187,151" value="L미러" pos="21" posleft="199" postop="161" title="L미러" style="cursor: pointer;"><area shape="poly" coords="334,139,325,166,359,189,368,166,348,148" value="R미러" pos="22" posleft="338" postop="161" title="R미러" style="cursor: pointer;"><area shape="poly" coords="174,381,185,410,204,414,200,386,184,378" value="L후미등" pos="25" posleft="198" postop="374" title="L후미등" style="cursor: pointer;"><area shape="poly" coords="345,369,324,380,315,414,339,406,341,396" value="R후미등" pos="27" posleft="336" postop="374" title="R후미등" style="cursor: pointer;"><area shape="poly" coords="185,424,222,436,289,436,333,424,337,405,300,417,251,422,205,413,182,406,183,412" value="R범퍼" pos="28" posleft="265" postop="407" title="R범퍼" style="cursor: pointer;"><area shape="rect" coords="673,0,703,49" value="FR안개등" pos="46" posleft="630" postop="59" title="FR안개등" style="cursor: pointer;"><area shape="circle" coords="695,90,29" value="FR휠타이어" pos="48" posleft="630" postop="98" title="FR휠타이어" style="cursor: pointer;"><area shape="circle" coords="696,336,30" value="RR휠타이어" pos="58" posleft="630" postop="315" title="RR휠타이어" style="cursor: pointer;"><area shape="rect" coords="674,385,704,434" value="RR안개등" pos="59" posleft="630" postop="400" title="RR안개등" style="cursor: pointer;"><area shape="poly" coords="588,270,590,297,608,335,627,339,629,256,588,258" value="RR윈도우" pos="54" posleft="567" postop="202" title="RR윈도우" style="cursor: pointer;"><area shape="rect" coords="567,201,570,210" value="FR윈도우" pos="50" posleft="567" postop="201" title="FR윈도우" style="cursor: pointer;"><area shape="poly" coords="78,139,84,138,88,281,92,286,91,294,80,294,80,294" value="L사이드실" pos="4" posleft="64" postop="207" title="L사이드실" style="cursor: pointer;"><area shape="poly" coords="78,139,84,138,88,281,92,286,91,294,80,294,80,294" value="FL윈도우" pos="6" posleft="144" postop="206" title="FL윈도우" style="cursor: pointer;"><area shape="poly" coords="78,139,84,138,88,281,92,286,91,294,80,294,80,294" value="F윈도우" pos="20" posleft="265" postop="154" title="F윈도우" style="cursor: pointer;"><area shape="poly" coords="121,66,118,75,112,69,112,85,121,105,117,127,101,137,82,139,85,151,121,149,137,155,133,127,130,93,123,66" value="L휀다" pos="3" posleft="110" postop="128" title="L휀다" style="cursor: pointer;"><area shape="poly" coords="84,151,127,150,138,155,141,235,124,232,86,232" value="FL도어" pos="5" posleft="99" postop="180" title="FL도어" style="cursor: pointer;"><area shape="poly" coords="87,232,127,232,141,238,142,306,135,309,88,279" value="RL도어" pos="9" posleft="100" postop="252" title="RL도어" style="cursor: pointer;"><area shape="poly" coords="91,283,133,312,140,309,140,383,143,386,136,392,135,369,123,380,115,382,106,345,119,339,121,319,111,302,91,293" value="L쿼터패널" pos="13" posleft="114" postop="316" title="L쿼터패널" style="cursor: pointer;"><area shape="poly" coords="138,148,137,156,163,197,164,195,164,195,164,195" value="LA필러" pos="7" posleft="145" postop="173" title="LA필러" style="cursor: pointer;"><area shape="poly" coords="141,229,168,240,167,248,141,242" value="LB필러" pos="8" posleft="145" postop="230" title="LB필러" style="cursor: pointer;">
+									<area shape="poly" coords="162,296,144,342,144,307,137,309,139,383,143,386,146,357,165,306" value="LC필러" pos="11" posleft="146" postop="315" title="LC필러" style="cursor: pointer;"><area shape="poly" coords="222,65,249,49,305,48,330,68,333,148,312,136,274,131,237,137,217,147" value="후드" pos="19" posleft="264" postop="81" title="후드" style="cursor: pointer;" data-idx="1"><area shape="poly" coords="232,199,272,190,318,198,319,308,276,315,233,307,233,305" value="루프" pos="23" posleft="265" postop="244" title="루프" style="cursor: pointer;"><area shape="poly" coords="227,358,257,365,282,366,306,364,324,358,322,393,302,399,280,401,258,401,240,397,230,391" value="트렁크리드" pos="26" posleft="265" postop="374" title="트렁크리드" style="cursor: pointer;"><area shape="rect" coords="394,74,515,89" value="프론트패널" pos="29" posleft="449" postop="70" title="프론트패널" style="cursor: pointer;"><area shape="rect" coords="395,95,409,126" value="FL인사이드패널" pos="30" posleft="392" postop="102" title="FL인사이드패널" style="cursor: pointer;"><area shape="rect" coords="432,97,417,147" value="FL사이드멤버" pos="31" posleft="413" postop="113" title="FL사이드멤버" style="cursor: pointer;"><area shape="circle" coords="403,143,7" value="FL휠하우스" pos="34" posleft="393" postop="132" title="FL휠하우스" style="cursor: pointer;"><area shape="rect" coords="499,95,512,127" value="FR인사이드패널" pos="33" posleft="497" postop="101" title="FR인사이드패널" style="cursor: pointer;"><area shape="rect" coords="477,96,493,148" value="FR사이드멤버" pos="32" posleft="475" postop="113" title="FR사이드멤버" style="cursor: pointer;"><area shape="circle" coords="506,142,7" value="FR휠하우스" pos="35" posleft="497" postop="131" title="FR휠하우스" style="cursor: pointer;"><area shape="rect" coords="395,156,512,169" value="크로스멤버" pos="36" posleft="445" postop="153" title="크로스멤버" style="cursor: pointer;"><area shape="rect" coords="395,177,513,191" value="대쉬패널" pos="37" posleft="445" postop="175" title="대쉬패널" style="cursor: pointer;">
+									<area shape="rect" coords="404,198,504,286" value="플로어패널" pos="38" posleft="445" postop="233" title="플로어패널" style="cursor: pointer;"><area shape="rect" coords="396,292,512,306" value="패키지트레이" pos="39" posleft="444" postop="291" title="패키지트레이" style="cursor: pointer;"><area shape="circle" coords="403,322,7" value="RL휠하우스" pos="40" posleft="392" postop="313" title="RL휠하우스" style="cursor: pointer;"><area shape="rect" coords="417,314,430,355" value="RL사이드멤버" pos="41" posleft="414" postop="325" title="RL사이드멤버" style="cursor: pointer;"><area shape="rect" coords="438,314,470,355" value="트렁크플로어" pos="42" posleft="445" postop="325" title="트렁크플로어" style="cursor: pointer;"><area shape="rect" coords="478,315,491,355" value="RR사이드멤버" pos="43" posleft="475" postop="325" title="RR사이드멤버" style="cursor: pointer;"><area shape="circle" coords="508,322,8" value="RR휠하우스" pos="44" posleft="497" postop="313" title="RR휠하우스" style="cursor: pointer;"><area shape="rect" coords="395,362,513,376" value="리어패널" pos="45" posleft="445" postop="360" title="리어패널" style="cursor: pointer;"><area shape="rect" coords="647,139,652,296" value="R사이드실" pos="52" posleft="646" postop="212" title="R사이드실" style="cursor:pointer;"><area shape="poly" coords="607,65,598,94,594,155,606,149,632,149,646,150,646,139,631,139,614,125,609,107,615,88,619,85,620,71,609,80,609,80" value="R휀다" pos="47" posleft="598" postop="127" title="R휀다" style="cursor: pointer;"><area shape="poly" coords="593,155,591,234,617,231,643,231,646,146,611,149,609,149" value="FR도어" pos="51" posleft="611" postop="181" title="FR도어" style="cursor: pointer;"><area shape="poly" coords="591,236,609,229,642,233,641,282,595,310,589,302" value="RR도어" pos="55" posleft="611" postop="254" title="RR도어" style="cursor: pointer;"><area shape="poly" coords="638,286,596,312,588,308,590,382,587,388,595,391,595,370,614,383,622,348,612,338,609,321,617,305,628,296,639,293,639,293" value="R쿼터패널" pos="57" posleft="607" postop="357" title="R쿼터패널" style="cursor: pointer;"><area shape="poly" coords="592,148,565,194,568,198,594,152,593,151" value="RA필러" pos="49" posleft="564" postop="175" title="RA필러" style="cursor: pointer;">
+									<area shape="poly" coords="563,238,589,228,591,242,563,249,563,249" value="RB필러" pos="53" posleft="565" postop="231" title="RB필러" style="cursor: pointer;"><area shape="poly" coords="567,294,563,306,586,361,589,385,591,309,587,308,587,342,572,311" value="RC필러" pos="56" posleft="565" postop="315" title="RC필러" style="cursor: pointer;"><area shape="poly" coords="206,80,215,57,242,43,278,38,314,43,334,56,343,66,346,81,338,67,316,50,277,47,234,50,219,61" value="라디에이터 서포트" pos="60" posleft="444" postop="72" data-idx="5" title="라디에이터 서포트" style="cursor: pointer;"></map>
+								</div>
+								<div class="condition-mark" id="checkMark">
+									<p class="check_FL_foglamp" pos="1" style="display: none;">FL안개등</p>
+									<p class="check_FL_wheel" pos="2" style="display: none;">FL휠타이어</p>
+									<p class="check_RL_wheel" pos="12" style="display: none;">RL휠타이어</p>
+									<p class="check_L_side" pos="4" style="display: none;">L사이드실</p>
+									<p class="check_L_fender" pos="3" style="display: none;">L휀다</p>
+									<p class="check_FL_door" pos="5" style="display: none;">FL도어</p>
+									<p class="check_RL_door" pos="9" style="display: none;">RL도어</p>
+									<p class="check_L_quarterpanel" pos="13" style="display: none;">L쿼터패널</p>
+									<p class="check_RL_foglamp" pos="14" style="display: none;">RL안개등</p>
+									<p class="check_LA_filler" pos="7" style="display: none;">LA필러</p>
+									<p class="check_LB_filler" pos="8" style="display: none;">LB필러</p>
+									<p class="check_LC_filler" pos="11" style="display: none;">LC필러</p>
+									<p class="check_FL_window" pos="6" style="display: none;">FL윈도우</p>
+									<p class="check_RL_window" pos="10" style="display: none;">RL윈도우</p>
+									<p class="check_F_bumper" pos="15" style="display: none;">F범퍼</p>
+									<p class="check_grill" pos="16" style="display: none;">그릴/라디에이터 서포트</p>
+									<p class="check_L_lamp" pos="17" style="display: none;">L램프</p>
+									<p class="check_R_lamp" pos="18" style="display: none;">R램프</p>
+									<p class="check_bonnet" pos="19" style="display: none;">후드</p>
+									<p class="check_F_window" pos="20" style="display: none;">F윈도우</p>
+									<p class="check_R_window" pos="24" style="display: none;">R윈도우</p>
+									<p class="check_roof" pos="23" style="display: none;">루프</p>
+									<p class="check_L_mirror" pos="21" style="display: none;">L미러</p>
+									<p class="check_R_mirror" pos="22" style="display: none;">R미러</p>
+									<p class="check_trunk" pos="26" style="display: none;">트렁크리드</p>
+									<p class="check_L_taillight" pos="25" style="display: none;">L후미등</p>
+									<p class="check_R_taillight" pos="27" style="display: none;">R후미등</p>
+									<p class="check_R_bumper" pos="28" style="display: none;">R범퍼</p>
+									<p class="check_F_panel" pos="29" style="display: none;">프론트패널</p>
+									<p class="check_FL_insidepanel" pos="30" style="display: none;">FL인사이드패널</p>
+									<p class="check_FL_sidemember" pos="31" style="display: none;">FL사이드멤버</p>
+									<p class="check_FL_wheelhouse" pos="34" style="display: none;">FL휠하우스</p>
+									<p class="check_FR_insidepanel" pos="33" style="display: none;">FR인사이드패널</p>
+									<p class="check_FR_sidemember" pos="32" style="display: none;">FR사이드멤버</p>
+									<p class="check_FR_wheelhouse" pos="35" style="display: none;">FR휠하우스</p>
+									<p class="check_crossmember" pos="36" style="display: none;">크로스멤버</p>
+									<p class="check_dashpanel" pos="37" style="display: none;">대쉬패널</p>
+									<p class="check_floorpanel" pos="38" style="display: none;">플로어패널</p>
+									<p class="check_packagetray" pos="39" style="display: none;">패키지트레이</p>
+									<p class="check_RL_wheelhouse" pos="40" style="display: none;">RL휠하우스</p>
+									<p class="check_RL_sidemember" pos="41" style="display: none;">RL사이드멤버</p>
+									<p class="check_trunkfloor" pos="42" style="display: none;">트렁크플로어</p>
+									<p class="check_RR_sidemember" pos="43" style="display: none;">RR사이드멤버</p>
+									<p class="check_RR_wheelhouse" pos="44" style="display: none;">RR휠하우스</p>
+									<p class="check_rearpanel" pos="45" style="display: none;">리어패널</p>
+									<p class="check_FR_foglamp" pos="12" style="display: none;">FR안개등</p>
+									<p class="check_FR_wheel" pos="48" style="display: none;">FR휠타이어</p>
+									<p class="check_RR_wheel" pos="58" style="display: none;">RR휠타이어</p>
+									<p class="check_R_side" pos="52" style="display: none;">R사이드실</p>
+									<p class="check_R_fender" pos="47" style="display: none;">R휀다</p>
+									<p class="check_FR_door" pos="51" style="display: none;">FR도어</p>
+									<p class="check_RR_door" pos="55" style="display: none;">RR도어</p>
+									<p class="check_R_quarterpanel" pos="57" style="display: none;">R쿼터패널</p>
+									<p class="check_RR_foglamp" pos="59" style="display: none;">RR안개등</p>
+									<p class="check_RA_filler" pos="49" style="display: none;">RA필러</p>
+									<p class="check_RB_filler" pos="53" style="display: none;">RB필러</p>
+									<p class="check_RC_filler" pos="56" style="display: none;">RC필러</p>
+									<p class="check_FR_window" pos="50" style="display: none;">FR윈도우</p>
+									<p class="check_RR_window" pos="54" style="display: none;">RR윈도우</p>
+									<p class="check_radiator" pos="60" style="display: none;">라디에이터 서포트</p>
+								</div>
+							</div>
+						</div>
+						<p class="check-guide">교환(X), 판금/용접(W), 흠집(A), 요철(U), 부식(C), 손상(T)</p>
+						<div class="tb full">
+							<table>
+								<tbody>
+									<tr>
+										<th>사고이력</th>
+										<td><span class="t" id="accidentLog">없음</span></td>
+									</tr>
+									<tr>
+										<th>단순수리</th>
+										<td><span class="t" id="repairLog">없음</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="list-flip">
+							<div class="flip-group">
+								<h4>외판부위</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li>
+										<span class="t">후드</span>
+										<span class="c" id="outcheck1Check">양호</span>
+									</li>
+									<li>
+										<span class="t">프론트휀더</span>
+										<span class="c" id="outcheck2Check">양호</span>
+									</li>
+									<li>
+										<span class="t">도어</span>
+										<span class="c" id="outcheck3Check">양호</span>
+									</li>
+									<li>
+										<span class="t">트렁크 리드</span>
+										<span class="c" id="outcheck4Check">양호</span>
+									</li>
+									<li>
+										<span class="t">라디에이터 서포트(볼트체결부품)</span>
+										<span class="c" id="outcheck5Check">양호</span>
+									</li>
+									<li>
+										<span class="t">쿼터패널</span>
+										<span class="c" id="outcheck6Check">양호</span>
+									</li>
+									<li>
+										<span class="t">루프패널</span>
+										<span class="c" id="outcheck7Check">양호</span>
+									</li>
+									<li>
+										<span class="t">사이드실패널</span>
+										<span class="c" id="outcheck8Check">양호</span>
+									</li>
+								</ul>
+							</div>
+							<div class="flip-group">
+								<h4>주요골격</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li>
+										<span class="t">프론트패널</span>
+										<span class="c" id="outcheck9Check">양호</span>
+									</li>
+									<li>
+										<span class="t">크로스멤버</span>
+										<span class="c" id="outcheck10Check">양호</span>
+									</li>
+									<li>
+										<span class="t">인사이드패널</span>
+										<span class="c" id="outcheck11Check">양호</span>
+									</li>
+									<li>
+										<span class="t">트렁크플로어</span>
+										<span class="c" id="outcheck17Check">양호</span>
+									</li>
+									<li>
+										<span class="t">리어패널</span>
+										<span class="c" id="outcheck18Check">양호</span>
+									</li>
+									<li>
+										<span class="t">사이드멤버</span>
+										<span class="c" id="outcheck12Check">양호</span>
+									</li>
+									<li>
+										<span class="t">휠하우스</span>
+										<span class="c" id="outcheck13Check">양호</span>
+									</li>
+									<li>
+										<span class="t">필러패널(A랭크)</span>
+										<span class="c" id="outcheck14ACheck">양호</span>
+									</li>
+									<li>
+										<span class="t">필러패널(B랭크)</span>
+										<span class="c" id="outcheck14BCheck">양호</span>
+									</li>
+									<li>
+										<span class="t">필러패널(C랭크)</span>
+										<span class="c" id="outcheck14CCheck">양호</span>
+									</li>
+									<li>
+										<span class="t">대쉬패널</span>
+										<span class="c" id="outcheck15Check">양호</span>
+									</li>
+									<li>
+										<span class="t">플로어패널</span>
+										<span class="c" id="outcheck16Check">양호</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="car-check-group">
+						<h3>자동차 세부상태</h3>
+						<div class="list-flip">
+							<div class="flip-group">
+								<h4>자가진단</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">원동기</span>
+										<span class="c">양호</span>
+									</li>
+									<li>
+										<span class="t">변속기</span>
+										<span class="c">양호</span>
+									</li>
+								</ul>
+							</div>
+							<div class="flip-group">
+								<h4>원동기</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">작동상태(공회전)</span><span class="c">양호</span></li>
+									<li><span class="t">오일유량 및 오염</span><span class="c">적정</span></li>
+									<li><span class="t">오일누유 - 로커암 커버</span><span class="c">없음</span></li>
+									<li><span class="t">오일누유 - 실린터 헤드/가스켓</span><span class="c">없음</span></li>
+									<li><span class="t">오일누유 - 오일팬</span><span class="c">없음</span></li>
+									<li><span class="t">냉각수 누수 - 실린더헤드/가스켓</span><span class="c">없음</span></li>
+									<li><span class="t">냉각수 누수 - 라디에이터</span><span class="c">없음</span></li>
+									<li><span class="t">냉각수 누수 - 워터펌프</span><span class="c">없음</span></li>
+									<li><span class="t">냉각수 수량</span><span class="c">없음</span></li>
+									<li><span class="t">고압펌프(커먼레일)-디젤엔진</span><span class="c">미선택</span></li>
+								</ul>
+							</div>
+							<div class="flip-group">
+								<h4>변속기</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">자동(A/T) - 오일누유</span><span class="c">없음</span></li>
+									<li><span class="t">자동(A/T) - 오일유량 및 상태</span><span class="c">적정</span></li>
+									<li><span class="t">자동(A/T) - 작동상태(공회전)</span><span class="c">양호</span></li>
+								</ul>
+							</div>
+							<div class="flip-group">
+								<h4>동력전달</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">클러치 어셈블리</span><span class="c">미선택</span></li>
+									<li><span class="t">추진축 및 베어링</span><span class="c">양호</span></li>
+									<li><span class="t">등속죠인트</span><span class="c">양호</span></li>
+								</ul>
+							</div>
+							<div class="flip-group">
+								<h4>조향</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">동력조향 작동오일 누유</span><span class="c">없음</span></li>
+									<li><span class="t">작동상태 - 스티어링 기어</span><span class="c">양호</span></li>
+									<li><span class="t">작동상태 - 스티어링 펌프</span><span class="c">양호</span></li>
+									<li><span class="t">작동상태 - 타이로드엔드 및 볼죠인트</span><span class="c">양호</span></li>
+								</ul>
+							</div>
+							<div class="flip-group">
+								<h4>제동</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">브레이크 마스터 실린더 오일 누유</span><span class="c">없음</span></li>
+									<li><span class="t">배력장치 상태</span><span class="c">양호</span></li>
+									<li><span class="t">브레이크 오일 누유</span><span class="c">없음</span></li>
+								</ul>
+							</div>
+							<div class="flip-group">
+								<h4>전기</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">발전기 출력</span><span class="c">양호</span></li>
+									<li><span class="t">실내송풍 모터</span><span class="c">양호</span></li>
+									<li><span class="t">시동모터</span><span class="c">양호</span></li>
+									<li><span class="t">라디에이터 팬 모터</span><span class="c">양호</span></li>
+									<li><span class="t">와이퍼 모터 기능</span><span class="c">양호</span></li>
+									<li><span class="t">윈도우 모터 작동</span><span class="c">양호</span></li>
+								</ul>
+							</div>
+							<div class="flip-group">
+								<h4>고전원 전기장치</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">충전구 절연 상태</span><span class="c"></span></li>
+									<li><span class="t">구동축전지 격리 상태</span><span class="c"></span></li>
+									<li><span class="t">고전원 전기배선 상태(접속단자, 피복, 보호기구)</span><span class="c"></span></li>
+								</ul>
+							</div>
+							<div class="flip-group">
+								<h4>연료</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">연료누출(LP가스포함)</span><span class="c">없음</span></li>
+								</ul>
+							</div>
+						</div>
+						<h3>자동차 기타정보</h3>
+						<div class="list-flip">
+							<div class="flip-group">
+								<h4>수리필요</h4>
+								<button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">외장</span><span class="c"></span></li>
+									<li><span class="t">내장</span><span class="c"></span></li>
+									<li><span class="t">광택</span><span class="c"></span></li>
+									<li><span class="t">룸 클리닝</span><span class="c"></span></li>
+									<li><span class="t">휠 - 운전석(전)</span><span class="c"></span></li>
+									<li><span class="t">휠 - 운전석(후)</span><span class="c"></span></li>
+									<li><span class="t">휠 - 동반석(전)</span><span class="c"></span></li>
+									<li><span class="t">휠 - 동반석(후)</span><span class="c"></span></li>
+									<li><span class="t">휠 - 응급</span><span class="c"></span></li>
+									<li><span class="t">타이어 - 운전석(전)</span><span class="c"></span></li>
+									<li><span class="t">타이어 - 운전석(후)</span><span class="c"></span></li>
+									<li><span class="t">타이어 - 동반석(전)</span><span class="c"></span></li>
+									<li><span class="t">타이어 - 동반석(후)</span><span class="c"></span></li>
+									<li><span class="t">타이어 - 응급</span><span class="c"></span></li>
+									<li><span class="t">유리</span><span class="c"></span></li>
+								</ul>
+							</div>
+							<div class="flip-group">
+								<h4>기본품목</h4><button type="button" class="ir bt-flip">자세히보기</button>
+								<ul>
+									<li><span class="t">사용설명서</span><span class="c"></span></li>
+									<li><span class="t">안전삼각대</span><span class="c"></span></li>
+									<li><span class="t">잭</span><span class="c"></span></li>
+									<li><span class="t">스패너</span><span class="c"></span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="tb full">
+							<h3>최종 가격조사 · 산정 금액</h3>
+							<table>
+								<tbody>
+									<tr>
+										<th>최종 산정액</th>
+										<td><span class="t">- 만원</span></td>
+									</tr>
+									<tr>
+										<th>기준서 적용</th>
+										<td><span class="t"></span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tb full">
+							<h4>성능・상태 점검자 특기사항 및 의견</h4>
+							<table>
+								<tbody>
+									<tr>
+										<th colspan="2">경미한 판금.도색은 있을 수 있고 표기치 않음</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tb full">
+							<h4>가격조사・산정자 특기사항 및 의견</h4>
+							<table>
+								<tbody>
+									<tr>
+										<th colspan="2"></th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="car-check-group">
+						<div class="tb full">
+							<h3>점검 장면 촬영 사진</h3>
+							<table>
+								<tbody>
+									<tr>
+										<td class="cell-pic">
+											<div class="pic">
+												<img src="https://img.lotte-automarket.net/uploadFile/2023/03/28/LFILE_000001547520230328100153.jpg" alt="성능점검 차량 전면 사진">
+											</div>
+											<p class="tac">앞면</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="cell-pic">
+											<div class="pic">
+												<img src="https://img.lotte-automarket.net/uploadFile/2023/03/28/LFILE_000001547620230328100153.jpg" alt="성능점검 차량 후면 사진">
+											</div>
+											<p class="tac">뒷면</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="car-check-group">
+						<div class="tb full">
+							<p class="">
+								「자동차관리법」제58조 제1항 및 같은법 시행규칙 제120조에 따라 (중고자동차의 성능 · 상태를 점검, 자동차가격조사 · 산정)하였음을 확인합니다.
+								<br><br>
+								<span>2023년 03월 31일</span>
+							</p>
+							<ul class="bul-list mt20">
+								<li class="mt">중고자동차 성능 · 상태 점검자 : <strong>임우택(인)</strong></li>
+								<li class="mt">중고자동차 성능 · 상태 고지자 : <strong>(인)</strong></li>
+							</ul>
+						</div>
+						<div class="tb full">
+							<h3>유의사항 : 성능 · 상태 점검의 보증에 관한 사항 등</h3>
+							<div class="box-gray">
+								<ul class="num-list">
+									<li>
+										1. 자동차 매매업자는 성능 · 상태점검기록부(가격조사 · 산정 부분 제외)에 기재된 내용을 고지하지 아니하거나 거짓으로 고지함으로써 매수인에게 재산상 손해가 발생한 경우에는 그 손해를 배상할 책임을 집니다.
+										<ul class="bul-list">
+											<li>
+												자동차성능상태점검자가 거짓 또는 오류가 있는 성능상태점검 내용을 제공하여 아래의 보증기간 또는
+												보증거리 이내에 자동차의 실제 성능 · 상태가 다른 경우, 자동차매매업자는 매수인의 재산상
+												손해를 배상할 책임을 지며, 자동차성능상태점검자에게 이를 구상할 수 있습니다.
+												(매수인이 성능상태점검자가 가입한 책임보험 등을 통해 별도로 배상받는 경우는 제외함.)
+											</li>
+											<li>
+												자동차인도일부터 보증기간은 (30)일, 보증거리는 (2천)킬로미터로 합니다.(보증기간은 30일 이상,
+												보증거리는 2천킬로미터 이상이어야 하며, 그 중 먼저 도래한 것을 적용합니다)
+											</li>
+											<li>자동차매매업자는 중고자동차 성능상태점검기록부를 매수인에게 고지할 때 현행
+												자동차성능 · 상태점검자의 보증범위(국토교통부 고시)를 첨부하여 고지하여야 합니다
+												동 보증범위는 '자동차성능상태점검자의 보증범위' (국토교통부 고시)에 따르며 법제처
+												국가법령정보센터 또는 국토교통부 홈페이지에서 확인할 수 있습니다.
+											</li>
+											<li>
+												자동차의 리콜에 관한 사항은 자동차리콜센터(www.car.go.kr) 에서 확인할 수 있습니다.
+											</li>
+										</ul>
+									</li>
+									<li>
+										2. 중고자동차의 구조 · 장치 등의 성능 · 상태를 고지하지 아니 한 자, 거짓으로 점검하거나 거짓 고지한 자는
+										『자동차관리법』제80조제6호 및 제80조제7호에 따라 2년 이하의 징역 또는 2천만원 이하의 벌금에 처합니다.
+									</li>
+									<li>
+										3. 성능 · 상태점검자가 거짓으로 성능 · 상태 점검을 하거나 점검한 내용과 다르게 자동차매매업자에게 알린 경우
+										『자동차관리법 제21조제2항에 따른 행정처분의 기준과 절차에 관한 규칙』제5조제1항에 따라 1차 사업정지 30일,
+										2차 사업정지 90일, 3차 등록취소의 행정처분을 받습니다.
+									</li>
+									<li>
+										4. 사고이력인정은 사고로 자동차 주요 골격 부위의 판금,용접수리 및 교환이 있는 경우로 한정합니다.
+										단, 쿼터패널, 루프패널, 사이드실패널 부위는 절단, 용접시에만 사고로 표기합니다.
+										(후드, 프론트펜더, 도어, 트렁크리드 등 외판 부위 및 범퍼에 대한 판금, 용접수리 및 교환은 단순수리로서 사고에 포함되지 않습니다)
+									</li>
+									<li>
+										5. 성능 · 상태점검은 국토교통부장관이 정하는 자동차성능 · 상태점검 방법에 따라야 합니다.
+									</li>
+									<li>
+										6. 체크항목 판단기준
+										<ul class="bul-list">
+											<li>미세누유(미세누수) : 해당부위에 오일(냉각수)이 비치는 정도로서 부품 노후로 인한 현상</li>
+											<li>누유(누수) : 해당부위에서 오일(냉각수) 이 맺혀서 떨어지는 상태</li>
+											<li>부식 : 차량 하부와 외판의 금속 표면이 화학반응에 의해 금속이 아닌 상태로 상실되어 가는 현상(단순히 녹슬어 있는 상태는 제외합니다.)</li>
+											<li>침수 : 자동차의 원동기, 변속기 등 주요장치 일부가 물에 잠긴 흔적이 있는 상태</li>
+											<li>현재 주행거리: 성능 · 상태점검 당시 해당 차량 주행거리계의 주행거리를 기록하되, 기록한 주행거리가 자동차전산정보처리조직(자동차관리정보시스템) 으로부터 받은 주행거리(주행거리계 교체 정보 포함)보다 적은 경우 '특기사항 및 점검자의 의견' 란에 이를 기재하여야 합니다.</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="tb full">
+							<h3>유의사항 : 자동차가격조사 · 산정의 보증에 관한 사항등</h3>
+							<div class="box-gray">
+								<ul class="num-list">
+									<li>7. 가격조사 · 산정자는 아래의 보증기간 또는 보증거리 이내에 중고자동차성능 · 상태점검기록부(가격조사 · 산정부분 한정)에 기재된 내용에 허위 또는 오류가 있는 경우 계약 또는 관계 법령에 따라 매수인에 대하여 책임을 집니다.
+										<ul class="bul-list">
+											<li>자동차인도일부터 보증기간은 ( )일, 보증거리는 ( )킬로미터로 합니다.<br>(보증기간은 30일 이상, 보증거리는 2천킬로미터 이상이어야 하며, 그 중 먼저 도래한 것을 적용합니다)</li>
+										</ul>
+									</li>
+									<li>
+										8. 매매업자는매수인이 가격조사 · 산정을 원할 경우 가격조사 · 산정자가 해당 자동차가격을 조사 · 산정하여 결과를 이 서식에 적도록 한 후, 매매계약을 체결하기전에 매수인에게 서면으로 고지하여야 합니다. 이경우 매매업자는 가격조사 · 산정자에게 가격조사 · 산정을 의뢰하기 전에 매수인에게 가격조사 · 산정 비용을 안내하여야 합니다.
+									</li>
+									<li>
+										9. 자도차가격은 보험개발원이 정한 차량기준가액을 기준가격으로 조사 · 산정하되, 기준서는 『자동차관리법』제58조의4제1호에 해당하는 자는 기술사회에서 발행한 기준서를, 제2호에 해당하는 자는 한국자동차진단보증협회에서 발행한 기준서를 각각 적용하여야 하며, 기준가격과 기준서는 산정일 기준 가장 최근에 발행된 것을 적용합니다.
+									</li>
+									<li>
+										10. 특기사항란은 가격조사 · 산정자의 자동차 성능 · 상태에 대한 견해가 성능 · 상태점검자의 견해와 다를 경우 표시합니다.
+									</li>
+									<li>
+										<strong>* 자동차가격조사 · 산정이란?</strong><br>
+										“가격조사 · 산정”은 소비자가 매매계약을 체결함에 있어 중고차 가격의 적절성 판단에 참고할 수 있도록 법령에 의한 절차와 기준에 따라 전문 가격조사 · 산정인이 객관적으로 제시한 가액입니다. 따라서 “가격조사 · 산정”은 소비자의 자율적 선택에 따른 유료 서비스이며, 가격조사 · 산정 결과는 중고차가격판단에 관하여 법적 구속력은 없고 소비자의구매여부 결정에 참고자료로 활용됩니다.
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //popup : 성능상태점검기록부 -->
+
+	<!-- 230719 popup : 보험처리이력 추가 -->
+	<div class="popup-car-check popup" id="carHistoryPop">
+		<div class="layout--header">
+			<header>
+				<h2 class="page-title">보험처리이력(Car History)</h2>
+				<button type="button" class="ir bt-page-close" onclick="ui.modalPopClose(carHistoryPop)">페이지 닫기</button>
+			</header>
+		</div>
+		<div class="layout--container">
+			<!-- .sec-car-history 태그 변경 (section -> div) -->
+			<!-- <section class="sec-car-history"> -->
+			<div class="sec-car-history">
+				<div class="car-history-summary">
+					<h3>[11루8985] 기아 더 뉴 K5 2.0 가솔린 트렌디</h3>
+
+					<!-- 230719 정보조회일 하단으로 위치이동/ 자동차번호 삭제 -->
+					<!-- <p class="desc">자동차 번호: 172하2139 / 정보 조회일: 2023.07.18</p> -->
+
+					<!-- 230719 box -> table로 수정 -->
+					<!--
+					<div class="smr-box">
+						<h4>중고차 사고이력 정보 요약</h4>
+						<ul>
+							<li><span class="t">자동차 일반사양</span><span class="c">현대, G80, 2022, 세단 4도어</span></li>
+							<li><span class="t">자동차 용도이력</span><span class="c">사용이력있음</span></li>
+							<li><span class="t">자동차 번호/소유자 변경횟수</span><span class="c">0회 / 0회</span></li>
+							<li><span class="t">자동차보험 특수 사고이력(전손, 침수, 도난)</span><span class="c">전손 0회 /  도난 0회 / 침수(전손,분손) 0회</span></li>
+							<li><span class="t">보험사고이력(내차 피해)</span><span class="c">없음</span></li>
+							<li><span class="t">보험사고이력(타차 가해)</span><span class="c">없음</span></li>
+						</ul>
+					</div>
+					<p class="info-txt">본 중고차 사고이력정보는 정보조회일자를 기준으로 작성되었습니다.</p>
+					-->
+					<div class="carhistory-sec">
+						<h4>사고이력 정보 요약</h4><!-- 230719 텍스트 수정 ("중고차" 삭제) -->
+						<table>
+							<colgroup>
+								<col width="45"><col width="65"><col width="">
+							</colgroup>
+							<tbody>
+								<tr class="doubleline">
+									<th rowspan="2">보험사고<br/>이력</th>
+									<th>내차피해</th>
+									<td>1회<p>2,200,000원<p></td>
+								</tr>
+								<tr>
+									<th>타차가해</th>
+									<td>1회<p>2,200,000원<p></td>
+								</tr>
+								<tr>
+									<th colspan="2">전손사고</th>
+									<td>1회</td>
+								</tr>
+								<tr>
+									<th colspan="2">도난사고</th>
+									<td>1회</td>
+								</tr>
+								<tr>
+									<th colspan="2">침수이력</th>
+									<td>1회</td>
+								</tr>
+								<tr>
+									<th colspan="2">용도변경</th>
+									<td>있음</td>
+								</tr>
+								<tr>
+									<th colspan="2">차량번호변경</th>
+									<td>있음</td>
+								</tr>
+								<tr>
+									<th colspan="2">소유자변경</th>
+									<td>2회</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="carhistory-sec">
+					<h4>자동차 일반 사양 정보</h4>
+					<table>
+						<colgroup>
+							<col width="110"><col width="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>제작사</th>
+								<td>현대</td>
+							</tr>
+							<tr>
+								<th>연식</th>
+								<td>2022년</td>
+							</tr>
+							<tr>
+								<th>배기량</th>
+								<td>3,470cc</td>
+							</tr>
+							<tr>
+								<th>용도 및 차종</th>
+								<td>승용 영업용</td>
+							</tr>
+							<tr>
+								<th>자동차명</th>
+								<td>G80</td>
+							</tr>
+							<tr>
+								<th>사용연료</th>
+								<td>가솔린</td>
+							</tr>
+							<tr>
+								<th>차체형상</th>
+								<td>세단 4도어</td>
+							</tr>
+							<tr>
+								<th>최초 보험일</th>
+								<td>2022.06.02</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="info-txt">
+						자동차 일반 정보로서 172하2139 차량을 확인하기 위하여 참고로 제공하는 것이며, 수입차나 특수차량등의 경우에는 일부 정보의 누락이나 오류가 있을 수 있습니다.
+					</p>
+				</div>
+				<div class="carhistory-sec">
+					<h4>자동차 일반 사양 정보</h4>
+					<ul class="round-box">
+						<li>
+							<p>영업용(대여) <br>사용이력</p>
+							<p class="t-red">사용이력 있음</p>
+						</li>
+						<li>
+							<p>영업용(일반) <br>사용이력</p>
+							<p>사용이력 없음</p>
+						</li>
+						<li>
+							<p>관용용도 <br>사용이력</p>
+							<p>사용이력 없음</p>
+						</li>
+					</ul>
+					<p class="info-txt">
+						본 정보는 172하2139 차량의 과거 자동차번호 변경기록을 모두 검색하여 제공하는 것으로 대여용(렌트카), 영업용(택시 등)으로 사용된 적이 있는 지를 확인할 수 있습니다.
+					</p>
+				</div>
+				<div class="carhistory-sec">
+					<h4>자동차 번호 및 소유자 변경이력 정보</h4>
+					<h4>없음</h4>
+				</div>
+				<div class="carhistory-sec">
+					<h4>자동차보험 특수 사고이력 정보</h4>
+					<ul class="round-box">
+						<li>
+							<p>전손 보험사고</p>
+							<p>이력 없음</p>
+						</li>
+						<li>
+							<p>침수 보험사고</p>
+							<p>이력 없음</p>
+						</li>
+						<li>
+							<p>도난 보험사고</p>
+							<p>이력 없음</p>
+						</li>
+					</ul>
+					<p class="info-txt">
+						본 정보는 172하2139 차량의 과거 자동차번호 변경기록을 모두 검색하여 제공하는 것으로 대여용(렌트카), 영업용(택시 등)으로 사용된 적이 있는 지를 확인할 수 있습니다.
+					</p>
+				</div>
+				<div class="carhistory-sec">
+					<h4>보험사고이력 정보: 내차 피해</h4>
+					<ul class="desc-list">
+						<li class="ni">
+							자동차 사고로 발생한 172하2139 차량의 손상 수리기록을 수리비(보험금)출처에 따라
+						</li>
+						<li>1. ‘자기 자동차 보험에서 지급된 경우' 와</li>
+						<li>2. ‘타인의 자동차 보험에서 지급된 경우'로 나누어 제공합니다. (대인사고 제외) ‘수리(견적)비용’은 보험사가 지급하는 보험금 중에서 대차료, 휴차료 등 간접손해와 과실상계액 등을 제외한 수리 및 견적(부품/공임/도장) 비용으로 실제 지급된 보험금과 차이가 있습니다.</li>
+					</ul>
+					<div class="smr-box">
+						<h5>내차 보험으로 처리한 내차 사고 / 사고 유무: 없음</h5>
+					</div>
+					<div class="smr-box">
+						<h5>타차 보험으로 처리한 내차 사고 / 사고 유무: 없음</h5>
+					</div>
+					<p class="info-txt">
+						쌍방과실로 해당 자동차의 손상ㆍ수리기록이 동 차량의 자동차 보험과 타차 자동차 보험에서 동시에 처리된 경우에는, '1. 내차 보험으로 처리한 내차 사고'에만 표시되고 '2. 타차보험에서 처리된 내차사고' 에서는 생략됩니다.
+					</p>
+				</div>
+				<div class="carhistory-sec">
+					<h4>보험사고이력 정보: 타차 가해</h4>
+					<ul class="desc-list">
+						<li class="ni">
+							172하2139 차량이 타인의 자동차등의 재물에 피해를 입혀, 그 손해를 해당 차량의 자동차 보험으로 처리한 내역입니다. (대인사고 제외)
+						</li>
+					</ul>
+					<div class="smr-box">
+						<div class="smr-box">
+							<h5>내차 보험으로 처리한 내차 사고 / 사고 유무: 없음</h5>
+						</div>
+					</div>
+					<p class="info-txt">
+						본 정보는 자동차사고로 상대방 차량 또는 재물에 발생한 손해와 관련된 정보로서, 상대방 차량 또는 재물에 발생한 손해 규모를 참고하여 자기 자동차의 손상여부 등을 간접적으로 확인할 수 있도록 제공하여 드리고 있습니다
+					</p>
+				</div>
+				<div class="carhistory-sec">
+					<h4>정보이용관련 유의사항</h4>
+					<div class="smr-box">
+						<h5><var class="t-red">자동차 보험사고기록이 없었다고 해서 반드시 무사고라고 할 수 없습니다.</var></h5>
+						<p>중고차 사고이력정보 서비스는 자동차 보험을 취급하는 14개 손해보헙사의 자동차 보험수리비 지급기록(1996년이후)에 근거하여 제공하고 있습니다. 따라서 다음과 같은 경우에는 중고차 사고 이력정보 서비스를 제공할 수 없습니다.</p>
+						<ul class="desc-list mt10">
+							<li>
+								1) 사고가 있었다하더라도 보험회사에 사고신고를 하지 않고 자비로 처리한 경우, 사고신고를 하였더라도 면책, 취소 등의 사유로 보험금이 지급되지 않은 경우, 사고신고 후 자비로 처리한 경우입니다.
+							</li>
+							<li>
+								2) 사고가 있었다하더라도 종합보험, 즉 자기차량담보나 대물배상담보의 자동차 보험에 가입하지 않아서 자동차 보험으로 수리비용을 청구하지 못한 경우 (단, 이 경우라도 타인 자동차보험에서 보상받은 경우에는 사고정보 제공 가능)
+							</li>
+							<li>
+								3) 자동차보험이 아닌 운수공제(택시공제, 화물공제, 버스공제 등)에 가입되어 운수공제로부터 자동차의 피해에 대한 손해를 보상받은 경우 등, 본 중고차 사고이력 정보는 중고차 품질확인을 위한 보조정보이며 결정적인 판단 자료로 사용되어서는 아니됩니다. 따라서 정밀한 중고차 품질확인을 원하시면 차량진단 전문업체의 진단을 받아보시기 바랍니다.
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="carhistory-sec">
+					<h4>중고차사고이력 정보서비스란</h4>
+					<ul class="desc-list">
+						<li class="ni">
+							중고차 사고이력정보 서비스는 중고차 거래의 활성화와 중고차 매매시장의 투명성을 높이기 위하여, 보험개발원에서 보유하고 있는 1996년 이후의 자동차 관련 정보를 기초로 제공되는 온라인 서비스입니다. 본 정보는 중고차 품질확인을 위한 보조정보로서 자동차와 관련된 모든 사고의 발생여부나 품질확인을 위한 결정적인 판단자료로 사용되어서는 아니됩니다. 따라서 본 정보의 확대해석이나 오남용으로 발생하는 사항에 대해서 보험개발원은 어떠한 책임도 부담하지 아니합니다.
+						</li>
+						<li class="ni mt20">
+							보험개발원(www.kidi.or.kr)은 보험업법 제176조에 의하여 설립된 보험요율산출기관이며, 중고차사고이력정보서비스(www.carhistory.or.kr)는 보험업법시행령 제86조 제1호에 근거하여 제공합니다.
+						</li>
+					</ul>
+					<div class="desc-footer">
+						<span class="date">2022.05.25</span> <!-- 230719 날짜 추가 -->
+						<p>보험개발원</p>
+					</div>
+				</div>
+			<!-- </section> -->
+			</div>
+		</div>
+	</div>
+	<!-- // popup : 보험처리이력 -->
+
+	<!-- 230412 popup : 전체사진보기 -->
+	<div class="popup-see-all-pic popup" id="seeAllPicPop">
+		<div class="layout--header">
+			<header>
+				<h2 class="page-title">전체사진보기</h2>
+				<button type="button" class="ir bt-page-close" onclick="ui.modalPopClose(seeAllPicPop)">페이지 닫기</button>
+			</header>
+		</div>
+		<div class="layout--container">
+			<div class="swiper-wrap">
+				<div class="swiper mySwiper2">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="images/dummy/@detail-car-image2.jpg" alt="차량대표이미지" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/dummy/@detail-car-image2_1.jpg" alt="차량대표이미지" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/dummy/@detail-car-image2_2.jpg" alt="차량대표이미지" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/dummy/@detail-car-image2_3.jpg" alt="차량대표이미지" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/dummy/@detail-car-image2_4.jpg" alt="차량대표이미지" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/dummy/@detail-car-image2_5.jpg" alt="차량대표이미지" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/dummy/@detail-car-image2_6.jpg" alt="차량대표이미지" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/dummy/@detail-car-image2_7.jpg" alt="차량대표이미지" />
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="thumbs-wrap">
+					<div thumbsSlider="" class="swiper mySwiper1">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="images/dummy/@detail-car-image2.jpg" alt="차량대표이미지" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/dummy/@detail-car-image2_1.jpg" alt="차량대표이미지" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/dummy/@detail-car-image2_2.jpg" alt="차량대표이미지" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/dummy/@detail-car-image2_3.jpg" alt="차량대표이미지" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/dummy/@detail-car-image2_4.jpg" alt="차량대표이미지" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/dummy/@detail-car-image2_5.jpg" alt="차량대표이미지" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/dummy/@detail-car-image2_6.jpg" alt="차량대표이미지" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/dummy/@detail-car-image2_7.jpg" alt="차량대표이미지" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Initialize Swiper -->
+			<script>
+				let ww = window.innerWidth;
+				let wh = window.innerHeight;
+				let swiper1, swiper2;
+
+				// thumbs swiper
+				function initSwiper(direction, slidesPerView, cssMode) {
+					if (typeof(swiper1) == 'object') {
+						swiper1.destroy();
+					}
+
+					return swiper1 = new Swiper(".mySwiper1", {
+						spaceBetween: 3,
+						slidesPerView: slidesPerView,
+						freeMode: {
+							enabled: true,
+							sticky: true,
+						},
+						watchSlidesProgress: true,
+						direction: direction,
+						cssMode: cssMode
+					});
+				}
+
+				// main image swiper
+				function initSwiper2() {
+					if (typeof(swiper2) == 'object') {
+						swiper2.destroy();
+					}
+
+					return swiper2 = new Swiper(".mySwiper2", {
+						slidesPerView: 1,
+						spaceBetween: 0,
+						pagination: {                       
+							el: '.swiper-pagination',
+							type: 'fraction',
+						},
+						thumbs: {
+							swiper: swiper1,
+						}
+					});
+				}
+
+				function responsiveSwiper() {
+					if (ww <= wh) {
+						initSwiper('horizontal', '5', false);
+						initSwiper2();
+					} else {
+						initSwiper('vertical', 'auto', true);
+						initSwiper2();
+					}
+				}
+
+				window.addEventListener('resize', function() {
+					ww = window.innerWidth;
+					wh = window.innerHeight;
+					responsiveSwiper();
+				});
+			</script>
+		</div>
+	</div>
+	<!-- //popup : 전체사진보기 -->
+
+	<!-- 230412 popup : 롯데진단 검사 결과 -->
+	<div class="popup-lotte-cert popup" id="lotteCertPop">
+		<div class="layout--header">
+			<header>
+				<h2 class="page-title">롯데진단 검사 결과</h2>
+				<button type="button" class="ir bt-page-close" onclick="ui.modalPopClose(lotteCertPop)">페이지 닫기</button>
+			</header>
+		</div>
+		<div class="layout--container">
+			<div>
+				<!-- 배너 -->
+				<!-- 230502 .banner-strip 추가 -->
+				<div class="banner-lotte-cert banner-strip">
+					<img src="images/elements/img-lotte-cert-mark.png" alt="롯데인증마크" />
+					<p>롯데가 직접 <strong>195개 항목</strong>을 정밀진단한<br/>신뢰할 수 있는 점검결과입니다.</p>
+				</div>
+
+				<!-- 기본정보 -->
+				<div class="car-info-detail area">
+					<h3 class="s-title">싼타페 더 프라임 디젤 2.2 2WD 1 밀리언 얼티밋</h4>
+					<p class="num">차대번호 SDF135AS3D2F13SDF6D</p>
+					<ul>
+						<li>
+							<span class="t">차량번호</span>
+							<span class="c">123가1234</span>
+						</li>
+						<li>
+							<span class="t">주행거리</span>
+							<span class="c">132,588km</span>
+						</li>
+						<li>
+							<span class="t">연식</span>
+							<span class="c">19년11월</span>
+						</li>
+						<li>
+							<span class="t">배기량</span>
+							<span class="c">1,955cc</span>
+						</li>
+						<li>
+							<span class="t">최초등록</span>
+							<span class="c">20년12월</span>
+						</li>
+						<li>
+							<span class="t">연료</span>
+							<span class="c">디젤</span>
+						</li>
+						<li>
+							<span class="t">색상</span>
+							<span class="c">흰색</span>
+						</li>
+						<li>
+							<span class="t">변속기</span>
+							<span class="c">오토</span>
+						</li>
+						<li>
+							<span class="t">인승</span>
+							<span class="c">7인승</span>
+						</li>
+						<li>
+							<span class="t">구동방식</span>
+							<span class="c">전륜구동</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 사고 종합평가 -->
+				<div class="car-accident-history area">
+					<div class="s-title-wrap">
+						<h3 class="s-title">
+							사고 종합평가
+							<div class="common-layer-group posTop">
+								<button type="button" class="ir common-layer-bt">툴팁보기</button>
+								<div class="common-layer-tooptip custom-tooltip">
+									<h4>사고 종합평가란?</h4>
+									<p>
+										사고확인은 크게 보험개발원에서 제공하는 보험이력조회와 법정 성능상태점검으로 확인 가능합니다.
+									</p>
+								</div>
+							</div>
+						</h3>
+					</div>
+
+					<div class="table">
+						<h3 class="header">보험이력조회</h3>
+						<ul class="data-wrap">
+							<li>
+								<span class="t">사고이력</span>
+								<p class="c none">무사고</p>
+							</li>
+							<li>
+								<span class="t">내차가해</span>
+								<p class="c">-</p>
+							</li>
+							<li>
+								<span class="t">타차피해</span>
+								<p class="c">-</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="table active">
+						<h3 class="header">성능상태점검</h3>
+						<ul class="data-wrap">
+							<li>
+								<span class="t">사고이력</span>
+								<p class="c">있음</p>
+							</li>
+							<li>
+								<span class="t">주요골격</span>
+								<p class="c">있음</p>
+							</li>
+							<li>
+								<span class="t">단순수리</span>
+								<p class="c">-</p>
+							</li>
+						</ul>
+
+						<!-- 차량상태영역// -->
+						<div class="sec-car-check-view">
+							<div class="car-check-area"><!-- 차량상태 영역 pc 소스 그대로 유지함 -->
+								<div class="check-car" id="CarCheckState">
+									<img src="images/checkcar/check_link_bg.png" class="check_link_bg" usemap="#Map">
+									
+									<div class="condition-mark" id="checkMark">
+										<!-- <p class="check_FL_foglamp" pos="1" style="display: block;">FL안개등</p> -->
+										<!-- <p class="check_FL_wheel" pos="2" style="display: block;">FL휠타이어</p> -->
+										<!-- <p class="check_RL_wheel" pos="12" style="display: block;">RL휠타이어</p> -->
+										<p class="check_L_side" pos="4" style="display: block;">L사이드실</p>
+										<p class="check_L_fender" pos="3" style="display: block;">L휀다</p>
+										<p class="check_FL_door" pos="5" style="display: block;">FL도어</p>
+										<p class="check_RL_door" pos="9" style="display: block;">RL도어</p>
+										<p class="check_L_quarterpanel" pos="13" style="display: block;">L쿼터패널</p>
+										<!-- <p class="check_RL_foglamp" pos="14" style="display: block;">RL안개등</p> -->
+										<p class="check_LA_filler" pos="7" style="display: block;">LA필러</p>
+										<p class="check_LB_filler" pos="8" style="display: block;">LB필러</p>
+										<p class="check_LC_filler" pos="11" style="display: block;">LC필러</p>
+										<!-- <p class="check_FL_window" pos="6" style="display: block;">FL윈도우</p> -->
+										<!-- <p class="check_RL_window" pos="10" style="display: block;">RL윈도우</p> -->
+										<!-- <p class="check_F_bumper" pos="15" style="display: block;">F범퍼</p> -->
+										<!-- <p class="check_grill" pos="16" style="display: block;">그릴/라디에이터 서포트</p> -->
+										<!-- <p class="check_L_lamp" pos="17" style="display: block;">L램프</p> -->
+										<!-- <p class="check_R_lamp" pos="18" style="display: block;">R램프</p> -->
+										<p class="check_bonnet" pos="19" style="display: block;">후드</p>
+										<!-- <p class="check_F_window" pos="20" style="display: block;">F윈도우</p> -->
+										<!-- <p class="check_R_window" pos="24" style="display: block;">R윈도우</p> -->
+										<p class="check_roof" pos="23" style="display: block;">루프</p>
+										<!-- <p class="check_L_mirror" pos="21" style="display: block;">L미러</p> -->
+										<!-- <p class="check_R_mirror" pos="22" style="display: block;">R미러</p> -->
+										<p class="check_trunk" pos="26" style="display: block;">트렁크리드</p>
+										<!-- <p class="check_L_taillight" pos="25" style="display: block;">L후미등</p> -->
+										<!-- <p class="check_R_taillight" pos="27" style="display: block;">R후미등</p> -->
+										<!-- <p class="check_R_bumper" pos="28" style="display: block;">R범퍼</p> -->
+										<p class="check_F_panel" pos="29" style="display: block;">프론트패널</p>
+										<p class="check_FL_insidepanel" pos="30" style="display: block;">FL인사이드패널</p>
+										<p class="check_FL_sidemember" pos="31" style="display: block;">FL사이드멤버</p>
+										<p class="check_FL_wheelhouse" pos="34" style="display: block;">FL휠하우스</p>
+										<p class="check_FR_insidepanel" pos="33" style="display: block;">FR인사이드패널</p>
+										<p class="check_FR_sidemember" pos="32" style="display: block;">FR사이드멤버</p>
+										<p class="check_FR_wheelhouse" pos="35" style="display: block;">FR휠하우스</p>
+										<p class="check_crossmember" pos="36" style="display: block;">크로스멤버</p>
+										<p class="check_dashpanel" pos="37" style="display: block;">대쉬패널</p>
+										<p class="check_floorpanel" pos="38" style="display: block;">플로어패널</p>
+										<p class="check_packagetray" pos="39" style="display: block;">패키지트레이</p>
+										<p class="check_RL_wheelhouse" pos="40" style="display: block;">RL휠하우스</p>
+										<p class="check_RL_sidemember" pos="41" style="display: block;">RL사이드멤버</p>
+										<p class="check_trunkfloor" pos="42" style="display: block;">트렁크플로어</p>
+										<p class="check_RR_sidemember" pos="43" style="display: block;">RR사이드멤버</p>
+										<p class="check_RR_wheelhouse" pos="44" style="display: block;">RR휠하우스</p>
+										<p class="check_rearpanel" pos="45" style="display: block;">리어패널</p>
+										<!-- <p class="check_FR_foglamp" pos="12" style="display: block;">FR안개등</p> -->
+										<!-- <p class="check_FR_wheel" pos="48" style="display: block;">FR휠타이어</p> -->
+										<!-- <p class="check_RR_wheel" pos="58" style="display: block;">RR휠타이어</p> -->
+										<p class="check_R_side" pos="52" style="display: block;">R사이드실</p>
+										<p class="check_R_fender" pos="47" style="display: block;">R휀다</p>
+										<p class="check_FR_door" pos="51" style="display: block;">FR도어</p>
+										<p class="check_RR_door" pos="55" style="display: block;">RR도어</p>
+										<p class="check_R_quarterpanel" pos="57" style="display: block;">R쿼터패널</p>
+										<!-- <p class="check_RR_foglamp" pos="59" style="display: block;">RR안개등</p> -->
+										<p class="check_RA_filler" pos="49" style="display: block;">RA필러</p>
+										<p class="check_RB_filler" pos="53" style="display: block;">RB필러</p>
+										<p class="check_RC_filler" pos="56" style="display: block;">RC필러</p>
+										<!-- <p class="check_FR_window" pos="50" style="display: block;">FR윈도우</p> -->
+										<!-- <p class="check_RR_window" pos="54" style="display: block;">RR윈도우</p> -->
+										<p class="check_radiator" pos="60" style="display: block;">라디에이터 서포트</p>
+									</div>
+			
+									<div id="flag3" class="flag" style="position:absolute;z-index:999;left:110px;top:128px;"><span class="i-mark bg-X" pos="3" data-target="3" data-accitem="X">교환</span></div>
+									<div id="flag4" class="flag" style="position:absolute;z-index:999;left:64px;top:207px;"><span class="i-mark bg-C" pos="4" data-target="4" data-accitem="C">부식</span></div>
+									<div id="flag5" class="flag" style="position:absolute;z-index:999;left:99px;top:180px;"><span class="i-mark bg-X" pos="5" data-target="5" data-accitem="X">교환</span></div>
+									<div id="flag7" class="flag" style="position:absolute;z-index:999;left:145px;top:173px;"><span class="i-mark bg-X" pos="7" data-target="7" data-accitem="X">교환</span></div>
+									<div id="flag8" class="flag" style="position:absolute;z-index:999;left:145px;top:230px;"><span class="i-mark bg-A" pos="8" data-target="8" data-accitem="A">흠집</span></div>
+									<div id="flag9" class="flag" style="position:absolute;z-index:999;left:100px;top:252px;"><span class="i-mark bg-A" pos="9" data-target="9" data-accitem="A">흠집</span></div>
+									<div id="flag11" class="flag" style="position:absolute;z-index:999;left:146px;top:315px;"><span class="i-mark bg-U" pos="11" data-target="11" data-accitem="U">요철</span></div>
+									<div id="flag13" class="flag" style="position:absolute;z-index:999;left:114px;top:346px;"><span class="i-mark bg-W" pos="13" data-target="13" data-accitem="W">판금/용접</span></div>
+									<div id="flag16" class="flag" style="position:absolute;z-index:999;left:265px;top:27px;"><span class="i-mark bg-X" pos="16" data-target="16" data-accitem="X">교환</span></div>
+									<div id="flag19" class="flag" style="position:absolute;z-index:999;left:264px;top:81px;"><span class="i-mark bg-W" pos="19" data-target="19" data-accitem="W">판금/용접</span></div>
+									<div id="flag23" class="flag" style="position:absolute;z-index:999;left:265px;top:244px;"><span class="i-mark bg-X" pos="23" data-target="23" data-accitem="X">교환</span></div>
+									<div id="flag26" class="flag" style="position:absolute;z-index:999;left:265px;top:374px;"><span class="i-mark bg-X" pos="26" data-target="26" data-accitem="X">교환</span></div>
+									<div id="flag30" class="flag" style="position:absolute;z-index:999;left:392px;top:102px;"><span class="i-mark bg-X" pos="30" data-target="30" data-accitem="X">교환</span></div>
+									<div id="flag31" class="flag" style="position:absolute;z-index:999;left:413px;top:113px;"><span class="i-mark bg-W" pos="31" data-target="31" data-accitem="W">판금/용접</span></div>
+									<div id="flag32" class="flag" style="position:absolute;z-index:999;left:475px;top:113px;"><span class="i-mark bg-X" pos="32" data-target="32" data-accitem="X">교환</span></div>
+									<div id="flag33" class="flag" style="position:absolute;z-index:999;left:497px;top:101px;"><span class="i-mark bg-X" pos="33" data-target="33" data-accitem="X">교환</span></div>
+									<div id="flag34" class="flag" style="position:absolute;z-index:999;left:393px;top:132px;"><span class="i-mark bg-W" pos="34" data-target="34" data-accitem="W">판금/용접</span></div>
+									<div id="flag35" class="flag" style="position:absolute;z-index:999;left:497px;top:131px;"><span class="i-mark bg-X" pos="35" data-target="35" data-accitem="X">교환</span></div>
+									<div id="flag36" class="flag" style="position:absolute;z-index:999;left:445px;top:153px;"><span class="i-mark bg-C" pos="36" data-target="36" data-accitem="C">부식</span></div>
+									<div id="flag37" class="flag" style="position:absolute;z-index:999;left:445px;top:175px;"><span class="i-mark bg-C" pos="37" data-target="37" data-accitem="C">부식</span></div>
+									<div id="flag38" class="flag" style="position:absolute;z-index:999;left:445px;top:233px;"><span class="i-mark bg-C" pos="38" data-target="38" data-accitem="C">부식</span></div>
+									<div id="flag39" class="flag" style="position:absolute;z-index:999;left:444px;top:291px;"><span class="i-mark bg-U" pos="39" data-target="39" data-accitem="U">요철</span></div>
+									<div id="flag40" class="flag" style="position:absolute;z-index:999;left:392px;top:313px;"><span class="i-mark bg-T" pos="40" data-target="40" data-accitem="T">손상</span></div>
+									<div id="flag41" class="flag" style="position:absolute;z-index:999;left:414px;top:325px;"><span class="i-mark bg-T" pos="41" data-target="41" data-accitem="T">손상</span></div>
+									<div id="flag42" class="flag" style="position:absolute;z-index:999;left:445px;top:325px;"><span class="i-mark bg-T" pos="42" data-target="42" data-accitem="T">손상</span></div>
+									<div id="flag43" class="flag" style="position:absolute;z-index:999;left:475px;top:325px;"><span class="i-mark bg-T" pos="43" data-target="43" data-accitem="T">손상</span></div>
+									<div id="flag44" class="flag" style="position:absolute;z-index:999;left:497px;top:313px;"><span class="i-mark bg-T" pos="44" data-target="44" data-accitem="T">손상</span></div>
+									<div id="flag45" class="flag" style="position:absolute;z-index:999;left:445px;top:360px;"><span class="i-mark bg-T" pos="45" data-target="45" data-accitem="T">손상</span></div>
+									<div id="flag47" class="flag" style="position:absolute;z-index:999;left:598px;top:127px;"><span class="i-mark bg-W" pos="47" data-target="47" data-accitem="W">판금/용접</span></div>
+									<div id="flag49" class="flag" style="position:absolute;z-index:999;left:564px;top:175px;"><span class="i-mark bg-W" pos="49" data-target="49" data-accitem="W">판금/용접</span></div>
+									<div id="flag51" class="flag" style="position:absolute;z-index:999;left:611px;top:181px;"><span class="i-mark bg-X" pos="51" data-target="51" data-accitem="X">교환</span></div>
+									<div id="flag52" class="flag" style="position:absolute;z-index:999;left:646px;top:212px;"><span class="i-mark bg-A" pos="52" data-target="52" data-accitem="A">흠집</span></div>
+									<div id="flag53" class="flag" style="position:absolute;z-index:999;left:565px;top:231px;"><span class="i-mark bg-W" pos="53" data-target="53" data-accitem="W">판금/용접</span></div>
+									<div id="flag55" class="flag" style="position:absolute;z-index:999;left:611px;top:254px;"><span class="i-mark bg-W" pos="55" data-target="55" data-accitem="W">판금/용접</span></div>
+									<div id="flag56" class="flag" style="position:absolute;z-index:999;left:565px;top:315px;"><span class="i-mark bg-T" pos="56" data-target="56" data-accitem="T">손상</span></div>
+									<div id="flag57" class="flag" style="position:absolute;z-index:999;left:596px;top:348px;"><span class="i-mark bg-T" pos="57" data-target="57" data-accitem="T">손상</span></div>
+									<div id="flag60" class="flag" style="position:absolute;z-index:999;left:444px;top:72px;"><span class="i-mark bg-X" pos="60" data-target="60" data-accitem="X">교환</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tips">
+						<h3>꼭 알아야 할 중고차 TIP!</h3>
+						<ul class="contents">
+							<li>[보험이력조회]는 자동차보험사 사용이력이 기준이기에, 보험처리 없이 사설수리한 경우 무사고로 표기될 수 있습니다.</li>
+							<li>[성능상태점검]의 사고이력 기준은 주요골격의 교환/판금/용접 이력이 기준이기에, 단순수리의 경우 무사고로 표기될 수 있습니다.</li>
+							<li>[보험이력조회]와 [성능상태점검] 무사고의 상이한 기준으로 다르게 표기될 수 있으니, 두 지표의 특성을 이해하고 비교하시면 됩니다.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 진단검사 상세 -->
+				<div class="car-check-detail area">
+					<div class="s-title-wrap">
+						<h3 class="s-title">진단검사 상세</h3>
+					</div>
+
+					<!-- 양호/이상 -->
+					<ul class="data-wrap">
+						<li class="all">
+							<span class="t">점검항목</span>
+							<p class="c"><strong>195</strong>건</p>
+						</li>
+						<li class="g">
+							<span class="t">양호</span>
+							<p class="c none"><strong>187</strong>건</p>
+						</li>
+						<li class="p">
+							<span class="t">이상</span>
+							<p class="c"><strong>8</strong>건</p>
+						</li>
+					</ul>
+
+					<!-- Summary -->
+					<ol class="summary-wrap list-contents">
+						<li>
+							<div>
+								<h4 class="t-label">외장</h4>
+								<p class="t-val"><strong>57</strong>/ 60</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<h4 class="t-label">내장</h4>
+								<p class="t-val"><strong>41</strong>/ 42</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<h4 class="t-label">엔진/미션</h4>
+								<p class="t-val"><strong>15</strong>/ 18</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<h4 class="t-label">제동/조향</h4>
+								<p class="t-val"><strong>18</strong>/ 19</p>
+							</div>
+						</li>
+						<li class="none">
+							<div>
+								<h4 class="t-label">등화장치</h4>
+								<p class="t-val"><strong>17</strong>/ 17</p>
+							</div>
+						</li>
+						<li class="none">
+							<div>
+								<h4 class="t-label">안전/편의</h4>
+								<p class="t-val"><strong>39</strong>/ 39</p>
+							</div>
+						</li>
+					</ol>
+
+					<!-- detail -->
+					<div class="detail-wrap">
+						<div class="tip"><p>성능진단검사 중복 46항목</p></div>
+
+						<div class="table">
+							<h3>외장 (<strong>57</strong><span>/60</span>)</h3>
+							<table class="wrap">
+								<tr class="chk"><th>1.</th><td><span>후드(본넷)</span></td></tr>
+								<tr class="chk"><th>2.</th><td><span>프론트 펜더(운)</span></td></tr>
+								<tr class="chk"><th>3.</th><td><span>프론트 펜더(조)</span></td></tr>
+								<tr class="chk"><th>4.</th><td><span>프론트 도어(운)</span></td></tr>
+								<tr class="chk"><th>5.</th><td><span>프론트 도어(조)</span></td></tr>
+								<tr class="chk"><th>6.</th><td><span>리어 도어(운)</span></td></tr>
+								<tr class="chk"><th>7.</th><td><span>리어 도어(조)</span></td></tr>
+								<tr class="chk"><th>8.</th><td><span>트렁크 리드</span></td></tr>
+								<tr class="active chk">
+									<th>9.</th>
+									<td>
+										<span>라디에이터서포트 (볼트체결품)</span>
+										<div class="label-wrap">
+											<p class="label-X">교환</p>
+											<p class="label-W">용접</p>
+											<p class="label-U">요철</p>
+											<p class="label-C">부식</p>
+											<p class="label-T">손상</p>
+											<p class="label-A">흠집</p>
+										</div>
+									</td>
+								</tr>
+								<tr class="active chk"><th>10.</th><td><span>쿼터 패널(운)</span></td></tr>
+								<tr class="chk"><th>11.</th><td><span>쿼터 패널(조)</span></td></tr>
+								<tr class="chk"><th>12.</th><td><span>루프</span></td></tr>
+								<tr class="chk"><th>13.</th><td><span>사이드 실(운)</span></td></tr>
+								<tr class="chk"><th>14.</th><td><span>사이드 실(조)</span></td></tr>
+								<tr class="chk"><th>15.</th><td><span>프론트 패널</span></td></tr>
+								<tr class="chk"><th>16.</th><td><span>크로스 멤버</span></td></tr>
+								<tr class="chk"><th>17.</th><td><span>인사이드 패널</span></td></tr>
+								<tr class="chk"><th>18.</th><td><span>사이드 멤버</span></td></tr>
+								<tr class="chk"><th>19.</th><td><span>휠 하우스</span></td></tr>
+								<tr class="chk"><th>20.</th><td><span>A필러(운)</span></td></tr>
+								<tr class="chk"><th>21.</th><td><span>B필러(운)</span></td></tr>
+								<tr class="chk"><th>22.</th><td><span>C필러(운)</span></td></tr>
+								<tr class="chk"><th>23.</th><td><span>A필러(조)</span></td></tr>
+								<tr class="chk"><th>24.</th><td><span>B필러(조)</span></td></tr>
+								<tr class="chk"><th>25.</th><td><span>C필러(조)</span></td></tr>
+								<tr class="chk"><th>26.</th><td><span>대쉬 패널</span></td></tr>
+								<tr class="chk"><th>27.</th><td><span>플로어 패널</span></td></tr>
+								<tr class="chk"><th>28.</th><td><span>트렁크 플로어</span></td></tr>
+								<tr class="chk"><th>29.</th><td><span>리어 패널</span></td></tr>
+								<tr class="chk"><th>30.</th><td><span>패키지 트레이</span></td></tr>
+								<tr><th>31.</th><td><span>라디에이터 그릴</span></td></tr>
+								<tr><th>32.</th><td><span>후드 트림</span></td></tr>
+								<tr><th>33.</th><td><span>펜더 가니시(운)</span></td></tr>
+								<tr><th>34.</th><td><span>운전석 프론트 휠(앞)</span></td></tr>
+								<tr><th>35.</th><td><span>프론트 도어 가니시(운)</span></td></tr>
+								<tr><th>36.</th><td><span>리어도어 가니시(운)</span></td></tr>
+								<tr><th>37.</th><td><span>사이드 실 몰딩(운)</span></td></tr>
+								<tr><th>38.</th><td><span>사이드 미러(운)</span></td></tr>
+								<tr><th>39.</th><td><span>쿼터 가니시(운)</span></td></tr>
+								<tr><th>40.</th><td><span>운전석 리어 휠(뒤)</span></td></tr>
+								<tr><th>41.</th><td><span>프론트 범퍼</span></td></tr>
+								<tr><th>42.</th><td><span>리어범퍼</span></td></tr>
+								<tr><th>43.</th><td><span>리어 범퍼 로우 커버</span></td></tr>
+								<tr><th>44.</th><td><span>쿼터 가니시(조)</span></td></tr>
+								<tr><th>45.</th><td><span>조수석 리어 휠(뒤)</span></td></tr>
+								<tr><th>46.</th><td><span>리어 도어 가니시(조)</span></td></tr>
+								<tr><th>47.</th><td><span>프론트 도어 가니시(조)</span></td></tr>
+								<tr><th>48.</th><td><span>사이드 실 몰딩(조)</span></td></tr>
+								<tr><th>49.</th><td><span>사이드 미러(조)</span></td></tr>
+								<tr><th>50.</th><td><span>펜더 가니시(조)</span></td></tr>
+								<tr><th>51.</th><td><span>조수석 프로트 힐(앞)</span></td></tr>
+								<tr><th>52.</th><td><span>전면 유리</span></td></tr>
+								<tr><th>53.</th><td><span>프론트 도어 유리(운)</span></td></tr>
+								<tr><th>54.</th><td><span>리어 도어 유리(운)</span></td></tr>
+								<tr><th>55.</th><td><span>쿼터 유리(운)</span></td></tr>
+								<tr><th>56.</th><td><span>후면 유리</span></td></tr>
+								<tr><th>57.</th><td><span>쿼터유리(조)</span></td></tr>
+								<tr><th>58.</th><td><span>리어도어 유리(조)</span></td></tr>
+								<tr><th>59.</th><td><span>프론트 도어 유리(조)</span></td></tr>
+								<tr><th>60.</th><td><span>선루프</span></td></tr>
+							</table>
+						</div>
+
+						<div class="table">
+							<h3>내장 (<strong>41</strong><span>/42</span>)</h3>
+							<table class="wrap">
+								<tr><th>61.</th><td><span>크래시 패드</span></td></tr>
+								<tr><th>62.</th><td><span>계기반</span></td></tr>
+								<tr><th>63.</th><td><span>스티어링 컬럼 슈라우드</span></td></tr>
+								<tr><th>64.</th><td><span>크래시 패드 로우 커버</span></td></tr>
+								<tr><th>65.</th><td><span>글로브 박스</span></td></tr>
+								<tr><th>66.</th><td><span>센터 페시아</span></td></tr>
+								<tr><th>67.</th><td><span>기어 노브</span></td></tr>
+								<tr><th>68.</th><td><span>센터 콘솔</span></td></tr>
+								<tr class="active">
+									<th>69.</th>
+									<td>
+										<span>콘솔 암레스트</span>
+										<div class="label-wrap">
+											<p class="label">이상</p>
+										</div>
+									</td>
+								</tr>
+								<tr><th>70.</th><td><span>선루프 블라인드</span></td></tr>
+								<tr><th>71.</th><td><span>룸 미러(ECM)</span></td></tr>
+								<tr><th>72.</th><td><span>선바이저(운)</span></td></tr>
+								<tr><th>73.</th><td><span>선바이저(조)</span></td></tr>
+								<tr><th>74.</th><td><span>헤드 라이닝</span></td></tr>
+								<tr><th>75.</th><td><span>소화기</span></td></tr>
+								<tr><th>76.</th><td><span>프론트 도어 트림(운)</span></td></tr>
+								<tr><th>77.</th><td><span>프론트 시트(운)</span></td></tr>
+								<tr><th>78.</th><td><span>프론트 헤드레스트(운)</span></td></tr>
+								<tr><th>79.</th><td><span>운전석 매트</span></td></tr>
+								<tr><th>80.</th><td><span>카페트(앞)</span></td></tr>
+								<tr><th>81.</th><td><span>리어 도어 트림(운)</span></td></tr>
+								<tr><th>82.</th><td><span>리어 시트(운)</span></td></tr>
+								<tr><th>83.</th><td><span>리어 헤드레스트(운)</span></td></tr>
+								<tr><th>84.</th><td><span>리어 매트(운)</span></td></tr>
+								<tr><th>85.</th><td><span>카페트(뒤)</span></td></tr>
+								<tr><th>86.</th><td><span>센터 시트</span></td></tr>
+								<tr><th>87.</th><td><span>센터 헤드레스트</span></td></tr>
+								<tr><th>88.</th><td><span>후석 암레스트</span></td></tr>
+								<tr><th>89.</th><td><span>커튼 류</span></td></tr>
+								<tr><th>90.</th><td><span>트렁크 리드 트림</span></td></tr>
+								<tr><th>91.</th><td><span>트렁크 매트</span></td></tr>
+								<tr><th>92.</th><td><span>OVM공구</span></td></tr>
+								<tr><th>93.</th><td><span>스페어 타이어</span></td></tr>
+								<tr><th>94.</th><td><span>타이어 리페어 키트</span></td></tr>
+								<tr><th>95.</th><td><span>리어 도어 트림(조)</span></td></tr>
+								<tr><th>96.</th><td><span>리어 시트(조)</span></td></tr>
+								<tr><th>97.</th><td><span>리어 헤드레스트(조)</span></td></tr>
+								<tr><th>98.</th><td><span>리어 매트(조)</span></td></tr>
+								<tr><th>99.</th><td><span>프론트 도어 트림(조)</span></td></tr>
+								<tr><th>100.</th><td><span>프론트 시트(조)</span></td></tr>
+								<tr><th>101.</th><td><span>프론트 헤드레스트(조)</span></td></tr>
+								<tr><th>102.</th><td><span>동반석 매트</span></td></tr>
+							</table>
+						</div>
+
+						<div class="table">
+							<h3>엔진/미션 (<strong>15</strong><span>/18</span>)</h3>
+							<table class="wrap">
+								<tr class="chk"><th>103</th><td><span>엔진 시동 상태</span></td></tr>
+								<tr class="chk"><th>104</th><td><span>엔진 공회전 상태</span></td></tr>
+								<tr class="chk active">
+									<th>105</th>
+									<td>
+										<span>엔진오일량</span>
+										<div class="label-wrap">
+											<p class="label">부족</p>
+										</div>
+									</td>
+								</tr>
+								<tr class="chk"><th>106</th><td><span>엔진오일 누유</span></td></tr>
+								<tr class="chk"><th>107</th><td><span>냉각수량</span></td></tr>
+								<tr class="chk"><th>108</th><td><span>냉각수 누수</span></td></tr>
+								<tr class="chk"><th>109</th><td><span>미션오일량</span></td></tr>
+								<tr class="chk"><th>110</th><td><span>미션오일 누유 – 누유</span></td></tr>
+								<tr class="chk"><th>111</th><td><span>변속기 작동상태</span></td></tr>
+								<tr><th>112</th><td><span>부동액 량</span></td></tr>
+								<tr class="active">
+									<th>113</th>
+									<td>
+										<span>부동액 누수</span>
+										<div class="label-wrap">
+											<p class="label">미세누수</p>
+										</div>
+									</td>
+								</tr>
+								<tr><th>114</th><td><span>구동 벨트 상태</span></td></tr>
+								<tr><th>115</th><td><span>엔진 작동 소음</span></td></tr>
+								<tr class="active">
+									<th>116</th>
+									<td>
+										<span>배기 소음</span>
+										<div class="label-wrap">
+											<p class="label">불량</p>
+										</div>
+									</td>
+								</tr>
+								<tr><th>117</th><td><span>발전기 출력 전압</span></td></tr>
+								<tr><th>118</th><td><span>냉각팬 작동 상태</span></td></tr>
+								<tr><th>119</th><td><span>컨덴서팬 작동 상태</span></td></tr>
+								<tr><th>120</th><td><span>에어컨 컴프레셔 작동 상태</span></td></tr>
+							</table>
+						</div>
+
+						<div class="table">
+							<h3>제동/조향 (<strong>18</strong><span>/19</span>)</h3>
+							<table class="wrap">
+								<tr class="chk"><th>121.</th><td><span>브레이크 페달 작동 상태</span></td></tr>
+								<tr class="chk"><th>122.</th><td><span>브레이크 오일량</span></td></tr>
+								<tr class="chk"><th>123.</th><td><span>브레이크 오일 누유</span></td></tr>
+								<tr class="chk"><th>124.</th><td><span>핸들 작동 상태</span></td></tr>
+								<tr class="chk"><th>125.</th><td><span>파워스티어링 오일량</span></td></tr>
+								<tr class="chk"><th>126.</th><td><span>파워스티어링 오일 누유</span></td></tr>
+								<tr class="chk"><th>127.</th><td><span>클러치 오일량</span></td></tr>
+								<tr><th>128.</th><td><span>클러치 오일 누유</span></td></tr>
+								<tr><th>129.</th><td><span>조향 기어 유격</span></td></tr>
+								<tr><th>130.</th><td><span>브레이크 패드 마모도(앞)</span></td></tr>
+								<tr><th>131.</th><td><span>브레이크 패드 마모도(뒤)</span></td></tr>
+								<tr class="active">
+									<th>132.</th>
+									<td>
+										<span>전륜 디스크(운)</span>
+										<div class="label-wrap">
+											<p class="label">불량</p>
+										</div>
+									</td>
+								</tr>
+								<tr><th>133.</th><td><span>전륜 디스크(조)</span></td></tr>
+								<tr><th>134.</th><td><span>후륜 디스크(운)</span></td></tr>
+								<tr><th>135.</th><td><span>후륜 디스크(조)</span></td></tr>
+								<tr><th>136.</th><td><span>전륜 타이어(운)</span></td></tr>
+								<tr><th>137.</th><td><span>전륜 타이어(조)</span></td></tr>
+								<tr><th>138.</th><td><span>후륜 타이어(운)</span></td></tr>
+								<tr><th>139.</th><td><span>후륜 타이어(조)</span></td></tr>
+							</table>
+						</div>
+
+						<div class="table">
+							<h3>등화장치  (<strong>17</strong><span>/17</span>)</h3>
+							<table class="wrap">
+								<tr><th>140.</th><td><span>전조등</span></td></tr>
+								<tr><th>141.</th><td><span>주간 주행등</span></td></tr>
+								<tr><th>142.</th><td><span>안개등</span></td></tr>
+								<tr><th>143.</th><td><span>미등(앞)</span></td></tr>
+								<tr><th>144.</th><td><span>미등(뒤)</span></td></tr>
+								<tr><th>145.</th><td><span>방향 지시등(앞)</span></td></tr>
+								<tr><th>146.</th><td><span>방향 지시등(뒤)</span></td></tr>
+								<tr><th>147.</th><td><span>사이드 리피터</span></td></tr>
+								<tr><th>148.</th><td><span>제동등</span></td></tr>
+								<tr><th>149.</th><td><span>후진등</span></td></tr>
+								<tr><th>150.</th><td><span>번호등</span></td></tr>
+								<tr><th>151.</th><td><span>비상등</span></td></tr>
+								<tr><th>152.</th><td><span>보조 제동등</span></td></tr>
+								<tr><th>153.</th><td><span>콘솔 램프</span></td></tr>
+								<tr><th>154.</th><td><span>룸 램프</span></td></tr>
+								<tr><th>155.</th><td><span>선바이저 램프</span></td></tr>
+								<tr><th>156.</th><td><span>리어 룸 램프</span></td></tr>
+							</table>
+						</div>
+
+						<div class="table">
+							<h3>안전/편의 (<strong>39</strong><span>/39</span>)</h3>
+							<table class="wrap">
+								<tr><th>157.</th><td><span>주차브레이크 작동 여부</span></td></tr>
+								<tr><th>158.</th><td><span>경음기(horn)</span></td></tr>
+								<tr><th>159.</th><td><span>와이퍼 작동 상태</span></td></tr>
+								<tr><th>160.</th><td><span>워셔모터 작동 상태</span></td></tr>
+								<tr><th>161.</th><td><span>전방 경보장치</span></td></tr>
+								<tr><th>162.</th><td><span>후방 경보장치</span></td></tr>
+								<tr><th>163.</th><td><span>후방 카메라</span></td></tr>
+								<tr><th>164.</th><td><span>시트 벨트(운)</span></td></tr>
+								<tr><th>165.</th><td><span>시트 벨트(조)</span></td></tr>
+								<tr><th>166.</th><td><span>후석 시트 벨트</span></td></tr>
+								<tr><th>167.</th><td><span>시트 벨트 경고</span></td></tr>
+								<tr><th>168.</th><td><span>도어 열림 경고</span></td></tr>
+								<tr><th>169.</th><td><span>타이어 공기압 경고</span></td></tr>
+								<tr class="active">
+									<th>170.</th>
+									<td>
+										<span>경사로 밀림 방지장치(HAC)</span>
+										<div class="label-wrap">
+											<p class="label">불량</p>
+										</div>
+									</td>
+								</tr>
+								<tr><th>171.</th><td><span>차선 이탈 경고(LDWS)</span></td></tr>
+								<tr><th>172.</th><td><span>후측방 충돌 방지 보조장치</span></td></tr>
+								<tr><th>173.</th><td><span>제동 제어(ABS)</span></td></tr>
+								<tr><th>174.</th><td><span>차량자세 제어(ESC)</span></td></tr>
+								<tr><th>175.</th><td><span>에어백 제어</span></td></tr>
+								<tr><th>176.</th><td><span>리모콘 키</span></td></tr>
+								<tr><th>177.</th><td><span>프론트 윈도우(운)</span></td></tr>
+								<tr><th>178.</th><td><span>프론트 윈도우(조)</span></td></tr>
+								<tr><th>179.</th><td><span>리어 윈도우(운)</span></td></tr>
+								<tr><th>180.</th><td><span>리어 윈도우(조)</span></td></tr>
+								<tr><th>181.</th><td><span>전동 시트(운)</span></td></tr>
+								<tr><th>182.</th><td><span>전동 시트(조)</span></td></tr>
+								<tr><th>183.</th><td><span>후석 전동 시트</span></td></tr>
+								<tr><th>184.</th><td><span>시트 난방</span></td></tr>
+								<tr><th>185.</th><td><span>시트 냉방</span></td></tr>
+								<tr><th>186.</th><td><span>사이드 미러 폴딩</span></td></tr>
+								<tr><th>187.</th><td><span>에어컨 시스템</span></td></tr>
+								<tr><th>188.</th><td><span>히터 시스템</span></td></tr>
+								<tr><th>189.</th><td><span>AV 시스템(앞)</span></td></tr>
+								<tr><th>190.</th><td><span>AV 시스템(뒤)</span></td></tr>
+								<tr><th>191.</th><td><span>핸들 리모컨</span></td></tr>
+								<tr><th>192.</th><td><span>내비게이션</span></td></tr>
+								<tr><th>193.</th><td><span>내비게이션 정품 여부</span></td></tr>
+								<tr><th>194.</th><td><span>시거잭</span></td></tr>
+								<tr><th>195.</th><td><span>하이패스 시스템</span></td></tr>
+							</table>
+						</div>
+					</div>
+
+					<div class="tips">
+						<h3>고지사항</h3>
+						<ul class="contents">
+							<li>롯데진단점검은 법정성능점검(46항목)을 포함한 195항목을 자체점검한 결과로, 법적성능점검과는 별개의 서비스입니다.</li>
+							<li>위 항목 및 부품의 진단결과가 상이해 발생한 기능 이상의 경우 손해를 청구할 수 있습니다.</li>
+							<li>진단당시 작동여부와 상태 등을 소개하는 것이 목적으로, 성능이 얼마나 좋은지는 알기 어렵습니다.</li>
+							<li>출고 후 상태가 변하기 쉬운 소모품(타이어/오일류/패드류/부동액) 또는 일반적인 방법으로 점검이 불가능한 경우 보장범위에서 제외됩니다.</li>
+							<li>롯데진단점검은 부품의 잔여수명을 보장하지는 않으며, 출고 시 순정품이 아닌 튜닝 옵션과 부품은 보장범위에서 제외됩니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //popup : 롯데진단 검사 결과 -->
+
+	<!-- 230502 popup : 정비이력 결과 -->
+	<div class="popup-car-repair popup" id="carRepairPop">
+		<div class="layout--header">
+			<header>
+				<h2 class="page-title">정비이력</h2>
+				<button type="button" class="ir bt-page-close" onclick="ui.modalPopClose(carRepairPop)">페이지 닫기</button>
+			</header>
+		</div>
+		<div class="layout--container">
+			<div>
+				<!-- 배너 -->
+				<div class="banner-car-repair banner-strip">
+					<!-- 230628 텍스트 수정 -->
+					<p>이 차량은 출고 이후<br/>롯데렌터카에서 <strong>정기관리한 차량</strong> 입니다.</p>
+				</div>
+				<section>
+					<!-- 타이틀 -->
+					<h4 class="title">[67러8912] 현대 싼타페 더 프라임 스마트</h4>
+					
+					<!-- 요약정보 -->
+					<div class="checkup-box-wrap">
+						<ul class="checkup-box">
+							<!-- 230717 정보 수정 -->
+							<li>
+								<img src="images/icon/ico-checkup-1.png" alt="엔진오일" />
+								<h4 class="t-label">엔진오일</h4>
+								<p class="t-val"><strong>11</strong>회</p>
+							</li>
+							<li>
+								<img src="images/icon/ico-checkup-2.png" alt="타이어" />
+								<h4 class="t-label">타이어</h4>
+								<p class="t-val"><strong>10</strong>회</p>
+							</li>
+							<li>
+								<img src="images/icon/ico-checkup-3.png" alt="배터리" />
+								<h4 class="t-label">배터리</h4>
+								<p class="t-val"><strong>1</strong>회</p>
+							</li>
+							<li>
+								<img src="images/icon/ico-checkup-4.png" alt="실내클리너" />
+								<h4 class="t-label">실내클리너</h4>
+								<p class="t-val"><strong>3</strong>회</p>
+							</li>
+						</ul>
+					</div>
+					
+					<!-- 정비이력 -->
+					<table class="car-repair-history">
+						<thead>
+							<tr>
+								<th width="100px">접수일자</th>
+								<th width="70px">정비유형</th>
+								<th>정비항목</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2023-04-01</td>
+								<td>일반</td>
+								<td>엔진오일</td>
+							</tr>
+							<tr>
+								<td>2023-02-11</td>
+								<td>일반</td>
+								<td>타이어</td>
+							</tr>
+							<tr>
+								<td>2023-01-05</td>
+								<td>일반</td>
+								<td>배터리</td>
+							</tr>
+							<tr>
+								<td>2022-12-07</td>
+								<td>일반</td>
+								<td>실내클리너</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</div>
+		</div>
+	</div>
+	<!-- // popup : 정비이력 결과 -->
+
+
+	<!--  231123 추가 :: layer-popup-wrappper(정비상품 툴팁)// -->
+	<div class="layer_popup_wrappper vM" id="productTooltipPop">
+		<div class="layer_popup bg">
+			<div class="pop_inner">
+				<div class="pop-head">
+					<h3 class="pop-title">정비상품</h3>
+					<a href="javascript:;" class="ir pop_close" onclick="ui.modalPopClose(productTooltipPop);">닫기</a>
+				</div>
+				<div class="pop-contents">
+					<h4>[실속정비]</h4>
+					<ul class="decimal">
+						<li>
+							원하는 시간/장소에 전문가가 찾아가는 방문정비 서비스
+							<strong>(2회/년)</strong><br>
+						</li>
+						<li>기본정비 서비스 제공 - 사고정비, 검사정비, 긴급출동</li>
+						<li>
+							필수 소모품 4종 교체 <strong>(1회/년)</strong><br/>
+							- 엔진오일(전기차 미제공)·와이퍼·워셔액·에어컨필터
+						</li>
+					</ul>
+					<h4>[고급정비]</h4>
+					<ul class="decimal">
+						<li>
+							원하는 시간/장소에 전문가가 찾아가는 방문정비 서비스
+							<strong>(4회/년)</strong>
+						</li>
+						<li>기본정비 서비스 제공 - 사고정비, 검사정비, 긴급출동</li>
+						<li>
+							필수 소모품 4종 교체 <strong>(주기별 교체)</strong><br/>
+							- 엔진오일(전기차 미제공)·와이퍼·워셔액·에어컨필터
+						</li>
+						<li><strong>타이어 마모시 교체(계약기간 최대 4본)</strong></li>
+						<li><strong>일반정비, 정비대차 서비스 제공</strong></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // layer-popup-wrappper(정비상품 툴팁)// -->
+
+	<!--  231123 추가 :: layer-popup-wrappper(보증금 툴팁)// -->
+	<div class="layer_popup_wrappper vM" id="depositTooltipPop">
+		<div class="layer_popup bg">
+			<div class="pop_inner">
+				<div class="pop-head">
+					<h3 class="pop-title">보증금</h3>
+					<a href="javascript:;" class="ir pop_close" onclick="ui.modalPopClose(depositTooltipPop);">닫기</a>
+				</div>
+				<div class="pop-contents">
+					<p>
+						계약기간 만료 시 납부한 보증금 전액을 돌려 받으실 수 있습니다.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // layer-popup-wrappper(보증금 툴팁)// -->
+
+
+	<!--  231123 추가 :: layer-popup-wrappper(선납금 툴팁)// -->
+	<div class="layer_popup_wrappper vM" id="advanceTooltipPop">
+		<div class="layer_popup bg">
+			<div class="pop_inner">
+				<div class="pop-head">
+					<h3 class="pop-title">선납금</h3>
+					<a href="javascript:;" class="ir pop_close" onclick="ui.modalPopClose(advanceTooltipPop);">닫기</a>
+				</div>
+				<div class="pop-contents">
+					<p>
+						월 대여료 중 일부를 미리 납부하는 방식으로 계약 종료 시 돌려 받을 수 없는 보증조건입니다.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // layer-popup-wrappper(선납금 툴팁)// -->
+
+	
+	<!--  231123 추가 :: layer-popup-wrappper(약정주행거리 툴팁)// -->
+	<div class="layer_popup_wrappper vM" id="distanceTooltipPop">
+		<div class="layer_popup bg">
+			<div class="pop_inner">
+				<div class="pop-head">
+					<h3 class="pop-title">약정 주행거리</h3>
+					<a href="javascript:;" class="ir pop_close" onclick="ui.modalPopClose(distanceTooltipPop);">닫기</a>
+				</div>
+				<div class="pop-contents">
+					<p>
+						계약 종료 시 약정된 주행거리를 초과한 경우 초과운행부담금을 정산하여야 합니다.<br>
+						(국산차 100원/km , 수입차 200원/km, 테슬라 450원/km)<br>
+						계약 이후 약정주행거리는 변경 불가합니다.<br>
+						만기 후 인수시, 약정 주행거리는 무관합니다.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // layer-popup-wrappper(약정주행거리 툴팁)// -->
+
+</body>
+</html>

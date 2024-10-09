@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데렌터카</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/landing.css" type="text/css" /><!-- for landing page style --><!--  230831 css 링크 추가 // -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/ui-search-list.js"></script>
+<script src="js/nayuda.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+<!-- layout--wrap// -->
+<div class="layout--wrap landing optional">
+	<!-- layout--header// -->
+	<div class="layout--header">
+		<header>
+			<h1 class="logo"><a href="main.html" class="ir">마이카세이브</a></h1>
+			<!-- <h2 class="page-title">회사소개</h2> -->
+			<button type="button" class= "ir bt-page-prev" onclick="history.back();">이전 페이지</button>
+			<div class="button-wrap"> <!-- 230818 button-wrap 추가 -->
+				<button type="button" class="bt-home" onclick="location.href='main.html'">홈</button> <!-- 230818 홈버튼 추가 -->
+				<button type="button" class="bt-sidemenu" onclick="event.stopPropagation();event.preventDefault();" >
+					<span class="line"></span><span class="line"></span><span class="line"></span>
+				</button>
+			</div>
+		</header>
+		<!-- 230524 햄버거 메뉴 추가 -->
+		<div class="side-menu " id="sideMenu">
+			<div class="container">
+				<ul>
+					<li><a href="main.html" class="mn">중고차렌트</a></li>
+					<li><a href="auto-lease.html" class="mn">오토리스</a></li>
+					<li><a href="sinchajang.html" class="mn">신차렌트</a></li>
+					<li><a href="rentcar-succeed.html" class="mn">차량승계</a></li>
+					<li><a href="sellcar-simple-step1.html" class="mn">내차팔기</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //layout-header -->
+
+
+	<!-- 230725 layout--container 추가// -->
+	<div class="layout--container">
+		<!-- 00.메인 -->
+		<div class="area main">
+			<img class="title" src="images/page/landing-optional-title.png" alt="타이틀" >
+			<div class="car-wrap">
+				<img class="car" src="images/page/landing-optional-00-car.png" alt="차량이미지" >
+				<img class="icon icon01 on" src="images/page/landing-optional-00-icon01.png" alt="아이콘01" >
+				<img class="icon icon02 on" src="images/page/landing-optional-00-icon02.png" alt="아이콘02" >
+				<img class="icon icon03 on" src="images/page/landing-optional-00-icon03.png" alt="아이콘03" >
+				<img class="icon icon04 on" src="images/page/landing-optional-00-icon04.png" alt="아이콘04" >
+			</div>
+			<img class="bg-00" src="images/page/landing-optional-00-bg.png" alt="배경이미지">
+		</div>
+
+		<!-- 01.중고차 장기렌터카란? -->
+		<div class="area area01 card">
+			<img class="contents" src="images/page/landing-optional-01.png" alt="중고차 장기렌터카 설명" >
+			<div class="lotte-wrap">
+				<img class="car" src="images/page/landing-optional-01-car.png" alt="차량이미지" >
+				<img class="bg-01" src="images/page/landing-optional-01-circle.png" alt="배경" >
+				<img class="lotte-mark" src="images/page/landing-optional-01-lotte.png" alt="롯데진단" >
+			</div>
+			<!-- <button type="button" class="bt bt-common-type1" onclick="location.href='landing-rent.html'">렌터카 장점 자세히 보기</button> -->
+		</div>
+
+		<!-- 02. 이런 분들께 추천드려요! -->
+		<div class="area area02 card">
+			<img class="contents" src="images/page/landing-optional-02.png" alt="이런 분들께 추천드려요 설명" >
+			<div class="blank-wrap">
+				<img class="blank blank01" src="images/page/landing-optional-02-blank01.png" alt="말풍선01" >
+				<img class="blank blank02" src="images/page/landing-optional-02-blank02.png" alt="말풍선02" >
+				<img class="blank blank03" src="images/page/landing-optional-02-blank03.png" alt="말풍선03" >
+				<img class="blank blank04" src="images/page/landing-optional-02-blank04.png" alt="말풍선04" >
+			</div>
+            <a class="banner-rent" href="landing-rent.html">
+				<img src="images/page/landing-optional-02-banner.png" alt="중고차 장기렌트 안내페이지 이동 배너" >
+			</a>
+		</div>
+
+		<!-- 03. 상세 계약 조건 -->
+		<div class="area area03 card">
+			<img class="contents" src="images/page/landing-optional-03.png" alt="상세 계약 조건" >
+		</div>
+
+		<!-- 04. 자주 묻는 질문 -->
+		<div class="area area04">
+			<img class="contents" src="images/page/landing-optional-04.png" alt="자주 묻는 질문" >
+			<div class="faq-wrap">
+                <ul class="faq on">
+					<li class="tit">
+						<span>보증조건(선납금)</span>은 무엇인가요?
+					</li>
+					<li class="txt">
+						<ol>
+							<li>
+								선납금은 차량가격의 10%, 20%, 30% 중 선택할 수 있으며, 월 대여료 중 일부를 미리 납부하는 방식으로 계약 종료 시 돌려받을 수 없는 보증 조건입니다.
+							</li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="faq">
+					<li class="tit">
+						<span>약정주행거리</span>와 <span>초과운행부담금</span>에 대해 설명해주세요
+					</li>
+					<li class="txt">
+						<ol>
+							<li class="disc">
+								약정주행거리는 연간 주행하는 거리를 설정하는 조건으로 롯데렌터카 중고차 장기렌터카는 연간 3만 km 조건만 선택 가능합니다.
+								<p class="ref">(24개월 계약 시 2년간 총 6만 km 이용 가능)</p>
+							</li>
+							<br/>
+							<li class="disc">
+								계약 종료 시 약정된 주행거리를 초과한 경우 초과운행부담금을 정산하여야 합니다.
+								<p class="ref">(국산차 100원/km, 수입차 200원/km, 테슬라 450원/km)</p>
+							</li>
+							<br/>
+							<li class="disc">
+								만기 이후 인수 시 약정주행거리는 무관합니다.
+							</li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="faq">
+					<li class="tit">
+						<span>정비 상품</span>에 대해 자세히 알고 싶어요
+					</li>
+					<li class="txt">
+						<ol>
+							<li>
+								일반형, 실속정비, 고급형 정비상품에 대해 알려드릴께요.
+							</li>
+							<br/>
+							<li class="table-wrap">
+                                <img class="th" src="images/page/landing-optional-04-th.png" alt="테이블 헤더" >
+                                <img class="td" src="images/page/landing-optional-04-td.png" alt="테이블 내용" >
+							</li>
+							<br/>
+							<li>
+								<strong>[소모품 교체]</strong>
+								<p>필수 4종 소모품 교체  :  엔진오일, 에어컨필터, 와이퍼, 워셔액</p>
+								<br/>
+								<strong>[방문정비 제공]</strong>
+								<p>정비 항목  :  엔진룸 클리닝, 배터리 점검, 차량내부 살균소독, 공기압 보충 등</p>
+								<p class="warn">※ 실속정비의 경우 방문 정비 연 2회 중 1회는 소모품 교체 시 함께 진행</p>
+								<p class="warn">※ 고급형 선택 시 정기적으로 차량 소재지 방문을 통한 순회정비 실시</p>
+								<br/>
+								<strong>[타이어 교체]</strong>
+								<p>고급형 선택 시 타이어는 4본 이하 설정 가능</p>
+								<br/>
+								<strong>[유의사항]</strong>
+								<p>외산차/전기차/수소차는 실속정비형 가입 불가</p>
+							</li>
+
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="faq">
+					<li class="tit">
+						계약 종료 후, <span>인수는 계약자만 가능</span>한가요?
+					</li>
+					<li class="txt">
+						<ol>
+							<li>
+								네, 인수는 계약 당사자만 가능합니다.
+							</li>
+                            <br/>
+							<li class="disc">
+								<strong>[개인 계약]</strong>
+								<p>가족으로 인수 → <em>불가</em></p>
+							</li>
+                            <br/>
+							<li class="disc">
+								<strong>[개인사업자 계약]</strong>
+								<p>사업자 인수 → <em>불가</em></p>
+								<p>(개인 명의로 인수 가능)</p>
+							</li>
+                            <br/>
+							<li class="disc">
+								<strong>[법인 계약]</strong>
+								<p>법인 대표 및 임직원으로 인수 → <em>불가</em></p>
+                                <p>(계약 당사자 인수가 원칙이므로 법인은 해당 법인으로만 인수 가능)</p>
+							</li>
+							<br/>
+							<li>
+                                계약자 외 <u>다른 명의로 인수 희망 시 승계 후 인수 가능</u>합니다.
+							    승계합의서 작성일로부터 최소 1달 이상 계약 유지가 되어야 인수 가능하기 때문에, 승계는 계약종료 1개월 전에 완료해야 합니다.
+                            </li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="faq">
+					<li class="tit">
+						<span>운전자 범위 변경</span>이 가능한가요?
+					</li>
+					<li class="txt">
+						<ol>
+							<li>
+								<strong>[개인 및 개인사업자]</strong>
+								<ol>
+									<li>운전자 범위는 표준과 누구나 중 선택 가능해요.</li>
+								</ol>
+                                <ol class="disc-wrap">
+                                    <li class="disc"><strong>표준 : </strong></li>
+                                    <li>계약자 본인 및 배우자, 계약자와 배우자의 직계 가족 및 형제자매 (개인사업자의 경우 계약자 사업장의 임직원 포함)</li>
+                                </ol>
+                                <ol class="disc-wrap">
+									<li class="disc"><strong>누구나 : </strong></li>
+                                    <li>계약자 및 계약자가 지정한 누구나</li>
+                                </ol>
+								<br/>
+								<strong>[법인]</strong>
+								<p>임직원 운전자 한정</p>
+							</li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="faq">
+					<li class="tit">
+						개인 장기렌터카의 <span>보험 조건</span>은 어떻게 되나요?
+					</li>
+					<li class="txt">
+						<ol>
+							<li>
+								<strong>[보험연령]</strong>
+								<p>만 21세/만 26세 중 선택 가능하며, 보험 조건에 따라 월 대여료는 변동됩니다.</p>
+								<br/>
+								<strong>[보험조건]</strong>
+								<ol>
+									<li class="disc">대인보상 : <span class="blue">무제한</span></li>
+									<li class="disc">대물배상 : <span class="blue">1억원</span></li>
+									<li class="disc">자손보상 : <span class="blue">1억원</span></li>
+									<li class="disc">무보험차 상해 : <span class="blue">2억원/1인당</span></li>
+									<li class="disc">긴급출동서비스 : <span class="blue">연 5회</span></li>
+									<li class="disc">차량손해면책 고객부담금(자기부담금) : <span class="blue">30만원~50만원</span></li>
+								</ol>
+							</li>
+							<li class="ref">
+								<strong>대물배상이란?</strong>
+								<p>
+									대물배상은 타인의 재물을 없애거나 훼손한 경우에 보험가입금액 한도 내에서 보상하는 담보입니다.
+									<br/>
+									(직계 가족 또는 소속 회사가 소유/사용/관리중인 재물에 대한 손해는 보상 불가)
+								</p>
+								<br/>
+								<strong>자손이란?</strong>
+								<p>
+									자기신체사고는 피보험자가 죽거나 다친 경우에 보상하며, 보상은 사망-가입금액/부상-급수별/후유장애-등급별로 가입금액 한도 내에서 치료비 등의 실제 손해액을 지급합니다.
+								</p>
+								<br/>
+								<strong>무보험차 상해란?</strong>
+								<p>
+									무보험자동차상해는 종합보험 미가입 또는 미적용되는 무보험차에 의해 피해를 입은 경우 책임보험 초과 손해를 한도 내에서 보상합니다.
+									<br/>
+									단, 차량 탑승 중 사고에 대해서만 적용되며, 부모/배우자/자녀가 가입한 종합 보험이 존재하는 경우 비례보상 합니다.
+								</p>
+							</li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="faq">
+					<li class="tit">
+						<span>월 렌트비</span>는 어떤 방식으로 납부 가능한가요?
+					</li>
+					<li class="txt">
+						<ol>
+							<li>
+								월 렌트비는 CMS자동이체, 가상계좌입금, 카드자동이체 방식으로 납부 가능합니다.
+							</li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="faq">
+					<li class="tit">
+						<span>자기부담금</span>에 대해 자세히 알고 싶어요!
+					</li>
+					<li class="txt">
+						<ol>
+							<li>자기부담금이란 본인 과실 사고 발생 시 보험료 할증이나 별도의 사고처리 비용 없이 설정된 자기부담금만 납부하여 차량 수리를 받으실 수 있도록 처리해드리는 혜택입니다.</li>
+							<br/>
+							<li>
+								<ol>
+									<li class="disc"><strong>대상 : </strong>개인 및 개인사업자</li>
+									<li class="disc"><strong>차종 : </strong>전 차종</li>
+								</ol>
+							</li>
+							<br/>
+							<li class="table">
+								<h4>자기부담금 선택 범위</h4>
+								<table>
+									<colgroup>
+										<col class="col1">
+										<col class="col2">
+									</colgroup>
+									<tr>
+										<th>연령</th>
+										<th>자기부담금</th>
+									</tr>
+									<tr>
+										<th>만 30세 미만</th>
+										<td>자기부담금 <u>50만원</u> 선택 가능</td>
+									</tr>
+									<tr>
+										<th>만 30세 이상 ~ 만 65세 미만</th>
+										<td>자기부담금 <u>30/50만원</u> 선택 가능</td>
+									</tr>
+									<tr>
+										<th>만 65세 이상</th>
+										<td>자기부담금 <u>50만원</u> 선택 가능</td>
+									</tr>
+								</table>
+							</li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="faq">
+					<li class="tit">
+						<span>긴급출동 서비스</span> 내용은 어떻게 되나요?
+					</li>
+					<li class="txt">
+						<ol>
+							<li>
+								긴급 출동서비스가 필요한 경우 롯데렌터카 콜센터(1588-1230)로 전화 주시면 연중무휴 24시간 이용 가능합니다.
+								<br/>
+								(단, 정비옵션 별로 횟수제한이 있습니다.)
+							</li>
+							<br/>
+							<li class="disc fix">
+								<strong>비상급유 서비스</strong>
+								<p>운행 중 기름이 떨어졌을 때 충유 서비스(휘발유 차량 기준)</p>
+							</li>
+                            <br/>
+							<li class="disc fix">
+								<strong>잠금 장치 해제 서비스</strong>
+								<p>열쇠를 차 안에 둔 채 잠궜을 경우 잠금 장치 무료해제</p>
+							</li>
+                            <br/>
+							<li class="disc fix">
+								<strong>배터리 충전 서비스</strong>
+								<p>배터리 방전으로 운행 불가 시 긴급 시동</p>
+							</li>
+                            <br/>
+                            <li class="disc fix">
+								<strong>타이어 펑크 교체 서비스</strong>
+								<p>타이어 파손으로 운행 불가 시 예비 타이어로 교체</p>
+							</li>
+                            <br/>
+							<li class="disc fix">
+								<strong>긴급 견인 서비스</strong>
+								<p>고장 및 사고로 운행 불가 시 가까운 지정 정비 공장까지 견인(고속도로 견인포함)</p>
+							</li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="faq">
+					<li class="tit">
+						<span>사고 발생 시</span> 어떻게 해야 하나요?
+					</li>
+					<li class="txt">
+						<ol>
+							<li>
+								사고 발생 시 롯데렌터카 콜센터(1588-1230)로 전화 주시면 모든 처리를 도와드립니다.
+								<br/>
+								삼성화재, 현대해상 등 주요 자동차 보험사와의 제휴로 개인자동차보험과 동일한 혜택을 받으실 수 있습니다.
+							</li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="faq">
+					<li class="tit">
+						사고 시 <span>비용 처리</span>는 어떻게 되나요?
+					</li>
+					<li class="txt">
+						<ol>
+							<li>
+								자차사고를 제외한 사고는 보험으로 처리됩니다.
+								<br/>
+								본인 과실 사고 시 자기차량 수리가 필요한 경우 차량손해면책제도(LDW)에 따라 일정금액의 자기부담금(면책금)만 납부하고 수리 하실 수 있습니다.
+								<br/>
+								수리비용이 자기부담금(면책금)보다 적을 경우 실비용으로 직접 처리도 가능합니다.
+							</li>
+						</ol>
+					</li>
+				</ul>
+
+				<button type="button" class="bt bt-common-type1" onclick="location.href='main.html'">중고차 차량 보러가기</button>
+			</div>
+
+			<script>
+				// FAQ 클릭시, toggle 이벤트
+				$(".faq .tit").on("click", function(){
+					toggleFAQ (this);
+				})
+
+				function toggleFAQ (tg) {
+					if($(tg).parent().hasClass('on')) {
+						$(tg).parent().removeClass('on');
+					} else {
+						$('.faq').removeClass('on');
+						$(tg).parent().addClass('on');
+					}
+				}
+			</script>
+		</div>
+	</div>
+	<!-- // 230725 layout--container -->
+
+	<!-- layout--footer// -->
+	<div class="layout--footer">
+		<!-- 230524 scroll-top 버튼 추가 -->
+		<div class="floating-page-top">
+			<button type="button" class="ir" onclick="nayuda.scrollTo(0)">TOP</button>
+		</div>
+	</div>
+	<!-- //layout-footer -->
+	
+</div>
+<!-- //layout--wrap -->
+</body>
+</html>
+	
+

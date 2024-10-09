@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데렌터카</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<!-- <link rel="stylesheet" href="css/common_new.css" type="text/css" /> -->
+<link rel="stylesheet" href="css/search-list.css" type="text/css" /><!-- for search-list style --> 
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/ui-search-list.js"></script>
+<script src="js/nayuda.js"></script>
+<!-- //front UI js -->
+</head>
+<body>
+<!-- layout--wrap// -->
+<div class="layout--wrap main-list">
+	
+	<!-- layout--header// -->
+	<div class="layout--header nl relative main">  <!-- header에 클래스 추가 (.relative, .main) -->
+		<header>
+			<h1 class="logo"><a href="main.html" class="ir">마이카세이브</a></h1>
+			<div class="button-wrap"> <!-- 230818 button-wrap 추가 -->
+				<button type="button" class="bt-sidemenu" onclick="event.stopPropagation();event.preventDefault();" >
+					<span class="line"></span><span class="line"></span><span class="line"></span>저는
+				</button>
+			</div>
+		</header>
+		<!-- 230524 햄버거 메뉴 추가 -->
+		<div class="side-menu " id="sideMenu">
+			<div class="container">
+				<ul>
+					<li><a href="main.html" class="mn">중고차렌트</a></li>
+					<li><a href="auto-lease.html" class="mn">오토리스</a></li>
+					<li><a href="sinchajang.html" class="mn">신차렌트</a></li>
+					<li><a href="rentcar-succeed.html" class="mn">차량승계</a></li>
+					<li><a href="sellcar-simple-step1.html" class="mn">내차팔기</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //layout-header -->
+	
+	<!-- layout--container// -->
+	<div class="layout--container ctn-car-list">
+		
+		<!-- search list container//-->
+		<div class="search-list-container">
+			<!-- 230515 메인 배너 슬라이더 -->
+			<div class="card-banner-area">
+				<div class="banner-slider swiper-container">
+					<div class="swiper-wrapper">
+						<!-- 230816 이미지 url 및 bg-color 수정 -->
+						<div class="swiper-slide" style="background-color: #202020;" onclick="location.href='landing-option.html'">
+							<img src="images/elements/main-banner-02.png" alt="배너01" />
+						</div>
+						<div class="swiper-slide" style="background-color: #E7E7E7;" onclick="location.href='landing-rent.html'">
+							<img src="images/elements/main-banner-03.png" alt="배너02" />
+						</div>
+					</div>
+					<!-- pagination -->
+					<div class="swiper-pagination-area">
+						<div class="swiper-pagination-wrap">
+							<div class="wrap">
+								<!-- <div class="ir bt-img-prev swiper-button-prev"></div> -->
+								<div class="swiper-pagination"></div>
+								<!-- <div class="ir bt-img-next swiper-button-next"></div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- list element// -->
+			<div class="list-element">
+				<!-- 230719 중고차렌트 타이틀 추가 -->
+				<h4 class="total-num">전체차량 <var>23,183</var> 대</h4>
+
+				<!-- 230519 검색바 추가 -->
+				<div class="list-search"><!-- 자동완성 영역 노출시, 클래스 autoComplete 추가 -->
+					<div class="sch-group">
+						<button type="button" class="bt-search">검색</button><!-- 220901 : class명 삭제 -->
+						<!-- <span class="ip-wrap"> -->
+						<button type="button" class="btn-del hidden"
+							onclick="$('#listSchKwd').val('');$('.btn-del').addClass('hidden');$('.list-search').removeClass('autoComplete')">삭제</button> <!-- 230525 텍스트 전체삭제 아이콘 추가 -->
+				
+						<!-- 230526 input 이벤트는 임의로 작성한것이니 기능만 참고해주시고, 기존코드 및 신규로 수정/적용 부탁드립니다. -->
+						<input type="text" placeholder="차종 혹은 모델을 입력해주세요." id="listSchKwd"
+							oninput="this.setAttribute('value', this.value); 
+							if(this.value.length > 0) { $('.btn-del').removeClass('hidden'); $('.list-search').addClass('autoComplete');}
+							else { $('.btn-del').addClass('hidden'); $('.list-search').removeClass('autoComplete'); }"
+							onblur="$('.btn-del').addClass('hidden'); $('.list-search').removeClass('autoComplete');"
+						/>
+
+						<!-- 필터 위치 이동 -->
+						<button type="button" class="ir bt-list-filter on" onclick="ui.modalPopOpen(filterPopup);">
+							<span>필터</span>
+							<img src="images/icon/ico-list-filter-white.svg"> <!-- 230720 이미지 변경 -->
+						</button>
+
+						<div class="sch-result">
+							<div class="custom-scroller" data-mcs-theme="custom-theme">
+								<div class="sch-cate-group">
+									<div class="kwd">
+										<a href="#">더 뉴 그랜저 IG <em>하이</em>브리드 (19~현재)</a>
+										<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+										<a href="#">그랜저 IG <em>하이</em>브리드 (17~19)</a>
+										<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+										<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+	
+										<a href="#">더 뉴 그랜저 IG <em>하이</em>브리드 (19~현재)</a>
+										<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+										<a href="#">그랜저 IG <em>하이</em>브리드 (17~19)</a>
+										<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+										<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+										<a href="#">더 뉴 그랜저 IG <em>하이</em>브리드 (19~현재)</a>
+										<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+										<a href="#">그랜저 IG <em>하이</em>브리드 (17~19)</a>
+										<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+										<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+										<a href="#">더 뉴 그랜저 IG <em>하이</em>브리드 (19~현재)</a>
+										<a href="#">K5 <em>하이</em>브리드 3세대 (19~현재)</a>
+										<a href="#">그랜저 IG <em>하이</em>브리드 (17~19)</a>
+										<a href="#">올 뉴 K7 <em>하이</em>브리드 3세대 (16~19)</a>
+										<a href="#">LF 쏘나타 <em>하이</em>브리드 (14~17)</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="keyword-tags">
+						<!-- 230627 태그 텍스트 수정 -->
+						<!-- 230515 프리미엄 태그 추가  -->
+						<!-- <button type="button" class="tag tag-img on"><img src="images/common/label-premium.svg"></button> -->
+						<button type="button" class="tag">#출고3년이내</button>
+						<button type="button" class="tag on">#3만km이하</button><!-- case : 선택된 요소 -->
+						<button type="button" class="tag on">#1인소유</button><!-- case : 선택된 요소 -->
+						<button type="button" class="tag">#법인임원차량</button>
+						<button type="button" class="tag">#무사고</button>
+					</div>
+				</div>
+				<!-- // 검색바 추가 -->
+
+				<div class="list-head"><!-- 220927 : 리스트 헤더영역 추가 -->
+					<!-- 230720 텍스트 수정 ("총" -> "판매중") -->
+					<p class="list-total-count">총 <var>23,183</var> 대</p>
+					<div class="list-filter">
+						<!-- 230522 검색결과 hidden -->
+						<!--	
+							<div class="selected-option">
+								<div class="items">
+									<button type="button" class="bt-selected-item">현대</button>
+									<button type="button" class="bt-selected-item">i40</button>
+									<button type="button" class="bt-selected-item">그랜저 IG</button>
+									<button type="button" class="bt-selected-item">서울</button>
+									<button type="button" class="bt-selected-item">1000 Km ~ 800,000 Km</button>
+									<button type="button" class="bt-selected-item">100만원 ~ 2,000만원</button>
+								</div>
+								<button type="button" class="ir bt-selected-refresh">검색조건 초기화</button>
+							</div>
+						-->
+						<!-- 230711 등록예정 -->
+						<button type="button" class="bt-wtCar">
+							<input class="switch-input sm" type="checkbox" id="switch-wt" onclick="$('.list-content').toggleClass('main');" />
+							<label class="switch" for="switch-wt">등록예정</label>
+						</button>
+
+						<!-- 230522 정렬/필터 추가 -->
+						<button type="button" class="bt-condition-align" onclick="ui.modalPopOpen(sortPopup);">
+							<span>최근등록</span><img src="images/icon/ico-sort.png">
+						</button>
+					</div>													
+				</div>
+
+				<!-- 230727 case : 검색결과없음 (+ 이미지 랜덤출력 js 참고요청) -->
+				<div class="list-content" style="display: none;">
+					<div class="empty-result-common">
+						<div class="img"><img id="randomImg-01" src="images/elements/search-fail-img-01.png" alt="검색결과없음"></div> 
+						<p class="msg">검색된 차량이 없습니다.</p>
+					</div>
+				</div>
+
+				<!-- content -->
+				<div class="list-content" style="display: block;">
+					<ul class="list-type-common">
+						<!-- loop// -->
+						<li class="list-item inprogress">
+							<div class="list-thumb"><!-- 220905 : 카드형 썸네일 슬라이더 추가 -->
+								<a href="#" onclick="event.preventDefault();"><!-- 230515 onclick 이벤트 추가 - list-item 클릭가능 영역을 리스트 전체로 확장 -->
+									<div class="car-thumb-slider swiper-container">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_1.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_2.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_3.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_4.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_5.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_6.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_7.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_1.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_2.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_3.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_4.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_5.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_6.jpg" alt="차량대표이미지" />
+											</div>
+											<div class="swiper-slide">
+												<img src="images/dummy/@detail-car-image2_7.jpg" alt="차량대표이미지" />
+											</div>
+										</div>
+										<div class="swiper-pagination-wrap"> <!-- 230810 추가 -->
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="list-detail">
+								<!-- 230712 : 뱃지 스타일 수정 (진단파/인증차/관리차) -->
+								<div class="badge">
+									<span class="ele-badge badge-type1">인증차</span>
+									<span class="badge-lotte-cert">진단차</span>
+									<span class="ele-badge badge-type3">관리차</span>
+								</div>
+								<div class="list-title">
+									제네시스 G80 (G) 3.3 프리미엄 럭셔리
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<!-- <span class="loc">경기</span> -->
+									<span class="">2,992cc</span><!-- 230523 요약정보 변경 (지역X -> 배기량) -->
+								</div>
+								<!-- 230523 태그 위치이동 -->
+								<!--
+									<div class="list-desc">
+										롯데진단 / 완전무사고 / 1인신조 / 20,900km / 기아직원관리 / 3팩옵션추가
+									</div>
+								-->
+								<div class="list-price">
+									<div class="price">
+										<!-- 230621 "인수형" -> "24개월" 태그 수정 -->
+										<span class="period">24개월/ </span>
+										<span class="prc">월 <var>635,000</var>원</span>
+									</div>
+								</div>
+								<!-- 230523 태그 위치이동 -->
+								<div class="list-tag" style="display: none;">
+									<!-- 230526 검색조건으로 선택시, addclass "on" -->
+									<span class="tag on">#출고3년이내</span>
+									<span class="tag on">#3만km이하</span>
+									<span class="tag">#1인소유</span>
+									<span class="tag">#법인임원차량</span>
+									<span class="tag">#무사고</span>
+								</div>
+							</div>
+						</li>
+						<!-- //loop -->
+						<li class="list-item inprogress">  <!-- 231020 : case 상담진행중인 경우 class="inprogress"추가  -->
+							<div class="list-thumb">
+								<img src="images/dummy/@detail-car-image3.jpg" alt="" />
+							</div>
+							<div class="list-detail">
+								<div class="badge">
+									<span class="ele-badge badge-type1">인증차</span>
+									<span class="badge-lotte-cert">진단차</span>
+									<span class="ele-badge badge-type3">관리차</span>
+								</div>
+								<div class="list-title">
+									KG모빌리티(쌍용) 티볼리 TX 2WD
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="" >2,992cc</span>
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<span class="period">24개월 /</span>
+										<span class="prc">월 <var>635,000</var>원</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div class="list-thumb">
+								<img src="images/dummy/@detail-car-image4.jpg" alt="" />
+							</div>
+							<div class="list-detail">
+								<div class="badge">
+									<span class="badge-lotte-cert">진단차</span>
+									<span class="ele-badge badge-type3">관리차</span>
+								</div>
+								<div class="list-title">
+									현대 소나타 DN8 (G) 1.6 터보 프리미엄 패밀리
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="" >2,992cc</span>
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<span class="period">24개월 /</span>
+										<span class="prc">월 <var>635,000</var>원</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div class="list-thumb">
+								<img src="images/dummy/@detail-car-image2.jpg" alt="" />
+							</div>
+							<div class="list-detail">
+								<div class="badge">
+									<span class="ele-badge badge-type1">인증차</span>
+									<span class="badge-lotte-cert">진단차</span>
+									<span class="ele-badge badge-type3">관리차</span>
+								</div>
+								<div class="list-title">
+									제네시스 G80 (G) 3.3 프리미엄 럭셔리
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="" >2,992cc</span>
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<span class="period">24개월/ </span>
+										<span class="prc">월 <var>635,000</var>원</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div class="list-thumb">
+								<img src="images/dummy/@detail-car-image5.jpg" alt="" />
+							</div>
+							<div class="list-detail">
+								<div class="badge">
+									<span class="badge-lotte-cert">진단차</span>
+									<span class="ele-badge badge-type3">관리차</span>
+								</div>
+								<div class="list-title">
+									현대 더 뉴 그랜저 (G) 2.5 캘리그래피
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="" >2,992cc</span>
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<span class="period">24개월 /</span>
+										<span class="prc">월 <var>635,000</var>원</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div class="list-thumb">
+								<img src="images/dummy/@detail-car-image3.jpg" alt="" />
+							</div>
+							<div class="list-detail">
+								<div class="badge">
+									<span class="ele-badge badge-type1">인증차</span>
+									<span class="badge-lotte-cert">진단차</span>
+									<span class="ele-badge badge-type3">관리차</span>
+								</div>
+								<div class="list-title">
+									KG모빌리티(쌍용) 티볼리 TX 2WD
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="" >2,992cc</span>
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<span class="period">24개월 /</span>
+										<span class="prc">월 <var>635,000</var>원</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div class="list-thumb">
+								<img src="images/dummy/@detail-car-image-gray.png" alt="" />
+							</div>
+							<div class="list-detail">
+								<div class="badge">
+									<span class="badge-lotte-cert">진단차</span>
+									<span class="ele-badge badge-type3">관리차</span>
+								</div>
+								<div class="list-title">
+									KG모빌리티(쌍용) 티볼리 TX 2WD
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="" >2,992cc</span>
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<span class="period">24개월 /</span>
+										<span class="prc">월 <var>635,000</var>원</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<script>
+							$(".list-item").on("click", function(){ location.href='car-detail.html' })
+						</script>
+					</ul>
+
+					<!-- 230711 등록예정차량 영역 추가 -->
+					<ul class="list-type-wt list-type-common">
+						<li class="list-item">
+							<div class="list-thumb empty"> <!-- 클래스 empty 추가 (차량이미지 없는 경우) -->
+								<img src="images/cars/@car-wt.png" alt="이미지없음" />  <!-- 이미지 경로 수정 (차량이미지 없는 경우) -->
+							</div>
+							<div class="list-detail">
+								<!-- 230712 : 뱃지 스타일 수정 (진단파/인증차/관리차) -->
+								<div class="badge">
+									<span class="ele-badge badge-type1">인증차</span>
+									<span class="badge-lotte-cert">진단차</span>
+									<span class="ele-badge badge-type3">관리차</span>
+								</div>
+								<div class="list-title">
+									KG모빌리티(쌍용) 티볼리 TX 2WD
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="" >2,992cc</span>
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<!-- <span class="period">24개월 /</span> -->
+										<!-- <span class="prc">월 <var>635,000</var>원</span> -->
+										<span class="prc none"><var>가격문의</var></span>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-item">
+							<div class="list-thumb">
+								<img src="images/cars/thumbs_grandeur.png" alt="그랜저" />
+							</div>
+							<div class="list-detail">
+								<!-- 230712 : 뱃지 스타일 수정 (진단파/인증차/관리차) -->
+								<div class="badge">
+									<span class="ele-badge badge-type1">인증차</span>
+									<span class="badge-lotte-cert">진단차</span>
+									<span class="ele-badge badge-type3">관리차</span>
+								</div>
+								<div class="list-title">
+									KG모빌리티(쌍용) 티볼리 TX 2WD
+								</div>
+								<div class="list-option">
+									<span class="year">2019/11(19년형)</span>
+									<span class="dstc">32,588km</span>
+									<span class="fuel">가솔린</span>
+									<span class="" >2,992cc</span>
+								</div>
+								<div class="list-price">
+									<div class="price">
+										<!-- <span class="period">24개월 /</span> -->
+										<!-- <span class="prc">월 <var>635,000</var>원</span> -->
+										<span class="prc none"><var>가격문의</var></span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<!-- 230907 더보기 버튼 추가 -->
+					<button type="button" class="bt-common-type8 bt-full bt-down" onclick=""><span>더보기</span></button>
+
+				</div>
+				<!-- // content -->
+
+			</div>
+			<!-- //list element -->
+		</div>
+		<!-- //search list container-->
+	</div>
+	<!-- layout--container -->
+
+
+	<!-- layout--footer// -->
+	<div class="layout--footer">
+		<!-- 230524 scroll-top 버튼 추가 -->
+		<div class="floating-page-top">
+			<button type="button" class="ir" onclick="nayuda.scrollTo(0)">TOP</button>
+		</div>
+	</div>
+	<!-- //layout-footer -->
+	
+</div>
+<!-- //layout--wrap -->
+
+
+<!-- 230711 정렬팝업 위치이동 -->
+<div class="sort-menu layer_popup_wrappper" id="sortPopup" style="display:none;">
+	<div class="layer_popup bg-bottom">
+		<div class="pop_inner">
+			<div class="pop-head">
+				<h3 class="pop-title">정렬</h3>
+				<a href="javascript:void(0)" class="ir pop_close" onclick="ui.modalPopClose(sortPopup);">닫기</a>
+			</div>
+			<div class="pop-contents">
+				<!-- 라디오버튼 선택시, 정렬 적용 후, "자동 창닫기" 개발요청 -->
+				<ul class="sort-wrap">
+					<li>
+						<input type="radio" name="sort" value="1" id="sort_01" checked>
+						<label for="sort_01" class="custom-radio-button">최근 등록순</label>
+					</li>
+					<li>
+						<input type="radio" name="sort" value="2" id="sort_02">
+						<label for="sort_02" class="custom-radio-button">오래된 등록순</label>
+					</li>
+					<li>
+						<input type="radio" name="sort" value="3" id="sort_03">
+						<label for="sort_03" class="custom-radio-button">최신 연식순</label>
+					</li>
+					<li>
+						<input type="radio" name="sort" value="4" id="sort_04">
+						<label for="sort_04" class="custom-radio-button">오래된 연식순</label>
+					</li>
+					<li>
+						<input type="radio" name="sort" value="5" id="sort_05">
+						<label for="sort_05" class="custom-radio-button">짧은 주행거리</label>
+					</li>
+					<li>
+						<input type="radio" name="sort" value="6" id="sort_06">
+						<label for="sort_06" class="custom-radio-button">많은 주행거리</label>
+					</li>
+					<li>
+						<input type="radio" name="sort" value="7" id="sort_07">
+						<label for="sort_07" class="custom-radio-button">낮은 가격순</label>
+					</li>
+					<li>
+						<input type="radio" name="sort" value="8" id="sort_08">
+						<label for="sort_08" class="custom-radio-button">높은 가격순</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 230711 필터팝업 위치이동 -->
+<div class="filter-menu layer_popup_wrappper" id="filterPopup" style="display:none;">
+	<div class="layer_popup bg-bottom">
+		<div class="pop_inner">
+			<div class="pop-head">
+				<h3 class="pop-title">필터</h3>
+				<a href="javascript:void(0)" class="ir pop_close" onclick="ui.modalPopClose(filterPopup);">닫기</a>
+			</div>
+			<div class="pop-contents">
+				<!-- layout--container// -->
+				<div class="layout--container ctn-search">
+					<!-- search list container//-->
+					<div class="filter-container">
+						<!-- search element// -->
+						<div class="search-element">
+							<div class="search-condition-container"> <!-- 230711 div.search-condition-container 추가 -->
+								<div class="search-condition">
+									<!-- 230710 등록예정차량 추가 -->
+									<div class="condition-item item-wtCar" style="display: none;">
+										<h3 class="item-title">등록예정차량만 보기</h3>
+										<input class="switch-input" type="checkbox" id="switch-wt" onclick="" />
+									</div>
+
+									<!-- 230710 롯데서비스 추가 -->
+									<div class="condition-item item-lotteService">
+										<h3 class="item-title">
+											롯데서비스
+											<div class="common-layer-group posTop">
+												<button type="button" class="ir common-layer-bt">툴팁보기</button>
+												<div class="common-layer-tooptip custom-tooltip"> <!-- 230726 인증차, 진단차 순서변경 -->
+													<h4>인증차</h4>
+													<p>주요골격(프레임) 사고이력이 없는 <u>무사고 진단차량</u> 입니다.</p>
+													<h4>진단차</h4>
+													<p>롯데렌터카에서 <u>직접성능점검한 정보가 제공되는 차량</u>입니다.</p>
+													<h4>관리차</h4>
+													<p>신차 출고부터 지금까지 롯데렌터카에서 <u>정기관리한 차량</u> 입니다.</p>
+												</div>
+											</div>
+										</h3>
+										<ul class="svc-box-wrap">
+											<!-- 230726 인증차, 진단차 순서변경 -->
+											<li class="svc-box">
+												<img class="active" src="images/icon/ico-certification.png">
+												<img class="inactive" src="images/icon/ico-certification-inactive.png">
+												<span>인증차</span>
+											</li>
+											<li class="svc-box active">
+												<img class="active" src="images/icon/ico-diagnosis.png">
+												<img class="inactive" src="images/icon/ico-diagnosis-inactive.png">
+												<span>진단차</span>
+											</li>
+											<li class="svc-box">
+												<img class="active" src="images/icon/ico-management.png">
+												<img class="inactive" src="images/icon/ico-management-inactive.png">
+												<span>관리차</span>
+											</li>
+											
+											<!-- 하드코딩, 삭제 후 수정요청 -->
+											<script>
+												$(".svc-box").on("click", function(){ $(this).toggleClass("active"); })
+											</script>
+										</ul>
+									</div>
+									
+									<!-- 제조사/모델 -->
+									<div class="condition-item item-model"> <!-- 230710 클래스 on 붙이면 선택된모델 레이아웃 노출 -->
+										<h3 class="item-title">제조사/모델</h3>
+										<!-- onclick 동작을 위한 하드코딩이니 수정 후, 적용요청 -->
+										<button type="button" class="bt-flip-text" onclick="$('.search-condition-container').css('display','none');$('.model-list-container').css('display','block');">
+											<img src="images/icon/ico-search-white.svg" alt="검색아이콘" /> <!-- 230710 검색아이콘 이미지명 변경 -->
+											제조사/모델 찾아보기 <span>더보기</span>
+										</button>
+										<!-- 선택된 모델 -->
+										<div class="selected-option">
+											<button type="button" class="bt-selected-item">기아</button>
+											<button type="button" class="bt-selected-item">제네시스</button>
+											<button type="button" class="bt-selected-item">현대</button>
+											<button type="button" class="bt-selected-item">그랜저</button>
+											<button type="button" class="bt-selected-item">기아 스포티지 4세대 외 8개</button>
+										</div>
+									</div>
+
+									<!-- 주행거리 -->
+									<div class="condition-item item-distance">
+										<h3 class="item-title">주행거리</h3>
+										<div class="type-group range">
+											<div class="range-bts">
+												<!-- 230628 주행거리 텍스트 수정 -->
+												<button type="button" class="rg-bt">전체</button>
+												<button type="button" class="rg-bt on">~3만</button>
+												<button type="button" class="rg-bt way">~5만</button>
+												<button type="button" class="rg-bt on">~7만</button>
+												<button type="button" class="rg-bt">~10만</button>
+											</div>
+										</div>
+										<div class="type-group direct">
+											<div class="select-type-input has-bt">
+												<span class="ip_wrap">
+													<input type="text" />
+													<small>km</small>
+												</span>
+												<span class="sb">~</span>
+												<span class="ip_wrap">
+													<input type="text" />
+													<small>km</small>
+												</span>
+												<!-- <button type="button" class="bt-submit">확인</button> --> <!-- 230710 확인버튼 삭제 -->
+											</div>
+										</div>
+									</div>
+
+									<!-- 연식 -->
+									<div class="condition-item item-year unfold" data-fold="foldable">
+										<h3 class="item-title">연식</h3>
+										<!-- 230710 범위 추가 -->
+										<div class="type-group range">
+											<div class="range-bts">
+												<button type="button" class="rg-bt on">전체</button>
+												<button type="button" class="rg-bt">~3년</button>
+												<button type="button" class="rg-bt">~4년</button>
+												<button type="button" class="rg-bt">~5년</button>
+											</div>
+										</div>
+										<div class="select-type-input">
+											<span class="sl_wrap">
+												<select>
+													<option value="">최소</option>
+												</select>
+											</span>
+											<span class="sb">~</span>
+											<span class="sl_wrap">
+												<select>
+													<option value="">최대</option>
+												</select>
+											</span>
+										</div>
+									</div>
+
+									<!-- 월 대여료 -->
+									<div class="condition-item item-price">
+										<h3 class="item-title">월 대여료</h3> <!-- 230628 가격-> 월대여료 텍스트 수정 -->
+										<!-- 230710 범위 추가 -->
+										
+										<div class="type-group range">
+											<div class="range-bts">
+												<button type="button" class="rg-bt on">전체</button>
+												<button type="button" class="rg-bt">~50만원</button>
+												<button type="button" class="rg-bt">~60만원</button>
+												<button type="button" class="rg-bt">~70만원</button>
+											</div>
+										</div>
+										<div class="type-group"><!-- case : 판매가 선택 시 노출 -->
+											<div class="select-type-input has-bt">
+												<span class="ip_wrap">
+													<input type="text" />
+													<small>만원</small>
+												</span>
+												<span class="sb">~</span>
+												<span class="ip_wrap">
+													<input type="text" />
+													<small>만원</small>
+												</span>
+												<!-- <button type="button" class="bt-submit">확인</button> --> <!-- 230710 확인버튼 삭제 -->
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- BUTTONS -->
+								<!-- 230711 버튼 클래스 변경 -->
+								<div class="bt-fixed-container search-btn">
+									<button type="button" class="bt-condition-reset bt-default">초기화</button> <!-- 230621 초기화 버튼 수정 -->
+									<button type="button" class="bt-condition-search bt-active">검색 (232,403대)</button>
+								</div>
+							</div>
+							
+
+							<!-- 230710 pop-conent 02. 제조사/모델 선택페이지 -->
+							<div class="model-list-container"  style="display: none;">
+								<h4 class="title-head">
+									<img src="images/icon/ico-arr-prev.svg" alt="제조사/모델 뒤로가기"  onclick="$('.search-condition-container').css('display','block');$('.model-list-container').css('display','none');" />
+									제조사/모델
+								</h4>
+								<div class="model-container">
+									<!-- item :: unfold -->
+									<div class="model-item unfold">
+										<div class="item-title">
+											<span class="ck-wrap">
+												<input type="checkbox" name="" id="br1" checked>
+												<label for="br1"><img class="logo" src="images/common/logo/logo-hyundai.png">현대</label> <!-- 제조사 로고 이미지 추가-->
+											</span>
+											<span class="count">(36)</span>
+											<!-- 230711 onclick 동작확인을 위한 하드코딩이니 수정 후, 다른 제조사에도 적용요청 -->
+											<button type="button" class="ir bt-flip bot" onclick="$(this).parents('div.model-item').toggleClass('unfold')">목록열기</button>
+										</div>
+										<div class="condition-detail">
+											<div class="condition-item">
+												<div class="item-title">
+													<span class="ck-wrap">
+														<input type="checkbox" id="mg93" disabled="">
+														<label>i30</label>
+													</span>
+													<span class="count">(0)</span>
+												</div>
+											</div>
+											<div class="condition-item">
+												<div class="item-title">
+													<span class="ck-wrap">
+														<input type="checkbox" id="mg94" disabled="">
+														<label>i40</label>
+													</span>
+													<span class="count">(0)</span>
+												</div>
+											</div>
+											<div class="condition-item">
+												<div class="item-title">
+													<span class="ck-wrap">
+														<input type="checkbox" id="mg95" disabled="">
+														<label>갤로퍼</label>
+													</span>
+													<span class="count">(0)</span>
+												</div>
+											</div>
+											<div class="condition-item unfold"> <!-- 대분류 열릴시 클리스 unfold 추가 -->
+												<div class="item-title">
+													<span class="ck-wrap">
+														<input type="checkbox" id="mg96" checked>
+														<label for="mg96">그랜저</label>
+													</span>
+													<span class="count">(11)</span>
+												</div>
+												<div class="condition-detail">
+													<div class="condition-item">
+														<div class="item-title">
+															<span class="ck-wrap">
+																<input type="checkbox" id="md8" disabled=""><label>그랜저 뉴 럭셔리</label>
+															</span>
+															<span class="count">(0)</span>
+														</div>
+													</div>
+													<div class="condition-item">
+														<div class="item-title">
+															<span class="ck-wrap">
+																<input type="checkbox" id="md66" disabled=""><label>뉴그랜저XG</label>
+															</span>
+															<span class="count">(10)</span>
+														</div>
+													</div>
+													<div class="condition-item">
+														<div class="item-title">
+															<span class="ck-wrap">
+																<input type="checkbox" id="md71" disabled=""><label>뉴그랜저</label>
+															</span>
+															<span class="count">(20)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="condition-item">
+												<div class="item-title">
+													<span class="ck-wrap">
+														<input type="checkbox" id="mg97" disabled="">
+														<label>그레이스</label>
+													</span>
+													<span class="count">(0)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- item :: fold -->
+									<div class="model-item">
+										<div class="item-title">
+											<span class="ck-wrap">
+												<input type="checkbox" name="" id="br2">
+												<label for="br2"><img class="logo" src="images/common/logo/logo-genesis.png">제네시스</label>
+											</span>
+											<span class="count">(2,512)</span>
+											<button type="button" class="ir bt-flip bot">목록열기</button>
+										</div>
+									</div>
+									<!-- item :: fold -->
+									<div class="model-item">
+										<div class="item-title">
+											<span class="ck-wrap">
+												<input type="checkbox" name="" id="br3">
+												<label for="br3"><img class="logo" src="images/common/logo/logo-kia.png">기아</label>
+											</span>
+											<span class="count">(1,121)</span>
+											<button type="button" class="ir bt-flip bot">목록열기</button>
+										</div>
+									</div>
+									<!-- item :: fold -->
+									<div class="model-item">
+										<div class="item-title">
+											<span class="ck-wrap">
+												<input type="checkbox" name="" id="br4">
+												<label for="br4"><img class="logo" src="images/common/logo/logo-kgmobility.png">KG모빌리티(쌍용)</label>
+											</span>
+											<span class="count">(124)</span>
+											<button type="button" class="ir bt-flip bot">목록열기</button>
+										</div>
+									</div>
+									<!-- item :: fold -->
+									<div class="model-item">
+										<div class="item-title">
+											<span class="ck-wrap">
+												<input type="checkbox" name="" id="br5">
+												<label for="br5"><img class="logo" src="images/common/logo/logo-chevrolet.png">쉐보레(GM대우)</label>
+											</span>
+											<span class="count">(20)</span>
+											<button type="button" class="ir bt-flip bot">목록열기</button>
+										</div>
+									</div>
+									<!-- item :: fold -->
+									<div class="model-item">
+										<div class="item-title">
+											<span class="ck-wrap">
+												<input type="checkbox" name="" id="br6">
+												<label for="br6"><img class="logo" src="images/common/logo/logo-renault.png">르노코리아(삼성)</label>
+											</span>
+											<span class="count">(36)</span>
+											<button type="button" class="ir bt-flip bot">목록열기</button>
+										</div>
+									</div>
+								</div>
+
+								<!-- BUTTONS -->
+								<div class="bt-fixed-container search-btn">
+									<button type="button" class="bt-condition-selected bt-active">선택</button>
+								</div>
+							</div>
+							<!-- // 제조사/모델 선택페이지 -->
+						</div>
+						<!-- //search element -->
+					</div>
+					<!-- //search list container-->
+				</div>
+				<!-- layout--container -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 231010 layer-popup-wrappper : 공지사항 팝업 // -->
+<div class="pop-notice layer_popup_wrappper" id="noticePop" style="display: none;">
+	<div class="layer_popup">
+		<div class="pop_inner fix">
+			<div class="pop-contents">
+				<img src="images/popup/popup_notice_brandChange.jpg" alt="채널 브랜드 공지" />
+				<div class="fixed-area">
+					<div class="btn-close-today">
+						<input type="checkbox" name="closeToday" id="closeTodayCb" /><label for="closeTodayCb">오늘 하루 그만 보기</label>
+					</div>
+					<a href="javascript:;" class="ir pop_close" onclick="ui.modalPopClose(noticePop);">닫기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // 231010 layer-popup-wrappper : 공지사항 팝업 -->
+
+
+
+<!-- ### 240205 layer-popup-wrappper : 새해 영업일 안내 팝업 // -->
+<div class="pop-banner layer_popup_wrappper" id="newYearPopup" style="display:block;">
+	<div class="layer_popup bg-bottom">
+		<div class="pop_inner">
+			<div class="pop-contents">
+				<img src="images/popup/popup_notice_newYear.png" alt="새해 영업일 안내" />
+				<div class="fixed-area">
+					<div class="btn-close-today">
+						<input type="checkbox" name="closeToday1" id="closeTodayCb1"/><label for="closeTodayCb1">오늘 하루 그만 보기</label>
+					</div>
+					<a href="javascript:;" class="ir pop_close" onclick="ui.modalPopClose(newYearPopup);">닫기</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // 240205 layer-popup-wrappper : 새해 영업일 안내 팝업 -->
+
+
+
+</body>
+</html>
+	
+
