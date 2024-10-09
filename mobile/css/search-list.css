@@ -866,7 +866,21 @@
  background-color: #E9E9E9;
 }
 
-
+.detail-element .car-seller .pre-number{
+    display:flex;
+    font-size: 12px;
+    align-items: center;
+    margin-top:10px;
+    color:#999;
+}
+.detail-element .car-seller .pre-number:before{
+    content:'';
+    width:2px; height:2px;
+    background:#999;
+}
+.detail-element .car-seller .pre-number p{
+    padding-left:5px;
+}
 .detail-element .car-seller .bt-report {
  font-size: 12px;
  text-decoration: none;
@@ -1028,8 +1042,9 @@
 .detail-element .car-seller .seller-profile {display:flex;margin:0 0 15px 0;}
 .detail-element .car-seller .seller-profile .pic {width:72px;height:72px;border-radius:50%;overflow:hidden;border: 1px solid #e9e9e9;border-radius: 25px;}
 .detail-element .car-seller .seller-profile .pic img {display:block;width:100%;height:100%;}
-.detail-element .car-seller .seller-profile .info {padding-left:17px;padding-top: 10px;}
+.detail-element .car-seller .seller-profile .info {padding-left:17px;padding-top: 4px;}
 .detail-element .car-seller .seller-profile .info .name {font-size: 0;}
+.detail-element .car-seller .seller-profile .info .sellernumber {font-size: 13px; color:#A1A1A1;}
 .detail-element .car-seller .seller-profile .info .shop {/*font-size:13px;font-weight:500;margin-left: 5px;*/font-size: 17px; font-weight: 500; color: #666;position: relative;}
 .detail-element .car-seller .seller-profile .info .shop::after {
  content: "";
@@ -1047,7 +1062,7 @@
 .detail-element .car-seller .seller-profile .info .name strong {font-size:17px;font-weight:700;margin-right: 3px;color:#000;}
 .detail-element .car-seller .seller-profile .info .name .lam {font-size:14px;color:#F33;font-weight:500;letter-spacing:-1px;}
 
-.detail-element .car-seller .seller-profile .info .car {margin-top: 8px;font-size:13px;font-weight:300;text-align:left; display: inline-block; color: #999;}
+.detail-element .car-seller .seller-profile .info .car {font-size:13px;font-weight:300;text-align:left; display: inline-block; color: #999;}
 .detail-element .car-seller .seller-profile .info .car + .car::before { content: '|'; color: #e9e9e9; margin-left: 3px; margin-right: 6px; }
 .detail-element .car-seller .seller-profile .info .car strong { color: #666; font-weight: 500; }
 .detail-element .car-seller .seller-profile .info .car a {margin-left:5px;font-size:12px;/*text-decoration:underline;*/font-weight:700}
@@ -1135,7 +1150,7 @@
 .detail-element .buyoption li span,
 .detail-element .buyoption li p{
     display: inline-block;
-    font-size: 12px;
+    font-size: 13px;
 }
 .detail-element .buyoption li p span.option-value{
     color: #999999;
@@ -1149,6 +1164,11 @@
 }
 .detail-element .buyoption li p em{
     font-weight: 700;
+}
+.detail-element .option-comment{
+    font-size:12px;
+    color:#999;
+    margin-top:14px;
 }
 .detail-element .ment {font-size:12px;}
 .detail-element .bt-view-more {display:block;width:100%;height:30px;line-height:30px;margin-top:10px;border:1px solid #E9E9E9;text-align:center;border-radius:5px;font-size:11px;font-weight:500;}
@@ -1850,8 +1870,8 @@ margin: 0 auto;
     margin-bottom: 14px;
 }
 .psc-btn-group .tab-content .warranty-price .title h3{
-    font-size: 14px;
-    font-weight:400;
+    font-size: 16px;
+    font-weight:700;
 }
 
 .psc-btn-group .tab-content .warranty-price .title span.more{

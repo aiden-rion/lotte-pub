@@ -241,66 +241,65 @@
                         <div class="inputSrhBx">
                             <input type="text" class="mainSrhTxt" placeholder="어떤 차량이 궁금하세요?" title="검색어 입력">
                             <ul class="srhTxtList">
-                                <li><a href="#"><span class="bold">쏘나타(DN8)</span></a></li>
-                                <li><a href="#"><span class="bold">쏘나</span><span>타(DN8) 하이브리드</span></a></li>
-                                <li><a href="#"><span class="bold">아반</span><span>떼AD</span></a></li>
-                                <li><a href="#"><span class="bold">더 뉴 아반</span><span>떼AD</span></a></li>
+                                <li onclick='location.href="./car_list_son.html"'><span class="bold">쏘나타(DN8)</span></li>
+                                <li><span class="bold">쏘나</span><span>타(DN8) 하이브리드</span></li>
+                                <li><span class="bold">아반</span><span>떼AD</span></li>
+                                <li><span class="bold">더 뉴 아반</span><span>떼AD</span></li>
+                                <li><span class="bold">제네</span><span>시스 G80</span></li>
                             </ul>
                             <button type="button" class="btnMainSrh">검색</button>
                         </div>
                     </div>
                     <button type="button" class="btnSrhClose">닫기</button>
                 </div>
-
+                
                 <script>
-
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.querySelector('.mainSrhTxt');
-    const searchList = document.querySelector('.srhTxtList');
-    const listItems = searchList.querySelectorAll('li');
-
-    // 페이지가 로드되면 입력창에 포커스
-    searchInput.focus();
-
-    searchInput.addEventListener('input', function() {
-        const query = searchInput.value.toLowerCase();
-        let hasVisibleItems = false;
-
-        listItems.forEach(item => {
-            const text = item.textContent.toLowerCase();
-            const regex = new RegExp(`(${query})`, 'gi'); // 정규 표현식 생성
-
-            if (text.includes(query)) {
-                hasVisibleItems = true;
-                // 기존 HTML을 복원하고 강조된 부분만 교체
-                const highlightedText = item.innerHTML.replace(/<span class="bold">.*?<\/span>/g, ''); // 기존 강조 제거
-                item.innerHTML = highlightedText.replace(regex, '<span class="bold">$1</span>'); // 강조 추가
-                item.style.display = 'block'; // Show matching items
-            } else {
-                item.style.display = 'none'; // Hide non-matching items
-            }
-        });
-
-        // Show or hide the list based on the input value and whether there are visible items
-        if (query && hasVisibleItems) {
-            searchList.classList.add('visible');
-        } else {
-            searchList.classList.remove('visible');
-        }
-    });
-});
-
-$('.btnSrhOpen').on('click', function() {    
-    $('.srhBx').hide();
-    $('.srhWrap').fadeIn(() => {
-        $('.mainSrhTxt').focus(); // 영역이 활성화되면 입력창에 포커스
-    });
-});
-
-$('.btnSrhClose').on('click', function() {    
-    $('.srhBx').show();
-    $('.srhWrap').fadeOut();
-});
+                document.addEventListener('DOMContentLoaded', function() {
+                    const searchInput = document.querySelector('.mainSrhTxt');
+                    const searchList = document.querySelector('.srhTxtList');
+                    const listItems = searchList.querySelectorAll('li');
+                
+                    searchInput.focus();
+                
+                    searchInput.addEventListener('input', function() {
+                        const query = searchInput.value.toLowerCase();
+                        let hasVisibleItems = false;
+                
+                        listItems.forEach(item => {
+                            const originalText = item.textContent.trim();
+                            const text = originalText.toLowerCase();
+                            const regex = new RegExp(`(${query})`, 'gi'); // 정규 표현식 생성
+                
+                            if (query && text.includes(query)) {
+                                hasVisibleItems = true;
+                                // 기존 HTML 내용을 유지하면서 강조된 부분을 새롭게 처리
+                                const newHTML = originalText.replace(regex, '<span class="bold">$1</span>');
+                                item.innerHTML = newHTML;
+                                item.style.display = 'block'; // 매칭되는 항목을 표시
+                            } else {
+                                item.style.display = 'none'; // 매칭되지 않는 항목을 숨김
+                            }
+                        });
+                
+                        if (query && hasVisibleItems) {
+                            searchList.classList.add('visible');
+                        } else {
+                            searchList.classList.remove('visible');
+                        }
+                    });
+                });
+                
+                $('.btnSrhOpen').on('click', function() {    
+                    $('.srhBx').hide();
+                    $('.srhWrap').fadeIn(() => {
+                        $('.mainSrhTxt').focus(); // 영역이 활성화되면 입력창에 포커스
+                    });
+                });
+                
+                $('.btnSrhClose').on('click', function() {    
+                    $('.srhBx').show();
+                    $('.srhWrap').fadeOut();
+                });
                 </script>
 
             </div> 

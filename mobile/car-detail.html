@@ -359,7 +359,7 @@
 							</div>
 
 							<div class="car-options-detail area">
-								<h3 class="s-title">선택옵</h3>
+								<h3 class="s-title">선택옵션</h3>
 								<h3 class="s-title-sub"><em>3개의 선택사양(총 360만원 상당)</em>이 적용되어 있어요.</h3>
 								<div class="buyoption">
 									<ul>
@@ -386,6 +386,9 @@
 											<p class="option-price"><em>300,000</em>원</p>
 										</li>
 									</ul>
+								</div>
+								<div class="option-comment">
+									※ 탈부착이 가능한 선택사양은 사용감에 따라 제공되지 않을 수 있습니다.
 								</div>
 							</div>
 
@@ -623,8 +626,8 @@
 							<!--// 보험이력조회 -->
 
 							<!-- 230623 혜택추가 -->
-							<div class="benefits-container">
-								<img src="images/elements/img-benefits.png" alt="구매혜택 이미지">
+							<div class="benefits-container area" style="padding-left:0; padding-right:0; border-top:1px solid #ddd;">
+								<img src="images/renew/warranty_img.png" alt="구매혜택 이미지">
 							</div>
 
 							<!-- 판매자정보 -->
@@ -637,6 +640,7 @@
 										<p class="name">
 											<a href="seller.html" class="shop"><strong>가양지점</strong>강동규 대리</a>
 										</p>
+										<p class="sellernumber">종사원번호 : CB18-01331</p>
 										
 										<p class="car">판매차량 <strong>1,244대</strong></p> <!-- 230914 수정 -->
 										<p class="car">등록예정 <strong>14대</strong></p> <!-- 230914 추가 -->
@@ -664,8 +668,10 @@
 									</div>
 									<button type="button" class="bt-view-toggle" onclick="$('.seller-msg').toggleClass('view');$(this).toggleClass('view')">차량설명 전체보기</button>
 								</div>
-								<!-- 230502 신고하기 태그 위치이동 -->
-								<button type="button" class="bt-report" onclick="ui.modalPopOpen(reportPop);">허위매물 신고하기</button>
+								<div class="pre-number">
+									<p>제시번호 : </p>
+									<span>2024058213</span>
+								</div>
 							</div>
 							<!-- // 판매자정보 -->
 
@@ -678,7 +684,7 @@
 									<li class="list-item">
 										<div class="list-thumb">
 											<a href="#">
-												<img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/09/24/LFILE_000026566920240924102024.png/dims/resize/490x350" alt="차량대표이미지" />
+												<img src="./images/test/LFILE_000012420120240311112158.png" alt="차량이미지">
 											</a>
 										</div>
 										<div class="list-detail">
@@ -697,9 +703,6 @@
 											<div class="list-price">
 												<div class="price">
 													<p class="prc"><em>26,535,000</em>원</p> <!-- 230717 태그(span->p) 수정 -->
-													<!-- 230720 수정 (선납금 노출X) -->
-													<span class="period">/ 24개월</span>
-													<!-- <span>24개월 / 선납금 10%</span> -->
 												</div>
 											</div>
 										</div>
@@ -708,7 +711,7 @@
 									<li class="list-item">
 										<div class="list-thumb">
 											<a href="#">
-												<img src="https://img-mycarsave.lotterentacar.net/uploadFile/2024/08/29/LFILE_000025060620240829110219.png/dims/resize/490x350" alt="차량대표이미지" />
+												<img src="./images/test/LFILE_000019610520240617130359.png" alt="차량이미지">
 											</a>
 										</div>
 										<div class="list-detail">
@@ -751,6 +754,7 @@
 
 							<!-- 기본형 -->
 							<div class="min-container">
+								<p class="blank">예상 견적 계산하기</p>
 								<p>
 									<span class="period"><em>총 구매 예상비용</em></span>
 								</p>
@@ -779,15 +783,84 @@
 												<div class="buy-price-list">
 												<ul>
 													<li>
-														<p class="title">차량판매가</p>
+														<div class="s-title-wrap" style="margin:0; width:60%;">
+															<h3 class="s-title">차량판매가
+																<!-- <div class="common-layer-group-conv posTop">
+																	<button type="button" class="ir common-layer-bt-conv">툴팁보기</button>
+																	<div class="layer_popup_wrappper vM">
+																		<div class="layer_popup bg">
+																			<div class="pop_inner">
+																				<div class="pop-head">
+																					<h3 class="pop-title">약정 주행거리란?</h3>
+																					<a href="#" class="ir pop_close">닫기</a>
+																				</div>
+																				<div class="pop-contents">
+																					<p>
+																					계약 종료 시 약정된 주행거리를 초과한 경우 초과운행부담금을 정산하여야 합니다.<br>(국산차 100원/km , 수입차 200원/km, 테슬라 450원/km)<br>계약 이후 약정주행거리는 변경 불가합니다.<br>만기 후 인수시, 약정 주행거리는 무관합니다.
+																					</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div> -->
+															</h3>
+														</div>
 														<p class="price"><em>30,000,000</em>원</p>
 													</li>
 													<li>
-														<p class="title">이전등록비(예상)</p>
+														<div class="s-title-wrap" style="margin:0; width:60%;">
+															<h3 class="s-title">이전등록비
+																<div class="common-layer-group-conv posTop">
+																	<button type="button" class="ir common-layer-bt-conv">툴팁보기</button>
+																	<div class="layer_popup_wrappper vM">
+																		<div class="layer_popup bg">
+																			<div class="pop_inner">
+																				<div class="pop-head">
+																					<h3 class="pop-title">이전등록비란?</h3>
+																					<a href="#" class="ir pop_close">닫기</a>
+																				</div>
+																				<div class="pop-contents">
+																					<p>
+																						차량 명의이전 시 필요한 비용이며 취등록세, 공채매입비, 인지대, 증지대를 대략적으로 계산한 비용입니다. 지역별 공채매입비 변동으로 실제 비용과 차이가 있을 수 있습니다.
+																					</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</h3>
+														</div>
 														<p class="price"><em>1,250,000</em>원</p>
 													</li>
 													<li>
-														<p class="title">탁송료</p>
+														<div class="s-title-wrap" style="margin:0; width:60%;">
+															<h3 class="s-title">매도수수료
+																<div class="common-layer-group-conv posTop">
+																	<button type="button" class="ir common-layer-bt-conv">툴팁보기</button>
+																	<div class="layer_popup_wrappper vM">
+																		<div class="layer_popup bg">
+																			<div class="pop_inner">
+																				<div class="pop-head">
+																					<h3 class="pop-title">매도수수료란?</h3>
+																					<a href="#" class="ir pop_close">닫기</a>
+																				</div>
+																				<div class="pop-contents">
+																					<p>
+																					중고자동차 보관.관리에 소요되는 비용입니다.(자동차관리법 시행규칙 제122조 3항)
+																					</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</h3>
+														</div>
+														<p class="price"><em>440,000</em>원</p>
+													</li>
+													<li>
+														<div class="s-title-wrap" style="margin:0; width:60%;">
+															<h3 class="s-title">탁송료</h3>
+														</div>
 														<p class="price"><em>80,000</em>원</p>
 													</li>
 												</ul>
@@ -837,6 +910,23 @@
 												</div>
 												<!--//warranty price-->
 											</div>
+
+											<script>
+											document.querySelectorAll('.common-layer-bt-conv').forEach(function(button) {
+												button.addEventListener('click', function() {
+													var popup = this.nextElementSibling;
+													popup.style.display = 'block';
+												});
+											});
+
+											document.querySelectorAll('.pop_close').forEach(function(closeButton) {
+												closeButton.addEventListener('click', function(event) {
+													event.preventDefault(); // 링크 기본 동작 방지
+													var popup = this.closest('.layer_popup_wrappper');
+													popup.style.display = 'none';
+												});
+											});
+											</script>
 											<div class="total_price">
 												<p>
 													<span class="period"><em>총 구매 예상비용</em></span>

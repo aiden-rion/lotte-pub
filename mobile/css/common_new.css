@@ -2091,7 +2091,7 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
 /* layer-popup */
 body.modalOpen {min-height:100vh;overflow:hidden;}
 .pop-head {
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2257,6 +2257,7 @@ body.modalOpen {min-height:100vh;overflow:hidden;}
 .vM .layer_popup {top:50%;left:10px;right:10px;transform:translate(0%,-50%);-webkit-transform:translate(0%,-50%);}
 .vB .layer_popup {top:auto;bottom:0;left:0;right:0;max-height:100vh;overflow-y:auto;transform:translate(0%, 0%);-webkit-transform:translate(0%, 0%);border-radius:10px 10px 0 0;}
 .layer_popup.bg {
+    display:table;
     background:#fff;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
