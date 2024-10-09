@@ -1372,7 +1372,7 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
 .notification button.bt-underline { text-decoration: underline; }
 
 /* calendar (jquery ui custom style) */
-#ui-datepicker-div {min-width:300px;padding:10px;margin-top:1px;box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.1);border:0;}
+#ui-datepicker-div {min-width:300px;padding:10px;margin-top:1px;box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.1);border:0;z-index:10099 !important;}
 .ui-datepicker-title {width:175px !important;margin:0 auto !important;overflow:hidden;font-size:15px;}
 .ui-datepicker-month {float:right !important;width:70px !important;height:40px;margin:0 3px !important;background:url("../images/icon/ico-selectbox.svg") no-repeat 90% 50%;}
 .ui-datepicker-month:after {content:"월"}
@@ -2442,6 +2442,38 @@ body.modalOpen {min-height:100vh;overflow:hidden;}
     height: 16px;
     background: url("../images/rent_new/icon/arr_r_grey.svg")center/cover no-repeat;
 }
+.pop_inner .bottom-info .calculate-title{
+    display:block;
+    font-size:16px;
+    font-weight:700;
+}
+.pop_inner .bottom-info ul{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    margin: 14px 0 10px;
+}
+.pop_inner .bottom-info ul li{
+    display:flex;
+    justify-content: space-between;
+}
+.pop_inner .bottom-info ul li p.tit{
+    font-weight:700;
+}
+
+.pop_inner .bottom-info .pop-contents{
+    display:none;
+    margin-top:10px;
+    animation:txtTop 0.5s 0.3s ease-in-out both ;
+}
+.pop_inner .bottom-info .pop-contents.show{
+    display:block;
+    transition:all 1s;
+}
+
+.pop_inner .calculate-sum{
+    display:block;
+}
 
 .pop-contents .calculate strong span {
     font-size: 16px;
@@ -2664,6 +2696,20 @@ body.modalOpen {min-height:100vh;overflow:hidden;}
     background: #000;
     color: #fff;
 }
+.btn-wrap button.light {
+    background: #FF3333;
+    color: #fff;
+}
+.btn-wrap button.bt-tel{
+    color:#FF3333;
+}
+.btn-wrap button.bt-tel:before {
+    content:"";display:inline-block;
+    vertical-align:middle;
+    width:16px;height:16px;margin:-4px 5px 0 0;
+    background:url("../images/icon/ico-tel-s.svg") no-repeat;
+    background-size: cover;
+}
 .btn-wrap button.no-click {
     background: #999999;
     pointer-events: none;
@@ -2723,6 +2769,12 @@ body.menuActive header .page-title{
 
 /* insert form group */
 .insert-form-group {}
+.insert-form-group .insert-form-tit{
+    display:block;
+    font-size:22px;
+    font-weight:800;
+    margin-bottom:22px;
+}
 .insert-form-group .insert-form-title {padding-bottom:10px;font-size:14px;font-weight:700;}
 .insert-form-group .insert-form-title.bd {margin-bottom:20px;border-bottom:1px solid #E9E9E9;}
 .insert-form-group .input-item.flex {display:flex;justify-content:space-between;}
@@ -2731,7 +2783,7 @@ body.menuActive header .page-title{
 .insert-form-group .input-item .c-red {color:#FF3333}
 .insert-form-group .input-item + .input-item {margin-top:20px;}
 .insert-form-group .input-item .dateBox .ui-datepicker-trigger {width:18px;top:14px;right:15px;}
-.insert-form-group .ipt-tit {min-height:18px;margin-bottom:8px;font-size:12px;font-weight:700;}
+.insert-form-group .ipt-tit {min-height:18px;margin-bottom:8px;font-size:14px;font-weight:500;}
 .insert-form-group .ipt-cont + .ipt-cont {margin-top:10px;}
 .insert-form-group .ipt-cont + .tip-list {margin-top:10px;}
 .insert-form-group .ipt-cont .ipt-flex {display:flex;align-items:center;}
@@ -3205,7 +3257,16 @@ body.state-loading {height:100vh;overflow:hidden;}
 }
 
 
-
+@keyframes txtTop {
+    0% {
+        transform: translateY(30px);
+        opacity:0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity:1;
+    }
+}
 
 
 

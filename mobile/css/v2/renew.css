@@ -497,6 +497,14 @@ li .saleType:after{
  .carBuyList .slick-next:hover{background:url(../../images/renew/btn_buy_next.png) no-repeat center center;}
  .carBuyList .slick-next::before{display:none;}
 
+.insert-form-group .insert-form-tit{
+    display:block;
+    font-size:22px;
+    font-weight:800;
+}
+
+
+
 @keyframes downScroll{
     0%{
         transform: translateY(10px);

@@ -2891,17 +2891,34 @@ color: #F33;
 }
 
 .info-container .txt-wrap {
- margin-left: 10px;
+    margin-left: 10px;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    width: 100%;
 }
 
 .info-container .txt-wrap h1 {
- font-size: 13px;
- font-weight: 500;
- color: #000;
- /*margin-bottom: 15px;*/
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    overflow: hidden;
+    height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: calc(100% - 6.3em);
 }
 
-/* ### 230720 수정 */
+.info-container .txt-wrap p.platenumber{
+    font-size:14px;
+    line-height: 20px;
+}
+.info-container .txt-wrap p.carprice{
+    font-size:16px;
+    font-weight:600;
+    line-height: 21px;
+}
+
 .info-container .txt-wrap .info {
  font-size: 0;
  margin-top: 15px;
@@ -3186,7 +3203,7 @@ color: #F33;
 }
 
 .popup .pop-btn.fixed button:last-child { flex: 1.7 1 0; }
-.pop-btn.fixed + .layout--container { padding-bottom: 64px; }
+.pop-btn.fixed + .layout--container {padding-bottom: 64px;border-top: 1px s;}
 
 .popup .pop-btn.fixed button { min-width: initial; padding: 0; flex: 1 1 0; }
 

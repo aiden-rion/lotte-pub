@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데렌터카</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/common_new.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" />
+<link rel="stylesheet" href="css/car-check-view.css" type="text/css" />
+<link rel="stylesheet" href="css/search-list.css" type="text/css" /><!-- for search-list style -->
+<!-- //front UI css -->
+<!-- front UI js// -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/nayuda.js"></script> <!-- 230720 추가 (.floating-page-top 이벤트) -->
+<!-- 230412 : 360도뷰 cdn 추가 -->
+<script src="https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js"></script>
+<!-- //front UI js -->
+
+</head>
+<body>
+
+	<!-- popup : 견적상담 신청 // -->
+	<main>
+		<div class="popup-quote popup layer_popup" id="quotePop">
+			<div class="layout--header">
+				<header>
+					<h1 class="logo blind">
+						<a href="/" class="ir">롯데렌터카 마이카세이브</a>
+					</h1>
+					<h2 class="page-title">상담신청</h2>
+					<button type="button" class="ir bt-page-close" onclick='location.href="./car-detail.html"'>페이지 닫기</button>
+				</header>
+			</div>
+			
+			<!-- 231110 버튼 위치 이동 -->
+			<div class="pop-btn fixed"> <!-- 231110 클래스 fixed 추가 -->
+				<button type="button" class="bt-pop-type5 rnd tel" onclick="">담당자 문의</button> <!-- 231109 안심번호 버튼 추가 -->
+				<button type="button" class="bt-pop-type1 rnd" onclick="">상담신청</button>
+			</div>
+
+			<div class="layout--container">
+				<div>
+					<!-- <div class="banner-strip notify">
+						<div>
+							<span class="txt">상담 예약을 해주시면 확인 후 빠르게 연락드리겠습니다</span>
+						</div>
+						<img class="icon" src="./images/elements/img-consult.png" alt="상담중 이미지" />
+					</div> -->
+
+					<!-- 230623 견적상담신청 내용 추가 -->
+					<!-- 매물 정보 -->
+					<div class="info-container area">
+						<img src="images/dummy/@detail-car-image2.jpg" alt="차량이미지" />
+						<div class="txt-wrap">
+							<h1>ALL NEW REXTON (D) 2.2 프레스티지 5인승 2WD</h1>
+							<p class="platenumber">23허1234</p>
+							<p class="carprice">35,800,000원</p>
+						</div>
+					</div>
+
+					<!-- 231108 추가 // -->
+					<div class="banner_link">
+						<div>
+							<p class="label">FAQ</p>
+							<span class="txt">고객님들이 많이 물어본 질문을 확인해 보세요</span>
+						</div>
+						<button class="btn-link">자세히보기</button> <!-- 231110 인수옵션형 안내페이지 FAQ로 랜딩 -->
+					</div>
+					<!-- // 231108 추가 -->
+					
+
+					<!-- 견적 정보 -->
+					<div class="psc-container area">
+						<h1>견적 정보</h1>
+						<h4>(VAT 포함)</h4>
+						<ul class="psc-wrap">
+							<li class="prc_advance sub">
+								<span class="tit">선납금 <var>(10%)</var></span> <!-- 230926 var 태그 추가 -->
+								<span class="val"><var>4,000,000</var>원</span>
+							</li>
+							<!-- 231004 보증금 추가 -->
+							<li class="prc_deposit sub">
+								<span class="tit">보증금 <var>(10%)</var></span> <!-- 230926 var 태그 추가 -->
+								<span class="val"><var>4,000,000</var>원</span>
+							</li>
+							<!-- 230926 인수가 위치 이동 -->
+							<!--
+							<span class="line"></span>
+							<li class="prc_acq">
+								<span class="tit">인수가</span>
+								<span class="val"><var>6,000,000</var>원</span>
+							</li>
+							-->
+							<li class="prc_total">
+								<span class="tit">월 대여료</span>
+								<span class="val">
+									월 <var>600,000</var>원
+								</span>
+							</li>
+							<!-- 230926 인수가 위치 이동 -->
+							<span class="line"></span>
+							<li class="prc_acq">
+								<span class="tit">계약만료 후 차량인수 희망 시, 인수가</span>
+								<span class="val"><var>6,000,000</var>원</span>
+							</li>
+						</ul>
+
+						<!-- 231110 텍스트 한줄씩 span 태그로 묶기 // -->
+						<p class="tips-box">
+							<span>· 보증·선납금을 제외한 정비, 보험, 세금 등이 포함된 금액입니다.</span>
+							<span>· 개인별 신용조건에 따라 담보 및 대여료가 달라질 수 있습니다.</span>
+							<span>· 보험연령 만 26세 이상 기준 표준대여료 입니다.</span>
+							<span> <!-- 231110 추가 -->
+								· 대인보상 : 무제한 / 대물배상 : 1억원 / 자손보상 : 1억원
+								<button class="btn-link">자세히보기</button> <!-- 231110 인수옵션형 안내페이지 FAQ > 보험조건으로 랜딩 -->
+							</span>
+						</p>
+						<!-- // 231110 텍스트 한줄씩 span 태그로 묶기 -->
+					</div>
+
+					<!-- 신청자 정보 -->
+					<div class="insert-form-group area">
+						<h1>신청자 정보</h1> <!-- 230623 "신청자 정보" 타이틀 추가 --><!-- "신청자 정보" 타이틀 추가 -->
+						<!-- <div class="wrap"> --> <!-- 230720 hidden -->
+							<div class="input-item">
+								<div class="ipt-tit">신청자명</div>
+								<div class="ipt-cont">
+									<span class="ip-wrap"><input type="text" value="" /></span>
+								</div>
+							</div>
+							<div class="input-item">
+								<div class="ipt-tit">연락처</div>
+								<div class="ipt-cont">
+									<span class="ip-wrap"><input type="tel" value="" /></span>
+								</div>
+							</div>
+						<!-- </div> --> <!-- 230720 hidden -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!--//  popup : 견적상담 신청 -->
+
+
+    <!-- 바텀시트 -->
+    <div class="layer_popup custom-alert-pop">
+        <div class="btn-wrap">
+            <button type="button" class="bt-tel">0508-0328-8827</button>
+            <button type="button" class="light" onclick="location.href='./direct_01_2.html'">상담신청</button>
+        </div>
+    </div>
+
+</body>
+</html>
