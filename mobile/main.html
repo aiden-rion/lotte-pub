@@ -15,11 +15,8 @@
 <meta property="og:image" content="" />
 <!-- front UI css// -->
 <link rel="stylesheet" href="css/fonts.css" type="text/css" />
-<link rel="stylesheet" href="css/jquery-ui.min.css">
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
+<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+<link rel="stylesheet" href="css/swiper-bundle.min.css"/>
 <link rel="stylesheet" href="css/common_new.css" type="text/css" />
 <link rel="stylesheet" href="css/main.css" type="text/css" />
 <link rel="stylesheet" href="css/sub.css" type="text/css" />
@@ -27,7 +24,6 @@
 <!-- //front UI css -->
 
 <!--2024.09 개선화면 CSS-->
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
 <script src="./js/jquery-3.4.1.min.js"></script>
 <script src="./js/slick.min.js"></script>
 <link rel="stylesheet" type="text/css" href="./css/v2/slick.css" />
@@ -190,8 +186,8 @@
                     </div>
                     <div class="main_bg_video">
                       <video class="main_video_content" autoplay muted loop playsinline poster="./images/renew/icon/video_cover.svg">
-                        <source src="./images/main_visual.mp4" type="video/mp4" />
-                        <source src="img/video.webm" type="video/webm" />
+                        <source src="./images/main_visual_2.mp4" type="video/mp4" />
+                        <source src="./images/main_visual_2.webm" type="video/webm" />
                       </video>
                     </div>
 
@@ -207,7 +203,7 @@
 
                 <div class="srhBx">
                     <p class="txt"><span class="countNum" data-start="0" data-end="1009"></span> 대의 차량이 기다리고 있어요!</p>
-                    <button type="button" class="btnSrhOpen" onclick='location.href="./car_list.html"'>어떤 차량이 궁금하세요?</button>
+                    <button type="button" class="btnSrhOpen">어떤 차량이 궁금하세요?</button>
                     <i class="iconSroll"></i>
                 </div>  
                 <script>
@@ -239,25 +235,73 @@
                 });
                 </script> -->
 
-                <!-- <div class="srhWrap">
+                <div class="srhWrap">
                     <div class="mainSrhBx">
                         <p class="txt"><span class="countNum" data-start="0" data-end="1009"></span> 대의 차량이 기다리고 있어요!</p>
                         <div class="inputSrhBx">
-                            <button type="button" class="btnSrhSelect">구매하기</button>
-                            <ul class="selectSrh">
-                                <li><a href="#">구매하기</a></li>
-                                <li><a href="#">렌트하기</a></li>
-                            </ul>
-                            <input type="text" class="mainSrhTxt" placeholder="어떤 차량이 궁금하세요?" title="검색어 입력란" value="쏘나">
+                            <input type="text" class="mainSrhTxt" placeholder="어떤 차량이 궁금하세요?" title="검색어 입력">
                             <ul class="srhTxtList">
-                                <li><a href="#"><span class="bold">쏘나</span><span>타(DN8)</span></a></li>
-                                <li><a href="#"><span class="bold">쏘나</span><span>타(DN8) 하이브리드</span></a></li>
+                                <li onclick='location.href="./car_list_son.html"'><span class="bold">쏘나타(DN8)</span></li>
+                                <li><span class="bold">쏘나</span><span>타(DN8) 하이브리드</span></li>
+                                <li><span class="bold">아반</span><span>떼AD</span></li>
+                                <li><span class="bold">더 뉴 아반</span><span>떼AD</span></li>
+                                <li><span class="bold">제네</span><span>시스 G80</span></li>
                             </ul>
                             <button type="button" class="btnMainSrh">검색</button>
                         </div>
                     </div>
                     <button type="button" class="btnSrhClose">닫기</button>
-                </div> -->
+                </div>
+                
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const searchInput = document.querySelector('.mainSrhTxt');
+                    const searchList = document.querySelector('.srhTxtList');
+                    const listItems = searchList.querySelectorAll('li');
+                
+                    searchInput.focus();
+                
+                    searchInput.addEventListener('input', function() {
+                        const query = searchInput.value.toLowerCase();
+                        let hasVisibleItems = false;
+                
+                        listItems.forEach(item => {
+                            const originalText = item.textContent.trim();
+                            const text = originalText.toLowerCase();
+                            const regex = new RegExp(`(${query})`, 'gi'); // 정규 표현식 생성
+                
+                            if (query && text.includes(query)) {
+                                hasVisibleItems = true;
+                                // 기존 HTML 내용을 유지하면서 강조된 부분을 새롭게 처리
+                                const newHTML = originalText.replace(regex, '<span class="bold">$1</span>');
+                                item.innerHTML = newHTML;
+                                item.style.display = 'block'; // 매칭되는 항목을 표시
+                            } else {
+                                item.style.display = 'none'; // 매칭되지 않는 항목을 숨김
+                            }
+                        });
+                
+                        if (query && hasVisibleItems) {
+                            searchList.classList.add('visible');
+                        } else {
+                            searchList.classList.remove('visible');
+                        }
+                    });
+                });
+                
+                $('.btnSrhOpen').on('click', function() {    
+                    $('.srhBx').hide();
+                    $('.srhWrap').fadeIn(() => {
+                        $('.mainSrhTxt').focus(); // 영역이 활성화되면 입력창에 포커스
+                    });
+                });
+                
+                $('.btnSrhClose').on('click', function() {    
+                    $('.srhBx').show();
+                    $('.srhWrap').fadeOut();
+                });
+                </script>
+
             </div> 
         </div>
 
@@ -1230,7 +1274,7 @@
     <script src="js/ui.js"></script>
     
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <!-- //front UI js -->
 
     <script>
