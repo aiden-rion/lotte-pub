@@ -1679,7 +1679,7 @@ margin: 0 auto;
 
 
 .tab-content {
- display: none;
+ display: block;
 }
 
 .tab-content.active {
@@ -1949,6 +1949,102 @@ margin: 0 auto;
     transition: border 0.5s ease-in-out;
 }
 .psc-btn-group .tab-content .warranty-price .radio-wrap .radio input[type='radio']:checked{
+    border: 0.3em solid #FF3333;
+}
+
+.prc_btn_wrap .tab-content{
+    width:100%;
+}
+.prc_btn_wrap .tab-content .warranty-price {
+    display: block;
+    margin-top: 25px;
+}
+.prc_btn_wrap .tab-content .warranty-price .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.prc_btn_wrap .tab-content .warranty-price .title h3{
+    font-size: 16px;
+    font-weight:700;
+}
+
+.prc_btn_wrap .tab-content .warranty-price .title span.more{
+    font-size: 14px; font-weight: 400;
+    margin-right: 8px;
+}
+.prc_btn_wrap .tab-content .warranty-price .title span.more::after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px 0 0 4px;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #666;
+    transform: rotate(45deg) translateY(-50%);
+    border-bottom: 0;
+    border-left: 0;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap{
+    width: 100%; margin: 10px 0;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio{
+    display: block;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio .radio-title{
+    position: relative;
+    text-align:left;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio label{
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio input[type="radio"]:checked + label{
+    border: 1px solid #333;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio label span.warranty-name{
+    margin-left: 32px;
+    display: flex;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio label span.warranty-name em{
+    font-size: 12px;
+    color: #999;
+    font-weight: 400;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio label span.warranty-charge{
+    color: #333;
+    margin-right: 16px;
+    width: 149px;
+    display: flex;
+    justify-content: space-between;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio label span.warranty-charge em{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #999;
+    font-weight: 400;
+}
+
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio input[type='radio']:checked + label span.warranty-charge em{
+    color: #666;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio input[type="radio"]{
+    display: block;
+    left: 15px;
+    top: 17px;
+    opacity: 100;
+    appearance: none;
+    border: max(2px, 0.5em) solid #ddd;
+    border-radius: 50%;
+    width: 1.0em;
+    height: 1.0em;
+    transition: border 0.5s ease-in-out;
+}
+.prc_btn_wrap .tab-content .warranty-price .radio-wrap .radio input[type='radio']:checked{
     border: 0.3em solid #FF3333;
 }
 
