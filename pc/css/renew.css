@@ -55,6 +55,16 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
   object-fit: cover;
   filter: brightness(30%);
 }
+.vsBtnWrap{
+    display:flex;
+    width:100%;
+}
+.vsBtnWrap button.vsBtn{
+    background:#FF0000;
+    color:#fff;
+    border-radius:50%;
+    width:90px;
+}
 
 .visualTxt > div.active a{margin-top:-15%;}
 .visualTxt > div.active a .vsTit{color:#fff;}

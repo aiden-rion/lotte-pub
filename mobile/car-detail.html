@@ -212,7 +212,6 @@
 							<div class="wrap">  <!-- 230717 div 추가 -->
 								<div class="badge">
 									<!-- 230717 뱃지 수정 -->
-									<span class="badge-lotte-cert">다이렉트전용</span>
 									<span class="ele-badge badge-type3">정기관리</span>
 									<span class="ele-badge badge-type3">무사고</span>
 								</div>
@@ -246,20 +245,20 @@
 										<div class="swiper-wrapper">
 											<!-- 230817 확인요청 :: a 태그 위치 및 "자세히보기" 텍스트 삭제 -->
 											<div class="swiper-slide">
-												<a href="#"> <!-- 230810 a태그 추가 -->
-													<img src="images/elements/banner_sm01.png" alt="중고차 장기렌터카" />
+												<a href="./event_banner1.html"> <!-- 230810 a태그 추가 -->
+													<img src="images/renew/viewpage_banner_01.png" alt="중고차 장기렌터카" />
 													<!-- <button type="button" onclick="">자세히보기</button> --> <!-- 230810 a태그 추가 -->
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#"> <!-- 230810 a태그 추가 -->
-													<img src="images/elements/banner_sm02.png" alt="인증차·진단차·관리차" />
+												<a href="./event_banner2.html"> <!-- 230810 a태그 추가 -->
+													<img src="images/renew/viewpage_banner_02.png" alt="인증차·진단차·관리차" />
 													<!-- <button type="button" onclick="">자세히보기</button> --> <!-- 230810 a태그 추가 -->
 												</a>
 											</div>
 											<div class="swiper-slide">
-												<a href="#"> <!-- 230810 a태그 추가 -->
-													<img src="images/elements/banner_sm03.png" alt="방문정비 서비스" />
+												<a href="./event_banner3.html"> <!-- 230810 a태그 추가 -->
+													<img src="images/renew/viewpage_banner_03.png" alt="방문정비 서비스" />
 													<!-- <button type="button" onclick="">자세히보기</button> -->
 												</a>
 											</div>
@@ -365,23 +364,26 @@
 									<ul>
 										<!-- 230717 옵션수정 -->
 										<li>
-											<p class="option-name">
+											<p class="option-name common-layer-group">
 												<span class="option-value">옵션</span>
 												<span class="option-title">파노라마 선루프</span>
+												<button type="button" class="ir common-layer-bt">툴팁보기</button>
 											</p>
 											<p class="option-price"><em>1,200,000</em>원</p>
 										</li>
 										<li>
-											<p class="option-name">
+											<p class="option-name common-layer-group">
 												<span class="option-value">옵션</span>
 												<span class="option-title">차체자세제어장치(VDC, ESC, ESP)</span>
+												<button type="button" class="ir common-layer-bt">툴팁보기</button>
 											</p>
 											<p class="option-price"><em>1,750,000</em>원</p>
 										</li>
 										<li>
-											<p class="option-name">
+											<p class="option-name common-layer-group">
 												<span class="option-value">옵션</span>
 												<span class="option-title">뷰게라 2CH VG-801L 32G(FHD)</span>
+												<button type="button" class="ir common-layer-bt">툴팁보기</button>
 											</p>
 											<p class="option-price"><em>300,000</em>원</p>
 										</li>
@@ -518,13 +520,13 @@
 									<li>
 										<div>
 											<span class="t-label">사고이력</span>
-											<span class="t-val"><strong>1</strong>건</span>
+											<span class="t-val"><strong>없음</strong></span>
 										</div>
 									</li>
 								</ol>
 
 								<!-- 230817 추가 :: 무사고일경우, div.stamp 추가 -->
-								<p class="stamp">법정성능점검 결과<br/>단순수리와 사고이력이 없는<u>무사고 차량</u>입니다.</p>
+								<p class="stamp">법정성능점검 결과<br/>단순수리와 사고이력이 없는 <u>무사고 차량</u>입니다.</p>
 								<div class="car-check-area accident-free"></div> <!-- case : 무사고 차량인 경우 accident-free class명이 붙음 -->
 
 								<div class="car-check-area" style="display:none;"> <!-- case : 판금, 교환, 용접, 부식 등 이력이 있는 차량인 경우 -->
@@ -642,8 +644,8 @@
 										</p>
 										<p class="sellernumber">종사원번호 : CB18-01331</p>
 										
-										<p class="car">판매차량 <strong>1,244대</strong></p> <!-- 230914 수정 -->
-										<p class="car">등록예정 <strong>14대</strong></p> <!-- 230914 추가 -->
+										<p class="car">판매중 <strong>1,244대</strong></p> <!-- 230914 수정 -->
+										<p class="car">판매완료 <strong>14대</strong></p> <!-- 230914 추가 -->
 										<!-- 230914 버튼 위치 이동 -->
 										<!--
 											<div class="btns">
@@ -653,9 +655,9 @@
 									</div>
 								</div>
 								<!-- 230914 버튼 위치 이동 -->
-								<div class="btns">
-									<button type="button" class="bt-common-type3 bt-full bt-tel">0504-322-8000</button> <!-- 230914 버튼 타입 수정 -->
-								</div>
+								<!-- <div class="btns">
+									<button type="button" class="bt-common-type3 bt-full bt-tel">0504-322-8000</button>
+								</div> -->
 
 								<div class="seller-msg"><!-- case : class="view" 추가 시 설명영역 전체 노출 -->
 									<div class="inner">
@@ -674,6 +676,51 @@
 								</div>
 							</div>
 							<!-- // 판매자정보 -->
+
+							<div class="list-content area">
+								<div class="list-faq">
+									<h3 class="s-title" style="width:100%; text-align:center;">자주 하는 질문</h3>
+									<ul>
+										<li class="faq-question" onclick="togglePopup();">
+											<p>Q</p>
+											<span>홈서비스 신청은 어떻게 해야하나요?</span>
+										</li>
+										<div class="answer">
+											<p class="ans-txt">내차사기 홈서비스란 온라인으로 차량을 주문·결제하고 집에서 받아볼 수 있는 비대면 중고차 구매 서비스입니다.</p>
+										</div>
+										<li>
+											<p>Q</p>
+											<span>홈서비스 취소/환불은 어떻게 하나요?</span>
+										</li>
+										<li>
+											<p>Q</p>
+											<span>홈서비스 이용 후 명의 이전일은 어떻게 되나요?</span>
+										</li>
+										<li>
+											<p>Q</p>
+											<span>홈서비스 이용시 차량 구매에 필요한 서류가 있나요?</span>
+										</li>
+										<li>
+											<p>Q</p>
+											<span>홈서비스 이용할 때 결제 진행은 어떻게 되나요?</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<script>
+
+								function togglePopup() {
+									const popup = document.querySelector('.answer');
+									const btnShow = document.querySelector('.faq-question');
+
+									// 팝업 활성화
+									popup.classList.toggle('on');
+
+									// 버튼에 'on' 클래스 토글
+									btnShow.classList.toggle('show');
+								}
+
+							</script>
 
 							<!-- 230412 유사한차량 추가 -->
 							<!-- list view type : vertical -->
@@ -1000,7 +1047,7 @@
 							<!-- <button type="button" class="bt-common-type1" disabled >상담 진행중</button> -->
 						</div>
 						<div class="btn-group btn-second"> <!-- 230621 div 추가-->
-							<button type="button" class="bt-common-type1"onclick="location.href='direct_01.html'">온라인 계약하기</button>
+							<button type="button" class="bt-common-type1"onclick="location.href='login_pass_01.html'">온라인 계약하기</button>
 						</div>
 					</div>
 

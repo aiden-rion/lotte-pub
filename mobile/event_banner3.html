@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>롯데렌터카 마이카세이브</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<!-- front UI css// -->
+<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="css/et_ux.css" type="text/css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" />
+<link rel="stylesheet" href="css/process.css" type="text/css" />
+<!-- //front UI css -->
+
+<!--2024.09 개선화면 CSS-->
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/v2/slick.css" />
+<link rel="stylesheet" type="text/css" href="./css/v2/slick-theme.css" />  
+<link rel="stylesheet" type="text/css" href="./css/v2/aos.css" />  
+<link rel="stylesheet" type="text/css" href="./css/v2/renew.css">
+<script src="./js/aos.js"></script>
+<script>
+    $(function (){
+        // 섹션별 에니메이션
+        AOS.init({duration:1200,offset:100});
+    });
+</script>
+<!--2024.09 개선화면 CSS-->
+</head>
+<body>
+
+
+    <div class="layout--header sub">
+        <header>
+            <h1 class="logo-wrap"><a href="./car-detail.html" class="ir">롯데렌터카 마이카세이브</a></h1>
+            <!--로고-->
+            <button type="button" id="carPrevButton" class="ir bt-page-prev" onclick="location.href='./car-detail.html'">이전 페이지</button>
+            <!--페이지명-->
+            <h2 class="page-title">롯데 Warranty</h2>
+            <div class="button-wrap">   
+                <button type="button" class="bt-sidemenu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </header>
+                <div class="side-menu " id="sideMenu">
+            <div class="user-sec">
+                <!-- 로그아웃 시  none class-->
+                <!-- <div class="member none">
+                    <a href="#">
+                        <span>로그인 해주세요.</span>
+                        PASS인증을 통해 비회원도 이용 가능합니다.
+                    </a>
+                </div> -->
+                <!-- 로그인 시-->
+                <div class="member">
+
+                    <div class="mypage">
+                        <div class="user-wrap">
+                            <div class="top-bar">
+                                <div class="badge">개인회원</div>
+                                <button type="button">회원정보 수정</button>
+                            </div>
+                            <a href="/mypage/mycarEstmate">
+                                <h3 class="user"><strong>김롯데</strong> 회원님, <br>반갑습니다!</h3>
+                            </a>
+                            <a href="/mypage/soleProprietorPage" class="member-change">사업자 회원으로 등록하시겠어요?</a>
+                        </div>
+                    </div>
+
+                    <ul class="member-menu">
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_mycontract.png' alt="나의 계약"/>
+                                    <strong>1</strong>
+                                </div>
+                                <span>나의 계약</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_calc.png' alt="견적 보관함"/>
+                                    <!-- <strong>7</strong> -->
+                                </div>
+                                <span>견적 보관함</span>                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_coupon.png' alt="쿠폰함"/>
+                                    <strong>3</strong>
+                                </div>
+                                <span>쿠폰함</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_sellcar.png' alt="내차팔기"/>
+                                    <!-- <strong>1</strong> -->
+                                </div>
+                                <span>내차팔기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_favorite.png' alt="관심차량"/>
+                                    <!-- <strong>7</strong> -->
+                                </div>
+                                <span>관심차량</span>                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src='./images/renew/icon/icon_menu_car.png' alt="최근 본 차량"/>
+                                    <strong>13</strong>
+                                </div>
+                                <span>최근 본 차량</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="menu-sec">
+                <p>마이카세이브</p>
+                <ul>
+                    <li><a href="#">중고차 구매</a></li>
+                    <li><a href="#">중고차 장기렌터카</a></li>
+                    <li><a href="#">신차 장기렌터카</a></li>
+                    <li><a href="#">기획전</a></li>
+                </ul>
+                <p>바로가기</p>
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">고객후기</a></li>
+                    <li><a href="#">비교하기</a></li>
+                </ul>
+                <p>서비스안내</p>
+                <ul>
+                    <li><a href="#">홈서비스 소개</a></li>
+                    <li><a href="#">롯데 Warranty</a></li>
+                    <li><a href="#">중고차 할부금융</a></li>
+                    <li><a href="#">자동차 보험가입</a></li>
+                </ul>
+            </div>
+        
+        </div>
+    </div>
+
+    <div id="reactMainPage" style="margin-top:70px;">
+      <img src="./images/renew/event_banner_04.png">
+    </div>
+    <!-- front UI js// -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/ui.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- //front UI js -->
+
+</body>
+</html>

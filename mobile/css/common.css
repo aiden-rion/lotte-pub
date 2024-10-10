@@ -400,7 +400,21 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
     z-index: 9999;
     max-height: 95vh;
     padding: 10px 0;
+    /* animation:bot-fixmotion 1s infinite ; */
 }
+
+
+/* @keyframes bot-fixmotion {
+    0% {
+
+        padding-top:10px;
+    }
+    100% {
+        transform: translateY(0px);
+        padding-top:20px;
+    }
+} */
+
 
 .psc-btn-group.bot-fixed::before {
     content: '';

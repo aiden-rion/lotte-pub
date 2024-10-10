@@ -179,15 +179,21 @@
                 <div class="visualTxt">
                     <div class="vsLeft">
                         <a href="./car_list.html">
-                            <h3 class="vsTit">구매하기</h3>
-                            <span class="vsEx">3일 환불보장<br />홈서비스 받고 구매하기</span>
-                            <i class="btnAroow"></i> 
+                            <!-- <h3 class="vsTit">구매하기</h3> -->
+                            <span class="vsEx">
+                                롯데에서 직접 진단하고<br /> 사후관리까지
+                            </span>
+                            <!-- <i class="btnAroow"></i>  -->
+                             <div class="vsBtnWrap">
+                                <button class="vsBtn">구매하기</button>
+                                <button class="vsBtn">렌트하기</button>
+                            </div>
                         </a>
                     </div>
                     <div class="main_bg_video">
                       <video class="main_video_content" autoplay muted loop playsinline poster="./images/renew/icon/video_cover.svg">
-                        <source src="./images/main_visual_2.mp4" type="video/mp4" />
-                        <source src="./images/main_visual_2.webm" type="video/webm" />
+                        <source src="./images/main_visual.mp4" type="video/mp4" />
+                        <!-- <source src="./images/main_visual_2.webm" type="video/webm" /> -->
                       </video>
                     </div>
 
@@ -309,9 +315,9 @@
             <div class="mainCon2">
                 <div class="swiper-container carBanBx" data-aos="fade-up">
                     <ul class="swiper-wrapper carBanList">
-                        <li class="swiper-slide"><a href="#"><img src="./images/renew/mo_header_banner01.png" alt=""></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/renew/mo_header_banner02.png" alt=""></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/renew/mo_header_banner01.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/renew/main_banner_01.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/renew/main_banner_02.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/renew/main_banner_03.png" alt=""></a></li>
                     </ul>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -319,16 +325,16 @@
                 <div class="carBuyBg" data-aos="fade-up">
                     <div class="arBuyWrap">             
                         <dl class="carBuyTit">
-                            <dt>지금 구매 가능한<br />
-                                인기 차량을 확인하세요</dt>
-                            <dd>최근 조회 수가 높은 차량이에요!</dd>
+                            <dt>최근 일주일간<br />
+                                많이 조회한 차량이에요</dt>
+                            <dd>실시간 인기차량</dd>
                         </dl>
                         
                         <div class="swiper-container carBuyBx">                            
                             <ul class="swiper-wrapper carBuyList">
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx saleType">
                                             <img src="./images/renew/sample_car1.png" alt="자동차샘플">
                                         </div>
@@ -338,7 +344,7 @@
                                             </dl>
                                             <dl class="txtPrice">
                                                 <dt><span class="bold">12,800,000</span>원</dt>
-                                                <dd class="strike">월 740,000원</dd>
+                                                <dd>신차가 45,000,000원</dd>
                                             </dl>
                                         </div>
                                     </a>
@@ -350,7 +356,7 @@
                                         </div>
                                         <div class="carTxtCon">
                                             <dl class="txtTit">
-                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dt>현대 캐스퍼 가솔린 1.0 터보 인스퍼레이션</dt>
                                             </dl>
                                             <dl class="txtPrice">
                                                 <dt><span class="bold">26,200,000</span>원</dt>
@@ -366,11 +372,11 @@
                                         </div>
                                         <div class="carTxtCon">
                                             <dl class="txtTit">
-                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dt>기아 더 뉴K9(RJ) 3.8 가솔린 AWD 마스터즈</dt>
                                             </dl>
                                             <dl class="txtPrice">
-                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
-                                                <dd class="strike">월 740,000원</dd>
+                                                <dt>월 <span class="bold">947,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 48,250,000원</dd>
                                             </dl>
                                         </div>
                                     </a>
@@ -382,11 +388,11 @@
                                         </div>
                                         <div class="carTxtCon">
                                             <dl class="txtTit">
-                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dt>르노코리아(삼성) 더 뉴QM6 2.0 GDe LE</dt>
                                             </dl>
                                             <dl class="txtPrice">
                                                 <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
-                                                <dd>신차가 80,000,000원</dd>
+                                                <dd>신차가 38,000,000원</dd>
                                             </dl>
                                         </div>
                                     </a>
@@ -399,7 +405,7 @@
                 <div class="serviceWrap2" data-aos="fade-up">
                     <div class="serviceBx2">
                         <div class="servTit2">
-                            마이카세이브 구매고객 혜택
+                            <dt>마이카세이브 중고차 특장점</dt>
                         </div>
 
                         <div class="serviceList2 secretSlide">
@@ -435,20 +441,17 @@
                 <div class="carKeywordBx" data-aos="fade-up">
                     <div class="conTit">추천 키워드</div>
                     <div class="keywordBut">
-                        <button type="button" class="active">#하이브리드할인</button>
-                        <button type="button">#인증차</button>
-                        <button type="button">#진단차</button>
-                        <button type="button">#관리차</button>
-                        <button type="button">#출고3년이내</button>
+                        <button type="button" class="active">#출고3년이내</button>
                         <button type="button">#3만km이하</button>
-                        <button type="button">#여름에는통풍시트</button>
+                        <button type="button">#무사고</button>
+                        <button type="button">#정기관리</button>
+                        <button type="button">#출고3년이내</button>
                     </div>
                     <div class="keyTabs">
                         <div class="Keytab active">
                             <ul class="swiper-wrapper carKeywordList">
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
                                         <div class="imgBx saleType">
                                             <img src="./images/renew/sample_car1.png" alt="자동차샘플">
                                         </div>
@@ -464,17 +467,14 @@
                                                 <dd>신차가 80,000,000원</dd>
                                             </dl>
                                             <ul class="badgeList">
-                                                <li class="direct">다이렉트 전용</li>
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
                                         <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car2.png" alt="자동차샘플">
                                         </div>
@@ -490,15 +490,14 @@
                                                 <dd>신차가 80,000,000원</dd>
                                             </dl>
                                             <ul class="badgeList">
-                                                <li class="direct">다이렉트 전용</li>
-                                                <li>관리차</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car3.png" alt="자동차샘플">
                                         </div>
@@ -513,16 +512,15 @@
                                                 <dd>신차가 80,000,000원</dd>
                                             </dl>
                                             <ul class="badgeList">
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car4.png" alt="자동차샘플">
                                         </div>
@@ -538,17 +536,15 @@
                                                 <dd>신차가 80,000,000원</dd>
                                             </dl>
                                             <ul class="badgeList">
-                                                <li class="direct">다이렉트 전용</li>
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car1.png" alt="자동차샘플">
                                         </div>
@@ -565,16 +561,15 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car2.png" alt="자동차샘플">
                                         </div>
@@ -591,14 +586,14 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>관리차</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car3.png" alt="자동차샘플">
                                         </div>
@@ -613,16 +608,15 @@
                                                 <dd>신차가 80,000,000원</dd>
                                             </dl>
                                             <ul class="badgeList">
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car4.png" alt="자동차샘플">
                                         </div>
@@ -639,9 +633,8 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
@@ -652,7 +645,7 @@
                             <ul class="swiper-wrapper carKeywordList"> 
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car2.png" alt="자동차샘플">
                                         </div>
@@ -669,14 +662,14 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>관리차</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car3.png" alt="자동차샘플">
                                         </div>
@@ -691,16 +684,15 @@
                                                 <dd>신차가 80,000,000원</dd>
                                             </dl>
                                             <ul class="badgeList">
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car4.png" alt="자동차샘플">
                                         </div>
@@ -717,16 +709,15 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car1.png" alt="자동차샘플">
                                         </div>
@@ -743,16 +734,15 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car2.png" alt="자동차샘플">
                                         </div>
@@ -769,14 +759,14 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>관리차</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car3.png" alt="자동차샘플">
                                         </div>
@@ -791,16 +781,15 @@
                                                 <dd>신차가 80,000,000원</dd>
                                             </dl>
                                             <ul class="badgeList">
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car4.png" alt="자동차샘플">
                                         </div>
@@ -817,9 +806,8 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
@@ -830,7 +818,7 @@
                             <ul class="swiper-wrapper carKeywordList">
                                 <li>
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car3.png" alt="자동차샘플">
                                         </div>
@@ -845,16 +833,15 @@
                                                 <dd>신차가 80,000,000원</dd>
                                             </dl>
                                             <ul class="badgeList">
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car4.png" alt="자동차샘플">
                                         </div>
@@ -871,16 +858,15 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car1.png" alt="자동차샘플">
                                         </div>
@@ -897,16 +883,15 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car2.png" alt="자동차샘플">
                                         </div>
@@ -923,14 +908,14 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>관리차</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car3.png" alt="자동차샘플">
                                         </div>
@@ -945,16 +930,15 @@
                                                 <dd>신차가 80,000,000원</dd>
                                             </dl>
                                             <ul class="badgeList">
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="state">상담진행중</span>
+
                                         <div class="imgBx">
                                             <img src="./images/renew/sample_car4.png" alt="자동차샘플">
                                         </div>
@@ -971,9 +955,8 @@
                                             </dl>
                                             <ul class="badgeList">
                                                 <li class="direct">다이렉트 전용</li>
-                                                <li>인증차</li>
-                                                <li>진단차</li>
-                                                <li>관리차</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
@@ -1010,7 +993,7 @@
                                             </div>
                                             <div class="carTxtCon">
                                                 <dl class="txtTit">
-                                                    <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                    <dt>현대 캐스퍼 가솔린 1.0 터보 인스퍼레이션</dt>
                                                     <dd>2021.09(22년형)</dd>
                                                     <dd>12,700km</dd>
                                                 </dl>
@@ -1093,7 +1076,7 @@
                                     </li>
                                     <li data-aos="fade-up" data-aos-offset="100">
                                         <a href="#">
-                                            <span class="state">상담진행중</span>
+    
                                             <div class="imgBx saleType">
                                                 <img src="./images/renew/sample_car3.png" alt="자동차샘플">
                                             </div>
@@ -1112,7 +1095,7 @@
                                     </li>
                                     <li data-aos="fade-up">
                                         <a href="#">
-                                            <span class="state">상담진행중</span>
+    
                                             <div class="imgBx saleType">
                                                 <img src="./images/renew/sample_car2.png" alt="자동차샘플">
                                             </div>
@@ -1131,7 +1114,7 @@
                                     </li>
                                     <li data-aos="fade-up">
                                         <a href="#">
-                                            <span class="state">상담진행중</span>
+    
                                             <div class="imgBx saleType">
                                                 <img src="./images/renew/sample_car1.png" alt="자동차샘플">
                                             </div>
@@ -1281,6 +1264,7 @@
         // window.addEventListener("wheel", function(e){
         //     e.preventDefault();
         // },{passive : false});
+
         // 한페이지씩 이동하도록 코드
         // var mHtml = $("html");
         // var page = 1;
@@ -1288,7 +1272,7 @@
         // $(window).on("wheel", function(e) {
         //     if(mHtml.is(":animated")) return;
         //     if(e.originalEvent.deltaY > 0) {
-        //         if(page == 3) return;
+        //         if(page == 2) return;
         //         page++;
         //     } else if(e.originalEvent.deltaY < 0) {
         //         if(page == 1) return;
@@ -1407,7 +1391,7 @@
         });
 
 
-        let menu = ['내 집까지 바로배송', '무사고 품질인증 차량', '최대12개월 연장보증','차량방문정비 서비스']
+        let menu = ['투명한 차량정보', '비대면 홈서비스', '품질연장보증','차량방문정비 서비스']
         let secretSlide = new Swiper(".secretSlide", {
             slidesPerView: 'auto',
             observer: true,
