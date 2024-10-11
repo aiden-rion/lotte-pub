@@ -642,7 +642,7 @@
 										<p class="name">
 											<a href="seller.html" class="shop"><strong>가양판매센터</strong>강동규 매니저</a>
 										</p>
-										<p class="sellernumber">경기도 용인시 기흥구 구갈로 123</p>
+										<p class="sellernumber">서울시 강서구 양천로53길 52</p>
 										
 										<p class="car">판매중 <strong>1,244대</strong></p> <!-- 230914 수정 -->
 										<p class="car">판매완료 <strong>14대</strong></p> <!-- 230914 추가 -->
@@ -665,10 +665,10 @@
 									}
 								</style>
 								<!-- 230914 버튼 위치 이동 -->
-								<!-- <div class="btns sellerinfo">
-									<button type="button" class="bt-common-type4 bt-full">방문예약</button>
-									<button type="button" class="bt-common-type3 bt-full">지도보기</button>
-								</div> -->
+								<div class="btns sellerinfo">
+									<!-- <button type="button" class="bt-common-type4 bt-full">방문예약</button> -->
+									<button type="button" class="bt-common-type4 bt-full">가양판매센터 오시는 길</button>
+								</div>
 
 								<div class="seller-msg"><!-- case : class="view" 추가 시 설명영역 전체 노출 -->
 									<div class="inner">
@@ -922,12 +922,12 @@
 								                            	<input type="radio" id="radio22" name="radio22" value="" checked="">
 								                            	<label for="radio22">
 								                            	<span class="warranty-name">	
-								                            		12개월
-								                            		<em>(10,000km)</em>
+								                            		베이직 12개월
+								                            		<em>엔진+미션</em>
 								                            	</span>
 								                            	<span class="warranty-charge">
-								                            		<em>550,000원</em>
-								                            		450,000원
+								                            		<!-- <em>550,000원</em> -->
+								                            		100,000원
 								                            	</span>
 								                            	</label>
 								                            </div>
@@ -939,12 +939,12 @@
 								                            	<input type="radio" id="radio23" name="radio22" value="">
 								                            	<label for="radio23">
 								                            	<span class="warranty-name">	
-								                            		6개월
-								                            		<em>(5,000km)</em>
+								                            		스탠다드 12개월
+								                            		<em>엔진+미션+일반부품</em>
 								                            	</span>
 								                            	<span class="warranty-charge">
-								                            		<em>200,000원</em>
-								                            		0원
+								                            		<!-- <em>200,000원</em> -->
+								                            		300,000원
 								                            	</span>
 								                            	</label>
 								                            </div>
@@ -1024,13 +1024,7 @@
 								</div>
 							</div>
 						</div>
-
-						<div class="btn-group btn-second">
-							<button type="button" class="bt-common-type3 bt-tel">전화상담</button>
-							<button type="button" class="bt-common-type1" onclick="openPopup()">차량 구매하기</button>
-						</div>
 					</div>
-
 					<!-- 230412 notification 추가 -->
 					<div class="notification">
 						<div class="wrap">
@@ -1040,8 +1034,16 @@
 					</div>
 					<!-- // 얼랏 추가 -->
 				</div>
-
-
+				<div class="psc-btn-group bottomBtnbox" style="    display: flex;
+				position: fixed;
+				z-index: 100023;
+				bottom: 0;
+				width: 100%;">
+					<div class="btn-group btn-second">
+						<button type="button" class="bt-common-type3 bt-tel">전화상담</button>
+						<button type="button" class="bt-common-type1" onclick="openPopup()">구매 시작하기</button>
+					</div>
+				</div>
 			</div>
 			<!-- layout--container -->
 		</div>
@@ -1158,7 +1160,7 @@
 		<div class="layout--header">
 			<header>
 				<h1 class="logo blind">
-					<a href="/" class="ir">롯데오토마켓</a>
+					<a href="/" class="ir">마이카세이브</a>
 				</h1>
 				<h2 class="page-title">허위매물 신고</h2>
 				<button type="button" class="ir bt-page-close" onclick="ui.modalPopClose(reportPop);">페이지 닫기</button>
