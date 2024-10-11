@@ -1216,6 +1216,8 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
     max-height: 90vh;
     overflow-y: auto;
     overflow-x: hidden;
+    transition: 0.8s;
+    transition-timing-function: ease-in;
 }
 .psc-btn-group.bot-fixed.fold .info-wrap .min-container { display: flex; }
 .psc-btn-group.bot-fixed.fold .info-wrap .max-container { display: none; }
@@ -2120,6 +2122,91 @@ body.modalOpen {min-height:100vh;overflow:hidden;}
     bottom: unset;
     border-radius: 16px;
 }
+.buy-process .bt-popup {position:absolute;top:17px;right:13px;width: 40px;height: 40px;background:url("../images/icon/ico-close-layer.svg") no-repeat 50% 50%;z-index:10020;-webkit-filter: grayscale(100%) brightness(0);filter: grayscale(100%) brightness(100);}
+.buy-process{
+    position:fixed;
+    width:100%;
+    height:100%;
+    display:block;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 10023;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+    display: none;
+}
+.buy-process h4{
+    color:#fff;
+    font-weight:700;
+}
+.buy-process-btn{
+    width:50px;
+    background:#fff;
+    z-index:10024;
+    width: 75%;
+    height: 86px;
+    border:1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    /* text-align: left; */
+    display: flex;
+    /* text-indent: 36px; */
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 96px;
+    flex-direction: column;
+    position:relative;
+}
+.buy-process-btn.icon01:after{
+    content:'';
+    width:40px; height:40px;
+    position:absolute;
+    left:40px;
+    background:url('../images/icon/buy_process_icon01.png') no-repeat 0 0;
+    background-size:40px; height:40px;
+}
+.buy-process-btn.icon02:after{
+    content:'';
+    width:40px; height:40px;
+    position:absolute;
+    left:40px;
+    background:url('../images/icon/buy_process_icon02.png');
+    background-size:40px; height:40px;
+}
+.buy-process-btn.icon03:after{
+    content:'';
+    width:40px; height:40px;
+    position:absolute;
+    left:40px;
+    background:url('../images/icon/buy_process_icon03.png');
+    background-size:40px; height:40px;
+}
+.buy-process-btn p{
+    margin-right:10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.buy-process-btn span{
+    font-size:14px;
+    color:#888
+}
+
+.layer_popoup_test{
+    width:100%; height:100%;
+    position:relative;
+}
+.layer_popup.bg{
+    content: "11111";
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0);
+}
+
 .custom-alert-pop.info-pop .pop_inner {
     padding: 24px 24px 32px;
 }
@@ -3204,11 +3291,11 @@ body.state-loading {height:100vh;overflow:hidden;}
     background-size:100%;
 }
 .layout--navigation ul li:nth-child(2) button::before{
-    background:url('../images/renew/icon/ico_navi_buy.png') no-repeat;
+    background:url('../images/icon/icon-buy.png') no-repeat;
     background-size:100%;
 }
 .layout--navigation ul li:nth-child(3) button::before{
-    background:url('../images/renew/icon/ico_navi_rent.png') no-repeat;
+    background:url('../images/icon/icon-rent.png') no-repeat;
     background-size:100%;
 }
 .layout--navigation ul li:nth-child(4) button::before{
@@ -3260,6 +3347,9 @@ body.state-loading {height:100vh;overflow:hidden;}
 .layout--navigation ul li .thumb-nail img{
     height: 100%;
 }
+
+
+
 
 
 @keyframes txtTop {

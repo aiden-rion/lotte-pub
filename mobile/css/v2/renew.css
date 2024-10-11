@@ -103,7 +103,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .mainVisualBx .srhBx{animation:txtTop 1s 0.3s ease-in-out both ;position: fixed;display: block;width:100%;text-align:center; margin-top: 48px; bottom: 120px;}
 .mainVisualBx .srhBx .iconSroll{animation:downScroll 1.8s ease-out infinite;display:none;width:40px;height:40px;margin:20px auto 0;background:url(../../images/renew/ic_scroll.png) no-repeat center center;} 
 .mainVisualBx .srhBx .btnSrhOpen{width:calc(100% - 3.25em);height:3.75em;display:inline-block;padding-left:1.88em;margin:12px 26px 0;font-size:16px;font-weight:400;color:#999999;line-height:24px;border-radius:64px;background:#fff url(../../images/renew/ic_srh.png) no-repeat 92% center;box-sizing: border-box;text-align:left; border: 2px solid #ff3333;} 
-.mainVisualBx .srhBx .txt{font-size: 1.25em;font-weight:600;color:#fff;line-height:36px;} 
+.mainVisualBx .srhBx .txt{font-size: 1.25em;font-weight:600;color:#fff;line-height:36px;position: relative;left: -5px;} 
 .mainVisualBx .srhBx .txt .countNum{color:#FF0000;font-weight:900;font-size: 1.26em;} 
 
 .quickBan{display:none;position:fixed;z-index:20;right:40px;bottom:60px;width:68px;}

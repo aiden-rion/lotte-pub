@@ -292,7 +292,7 @@
 							<div class="car-info-detail area">
 								<h3 class="s-title">기본정보</h3>
 								<!-- 230621 매물등록일 추가: 위치이동 -->
-								<p class="register-date">매물등록일 : 2023.04.23</p>
+								<p class="register-date">매물등록일 : 2024.10.10</p>
 								<!-- <p class="cert-num">제시번호 : 21-경기-000001</p> -->
 								<ul>
 									<li>
@@ -620,7 +620,7 @@
 										</li>
 									</ul>
 								</div>
-								<p class="txt-noti">※ 자동차보험 사고기록이 없었다고 해서 반드시 <strong>무사고</strong>라고 할 수는 없습니다.</p>
+								<p class="txt-noti">※ 자동차보험사에 접수된 사고이력만 표기됩니다.</p>
 
 								<!-- 230803 더보기 버튼 위치수정 & 클래스명 수정 -->
 								<button type="button" class="bt-common-type8 bt-l bt-full" onclick="ui.modalPopOpen(carHistoryPop);"><span>보험이력 더 보기</span></button>
@@ -640,39 +640,54 @@
 										<!--  231005 수정 (매니저 배정이 없는 경우 대비, 지점명 먼저 노출) -->
 										<!-- <p class="name"><strong>강동규 대리</strong><a href="seller.html" class="shop">중고차영업1지점</a></p> --> <!-- 230914 수정(+ 지점명 p태그 -> a태그로 수정) -->
 										<p class="name">
-											<a href="seller.html" class="shop"><strong>가양지점</strong>강동규 대리</a>
+											<a href="seller.html" class="shop"><strong>가양판매센터</strong>강동규 매니저</a>
 										</p>
-										<p class="sellernumber">종사원번호 : CB18-01331</p>
+										<p class="sellernumber">경기도 용인시 기흥구 구갈로 123</p>
 										
 										<p class="car">판매중 <strong>1,244대</strong></p> <!-- 230914 수정 -->
 										<p class="car">판매완료 <strong>14대</strong></p> <!-- 230914 추가 -->
 										<!-- 230914 버튼 위치 이동 -->
-										<!--
-											<div class="btns">
-												<button type="button" class="bt-common-type5 bt-full bt-tel">0505-1258-2515</button>
-											</div>
-										-->
+											<!-- <div class="btns">
+												<button type="button" class="bt-common-type5 bt-full">방문예약</button>
+											</div> -->
 									</div>
 								</div>
+
+								<style>
+									.sellerinfo{
+										display:flex;
+										gap:3px;
+										margin-bottom:13px;
+									}
+									.sellerinfo button{
+										height:35px; 
+										line-height:35px;
+									}
+								</style>
 								<!-- 230914 버튼 위치 이동 -->
-								<!-- <div class="btns">
-									<button type="button" class="bt-common-type3 bt-full bt-tel">0504-322-8000</button>
+								<!-- <div class="btns sellerinfo">
+									<button type="button" class="bt-common-type4 bt-full">방문예약</button>
+									<button type="button" class="bt-common-type3 bt-full">지도보기</button>
 								</div> -->
 
 								<div class="seller-msg"><!-- case : class="view" 추가 시 설명영역 전체 노출 -->
 									<div class="inner">
-											○ 사고진단결과 외판교환없는 [무사고] 차량입니다! (성능점검완료)<br /><br />
-											○ 추가옵션 : 파노라마썬루프[120만원]<br /><br />
-											○ 앞타이어 약 6.3mm / 뒤타이어 약 5.9mm 트레드 잔존하여 약 25,000km 이상 주행가능합니다!<br /><br />
-											○ 실내 흡연냄새x , 가죽시트 컨디션 우수! 쾌적한 실내상태 유지중입니다~<br /><br />
-											○ 1열 통풍/열선/전동시트, 운전석 메모리시트, 2열 열선시트, 헤드업디스플레이, 전동트렁크, 360도 어라운드뷰, 애플카플레이/안드로이드오토 연동 등 다양한 편의옵션 탑재!<br /><br />
-											○ 스마트키2개, 카드키1개, 스페어타이어 보유중입니다!<br /><br />
+										▶&nbsp;이전 소유주가 비흡연 주말외출용으로<br /> 
+										&nbsp;&nbsp;&nbsp;&nbsp;운행한 차량으로 주행거리가 짧습니다. <br /><br />
+									 
+									 ▶&nbsp;네비게이션, 썬루프, 열선 및 통풍시트와 <br />
+									 &nbsp;&nbsp;&nbsp;&nbsp;300만원 상당 패키지 장착 차량입니다.<br /><br />
+									 
+									 ▶&nbsp;출고 후 1년이내 신조급 차량이며<br />
+									 &nbsp;&nbsp;&nbsp;&nbsp;보험조회, 성능점검 결과 100% 무사고<br /><br /> 
 									</div>
-									<button type="button" class="bt-view-toggle" onclick="$('.seller-msg').toggleClass('view');$(this).toggleClass('view')">차량설명 전체보기</button>
+									<!-- <button type="button" class="bt-view-toggle" onclick="$('.seller-msg').toggleClass('view');$(this).toggleClass('view')">차량설명 전체보기</button> -->
 								</div>
 								<div class="pre-number">
 									<p>제시번호 : </p>
 									<span>2024058213</span>
+									<p style="margin-left:6px;">종사원번호 : </p>
+									<span> 경기-1234-1234</span>
 								</div>
 							</div>
 							<!-- // 판매자정보 -->
@@ -977,7 +992,7 @@
 												<p>
 													<span class="period"><em>총 구매 예상비용</em></span>
 												</p>
-												<span class="prc"><em class="counter" data-start="16535000" data-end="26535000"></em>원</span>
+												<span class="prc"><em class="counter" data-start="16535000" data-end="35535000"></em>원</span>
 												<script>
 													$(document).ready(function() {
 													const $counters = $(".counter");
@@ -1043,7 +1058,7 @@
 						<!-- </div> -->
 						<div class="btn-group btn-second">
 							<button type="button" class="bt-common-type3 bt-tel">전화상담</button>
-							<button type="button" class="bt-common-type1"onclick="location.href='login_pass_01.html'">온라인 계약하기</button>
+							<button type="button" class="bt-common-type1" onclick="openPopup()">차량 구매하기</button>
 						</div>
 					</div>
 
@@ -3163,6 +3178,24 @@
 		</div>
 	</div>
 	<!-- // layer-popup-wrappper(약정주행거리 툴팁)// -->
+	<div class="buy-process">
+		<h4>필요한 서비스를 선택해 주세요.</h4>
+		<button class="bt-popup" onclick="closePopup()"></button>
+		<button class="buy-process-btn icon01" onclick='location.href="./popup-quote.html"'><p>상담신청 접수</p><span>담당자와 상담이 필요해요</span></button>
+		<button class="buy-process-btn icon02" onclick='location.href="./popup-reserve.html"'><p>현장방문 예약</p><span>현장에 방문해보고 싶어요</span></button>
+		<button class="buy-process-btn icon03" onclick='location.href="./login_pass_01.html"'><p>다이렉트 구매</p><span>온라인으로 즉시구매 할래요.</span></button>
+	</div>
+
+
+	<script>
+		function openPopup() {
+			document.querySelector('.buy-process').style.display = 'flex';
+		}
+
+		function closePopup() {
+			document.querySelector('.buy-process').style.display = 'none';
+		}
+	</script>
 
 </body>
 </html>

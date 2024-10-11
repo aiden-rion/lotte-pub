@@ -1067,13 +1067,13 @@
 .detail-element .car-seller .seller-profile .info .car a {margin-left:5px;font-size:12px;/*text-decoration:underline;*/font-weight:700}
 
 .detail-element .car-seller .seller-profile .info .address {margin-top:8px;font-size:11px;color:#303030;font-weight:300;letter-spacing: -0.3px;}
-.detail-element .car-seller .seller-profile .info .btns {margin-top:3px;display:flex;}
+.detail-element .car-seller .seller-profile .info .btns {margin-top:3px;display:flex;width: 100%;}
 /*.detail-element .car-seller .seller-profile .info .bt-tel {width:135px;!*margin-left:10px;*!color:#F33;}*/
 /*.detail-element .car-seller .seller-profile .info .bt-tel:before {content:"";display:inline-block;vertical-align:middle;width:10px;height:10px;margin:-2px 4px 0 0;background:url("../images/icon/ico-tel-s.svg") no-repeat;}*/
 .detail-element .car-seller .bt-tel {width:100%;margin-bottom: 20px;color:#F33;font-weight: 700;font-size: 13px;height: 36px;line-height: 36px;border-color:#F33;}
 .detail-element .car-seller .bt-tel:before {content:"";display:inline-block;vertical-align:middle;width:14px;height:14px;margin:-2px 4px 0 0;background:url("../images/icon/ico-tel-s.svg") no-repeat;}
-.detail-element .car-seller .seller-msg .inner {text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 5;height:110px;border-radius:5px;padding:15px;overflow:hidden;font-size:12px;line-height:19px;background:#F9F9F9}
-.detail-element .car-seller .seller-msg.view .inner {height:auto;text-overflow:unset;display:block;}
+.detail-element .car-seller .seller-msg .inner {/* text-overflow: ellipsis; */display: -webkit-box;/* -webkit-box-orient: vertical; *//* -webkit-line-clamp: 5; */height: 183px;border-radius:5px;padding:15px;overflow:hidden;font-size:12px;line-height:19px;background:#F9F9F9}
+.detail-element .car-seller .seller-msg.view .inner {height:auto;text-overflow:unset;display:block;font-size: 14px;}
 .detail-element .car-seller .seller-msg.view .inner table td {white-space: initial !important;}
 .detail-element .car-seller .seller-msg .bt-view-toggle {position:relative;width:100%;padding:5px 0;font-size:12px;background:#F9F9F9;text-indent:-9999px;overflow:hidden;font-weight:300;text-align:center;}
 .detail-element .car-seller .seller-msg .bt-view-toggle:after {content:"";position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:16px;height:13px;display:inline-block;vertical-align:middle;background:url("../images/icon/ico-view-toggle.svg") no-repeat 100% 50%}
@@ -1264,7 +1264,7 @@
 /* ### ~ 230717 수정 */
 .detail-element .area.car-options-detail .options li.on {color:#F33}
 .detail-element .area.car-options-detail .options li .bt-option-all {height:100%;font-size:11px;color:#666;font-weight:700;text-align:center;line-height:1.5;}
-.detail-element .area.car-options-detail .options li .bt-option-all:before {content:"+";display:block;height:44px;line-height:44px;margin-bottom:5px;text-align:center;font-size:20px;font-weight:300;}
+.detail-element .area.car-options-detail .options li .bt-option-all:before {content:"+";display:block;height: 44px;line-height:44px;margin-bottom:5px;text-align:center;font-size:20px;font-weight:300;background: #f1f1f1;/* border-radius: 27px; */}
 
 /************************* 정기관리차량 *************************/
 .detail-element .area.car-checkup {  }
@@ -1409,7 +1409,7 @@ margin: 0 auto;
 .detail-element .area.car-insurance .isr-box li .t-val { font-size: 14px; font-weight: 700; }
 .detail-element .area.car-insurance .isr-box li .t-val span { font-size: 14px; font-weight: 300; }
 
-.txt-noti { font-size: 12px; font-weight: 300; color: #666; text-align: left; margin-top: 15px; }
+.txt-noti {font-size: 12px;font-weight: 300;color: #666;text-align: left;margin-top: 15px;letter-spacing: -0.2pt;}
 .txt-noti strong { color: #000; font-weight: 700; }
 
 .detail-element .area.car-insurance .common-layer-group.posTop .common-layer-tooptip { left: -92px; }
@@ -1676,7 +1676,7 @@ margin: 0 auto;
 /* 렌트 계산기 */
 /* 확장형 */
 .psc-btn-group .tab-content-wrap {
- padding: 0 15px;
+ padding: 0 21px;
 }
 
 
@@ -1686,6 +1686,7 @@ margin: 0 auto;
 
 .tab-content.active {
  display: block;
+ padding-bottom: 6px;
 }
 
 
