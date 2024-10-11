@@ -1412,7 +1412,7 @@
                                         <dl data-aos="fade-up">
                                             <!-- <dt>테마 기획전</dt> -->
                                             <dd class="txtTit">연비걱정 NO!<br><span class="txtRed">전기차</span> 기획전</dd>
-                                            <dd class="txtEx">신속출고 인기전기차 특가</dd>
+                                            <dd class="txtEx">신속출고<br />인기전기차 특가</dd>
                                         </dl>
                                         <!-- <a href="#" class="btnView" data-aos="fade-right">차량 더보기</a> -->
                                         <i class="icon1" data-aos="fade-up"></i>
@@ -1964,32 +1964,39 @@ document.addEventListener('DOMContentLoaded', function () {
     </script>
 
     <script>
-        function goAppDownload(os){
-            if(os === "ios"){
-                location.href = "https://apps.apple.com/app/id6443792853";
-            }else if(os === "android"){
-                location.href = "https://play.google.com/store/apps/details?id=com.lotterental.automarket";
+
+        var mHtml = $("html");
+        var page = 1;
+        var isScrolling = false;  // 스크롤 중인지 확인하는 플래그
+        mHtml.animate({scrollTop: 0}, 10);
+
+        $(window).on("wheel", function(e) {
+            if (isScrolling) return;  // 스크롤 중이면 중복 실행 방지
+            if (mHtml.is(":animated")) return;
+
+            if (e.originalEvent.deltaY > 0) {  // 스크롤 내릴 때
+                if (page == 2) return;  // 페이지 2에서 더 이상 내리지 않음
+                page++;
+            } else if (e.originalEvent.deltaY < 0) {  // 스크롤 올릴 때
+                if (page == 1) return;  // 첫 번째 페이지에서는 더 이상 올리지 않음
+
+                if (page == 2) {
+                    // 현재 스크롤 위치가 페이지의 맨 위(top)인 경우에만 첫 번째 페이지로 이동
+                    if ($(window).scrollTop() == $(window).height()) {
+                        page--;
+                    } else {
+                        return;  // top이 아니라면 기본 스크롤 동작 유지
+                    }
+                }
             }
-        }
-        // jQuery(function(){
-        //     if(nayuda.isMobileApp()){
-        //         jQuery("#sidemenu-foot-app").hide();
-        //     }
-        // });
 
-        $(".brand-name").click(function (){
-            $(this).toggleClass("on");
-            $(".footer-info").toggleClass("on");
+            var posTop = (page - 1) * $(window).height();
+            isScrolling = true;  // 스크롤 시작
+            mHtml.animate({scrollTop: posTop}, 500, function() {
+                isScrolling = false;  // 스크롤 끝나면 플래그 해제
+            });
         });
-    </script>
 
-
-
-
-
-<!--신규화면 스크립트 추가내용-->
-
-    <script>
         $(document).ready(function() {
         
         // 클래스가 "counter"인 모든 요소를 선택합니다.
