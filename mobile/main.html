@@ -1723,15 +1723,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const firstScreen = document.getElementById('firstScreen');
   const scrollArea = document.getElementById('scrollArea');
 
-  let isTouchDevice = false;
-
-  // 터치 입력 감지
-  function detectTouch() {
-    isTouchDevice = true;
-    window.removeEventListener('touchstart', detectTouch);
-  }
-
-  window.addEventListener('touchstart', detectTouch);
+  // 디바이스 체크
+  const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
 
   // 터치 또는 클릭 시 일반 스크롤 영역으로 이동
   function goToScrollArea() {
@@ -1749,12 +1742,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 터치 및 클릭 이벤트
-  if (isTouchDevice) {
+  if (isMobileDevice) {
+    // 모바일 장치에서 터치 및 클릭 이벤트
     firstScreen.addEventListener('touchend', goToScrollArea);
     firstScreen.addEventListener('click', goToScrollArea);
   } else {
-    // PC 휠 이벤트
+    // PC에서 휠 이벤트
     window.addEventListener('wheel', function (event) {
       if (event.deltaY > 0 && window.scrollY === 0) {
         goToScrollArea();
@@ -1764,9 +1757,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 스크롤 이벤트
+  // 스크롤 이벤트 (모바일 및 PC)
   window.addEventListener('scroll', function () {
-    if (window.scrollY === 0 && !isTouchDevice) {
+    if (window.scrollY === 0 && !isMobileDevice) {
       goToFirstScreen();
     }
   });
