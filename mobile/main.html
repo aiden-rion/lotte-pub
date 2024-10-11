@@ -47,13 +47,13 @@
 <body>
     <div class="layout--header">
         <header>
-            <h1 class="logo-wrap"><a href="/" class="ir">롯데렌터카 마이카세이브</a></h1>
+            <h1 class="logo-wrap"><a href="./main.html" class="ir">롯데렌터카 마이카세이브</a></h1>
             <div class="button-wrap">
                 <button type="button" class="bt-sidemenu">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
-                </button>
+                </button>   
             </div>
         </header>
         <div class="side-menu " id="sideMenu">
@@ -171,7 +171,7 @@
     <main class="layout--containter main-rent">
     <div class="mainContents">
         
-        <div class="mainCon1" id="firstScreen">
+        <div class="mainCon1">
             <div class="mainVisualBx">
                 <div class="visualTxt">
                     <div class="vsLeft">
@@ -295,7 +295,7 @@
             </div> 
         </div>
 
-        <div class="mainContentWrap" id="scrollArea">
+        <div class="mainContentWrap">
             <div class="mainCon2">
                 <div class="swiper-container carBanBx" data-aos="fade-up">
                     <ul class="swiper-wrapper carBanList">
@@ -418,7 +418,7 @@
                             </ul>
                             <div class="swiper-scrollbar"></div>    
                         </div>
-        
+
                     </div>
                 </div>
 
@@ -1572,7 +1572,7 @@
                     </div>
                 </div>
 
-                <div class="mainBannerWrap" data-aos="fade-up" style="padding-bottom:130px;">
+                <div class="mainBannerWrap" data-aos="fade-up">
                     <!-- <div class="conTit" data-aos-once="true">많이 찾는 서비스</div>
                     <ul class="mainBanList">
                         <li>
@@ -1695,29 +1695,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <!-- //front UI js -->
 
-    <style>
-.mainContents {
-  position: relative;
-}
-
-.mainCon1 {
-  height: 100vh; /* 전체 화면 */
-  background-color: #f0f0f0;
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  /* font-size: 2em; */
-}
-
-.mainContentWrap {
-  height: 200vh; /* 예시를 위한 스크롤 영역 */
-  background-color: #d0d0d0;
-  padding-bottom: 39px;
-  margin-bottom: 30px;
-  /* padding: 20px; */
-}
-    </style>
-
+<!-- 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const firstScreen = document.getElementById('firstScreen');
@@ -1764,7 +1742,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-</script>
+</script> -->
 
     <script>        
         
@@ -1877,24 +1855,16 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
 
-
-        let menu = ['투명한 차량정보', '비대면 홈서비스', '품질연장보증','차량방문정비 서비스']
+        let menu = ['투명한 차량정보', '비대면 홈서비스', '품질연장보증', '차량방문정비 서비스'];
         let secretSlide = new Swiper(".secretSlide", {
-            slidesPerView: 'auto',
-            observer: true,
-            observeParents: true,   
-            initialslide: 1,    
             slidesPerView: 1.3,
-            slidesOffsetAfter:0 ,
-            slidesOffsetBefore:0 ,
+            observer: true,
+            observeParents: true,
             spaceBetween: 16,
-            loop:true,
+            loop: true,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
-            },
-            scrollbar: {
-            el: ".swiper-scrollbar",
             },
             pagination: {
                 el: ".swiper-pagination",
@@ -1903,25 +1873,24 @@ document.addEventListener('DOMContentLoaded', function () {
                     return '<span class="' + className + '">' + (menu[index]) + "</span>";
                 },
             },
-        });
+            on: {
+                slideChange: function () {
+                    let activeIndex = this.realIndex; // 실제 슬라이드 인덱스
+                    let paginationEl = document.querySelector('.swiper-pagination'); // 페이징 엘리먼트
+                    let activeBullet = paginationEl.children[activeIndex]; // 현재 활성화된 메뉴 항목
 
-        // 기획전영역 스와이프 사용여부 확인
-        // let themeSwiper = new Swiper(".slideListBx", {
-        //     //effect : 'fade',
-        //     slidesPerView: 1,
-        //     slidesPerGroup: 1,
-        //     //centeredSlides: false,
-        //     speed : 0,
-        //     //slidesPerGroupSkip: 1,            
-        //     grabCursor: true,       
-        //     observer: true,
-        //     observeParents: true,   
-        //     initialslide: 1,
-        //     pagination : { // 페이징 설정
-        //         el : '.swiper-pagination',
-        //         clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
-        //     },    
-        // });
+                    // 활성화된 메뉴 항목을 중앙으로 스크롤
+                    let offsetLeft = activeBullet.offsetLeft;
+                    let bulletWidth = activeBullet.offsetWidth;
+                    let paginationWidth = paginationEl.offsetWidth;
+
+                    paginationEl.scrollTo({
+                        left: offsetLeft - (paginationWidth / 2) + (bulletWidth / 2),
+                        behavior: 'smooth' // 부드러운 스크롤
+                    });
+                }
+            }
+        });
         
 
         let hotSearchSwiper = new Swiper('.hot-search-slider', {

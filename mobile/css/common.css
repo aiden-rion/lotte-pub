@@ -389,7 +389,6 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
     padding: 8px 10px;
     background-color: #FFF;
     box-shadow: 0 -1px 10px rgba(0,0,0,0.16);
-    transition: height 2s ease, padding 2s ease; /* 패딩과 높이 모두 애니메이션 */
 }
 
 /* 펼쳐졌을 때 높이 변경 */
@@ -398,9 +397,10 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
     -webkit-border-radius: 20px 20px 0 0;
     border-radius: 20px 20px 0 0;
     z-index: 9999;
+    height: 551px;
     max-height: 95vh;
-    padding: 29px 0 0;
-    transition: height 2s ease, padding 2s ease;
+    padding: 35px 0 0;
+    transition: height 0.6s ease, padding 0.6s ease;
 }
 
 /* 펼쳐졌을 때 높이 변경 */
@@ -410,8 +410,11 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
     border-radius: 20px 20px 0 0;
     z-index: 9999;
     max-height: 95vh;
-    padding: 29px 0 0;
-    transition: height 2s ease, padding 2s ease;
+    padding: 30px 0 0;
+    transition: height 0.3s ease, padding 0.3s ease;
+    transform: translateY(0px);
+    /* transform: translate3d(130px, 0, 0); */ /* 각 슬라이드의 너비 + margin-right */
+    /* transition: transform 0.3s ease-in-out; */ */;
 }
 
 /* @keyframes bot-fixmotion {

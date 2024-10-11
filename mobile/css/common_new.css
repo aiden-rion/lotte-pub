@@ -1209,18 +1209,18 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
     letter-spacing: -0.32px;
 }
 
-.psc-btn-group.bot-fixed .info-wrap .min-container { display: none; }
+.psc-btn-group.bot-fixed .info-wrap .min-container { transform: rotateX(90deg); transition: transform 1s ease-in-out;}
 .psc-btn-group.bot-fixed .info-wrap .max-container {
     display: block;
     margin-bottom: 10px;
     max-height: 90vh;
     overflow-y: auto;
     overflow-x: hidden;
-    transition: 0.8s;
-    transition-timing-function: ease-in;
+    transform: rotateX(0deg);
+    transition: transform 1s ease-in-out;
 }
-.psc-btn-group.bot-fixed.fold .info-wrap .min-container { display: flex; }
-.psc-btn-group.bot-fixed.fold .info-wrap .max-container { display: none; }
+.psc-btn-group.bot-fixed.fold .info-wrap .min-container { transform: rotateX(0deg); transition: transform 1s ease-in-out;}
+.psc-btn-group.bot-fixed.fold .info-wrap .max-container { transform: rotateX(90deg); transition: transform 1s ease-in-out;}
 
 .layout--wrap.prc-none .car-price,
 .layout--wrap.prc-none .car-main-info .option { display: none; }

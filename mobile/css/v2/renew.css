@@ -364,39 +364,60 @@ li .saleType:after{
 .serviceTab2 button{display:inline-block;min-width:160px;height:54px;padding:13px 30px;margin-left:12px;border-radius:54px;font-size:16px;font-weight:400;color:#999;line-height:18px;border:1px solid #F7F7F7;background:#F7F7F7;box-sizing:border-box;}
 .serviceTab2 button:first-child{margin-left:0;}
 .serviceTab2 button.active{font-weight:700;color:#1A1A1A;border:1px solid #666;background:#fff;}
-.serviceList2 .swiper-pagination{
-    display: flex; white-space: nowrap; overflow-x: auto; gap: 8px;
+.serviceList2 .swiper-pagination {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto; /* auto에서 hidden으로 변경, 스크롤바 보이지 않도록 */
+    gap: 8px;
+    left: 0;
+    top: 0;
+    padding-right: 50px;
     text-align: left;
-    width: 100%; height: 40px; left: 30px; top: 0; padding-right: 51px;
-    -ms-overflow-style: none;
+    width: 100%; /* 패딩을 width에서 제외 */
+    height: 40px;
+    padding-right: 20px; /* 오른쪽 패딩 유지 */
+    padding-left: 30px;
+    -ms-overflow-style: none; /* IE/Edge에서 스크롤바 없애기 */
+    scrollbar-width: none; /* Firefox에서 스크롤바 없애기 */
 }
-.serviceList2 .swiper-pagination::-webkit-scrollbar{
-  display:none;
+
+.serviceList2 .swiper-pagination::-webkit-scrollbar {
+    display: none; /* 크롬/사파리에서 스크롤바 없애기 */
 }
 .serviceList2 .swiper-pagination span{display:inline-block;margin:0 50px;color:#fff;font-size:14px; line-height}
 .serviceList2 .swiper-pagination .swiper-pagination-bullet{
 	display: flex;
-    width: auto;
-    text-align: center;
-    height: 40px;
-    padding: 11px 16px;
-    margin-left: 12px;
-    border-radius: 54px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #999;
-    line-height: 18px;
-    border: 1px solid #F7F7F7;
-    background: #F7F7F7;
-    box-sizing: border-box;
-    align-items: baseline;
-    justify-content: center;
-    flex-direction: row;
-    margin: 0;
+	width: auto;
+	text-align: center;
+	height: 40px;
+	padding: 11px 16px;
+	margin-left: 12px;
+	border-radius: 54px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #999;
+	line-height: 18px;
+	border: 1px solid #F7F7F7;
+	background: #F7F7F7;
+	box-sizing: border-box;
+	align-items: baseline;
+	justify-content: center;
+	flex-direction: row;
+	margin: 0;
+	/* transform: translate3d(-200px, 0, 0); */ /* 각 슬라이드의 너비 + margin-right */
+	/* transition: transform 0.3s ease-in-out; */ */;
 }
 .serviceList2 .swiper-pagination .swiper-pagination-bullet:first-child:first-child{margin-left:0;}
-.serviceList2 .swiper-pagination .swiper-pagination-bullet-active {font-weight:700;color:#1A1A1A;border:1px solid #666;background:#fff;}
-.serviceList2 .swiper-wrapper{margin:70px 30px 0;}
+.serviceList2 .swiper-pagination .swiper-pagination-bullet-active {
+	font-weight:700;
+	color:#1A1A1A;
+	border:1px solid #666;
+	background:#fff;
+	position: relative;
+	/* transform: translate3d(-140px, 0, 0); */ /* 각 슬라이드의 너비 + margin-right */
+	/* transition: transform 0.3s ease-in-out; */ */
+}
+.serviceList2 .swiper-wrapper{margin: 56px 30px 0;}
 .serviceList2 .swiper-scrollbar{display: none;width:1200px;bottom:-10px;background:transparent;margin-left:-10px;}
 .serviceList2 .swiper-scrollbar-drag{background:#ddd;}
 /* 서비스 배너 */
@@ -424,7 +445,7 @@ li .saleType:after{
 .carBanList .slick-next{margin-left:552px;background:url(../../images/renew/btn_ban_next.png) no-repeat center center;}
 .carBanList .slick-next:hover{background:url(../../images/renew/btn_ban_next.png) no-repeat center center;}
 .carBanList .slick-next::before{display:none;}
-.carBanBx .swiper-pagination{width:100%;bottom: var(--swiper-pagination-bottom, -8px);}
+.carBanBx .swiper-pagination{width:100%;display: none;bottom: var(--swiper-pagination-bottom, -8px);}
 /*.carBanList .swiper-pagination li{width:20px;text-align:center;margin:0;vertical-align:middle;}*/
 .carBanBx .swiper-pagination span.swiper-pagination-bullet{position:relative;display:inline-block;content:'';width:10px;height:10px;background:#e5e5e5;border-radius:10px;font-size:0;opacity:1;}
 .carBanBx .swiper-pagination span.swiper-pagination-bullet-active{width:10px;height:10px;background:#1A1A1A;border-radius:16px;opacity:1;border:none;}
