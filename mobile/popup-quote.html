@@ -40,13 +40,15 @@
 	<!-- popup : 견적상담 신청 // -->
 	<main>
 		<div class="popup-quote popup layer_popup" id="quotePop">
-			<div class="layout--header">
+			<div class="layout--header sub">
 				<header>
-					<h1 class="logo blind">
-						<a href="/" class="ir">롯데렌터카 마이카세이브</a>
-					</h1>
+					<h1 class="logo-wrap" style="display:none;"><a href="./car-detail.html" class="ir">롯데렌터카 마이카세이브</a></h1>
+					<!--로고-->
+					<button type="button" id="carPrevButton" class="ir bt-page-prev" onclick="location.href='./car-detail.html'">이전 페이지</button>
+					<!--페이지명-->
 					<h2 class="page-title">상담신청</h2>
-					<button type="button" class="ir bt-page-close" onclick='location.href="./car-detail.html"'>페이지 닫기</button>
+					<div class="button-wrap">   
+					</div>
 				</header>
 			</div>
 			
@@ -86,100 +88,6 @@
 					</div>
 					<!-- // 231108 추가 -->
 					
-
-					<!-- 견적 정보 -->
-					<div class="psc-container area">
-						<h1>견적 정보</h1>
-						<h4>(VAT 포함)</h4>
-						<ul class="psc-wrap">
-							<li class="prc_advance sub">
-								<span class="tit">차량판매가</span> <!-- 230926 var 태그 추가 -->
-								<span class="val"><var>30,000,000</var>원</span>
-							</li>
-							<li class="prc_deposit sub">
-								<span class="tit">이전등록비</span> <!-- 230926 var 태그 추가 -->
-								<span class="val"><var>1,200,000</var>원</span>
-							</li>
-							<li class="prc_deposit sub">
-								<span class="tit">매도수수료</span> <!-- 230926 var 태그 추가 -->
-								<span class="val"><var>440,000</var>원</span>
-							</li>
-							<li class="prc_deposit sub">
-								<span class="tit">탁송료</span> <!-- 230926 var 태그 추가 -->
-								<span class="val"><var>80,000</var>원</span>
-							</li>
-							<span class="line"></span>
-							<li class="prc_btn_wrap">
-								<div class="tab-content">
-									<div class="warranty-price">
-										<div class="title">
-											<h3>롯데 Warranty</h3>
-											<span class="more">자세히보기</span>
-										</div>
-										<div class="radio-wrap">
-											<div class="radio">
-												<div class="radio-title">
-													<input type="radio" id="radio22" name="radio22" value="" checked=""
-														style="position:absolute; top:23px;"
-													>
-													<label for="radio22">
-													<span class="warranty-name">	
-														12개월
-														<em>(10,000km)</em>
-													</span>
-													<span class="warranty-charge">
-														<em>550,000원</em>
-														450,000원
-													</span>
-													</label>
-												</div>
-											</div>
-										</div>
-										<div class="radio-wrap">
-											<div class="radio">
-												<div class="radio-title">
-													<input type="radio" id="radio23" name="radio22" value=""
-														style="position:absolute; top:23px;"
-													>
-													<label for="radio23">
-													<span class="warranty-name">	
-														6개월
-														<em>(5,000km)</em>
-													</span>
-													<span class="warranty-charge">
-														<em>200,000원</em>
-														0원
-													</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="prc_total">
-								<span class="tit">총 예상 결제 금액</span>
-								<span class="val"><var>30,580,000</var>원
-								</span>
-							</li>
-							<!-- 230926 인수가 위치 이동 -->
-							<span class="line"></span>
-
-						</ul>
-
-						<!-- 231110 텍스트 한줄씩 span 태그로 묶기 // -->
-						<p class="tips-box">
-							<span>· 보증·선납금을 제외한 정비, 보험, 세금 등이 포함된 금액입니다.</span>
-							<span>· 개인별 신용조건에 따라 담보 및 대여료가 달라질 수 있습니다.</span>
-							<span>· 보험연령 만 26세 이상 기준 표준대여료 입니다.</span>
-							<span> <!-- 231110 추가 -->
-								· 대인보상 : 무제한 / 대물배상 : 1억원 / 자손보상 : 1억원
-								<button class="btn-link">자세히보기</button> <!-- 231110 인수옵션형 안내페이지 FAQ > 보험조건으로 랜딩 -->
-							</span>
-						</p>
-						<!-- // 231110 텍스트 한줄씩 span 태그로 묶기 -->
-					</div>
-
 					<!-- 신청자 정보 -->
 					<div class="insert-form-group area">
 						<h1>신청자 정보</h1> <!-- 230623 "신청자 정보" 타이틀 추가 --><!-- "신청자 정보" 타이틀 추가 -->
@@ -207,9 +115,9 @@
 
     <!-- 바텀시트 -->
     <div class="layer_popup custom-alert-pop">
-        <div class="btn-wrap">
-            <button type="button" class="bt-tel">0508-0328-8827</button>
-            <button type="button" class="light" onclick="location.href='./direct_01_2.html'">상담신청</button>
+        <div class="btn-wrap" style="display:block">
+            <!-- <button type="button" class="bt-tel">0508-0328-8827</button> -->
+            <button type="button" class="light" onclick="location.href='./direct_01_2.html'">신청하기</button>
         </div>
     </div>
 

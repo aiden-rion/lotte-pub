@@ -1265,7 +1265,7 @@
 /* ### ~ 230717 수정 */
 .detail-element .area.car-options-detail .options li.on {color:#F33}
 .detail-element .area.car-options-detail .options li .bt-option-all {height:100%;font-size:11px;color:#666;font-weight:700;text-align:center;line-height:1.5;}
-.detail-element .area.car-options-detail .options li .bt-option-all:before {content:"+";display:block;height: 44px;line-height:44px;margin-bottom:5px;text-align:center;font-size:20px;font-weight:300;background: #f1f1f1;/* border-radius: 27px; */}
+.detail-element .area.car-options-detail .options li .bt-option-all:before {content:"+";display:block;height: 44px;width: 44px;line-height:44px;margin-bottom:5px;text-align:center;font-size:20px;font-weight:300;background: #f1f1f1;border-radius: 30px;/* border-radius: 27px; */}
 
 /************************* 정기관리차량 *************************/
 .detail-element .area.car-checkup {  }
@@ -1963,7 +1963,7 @@ margin: 0 auto;
 }
 .prc_btn_wrap .tab-content .warranty-price {
     display: block;
-    margin-top: 25px;
+    margin-top: 6px;
 }
 .prc_btn_wrap .tab-content .warranty-price .title{
     display: flex;

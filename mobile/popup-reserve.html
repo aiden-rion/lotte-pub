@@ -39,13 +39,15 @@
 	<main>
 	<!-- popup : 방문예약 신청 // -->
 	<div class="popup-reserve popup layer_popup" id="reservPop">
-		<div class="layout--header">
+		<div class="layout--header sub">
 			<header>
-				<h1 class="logo blind">
-					<a href="/" class="ir">롯데렌터카 마이카세이브</a>
-				</h1>
+				<h1 class="logo-wrap" style="display:none;"><a href="./car-detail.html" class="ir">롯데렌터카 마이카세이브</a></h1>
+				<!--로고-->
+				<button type="button" id="carPrevButton" class="ir bt-page-prev" onclick="location.href='./car-detail.html'">이전 페이지</button>
+				<!--페이지명-->
 				<h2 class="page-title">방문예약</h2>
-				<button type="button" class="ir bt-page-close" onclick='location.href="./car-detail.html"'>페이지 닫기</button>
+				<div class="button-wrap">   
+				</div>
 			</header>
 		</div>
 
@@ -152,8 +154,8 @@
 				</ul>
             </div>
         </div>
-        <div class="btn-wrap">
-            <button type="button" class="bt-tel">통화하기</button>
+        <div class="btn-wrap" style="display:block">
+            <!-- <button type="button" class="bt-tel">통화하기</button> -->
             <button type="button" class="light" onclick="location.href='./direct_01_2.html'">방문신청하기</button>
         </div>
     </div>
