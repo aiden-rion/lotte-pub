@@ -171,7 +171,7 @@
     <main class="layout--containter main-rent">
     <div class="mainContents">
         
-        <div class="mainCon1">
+        <div class="mainCon1" id="firstScreen">
             <div class="mainVisualBx">
                 <div class="visualTxt">
                     <div class="vsLeft">
@@ -295,7 +295,7 @@
             </div> 
         </div>
 
-        <div class="mainContentWrap">
+        <div class="mainContentWrap" id="scrollArea">
             <div class="mainCon2">
                 <div class="swiper-container carBanBx" data-aos="fade-up">
                     <ul class="swiper-wrapper carBanList">
@@ -1572,7 +1572,7 @@
                     </div>
                 </div>
 
-                <div class="mainBannerWrap" data-aos="fade-up">
+                <div class="mainBannerWrap" data-aos="fade-up" style="padding-bottom:130px;">
                     <!-- <div class="conTit" data-aos-once="true">많이 찾는 서비스</div>
                     <ul class="mainBanList">
                         <li>
@@ -1695,27 +1695,86 @@
     <script src="js/swiper-bundle.min.js"></script>
     <!-- //front UI js -->
 
-    <script>        
-        // window.addEventListener("wheel", function(e){
-        //     e.preventDefault();
-        // },{passive : false});
+    <style>
+.mainContents {
+  position: relative;
+}
 
-        // 한페이지씩 이동하도록 코드
-        // var mHtml = $("html");
-        // var page = 1;
-        // mHtml.animate({scrollTop : 0},10);
-        // $(window).on("wheel", function(e) {
-        //     if(mHtml.is(":animated")) return;
-        //     if(e.originalEvent.deltaY > 0) {
-        //         if(page == 2) return;
-        //         page++;
-        //     } else if(e.originalEvent.deltaY < 0) {
-        //         if(page == 1) return;
-        //         page--;
-        //     }
-        //     var posTop =(page-1) * $(window).height();
-        //     mHtml.animate({scrollTop : posTop});
-        // })
+.mainCon1 {
+  height: 100vh; /* 전체 화면 */
+  background-color: #f0f0f0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* font-size: 2em; */
+}
+
+.mainContentWrap {
+  height: 200vh; /* 예시를 위한 스크롤 영역 */
+  background-color: #d0d0d0;
+  padding-bottom: 39px;
+  margin-bottom: 30px;
+  /* padding: 20px; */
+}
+    </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const firstScreen = document.getElementById('firstScreen');
+  const scrollArea = document.getElementById('scrollArea');
+
+  let isTouchDevice = false;
+
+  // 터치 입력 감지
+  function detectTouch() {
+    isTouchDevice = true;
+    window.removeEventListener('touchstart', detectTouch);
+  }
+
+  window.addEventListener('touchstart', detectTouch);
+
+  // 터치 또는 클릭 시 일반 스크롤 영역으로 이동
+  function goToScrollArea() {
+    window.scrollTo({
+      top: scrollArea.offsetTop,
+      behavior: 'smooth'
+    });
+  }
+
+  // 일반 스크롤 영역의 최상단에 도달 시 첫 화면으로 돌아가기
+  function goToFirstScreen() {
+    window.scrollTo({
+      top: firstScreen.offsetTop,
+      behavior: 'smooth'
+    });
+  }
+
+  // 터치 및 클릭 이벤트
+  if (isTouchDevice) {
+    firstScreen.addEventListener('touchend', goToScrollArea);
+    firstScreen.addEventListener('click', goToScrollArea);
+  } else {
+    // PC 휠 이벤트
+    window.addEventListener('wheel', function (event) {
+      if (event.deltaY > 0 && window.scrollY === 0) {
+        goToScrollArea();
+      } else if (window.scrollY > 0 && window.scrollY <= firstScreen.offsetHeight) {
+        goToFirstScreen();
+      }
+    });
+  }
+
+  // 스크롤 이벤트
+  window.addEventListener('scroll', function () {
+    if (window.scrollY === 0 && !isTouchDevice) {
+      goToFirstScreen();
+    }
+  });
+});
+</script>
+
+    <script>        
+        
 
         let themeSwiper = new Swiper('.theme-slider', {
             slidesPerView: 1,

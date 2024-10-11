@@ -689,7 +689,7 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
 .btn-group.bt-right{
     position:absolute;
     right:0;
-    top: -9px;
+    top: -8px;
 }
 .btn-group .bt-favorite {
     min-width:49px;
