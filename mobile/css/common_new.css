@@ -1969,6 +1969,63 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
 .list-type-vertical .list-thumb .slide-btn .swiper-button-lock {display:none}
 .list-type-vertical .list-thumb .car-thumb-slider{height: 100%;}
 
+.list-type-vertical .list-thumb.rentType:after{
+    content:'렌트';
+    display: block;
+    position: absolute;
+    left: 6px;
+    bottom: 7px;
+    padding: 5px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: #333;
+    border-radius: 15px;
+}
+.list-type-vertical .list-thumb.saleType:after{
+    content:'구매';
+    display: block;
+    position: absolute;
+    left: 6px;
+    bottom: 7px;
+    padding: 5px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: #EE2929;
+    border-radius: 15px;
+}
+
+.img-wrap.rentType:before{
+    content:'렌트';
+    display: block;
+    position: absolute;
+    left: 11px;
+    bottom: 6px;
+    padding: 5px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: #333;
+    border-radius: 15px;
+    z-index:11;
+}
+.img-wrap.saleType:before{
+    content:'구매';
+    display: block;
+    position: absolute;
+    left: 16px;
+    bottom: 6px;
+    padding: 5px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: #EE2929;
+    border-radius: 15px;
+    z-index:11;
+}
+
+
 .list-type-vertical.n3 .list-item:nth-child(3n) {margin-right:0;}
 .list-type-vertical.n4 .list-item:nth-child(4n) {margin-right:0;}
 .list-type-vertical .list-detail {position:relative;margin-top:12px}
