@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* reset */
-* {margin:0;padding:0;box-sizing:border-box;font-family:'pretendard', sans-serif;font-feature-settings: "tnum"}
+* {margin:0;padding:0;box-sizing:border-box;font-family: 'Pretendard', sans-serif;font-feature-settings: "tnum"}
 html {background: #fff !important;}
 html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a {line-height:1.5;color:#1A1A1A;font-size:14px;font-weight:400;}
 html, body {

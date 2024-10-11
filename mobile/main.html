@@ -431,6 +431,19 @@
                         <button type="button">#정기관리</button>
                         <button type="button">#출고3년이내</button>
                     </div>
+                    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const activeButton = document.querySelector(".keywordBut .active");
+
+    if (activeButton) {
+        activeButton.scrollIntoView({
+            behavior: "smooth",   // 스크롤이 부드럽게 이동되도록 설정
+            block: "nearest",     // 버튼이 완전히 보이도록 설정
+            inline: "center"      // 가로 중앙으로 위치하도록 설정
+        });
+    }
+});
+                    </script>
                     <div class="keyTabs">
                         <div class="Keytab active">
                             <ul class="swiper-wrapper carKeywordList">
