@@ -1,358 +1,91 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>롯데오토마켓</title>
-<meta charset="utf-8">
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
-<meta name="format-detection" content="telephone=no, address=no, email=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta property="og:title" content="" />
-<meta property="og:site_name" content="" />
-<meta property="og:description" content="" />
-<meta property="og:image" content="" />
-<link rel="icon" href="favicon.ico" type="image/x-icon"/>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-<!-- front UI css// -->
-<link rel="stylesheet" href="css/fonts.css" type="text/css" />
-<link rel="stylesheet" href="css/jquery-ui.min.css">
-<link rel="stylesheet" href="css/swiper.min.css" />
-<link rel="stylesheet" href="css/common_new.css" type="text/css" />
-<!-- <link rel="stylesheet" href="css/sub.css" type="text/css" /> -->
-<link rel="stylesheet" href="css/mypage.css" type="text/css" /><!-- for sub style -->
-<link rel="stylesheet" href="css/process.css" type="text/css" /><!-- for sub style -->
-<!-- //front UI css -->
-<!-- front UI js// -->
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/jquery.ui.touch-punch.min.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/ui.js"></script>
-<!-- //front UI js -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원리금균등상환 계산기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <!-- layout--header 마이페이지// -->
-	<div class="layout--header">
-		<header>
-            <a href="#" class="ir bt-page-prev">뒤로가기</a>
-			<h2 class="page-title">마이페이지</h2>
-		</header>
+<div class="container">
+    <h1>원리금균등상환 계산기</h1> 
+    <label for="principal">대출금액 (원)</label>
+    <input type="number" id="principal" placeholder="대출금액을 입력하세요">
 
-	</div>
+    <label for="annualInterestRate">연 이자율 (%)</label>
+    <input type="number" id="annualInterestRate" step="0.01" placeholder="이자율을 입력하세요">
 
-    <!-- 컨텐츠 시작 -->
-    <main class="layout--containter mypage">
+    <label for="months">상환 개월수</label>
+    <input type="number" id="months" placeholder="개월수를 입력하세요">
 
-        <!-- 개인회원 -->
-        <div class="user-wrap">
-            <div class="top-bar">
-                <div class="badge">개인회원</div>
-                <button type="button">회원정보 수정</button>
-            </div>
-            <a href="#">
-                <h3 class="user">
-                    <strong>김렌탈(lotte123)</strong> 회원님, <br>
-                    반갑습니다!
-                </h3>
-            </a>
-            <a href="#" class="member-change">사업자 회원으로 전환하시겠어요?</a>
-        </div>
-        <!-- 개인회원 -->
+    <button onclick="calculateMonthlyPayment()">계산하기</button>
 
+    <div class="result" id="result"></div> 
+</div>
+<script>
+    function calculateLoan(principal, annualInterestRate, months) {
+        const monthlyInterestRate = annualInterestRate / 12 / 100; // 월 이자율
+        const payment = (principal * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -months));
+        return payment.toFixed(0); // 소수점 둘째 자리까지 표시
+    }
 
-        
-        <!-- 사업자회원 -->
-        <div class ="user-wrap">
-            <div class ="top-bar">
-                <div class ="badge">개인사업자</div>
-                <button type="button">회원정보 수정</button>
-            </div>
-            <div class ='flex'>
-                <select id="name">
-                    <option value="">지원</option>
-                    <option value="">limjiwon1113</option>
-                    <option value="">어쩌구저쩌구어쩌구저쩌구</option>
-                    <option value="">롯데렌터카</option>
-                    <option value="" >롯데정보통신</option>
-                    <option value="" selected>임지원</option>
-                    <option value="">어쩌구저쩌구</option>
-                </select>
-                <p>회원님,</p>
-            </div>
-            <p>반갑습니다!</p>
-            <a href="#" class ="member-change">개인사업자를 추가로 등록하시겠어요?</a>
-        </div>
-        <!-- 사업자회원 -->
+    function calculateMonthlyPayment() {
+        const principal = parseFloat(document.getElementById('principal').value);
+        const annualInterestRate = parseFloat(document.getElementById('annualInterestRate').value);
+        const months = parseInt(document.getElementById('months').value, 10);
 
+        if (isNaN(principal) || isNaN(annualInterestRate) || isNaN(months)) {
+            document.getElementById('result').textContent = '모든 입력값을 올바르게 입력해주세요.';
+            return;
+        }
 
-
-        <div class="tab-wrap">
-            <div class="tab">
-                <button type="button" data-tab="tab1" class="on">나의 계약</button>
-                <button type="button" data-tab="tab2" class="">나의 견적</button>
-            </div>
-            <div class="tab-content on" id="tab1">
-                <div class="cont-wrap">
-                    <div class="tit-wrap">
-                        <h3>나의 계약 <span>3</span></h3>
-                    </div>
-
-                    <!-- 계약내용 없을때 -->
-                    <article class="cont-none">
-                        <div class="img-wrap"></div>
-                        <p>
-                            계약중인 차량이 없어요.
-                        </p>
-                        <button type="button" class="btn type01">차량 둘러보기</button>
-                    </article>
-                    <!-- 계약내용 없을때 -->
-
-
-                    <ul class="mycar-list">
-                        <li>
-                            <div class="top-bar">
-                                <span class="badge green">계약진행중</span>
-                                <p class="num">승인번호 : 1357913579</p>
-                                <button type="button" class="ir">계약보기</button>
-                            </div>
-                            <div class="car-thumb">
-                                <div class="img-wrap">
-                                    <img src="images/rent_new/test_img3.png" alt="테스트이미지" />
-                                </div>
-                                <dl>
-                                    <dt>기아 CARNIVAL KA4 (D)2.2</dt>
-                                    <dd>123하4567</dd>
-                                </dl>
-                            </div>
-                            <ul class="info-list">
-                                <li>
-                                    <span>신차가</span>
-                                    <p>0원 (0%)</p>
-                                </li>
-                                <li>
-                                    <span>보증금</span>
-                                    <p>12,009,000원 (30%)</p>
-                                </li>
-                                <li>
-                                    <span>인수가</span>
-                                    <p>18,800,000원</p>
-                                </li>
-                            </ul>
-                            <div class="price">
-                                <span><b>월 대여료</b> (세금 및 보험료 포함)</span> <strong>450,000원</strong>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="top-bar">
-                                <span class="badge blue">계약완료</span>
-                                <p class="num">승인번호 : 1357913579</p>
-                                <button type="button" class="ir">계약보기</button>
-                            </div>
-                            <div class="car-thumb">
-                                <div class="img-wrap">
-                                    <img src="images/rent_new/test_img3.png" alt="테스트이미지" />
-                                </div>
-                                <dl>
-                                    <dt>기아 CARNIVAL KA4 (D)2.2</dt>
-                                    <dd>123하4567</dd>
-                                </dl>
-                            </div>
-                            <ul class="info-list">
-                                <li>
-                                    <span>신차가</span>
-                                    <p>0원 (0%)</p>
-                                </li>
-                                <li>
-                                    <span>보증금</span>
-                                    <p>12,009,000원 (30%)</p>
-                                </li>
-                                <li>
-                                    <span>인수가</span>
-                                    <p>18,800,000원</p>
-                                </li>
-                            </ul>
-                            <div class="price">
-                                <span><b>월 대여료</b> (세금 및 보험료 포함)</span> <strong>450,000원</strong>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="top-bar">
-                                <span class="badge red">계약취소</span>
-                                <p class="num">승인번호 : 1357913579</p>
-                                <button type="button" class="ir">계약보기</button>
-                            </div>
-                            <div class="car-thumb">
-                                <div class="img-wrap">
-                                    <img src="images/rent_new/test_img3.png" alt="테스트이미지" />
-                                </div>
-                                <dl>
-                                    <dt>기아 CARNIVAL KA4 (D)2.2</dt>
-                                    <dd>123하4567</dd>
-                                </dl>
-                            </div>
-                            <ul class="info-list">
-                                <li>
-                                    <span>신차가</span>
-                                    <p>0원 (0%)</p>
-                                </li>
-                                <li>
-                                    <span>보증금</span>
-                                    <p>12,009,000원 (30%)</p>
-                                </li>
-                                <li>
-                                    <span>인수가</span>
-                                    <p>18,800,000원</p>
-                                </li>
-                            </ul>
-                            <div class="price">
-                                <span><b>월 대여료</b> (세금 및 보험료 포함)</span> <strong>450,000원</strong>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="tab-content" id="tab2">
-                <div class="cont-wrap">
-                    <div class="tit-wrap">
-                        <h3>나의 견적 <span>4</span></h3>
-                        <button type="button">전체삭제</button>
-                    </div>
-
-                    <!-- 견적내용 없을때 -->
-                    <article class="cont-none">
-                        <div class="img-wrap"></div>
-                        <p>
-                            진행중인 견적이 없어요.
-                        </p>
-                        <button type="button" class="btn type01">차량 둘러보기</button>
-                    </article>
-                    <!-- 견적내용 없을때 -->
-
-                    
-                    <ul class="mycar-list">
-                        <li>
-                            <div class="top-bar">
-                                <span class="badge green">견적</span>
-                                <p class="num">견적번호 : 6989472</p>
-                                <button type="button" class="btn-delete">삭제</button>
-                            </div>
-                            <div class="car-thumb">
-                                <div class="img-wrap">
-                                    <img src="images/rent_new/test_img3.png" alt="테스트이미지" />
-                                </div>
-                                <dl>
-                                    <dt>기아 CARNIVAL KA4 (D)2.2</dt>
-                                    <dd>123하4567</dd>
-                                    <dd>2020년식</dd>
-                                </dl>
-                            </div>
-                            <ul class="info-list">
-                                <li>
-                                    <span>신차가</span>
-                                    <p>0원 (0%)</p>
-                                </li>
-                                <li>
-                                    <span>보증금</span>
-                                    <p>12,009,000원 (30%)</p>
-                                </li>
-                                <li>
-                                    <span>인수가</span>
-                                    <p>18,800,000원</p>
-                                </li>
-                            </ul>
-                            <div class="price">
-                                <span><b>월 대여료</b> (세금 및 보험료 포함)</span> <strong>450,000원</strong>
-                            </div>
-                            <div class="btn-wrap">
-                                <button type="button" class="btn-type01">견적 자세히보기</button>
-                                <button type="button" class="btn-type02">다이렉트 계약하기</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="top-bar">
-                                <span class="badge blue">심사승인</span>
-                                <p class="num">견적번호 : 6989472</p>
-                                <button type="button" class="btn-delete">삭제</button>
-                            </div>
-                            <div class="car-thumb">
-                                <div class="img-wrap">
-                                    <img src="images/rent_new/test_img3.png" alt="테스트이미지" />
-                                </div>
-                                <dl>
-                                    <dt>기아 CARNIVAL KA4 (D)2.2</dt>
-                                    <dd>123하4567</dd>
-                                    <dd>2020년식</dd>
-                                </dl>
-                            </div>
-                            <ul class="info-list">
-                                <li>
-                                    <span>신차가</span>
-                                    <p>0원 (0%)</p>
-                                </li>
-                                <li>
-                                    <span>보증금</span>
-                                    <p>12,009,000원 (30%)</p>
-                                </li>
-                                <li>
-                                    <span>인수가</span>
-                                    <p>18,800,000원</p>
-                                </li>
-                            </ul>
-                            <div class="price">
-                                <span><b>월 대여료</b> (세금 및 보험료 포함)</span> <strong>450,000원</strong>
-                            </div>
-                            <div class="btn-wrap">
-                                <button type="button" class="btn-type01">견적 자세히보기</button>
-                                <button type="button" class="btn-type02">다이렉트 계약하기</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="top-bar">
-                                <span class="badge red">심사부결</span>
-                                <p class="num">견적번호 : 6989472</p>
-                                <button type="button" class="btn-delete">삭제</button>
-                            </div>
-                            <div class="car-thumb">
-                                <div class="img-wrap">
-                                    <img src="images/rent_new/test_img3.png" alt="테스트이미지" />
-                                </div>
-                                <dl>
-                                    <dt>기아 CARNIVAL KA4 (D)2.2</dt>
-                                    <dd>123하4567</dd>
-                                    <dd>2020년식</dd>
-                                </dl>
-                            </div>
-                            <ul class="info-list">
-                                <li>
-                                    <span>신차가</span>
-                                    <p>0원 (0%)</p>
-                                </li>
-                                <li>
-                                    <span>보증금</span>
-                                    <p>12,009,000원 (30%)</p>
-                                </li>
-                                <li>
-                                    <span>인수가</span>
-                                    <p>18,800,000원</p>
-                                </li>
-                            </ul>
-                            <div class="price">
-                                <span><b>월 대여료</b> (세금 및 보험료 포함)</span> <strong>450,000원</strong>
-                            </div>
-                            <article class="alert-txt">
-                                <p>보증금 조건을 상향 해주세요.</p>
-                            </article>
-                            <div class="btn-wrap">
-                                <button type="button" class="btn-type01">견적 자세히보기</button>
-                                <button type="button" class="btn-type02">다이렉트 계약하기</button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
-
+        const monthlyPayment = calculateLoan(principal, annualInterestRate, months);
+        document.getElementById('result').textContent = `매달 상환금액은 ${monthlyPayment}원 입니다.`;
+    }
+</script>
 </body>
 </html>

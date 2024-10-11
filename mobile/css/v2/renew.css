@@ -103,8 +103,8 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .mainVisualBx .srhBx{animation:txtTop 1s 0.3s ease-in-out both ;position: fixed;display: block;width:100%;text-align:center; margin-top: 48px; bottom: 120px;}
 .mainVisualBx .srhBx .iconSroll{animation:downScroll 1.8s ease-out infinite;display:none;width:40px;height:40px;margin:20px auto 0;background:url(../../images/renew/ic_scroll.png) no-repeat center center;} 
 .mainVisualBx .srhBx .btnSrhOpen{width:calc(100% - 3.25em);height:3.75em;display:inline-block;padding-left:1.88em;margin:12px 26px 0;font-size:16px;font-weight:400;color:#999999;line-height:24px;border-radius:64px;background:#fff url(../../images/renew/ic_srh.png) no-repeat 92% center;box-sizing: border-box;text-align:left; border: 2px solid #ff3333;} 
-.mainVisualBx .srhBx .txt{font-size:1.25em;font-weight:600;color:#fff;line-height:36px;} 
-.mainVisualBx .srhBx .txt .countNum{color:#FF0000;font-weight:900;} 
+.mainVisualBx .srhBx .txt{font-size: 1.25em;font-weight:600;color:#fff;line-height:36px;} 
+.mainVisualBx .srhBx .txt .countNum{color:#FF0000;font-weight:900;font-size: 1.26em;} 
 
 .quickBan{display:none;position:fixed;z-index:20;right:40px;bottom:60px;width:68px;}
 .quickBan button{width:68px;height:68px;font-size:0;line-height:0;text-indent: -9999px;border-radius: 50%;box-shadow:7px 5px 21px -2px rgba(0, 0, 0, 0.20);}
@@ -120,10 +120,10 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .quickBan .quickList a.btnQuickPrice{background:url(../../images/renew/quick_estimate.png) no-repeat center top;}
 .quickBan .quickList a .num{position:absolute;right:-3px;top:0;  display: inline-block; min-width:24px;height:18px;padding:2px 5px; font-size:13px;font-weight:700;color:#fff;line-height:14px;background: #FF3333;border-radius: 18px;box-sizing: border-box;text-align: center;}
 
-.srhWrap{display:none;position: fixed;z-index:100;left:0;top:0; width:100%;height:100%;background:rgba(0, 0, 0, 0.8);}
+.srhWrap{display:none;position: fixed;z-index:100;left:0;top:0;width:100%;height:100%;background: rgba(0, 0, 0, 0.9);}
 .mainSrhBx{position:absolute;top:30%;width: calc(100% - 40px);/* margin: 0 15px; *//* left: 15px; */text-align: center;margin: 0 20px;}
 .mainSrhBx *{vertical-align: middle;}
-.mainSrhBx .txt{margin-bottom:20px;font-size: 21px;font-weight:400;color:#fff;line-height:36px;text-align:center;} 
+.mainSrhBx .txt{margin-bottom: 12px;font-size: 20px;font-weight:400;color:#fff;line-height:36px;text-align:center;display: flex;justify-content: center;align-items: flex-end;gap: 5px;} 
 .mainSrhBx .txt .countNum{margin-top:-2px;display:inline-block;color:#FF0000;font-weight:900;font-size: 24px;} 
 .mainSrhBx .selectSrh{display:none;position:absolute;left:0;top:86px;width:100px;width:140px;min-height:128px;padding:12px; box-sizing: border-box;background: #fff;border-radius: 20px;}
 .mainSrhBx .selectSrh.active{display:block;}
@@ -131,9 +131,24 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .mainSrhBx .selectSrh li:first-child{margin-top:0;}
 .mainSrhBx .selectSrh li a{display:block;padding:12px;font-size:16px;font-weight:400;color:#1A1A1A;line-height:24px;border-radius: 10px;background:#fff;}
 .mainSrhBx .selectSrh li a:hover{background:#F5F7FA;}
-.mainSrhBx .srhTxtList{display:none;position:absolute;left:30px;top:63px;width:330px; text-align:left;}
+.mainSrhBx .srhTxtList{display:none;position:absolute;left:30px;top:63px;width: 304px;text-align:left;}
 .mainSrhBx .srhTxtList.visible{display:block;}
-.mainSrhBx .srhTxtList li{font-size:17px;font-weight: 700;color:#fff;line-height:32px;}
+.mainSrhBx .srhTxtList li{font-size:17px;font-weight: 700;color:#fff;line-height: 38px;/* display: flex; */position: relative;padding: 6px;border-bottom: 1px solid #ddd;}
+.mainSrhBx .srhTxtList li:after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin: 6px 0 0 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    transform: rotate(45deg) translateY(-50%);
+    border-bottom: 0;
+    border-left: 0;
+    position: absolute;
+    right: 12px;
+    top: 18px;
+}
 .mainSrhBx .srhTxtList li .bold{color:orange;font-weight:700; }
 .mainSrhBx .srhTxtList li span{vertical-align: baseline;}
 .mainSrhBx .inputSrhBx{position:relative;width:100%;height:3.75em;padding: 5px 18px 0;border:2px solid #FF3333;background: #fff;border-radius:80px;box-sizing: border-box;}

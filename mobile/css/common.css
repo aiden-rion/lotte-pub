@@ -678,7 +678,8 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
 
 .btn-group.bt-right{
     position:absolute;
-    right:0; top:-54px;
+    right:0;
+    top: -9px;
 }
 .btn-group .bt-favorite {
     min-width:49px;
@@ -1064,12 +1065,14 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
     width: calc(100% - 89px);
     height: 44px;
     padding: 0 50px 0 45px;
-    font-size: 16px; font-weight:500;
+    font-size: 16px;
+    font-weight:500;
     background-color: #F3F6F8;
     border-color: #F3F6F8;
     -webkit-border-radius: 8px;
     border-radius: 8px;
     z-index: 2;
+    border: 1px solid;
 }
 .list-search .sch-group input::placeholder{
     color: #555;
@@ -1392,7 +1395,7 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
     content:'렌트';
     display: block;
     position: absolute;
-    left: 16px;
+    left: 11px;
     bottom: 6px;
     padding: 5px 9px;
     font-size: 11px;
@@ -1810,7 +1813,7 @@ footer .foot-app .bt-app-ios {background:url("../images/common/foot-link-ios.png
 
 /* layer-popup */
 body.modalOpen {min-height:100vh;overflow:hidden; height: 100%;}
-.layer_popup_wrappper {position:fixed;top:0;right:0;left:0;bottom:0;width:100%;height:100%;overflow-x:hidden;overflow-y:auto;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-user-drag:none;z-index: 999999;display:none}
+.layer_popup_wrappper {position:fixed;top:0;right:0;left:0;bottom:0;width:100%;height:100%;overflow-x:hidden;overflow-y:auto;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-user-drag:none;z-index: 999999;display: none;}
 .layer_popup_wrappper:after {content:"";position:fixed;top:0;right:0;left:0;bottom:0;display:block;background:#000;opacity:0.1;}
 .layer_popup {position:absolute;left:0;right:0;top:60px;z-index:10020;}
 .vM .layer_popup {top:50%;left:10px;right:10px;transform:translate(0%,-50%);-webkit-transform:translate(0%,-50%);}

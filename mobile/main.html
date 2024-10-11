@@ -171,8 +171,6 @@
 
     <!--  컨텐츠 시작 -->
     <main class="layout--containter main-rent">
-
-
     <div class="mainContents">
         <div class="mainCon1">
             <div class="mainVisualBx">
@@ -208,7 +206,7 @@
                 </div>
 
                 <div class="srhBx">
-                    <p class="txt"><span class="countNum" data-start="0" data-end="1009"></span> 대의 차량이 기다리고 있어요!</p>
+                    <p class="txt"><span class="countNum" data-start="0" data-end="1325"></span> 대의 차량이 기다리고 있어요!</p>
                     <button type="button" class="btnSrhOpen">어떤 차량이 궁금하세요?</button>
                     <i class="iconSroll"></i>
                 </div>  
@@ -243,7 +241,7 @@
 
                 <div class="srhWrap">
                     <div class="mainSrhBx">
-                        <p class="txt"><span class="countNum" data-start="0" data-end="1009"></span> 대의 차량이 기다리고 있어요!</p>
+                        <p class="txt"><span class="countNum" data-start="0" data-end="1325"></span> 대의 차량이 기다리고 있어요!</p>
                         <div class="inputSrhBx">
                             <input type="text" class="mainSrhTxt" placeholder="어떤 차량이 궁금하세요?" title="검색어 입력">
                             <ul class="srhTxtList">
@@ -297,6 +295,7 @@
                 
                 $('.btnSrhOpen').on('click', function() {    
                     $('.srhBx').hide();
+                    $('.vsLeft > a').hide();
                     $('.srhWrap').fadeIn(() => {
                         $('.mainSrhTxt').focus(); // 영역이 활성화되면 입력창에 포커스
                     });
@@ -304,6 +303,7 @@
                 
                 $('.btnSrhClose').on('click', function() {    
                     $('.srhBx').show();
+                    $('.vsLeft > a').show();
                     $('.srhWrap').fadeOut();
                 });
                 </script>
@@ -642,58 +642,11 @@
                             </ul>
                         </div>
                         <div class="Keytab">
-                            <ul class="swiper-wrapper carKeywordList"> 
+                            <ul class="swiper-wrapper carKeywordList">
                                 <li class="swiper-slide">
                                     <a href="#">
 
-                                        <div class="imgBx">
-                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
-                                        </div>
-                                        <div class="carTxtCon">
-                                            <dl class="txtTit">
-                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
-                                                <dd>2021.09(22년형)</dd>
-                                                <dd>126,792km</dd>  
-                                                <dd>하이브리드</dd>
-                                            </dl>
-                                            <dl class="txtPrice">
-                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
-                                                <dd>신차가 80,000,000원</dd>
-                                            </dl>
-                                            <ul class="badgeList">
-                                                <li class="direct">다이렉트 전용</li>
-                                                <li>정기관리</li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#">
-
-                                        <div class="imgBx">
-                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
-                                        </div>
-                                        <div class="carTxtCon">
-                                            <dl class="txtTit">
-                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
-                                                <dd>2021.09(22년형)</dd>
-                                                <dd>하이브리드</dd>
-                                            </dl>
-                                            <dl class="txtPrice">
-                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
-                                                <dd>신차가 80,000,000원</dd>
-                                            </dl>
-                                            <ul class="badgeList">
-                                                <li>무사고</li>
-                                                <li>정기관리</li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#">
-
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car4.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">
@@ -718,7 +671,122 @@
                                 <li class="swiper-slide">
                                     <a href="#">
 
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx saleType">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt><span class="bold">12,800,000</span>원</dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car1.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">
@@ -743,7 +811,85 @@
                                 <li class="swiper-slide">
                                     <a href="#">
 
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <div class="Keytab">
+                            <ul class="swiper-wrapper carKeywordList">
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car2.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">
@@ -766,8 +912,53 @@
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#">
+                                        <div class="imgBx saleType">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt><span class="bold">12,800,000</span>원</dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
 
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car3.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">
@@ -790,7 +981,30 @@
                                 <li class="swiper-slide">
                                     <a href="#">
 
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car4.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">
@@ -816,10 +1030,55 @@
                         </div>
                         <div class="Keytab">
                             <ul class="swiper-wrapper carKeywordList">
-                                <li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx saleType">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt><span class="bold">12,800,000</span>원</dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
                                     <a href="#">
 
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car3.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">
@@ -839,10 +1098,10 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="swiper-slide">
                                     <a href="#">
 
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car4.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">
@@ -857,17 +1116,16 @@
                                                 <dd>신차가 80,000,000원</dd>
                                             </dl>
                                             <ul class="badgeList">
-                                                <li class="direct">다이렉트 전용</li>
                                                 <li>무사고</li>
                                                 <li>정기관리</li>
                                             </ul>
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="swiper-slide">
                                     <a href="#">
 
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car1.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">
@@ -889,10 +1147,10 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="swiper-slide">
                                     <a href="#">
 
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car2.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">
@@ -913,10 +1171,10 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="swiper-slide">
                                     <a href="#">
 
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car3.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">
@@ -936,10 +1194,203 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="swiper-slide">
                                     <a href="#">
 
-                                        <div class="imgBx">
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="Keytab">
+                            <ul class="swiper-wrapper carKeywordList">
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx saleType">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt><span class="bold">12,800,000</span>원</dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car4.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car1.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car2.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>126,792km</dd>  
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li class="direct">다이렉트 전용</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
+                                            <img src="./images/renew/sample_car3.png" alt="자동차샘플">
+                                        </div>
+                                        <div class="carTxtCon">
+                                            <dl class="txtTit">
+                                                <dt>현대 쏘나타(DN8) 하이브리드 2.0 HEV 인스퍼레이션</dt>
+                                                <dd>2021.09(22년형)</dd>
+                                                <dd>하이브리드</dd>
+                                            </dl>
+                                            <dl class="txtPrice">
+                                                <dt>월 <span class="bold">600,000</span>원<span class="month">/ 24개월</span></dt>
+                                                <dd>신차가 80,000,000원</dd>
+                                            </dl>
+                                            <ul class="badgeList">
+                                                <li>무사고</li>
+                                                <li>정기관리</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+
+                                        <div class="imgBx rentType">
                                             <img src="./images/renew/sample_car4.png" alt="자동차샘플">
                                         </div>
                                         <div class="carTxtCon">

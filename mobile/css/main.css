@@ -449,8 +449,8 @@ html,
     color: #1A1A1A;
 }
 .popular-slider .badge .officer {
-    background: #F0EFF4;
-    color: #1A1A1A;
+    /* background: #d9d9d9; */
+    /* color: #1A1A1A; */
 }
 .popular-slider .badge .direct {
     background-color: #FF3333;
