@@ -1,0 +1,1281 @@
+@charset "utf-8";
+
+/* visual */
+.layout--visual {
+    position: relative;
+    padding-top: 80px;
+}
+.layout--visual .swiper {
+    height: 200px;
+    background-color: #202020;
+}
+.layout--visual .swiper .swiper-slide {
+    cursor: pointer;
+}
+.main--container {
+    margin-top: 80px;
+    padding: 0;
+}
+
+.main--container .layout-row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex-row {
+    display: flex;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+/* 메인베너 */
+.visual-slider {
+    position: relative;
+}
+.visual-slider .paging-wrap {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    z-index: 10;
+    width: 1200px;
+}
+.visual-slider .swiper-pagination-custom {
+    width: fit-content;
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: rgba(26, 26, 26, 0.60);
+    font-size: 13px;
+    color: #fff;
+}
+/* 차량선택 */
+
+.brand-area .title p {
+    font-size: 32px;
+    margin-bottom: 24px;
+    font-weight: 800;
+}
+.brand-area .title strong {
+    color: #f33;
+    letter-spacing: -1px;
+    font-weight: 800;
+}
+
+
+/* 메인 검색 필터 */
+.brand-filter {
+    width: 792px;
+    height: 280px;
+    border: 1px solid #000;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.brand-filter .header-tab {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.brand-filter .header-tab button {
+    padding: 6px 16px;
+    color: #666;
+    border-radius: 16px;
+    font-weight: 700;
+}
+.brand-filter .header-tab button.on {
+    background: #FFF2F2;
+    color: #f33;
+    font-weight: 700;
+}
+.brand-filter .header-tab button:hover {
+    color: #f33;
+}
+.brand-filter .tab-content.on {
+    margin: 0;
+}
+.sub-tab-content {
+    display: none;
+    height: 154px;
+}
+.sub-tab-content.on {
+    display: flex;
+    align-items: center;
+}
+.sub-tab-wrap .sub-tab {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+}
+.sub-tab-wrap .sub-tab button:not(.btn-more) {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    padding: 18px 16px;
+    text-align: left;
+    color: #1A1A1A;
+    background:#FFF;
+}
+.sub-tab-wrap .sub-tab button:disabled{
+    color: #999;
+    background:#F7F7F7;
+}
+.sub-tab button img {
+    position: relative;
+    margin-right: 8px;
+    max-width: 34px;
+    max-height: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sub-tab-wrap .sub-tab button:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    background: url('../images/rent_new/icon/arrow_down_black_s.svg') center/cover no-repeat;
+}
+.sub-tab-wrap .sub-tab button:disabled:after{
+    opacity:0.3;
+}
+
+.sub-tab-wrap .sub-tab button:last-child:after {
+    background:none;
+}
+.sub-tab-wrap .sub-tab button:nth-child(3) p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    width: 130px;
+}
+
+.sub-tab-wrap .sub-tab button.on:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    background: url('../images/rent_new/icon/arrow_up_black_s.svg') center/cover no-repeat;
+}
+.sub-tab-wrap .sub-tab button.on {
+    background: #FFF;
+    color: #1A1A1A;
+    font-weight:800;
+}
+.sub-tab-wrap .sub-tab button + button {
+    border-left: 1px solid #E6E6E6;
+}
+.sub-tab-wrap .sub-tab .new-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.sub-tab-wrap .sub-tab .new-title span {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    width: 95px;
+}
+.brand-filter .sub-tab-wrap .sub-tab button.btn-more,
+.brand-filter .tit-wrap button.btn-more {
+    margin-right: -1px;
+    padding: 18px 16px;
+    width: 214px;
+    text-align: center;
+    font-weight: 700;
+    background: #f33;
+    color: #fff;
+}
+.brand-filter .car-list .swiper-scrollbar-drag, .brand-filter .detail-car-list .swiper-scrollbar-drag {
+    background: #DDDDDD;
+}
+.brand-filter .car-list .swiper-scrollbar, .brand-filter .detail-car-list .swiper-scrollbar {
+    height: 4px;
+    padding: 0 14px;
+    background: #fff;
+    top: 148px;
+}
+/* 브랜드선택 */
+.brand-filter .brand-list {
+    width: 100%;
+    height: 154px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brand-filter .brand-list ul {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand-filter .brand-list li{
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    height: 100%;
+    transition: background 0.2s;
+}
+.brand-filter .brand-list li:hover {
+    background: #F5F7FA;
+}
+.brand-filter .brand-list li button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 15px;
+    width: 100%;
+    text-align: center;
+}
+.brand-filter .brand-list li button span{
+    display: block;
+}
+.brand-filter .brand-list li img {
+    width: 50%;
+    transition: transform 0.2s;
+}
+.brand-filter .brand-list li:hover img {
+    transform: scale(1.2);
+}
+
+/* 모델선택 */
+.brand-filter .car-list,
+.brand-filter .detail-car-list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+.brand-filter .car-list .swiper-slide,
+.brand-filter .detail-car-list .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.brand-filter .car-list .swiper-slide span,
+.brand-filter .detail-car-list .swiper-slide span {
+    word-break: auto-phrase
+}
+.brand-filter .car-list button img, .brand-filter .car-list button, .brand-filter .detail-car-list button img {
+    width: 93%;
+    object-fit: contain;
+}
+.brand-filter .car-list button,
+.brand-filter .detail-car-list button {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    white-space: pre-line;
+    transition: all 0.2s;
+}
+.brand-filter .car-list .swiper-slide:hover,
+.brand-filter .detail-car-list .swiper-slide:hover {
+    background: #F5F7FA;
+    transition: all 0.2s;
+}
+
+/* 차종선택 */
+.brand-filter .tit-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E6E6E6;
+}
+.brand-filter .car-type .tit-wrap p {
+    padding-left: 26px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.brand-filter .car-type .tit-wrap span {
+    color: #999;
+    font-weight: 400;
+}
+.brand-filter .car-type ul {
+    display: flex;
+    justify-content: space-between;
+}
+.brand-filter .car-type ul li {
+    flex: 1;
+    text-align: center;
+}
+.brand-filter .car-type ul li {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.brand-filter .car-type ul li input {
+    width: 100%;
+    height: 64px;
+    margin: 20px 0 16px;
+    background-image: none;
+    background-size: contain;
+    opacity: 0.4;
+}
+.content-wrap ul li input[type="checkbox"]+ label {
+    opacity: 0.4;
+}
+.content-wrap ul li input[type="checkbox"]:checked + label {
+    opacity: 100%;
+}
+.brand-filter .car-type ul li input:checked {
+    opacity: 100;
+}
+.brand-filter .car-type ul li:nth-child(1) input {
+    background-image: url("../images/rent_new/main/filter_icon01.png");
+}
+.brand-filter .car-type ul li:nth-child(2) input {
+    background-image: url("../images/rent_new/main/filter_icon02.png");
+}
+.brand-filter .car-type ul li:nth-child(3) input {
+    background-image: url("../images/rent_new/main/filter_icon03.png");
+}
+.brand-filter .car-type ul li:nth-child(4) input {
+    background-image: url("../images/rent_new/main/filter_icon04.png");
+}
+.brand-filter .car-type ul li:nth-child(5) input {
+    background-image: url("../images/rent_new/main/filter_icon05.png");
+}
+.brand-filter .car-type ul li:nth-child(6) input {
+    background-image: url("../images/rent_new/main/filter_icon06.png");
+}
+
+.brand-filter .car-type ul:after {
+    display: none;
+}
+.brand-filter .car-type .car-tag {
+    height: 100%;
+    padding-left: 24px;
+    margin-top: 0;
+    overflow-x: scroll;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    white-space: nowrap;
+}
+
+.brand-filter .car-type .car-tag li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 12px;
+    padding: 0 12px;
+    height: 36px;
+    border: 1px solid #E6E6E6;
+    border-radius: 50px;
+}
+.brand-filter .car-type .car-tag li button {
+    width: 15px;
+    height: 15px;
+    background: url("../images/rent_new/icon/icon_close_grey.svg") center/cover;
+}
+.brand-filter .car-type .car-tag li a {
+    margin-right: 4px;
+    border: none;
+}
+.brand-filter .car-type .car-tag::-webkit-scrollbar {
+    height: 5px;
+}
+
+
+
+/* 가격별 검색 */
+.price-range-wrap .tit-wrap {
+    border-bottom: 1px solid #E6E6E6;
+}
+.price-range-wrap .input-wrap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+.price-range-wrap .input-wrap::before {
+    position: absolute;
+    display: block;
+    content: "~";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.price-range-wrap .input-wrap div {
+    position: relative;
+    padding: 0 16px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.price-range-wrap .input-wrap div p {
+    width: 105px;
+}
+.price-range-wrap .input-wrap div input {
+    padding: 0 35px 0 0 ;
+    border: none;
+    text-align: right;
+    font-weight: 800;
+    font-size: 20px;
+}
+.price-range-wrap .input-wrap div:after {
+    position: absolute;
+    content: "만원";
+    top: 16px;
+    right: 16px;
+    font-size: 16px;
+}
+.price-range-wrap .input-wrap div input::placeholder {
+    font-size: 20px;
+    font-weight: 700;
+    color: #999;
+}
+
+.price-range-wrap .range-cont .range {
+    width: 99%;
+    padding: 32px 56px 0;
+}
+.price-range-wrap .range-txt {
+    position: relative;
+}
+.price-range-wrap .range-txt li {
+    position: absolute;
+    display: flex;
+    top: 16px;
+    left: 50px;
+    content: '';
+}
+.price-range-wrap .range-txt li:nth-child(2) {
+    left: 174px;
+}
+.price-range-wrap .range-txt li:nth-child(3) {
+    left: 307px;
+}
+.price-range-wrap .range-txt li:nth-child(4) {
+    left: 442px;
+}
+.price-range-wrap .range-txt li:nth-child(5) {
+    left: 577px;
+}
+.price-range-wrap .range-txt li:nth-child(6) {
+    left: 705px;
+}
+.price-range-wrap .range-txt
+
+.price-range-wrap .content-wrap {
+    padding: 22px 0 0;
+}
+.price-range-wrap .ui-slider-handle {
+    width: 24px;
+    height: 24px;
+    top: -10px;
+    border-radius: 50%;
+    background: #fff !important;
+    border: 1px solid #E6E6E6 !important;
+    cursor: pointer;
+}
+.price-range-wrap .ui-widget.ui-widget-content {
+    border: none;
+    background: #DDDDDD;
+    border-radius: 50px;
+}
+.price-range-wrap .ui-slider-horizontal {
+    height: 4px;
+}
+.price-range-wrap .ui-widget-header {
+    background: #000 !important;
+}
+.price-range-wrap .hash-tag {
+    margin-top: 56px;
+}
+.price-range-wrap .hash-tag ul {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.price-range-wrap .hash-tag ul li {
+    padding: 8px 12px;
+    border: 1px solid #E6E6E6;
+    border-radius: 50px;
+}
+.price-range-wrap .hash-tag ul:after {
+    display: none;
+}
+.price-range-wrap .hash-tag::after {
+    display: none;
+}
+
+/* 차량명 검색 */
+.search-name-wrap .tit-wrap input {
+    padding-left: 44px;
+    width: 100%;
+    border: none;
+    background-image: url("../images/rent_new/icon/ico-search.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+.search-name-wrap .content-wrap {
+    overflow-y: visible;
+    background: #F5F7FA;
+    padding: 16px 24px;
+    height: 100vh;
+}
+.search-name-wrap .content-wrap ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.search-name-wrap .content-wrap .search-list ul {
+    padding-top: 10px;
+    gap: 20px;
+    color: #666;
+}
+.search-name-wrap .content-wrap .result-list {
+    font-size: 20px;
+    height: 140px;
+    overflow-y: scroll;
+
+}
+.search-name-wrap .content-wrap .result-list ul {
+    height: 100%;
+}
+.search-name-wrap .content-wrap .result-list ul li {
+    cursor:pointer;
+}
+
+.tag-slider {
+    position: relative;
+    margin-top: 24px;
+    width: 792px;
+}
+.tag-slider .swiper-slide {
+    width: fit-content;
+}
+.tag-slider .swiper-slide a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    height: 40px;
+    border: 1px solid #E6E6E6;
+    border-radius: 50px;
+    font-weight: 700;
+    color: #666;
+}
+.tag-slider .swiper-slide.type2 a {
+    border: 1px solid #E9E9E9;
+    border-radius: 50px;
+    background: #EDF4FF;
+    font-weight: 400;
+    color: #4B87FF;
+}
+.tag-slider .swiper-slide.type2 a:before {
+    content: '';
+    display: inline-block;
+    margin-right: 4px;
+    width: 21px;
+    height: 21px;
+    background: url("../images/rent_new/icon/ico-promotion.png") 50%/21px auto;
+    vertical-align: middle;
+}
+.tag-slider .swiper-slide a:hover {
+    border-color:#1A1A1A;
+    color: #1A1A1A;
+}
+.tag-slider .custom-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+    z-index: 10;
+}
+.tag-slider .custom-wrap div {
+    width: 50px;
+    height: 43px;
+    background: #fff;
+}
+.tag-slider .custom-wrap .swiper-button-next {
+}
+.tag-slider .custom-wrap .swiper-button-next:after {
+    display: none;
+}
+.tag-slider .custom-wrap .swiper-button-next:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 44px;
+    top: 0;
+    left: 10px;
+    background: url("../images/rent_new/icon/swiper-arr-r.png") center/contain no-repeat;
+}
+
+
+
+
+
+/* 인기모델 */
+.models-area {
+    position: relative;
+    width: 384px;
+}
+.models-area .swiper {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 364px;
+}
+
+.models-area .swiper-slide {
+    left: 0;
+    width: 100%;
+    height: 240px;
+    height: 100%;
+}
+
+.models-area .card-slide {
+    width: 100%;
+    height: 248px;
+    border-radius: 16px;
+    border: 1px solid #DCE3EF;
+    background: #ECF2FD;
+    padding: 24px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+
+.models-area .card-slide .page-num {
+    position: absolute;
+    left: 160px;
+    top: 16px;
+    color: #8C9BB7;
+    text-align: center;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 96px;
+    opacity: 0.1;
+}
+.models-area .card-slide .img-wrap {
+    position: absolute;
+    transform:translateX(100px);
+    right: 0px;
+    top: 52px;
+}
+.models-area .card-slide dl dt:nth-child(2) {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 32px;
+}
+.models-area .card-slide dl dt:nth-child(3) {
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+
+.models-area .card-slide .page-num {
+    transform: translateY(50px);
+    opacity: 0;
+}
+.models-area .card-slide dl {
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.models-area .swiper-slide:nth-child(1) {top: 0px; }
+.models-area .swiper-slide:nth-child(2) {top: 25px; }
+.models-area .swiper-slide:nth-child(3) {top: 50px; }
+.models-area .swiper-slide:nth-child(4) {top: 75px; }
+.models-area .swiper-slide:nth-child(5) {top: 100px; }
+
+.models-area h2 {
+    margin-bottom: 24px;
+    font-size: 32px;
+    font-weight: 800;
+}
+.btn-custom {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.models-area .swiper-slide .img-wrap img {
+    transform: translateX(500px) scale(0.1) translateY(50px);
+    opacity: 0;
+    scale: 0.1;
+}
+
+.models-area .swiper-slide-active .img-wrap img {
+    scale: 1;
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    transition-duration:0.2s;
+}
+
+.models-area .swiper-slide-active .page-num {
+    transform: translateY(0);
+    opacity: 0.1;
+    transition-duration:0.2s;
+}
+.models-area .swiper-slide-active .card-slide dl{
+    transform: translateY(0);
+    opacity: 1;
+    transition-duration:0.2s;
+}
+.models-area .swiper-slide .card-slide dt:first-of-type {
+    margin-bottom: 15px;
+    width: 35px;
+    height: 20px;
+}
+.models-area .swiper-slide-active .card-slide {
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.05);
+}
+
+.models-area .swiper-slide.theme-01 .card-slide {border: 1px solid #E1E7F1;background: #ECF2FD;}
+.models-area .swiper-slide.theme-02 .card-slide {border: 1px solid #EBE4E4;background: #F3EBEB;}
+.models-area .swiper-slide.theme-03 .card-slide {border: 1px solid #E9E8E0;background: #F4F3EB;}
+.models-area .swiper-slide.theme-04 .card-slide {border: 1px solid #E5E4F2;background: #F0EFFE;}
+.models-area .swiper-slide.theme-05 .card-slide {border: 1px solid #E4EDEF;background: #EFF9FB;}
+
+.models-area .swiper-button-prev,
+.models-area .swiper-button-next{top: 15px;height: auto;margin: 0;}
+.models-area .swiper-button-prev{right: 52px;left: auto;}
+.models-area .swiper-button-next{right: 8px;}
+
+.models-area .swiper-button-prev::after,
+.models-area .swiper-button-next:after{
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+/* 중간배너 */
+.main--container .banner-area {
+    display: flex;
+    justify-content: space-between;
+    height: 142px;
+    margin:48px 0 80px 0;
+}
+.main--container .banner-area a {
+    display: block;
+    width: 588px;
+    height: 142px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.main--container .banner-area a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 조회수많은 차량 */
+.popular-area {
+    position: relative;
+    margin-bottom: 80px;
+}
+.popular-area h2 {
+    margin-bottom: 20px;
+}
+.popular-area .swiper {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.popular-area .swiper .swiper-slide a {
+    display: block;
+}
+.popular-area .swiper .img-wrap {
+    width: 100%;
+    height: 165px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.popular-area .swiper .img-wrap img {
+    height: 100%;
+    object-fit: cover;
+}
+.popular-area .swiper dl {
+    display: flex;
+    flex-wrap: wrap;
+    height: 77px;
+    margin-bottom: 12px;
+}
+.popular-area .swiper dl dt {
+    width: 100%;
+    margin-bottom: 8px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.32px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    align-self: stretch;
+}
+.popular-area .swiper dl dd {
+    position: relative;
+    margin-right: 10px;
+    color: #666;
+    letter-spacing: -0.28px;
+}
+.popular-area .swiper dl dd:after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 10px;
+    top: 6px;
+    right: -6px;
+    background: #E6E6E6;
+}
+.popular-area .swiper dl dd:last-child:after{
+    display: none;
+}
+.popular-area .swiper .txt-wrap {
+    padding: 0 4px;
+}
+.popular-area .swiper .txt-wrap p {
+    font-size: 20px;
+    color: #F33;
+    font-weight: 800;
+    letter-spacing: -0.32px;
+}
+.popular-area .swiper .txt-wrap p span {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 8px;
+}
+.popular-area .swiper .badge {
+    height: 36px;
+}
+.popular-area .swiper .badge ul {
+    display: flex;
+    margin-bottom: 12px;
+}
+.popular-area .swiper .badge ul li { display: flex; justify-content: center; align-items: center; width: max-content; height: 21px; line-height: 21px; padding: 0px 4px; margin-right: 4px; margin-bottom: 5px; border: 0; color: #1A1A1A; background: #F0EFF4; border-radius: 4px; text-align: center; font-size: 12px; font-weight: 700; }
+.popular-area .swiper .badge ul li.certification { color: #1A1A1A; background-color: #F0EFF4; }
+.popular-area .swiper .badge ul li.diagnosis { color: #1A1A1A; background: #F0EFF4; }
+.popular-area .swiper .badge ul li.direct { color: #fff; background-color: #FF3333; }
+.popular-area .swiper .badge ul li.promotion { color: #fff; background-color: #111111; }
+.popular-area .swiper-button-prev,
+.popular-area .swiper-button-next{height: auto;margin: 0;}
+.popular-area .swiper-button-prev{left: -60px;}
+.popular-area .swiper-button-next{right: -60px;}
+
+.popular-area .swiper-button-prev::after,
+.popular-area .swiper-button-next:after{
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+
+/* 테마기획전 */
+.theme-area {height: 160px;margin: 24px 0 80px 0;}
+.layout-row .tit-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.layout-row .tit-flex .btn-more {
+    font-size: 20px;
+    color: #666;
+}
+.theme-area .swiper-wrapper .swiper-slide {
+    font-size: 0;
+    height: 160px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.theme-area .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.theme-area .swiper-button-prev,
+.theme-area .swiper-button-next{
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.theme-area .swiper-button-prev{left: 48px;}
+.theme-area .swiper-button-next{right: 48px;}
+
+.theme-area .swiper-button-prev::after,
+.theme-area .swiper-button-next:after{
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+
+
+
+
+
+.car-list-area .acc-title dl {
+    background: #F5F7FA;
+}
+.car-list-area .acc-title dl dt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 0 24px;
+    border-bottom: 1px solid #E6E6E6;
+    cursor: pointer;
+}
+.car-list-area .acc-title li:last-child dl dt {
+    border: none;
+}
+.car-list-area .acc-title dl dt::before{
+    content: '';
+    width: 1px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background-color: #999;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.car-list-area .acc-title dl dt::after{
+    content: '';
+    width: 14px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    background-color: #999;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.car-list-area .acc-title li.active dl dt{
+    border-bottom: none;
+}
+.car-list-area .acc-title li.active dl dt::before{
+    transform: translateY(-50%) rotate(-90deg);
+}
+.car-list-area .acc-title li.active dl dt::after{
+    transform: translateY(-50%) rotate(180deg);
+}
+.car-list-area .acc-title li.active dl dd::after{
+    content: '';
+    width: 32px;
+    height: 16px;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #F5F7FA;
+}
+.acc-contents .accoianContents {
+    display: none;
+}
+.acc-contents .accoianContents.active {
+    display: block;
+}
+.car-list-area .acc-title dl dd {
+    position: relative;
+    font-size: 20px;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car-list-area .acc-title dl dd .point {
+    color: #f33;
+}
+
+
+.car-list-area .acc-title dl dd a {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    padding-right: 20px;
+    color: #666;
+    font-size: 20px;
+    background-image: url("../images/rent_new/icon/card-arr-r.png");
+    background-size: 24px 24px;
+    background-position: 90px 50%;
+    background-repeat: no-repeat;
+}
+
+
+.car-list-area .acc-contents {
+    width: 850px;
+}
+.car-list-area .acc-contents .total-num {
+    position: absolute;
+    width: 52vw;
+    padding: 40px 0px 24px;
+    top: 0;
+    font-size: 20px;
+    font-weight: 700;
+    background: #fff;
+}
+.car-list-area .acc-contents p {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    padding:40px 0 0 48px;
+}
+.car-list-area .acc-contents dl dd p {
+    font-weight: 800;
+    margin-bottom: 0;
+    padding: 0;
+}
+.car-list-area .acc-contents .inner-scroll {
+    height: 500px;
+    overflow-y:auto;
+    overflow-x: hidden;
+    padding: 0 40px 48px;
+    margin: 100px 10px 0 0;
+}
+
+.car-list-area .acc-contents ul {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 24px;
+}
+.car-list-area .acc-contents ul li {
+    width: 236px;
+}
+.car-list-area .acc-contents .img-wrap {
+    width: 100%;
+    height: 185px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.car-list-area .acc-contents .img-wrap img {
+    height: 100%;
+    object-fit: cover;
+}
+.car-list-area .acc-contents dl dt {
+    width: 100%;
+    margin-bottom: 4px;
+    overflow: hidden;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    align-self: stretch;
+}
+.car-list-area .acc-contents dl dd {
+    font-size: 20px;
+    color: #F33;
+    font-weight: 800;
+}
+.car-list-area .acc-contents dl dd span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* 인증차,진단차,관리차 */
+.car-list-area {
+    position: relative;
+    border: 1px solid #E6E6E6;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 80px;
+}
+.car-list-area .acc-title {
+    width: 350px;
+    height: 600px;
+    border-right: 1px solid #E6E6E6;
+}
+.car-list-area .acc-title ul li {
+    height:100%;
+    overflow: hidden;
+}
+.car-list-area .acc-title ul li dl dd {
+    height: 0px;
+    opacity: 0;
+    padding: 0;
+    transition: 0.3s height ;
+}
+.car-list-area .acc-title ul li.active dl dd {
+    height: 400px;
+    padding: 24px;
+    transition: 0.3s height ;
+    opacity: 100;
+}
+.car-list-area .acc-title ul li.active a {
+    display: block;
+    opacity: 100;
+}
+
+/* 다른 고객 후기 */
+.customer-reviews {
+    padding: 90px 0;
+    background-color: #F3F6FA;
+}
+hgroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+hgroup a {
+    font-size: 14px;
+    color: #666;
+}
+hgroup a:hover {
+    color: #1A1A1A;
+}
+
+.review-area {
+    position: relative;
+}
+.review-slider .car-info .user-info div:first-child {
+    margin-bottom: 10px;
+    margin-top: 17px;
+    min-height: 40px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.review-area .swiper-slide {
+    width: 380px;
+    height: 158px;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.review-area .img-wrap {
+    height: 200px;
+    overflow: hidden;
+}
+.review-area .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.review-area .car-info {
+    height: 200px;
+    padding: 16px;
+}
+.review-area .car-info .car-name {
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 700;
+}
+.review-area .car-info .rating {
+    display: flex;
+    align-items: center;
+}
+.review-area .car-info .rating ul {
+    display: flex;
+    margin-right: 4px;
+}
+.review-area .car-info .rating ul .star {
+    width: 16px;
+    height: 16px;
+    background: url("../images/rent_new/icon/star_blank.png") center/contain no-repeat;
+}
+.review-area .car-info .rating ul .star.full{
+    background: url("../images/rent_new/icon/star_full.png") center/contain no-repeat;
+}
+.review-area .car-info .rating ul .star.half{
+    background: url("../images/rent_new/icon/star_half.png") center/contain no-repeat;
+}
+.review-area .car-info .rating .rate {
+    font-size: 16px;
+    color: #666;
+}
+
+.review-area .user-info p {
+    font-size: 14px;
+    height: 45px;
+    margin: 16px 0 4px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.review-area .user-name  {
+    display: flex;
+}
+.review-area .user-name span {
+    position: relative;
+    display: block;
+    color: #999;
+    line-height: 1;
+    font-size: 13px;
+}
+
+.review-area .user-name span:first-child {
+    margin-right: 10px;
+    padding-right: 12px;
+    font-size: 13px;
+}
+.review-area .user-name span:first-child::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #E6E6E6;
+    transform: translateY(-50%);
+}
+
+
+.review-area .swiper-button-prev,
+.review-area .swiper-button-next{height: auto;margin: 0;}
+.review-area .swiper-button-prev{left: -60px;}
+.review-area .swiper-button-next{right: -60px;}
+
+.review-area .swiper-button-prev::after,
+.review-area .swiper-button-next:after{
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a1a;
+}

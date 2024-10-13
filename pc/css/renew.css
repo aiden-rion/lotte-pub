@@ -1,13 +1,13 @@
-﻿﻿@charset "UTF-8";
+@charset "UTF-8";
 
 body{}
 body{}
 #wrap{}
 
 .suit{font-family:'SUIT';}
-.pretendard{font-family:'pretendard', 'Noto Sans KR', sans-serif;}
+.pretendard{font-family:'Pretendard', 'Noto Sans KR', sans-serif;}
 .txtHid{overflow:hidden;width:0;height:0;font-size:0;}
-html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-family:'pretendard', 'Noto Sans KR', sans-serif;}
+html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-family: 'Pretendard', 'Noto Sans KR', sans-serif;}
 
 .layout--header-new{min-width:1200px;}
 .layout--header-new header{max-width:100%;min-width:1200px;justify-content:center;}
@@ -34,9 +34,10 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .visualTxt > div{position:relative;height:100%;box-sizing: border-box;text-align: center;display: flex;flex-direction: column;align-items: center;justify-content: center;text-align:center;overflow:hidden;}
 .visualTxt > div a{display:inline-block;position: relative;z-index:5;width: 55%;padding: 10% 0;margin-top:17%;}
 .visualTxt > div a .vsTit{animation:txtLeft 1s ease-in-out both ;display:block;font-size:24px;font-weight:700;color:#FFF;line-height:28px;}
-.visualTxt > div a .vsEx{animation:txtLeft 1s 0.3s ease-in-out both ;display:block;margin:24px 0 48px;font-size:40px;font-weight:700;color:#fff;line-height:56px;}
+.visualTxt > div a .vsEx{animation:txtLeft 1s 0.3s ease-in-out both;display:block;margin:24px 0 48px;font-size: 30px;font-weight:700;color:#fff;line-height: 40px;}
+.visualTxt > div.active a .vsEx{animation: none;display:block;margin:24px 0 48px;font-size: 40px;font-weight:700;color:#fff;line-height: 55px;}
 .visualTxt .vsRight a .vsTit{animation:txtRight 1s 0.3s ease-in-out both ;}
-.visualTxt .vsRight a .vsEx{animation:txtRight 1s 0.8s ease-in-out both ;}
+.visualTxt .vsRight a .vsEx{animation: none;}
 .visualTxt .vsRight .vsBg2{background: url(../images/renew/main2.jpg) no-repeat 0 0;background-size:cover;}
 .visualTxt .vsLeft.active{ width:65%;}
 .visualTxt .vsRight.active{width:65%;} 
@@ -113,7 +114,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 
 
 /* 메인 하단 배너 */
-.mainBanList{display:flex;justify-content:space-between;width:1200px;margin:0 auto;padding:120px 0;}
+.mainBanList{display:flex;justify-content:space-between;width:1200px;margin:0 auto;padding: 90px 0;}
 .mainBanList li{}
 .mainBanList li a{display:block;position:relative;width:380px;height:160px;padding:34px 40px 40px;box-sizing:border-box;border:1px solid #ddd;border-radius:8px;}
 .mainBanList li a::before{display:block;content:'';position:absolute;right:40px;top:40px;width:87px;height:88px;}
@@ -153,7 +154,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .carThemeList > li a{display:block;padding:0 0 15px 0;border-radius:5px;}
 /*.carThemeList > li a:hover{animation:carThemeList 0.5s 1 ease both;}*/
 .carThemeList li .state{display:block;position:absolute;right:12px;top:12px;padding:8px 10px;font-size:12px;font-weight:600;color:#fff;background:rgba(0, 0, 0, 0.4);border-radius:4px;}
-.carThemeList li .imgBx{border-radius:5px;overflow:hidden;}
+.carThemeList li .imgBx{border-radius:5px;overflow:hidden;position: relative;}
 .carThemeList li .imgBx img{width:280px;height:200px;}
 .carThemeList li .carTxtCon{margin-top:16px;}
 .carThemeList li .carTxtCon dl.txtTit{display:flex;flex-wrap:wrap;height:71px;}
@@ -193,7 +194,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .carKeywordList li{text-align:center;}
 .carKeywordList li a{position:relative;display:inline-block;width:280px;}
 .carKeywordList li .state{display:block;position:absolute;right:12px;top:12px;padding:8px 10px;font-size:12px;font-weight:600;color:#fff;background:rgba(0, 0, 0, 0.4);border-radius:4px;}
-.carKeywordList li .imgBx{border-radius:5px;overflow:hidden;}
+.carKeywordList li .imgBx{border-radius:5px;overflow:hidden; position:relative;}
 .carKeywordList li .imgBx img{width:280px;height:200px;}
 .carKeywordList li .carTxtCon{margin-top:16px;text-align:left;}
 .carKeywordList li .carTxtCon dl.txtTit{display:flex;flex-wrap:wrap;height:71px;}
@@ -348,7 +349,35 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .carBuyList li{text-align:center;}
 .carBuyList li a{position:relative;display:inline-block;width:280px;}
 .carBuyList li .state{display:block;position:absolute;right:12px;top:12px;padding:8px 10px;font-size:12px;font-weight:600;color:#fff;background:rgba(0, 0, 0, 0.4);border-radius:4px;}
-.carBuyList li .imgBx{border-radius:5px;overflow:hidden;}
+.carBuyList li .imgBx{border-radius:5px;overflow:hidden; position:relative;}
+.imgBx.rentType:after{
+    content:'렌트';
+    display: block;
+    position: absolute;
+    left: 6px;
+    bottom: 11px;
+    padding: 5px 9px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: #333;
+    border-radius: 15px;
+}
+.imgBx.saleType:after{
+    content:'구매';
+    display: block;
+    position: absolute;
+    left: 11px;
+    bottom: 15px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background: #EE2929;
+    border-radius: 15px;
+}
+
+
 .carBuyList li .imgBx img{width:280px;height:200px;}
 .carBuyList li .carTxtCon{margin-top:16px;text-align:left;}
 .carBuyList li .carTxtCon dl.txtTit{display:flex;flex-wrap:wrap;height:71px;}
