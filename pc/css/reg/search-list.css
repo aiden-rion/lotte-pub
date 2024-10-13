@@ -158,7 +158,7 @@
     top: 3px;
     font-size: 12px;
     color: #999;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 /* ### 추가 */
@@ -272,7 +272,7 @@
     text-align: center;
     color: #666;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 3px;
 }
 
@@ -392,7 +392,7 @@
 .search-element .select-type-color .bt-item {position:relative;}
 .search-element .select-type-color .bt-item.selected:after {content:"";position:absolute;top:0;left:0;display:block;width:100%;height:36px;background:url('../images/icon/ico-color-check.svg') no-repeat 50% 45%;}
 .search-element .select-type-color .bt-item var {display:block;width:36px;height:36px;margin:0 auto;border-radius:50%;border:1px solid #F3F3F3;background-position:50% 50%;background-size:100%;background-repeat:no-repeat;}
-.search-element .select-type-color .bt-item span {display:block;padding-top:5px;text-align:center;font-size:12px;color:#666;font-weight:300}
+.search-element .select-type-color .bt-item span {display:block;padding-top:5px;text-align:center;font-size:12px;color:#666;font-weight: 500}
 .search-element .select-type-color .bt-item.selected span {font-weight:700;}
 .search-element .select-type-color .bt-more var {background:url("../../images/icon/ico-more-option.png") no-repeat 50% 50%;background-size:36px;border:0;}
 .search-element .select-type-color .bt-more.selected:after {display:none}
@@ -419,7 +419,7 @@
 .search-element .select-type-input .bt-submit {position:absolute;right:0;bottom:0;width:45px;height:30px;border-radius:2px;background:#fff;font-weight:700;color:#303030;border:1px solid #303030;font-size:11px}
 .search-element .type-tab {display:flex;width:100%;margin-bottom:20px;background:#F3F3F3;border-radius:2px;}
 .search-element .type-tab.n2 button {width:50%;}
-.search-element .type-tab button {height:30px;font-size:12px;color:#666;font-weight:300}
+.search-element .type-tab button {height:30px;font-size:12px;color:#666;font-weight: 500}
 .search-element .type-tab button.on {border:1px solid #303030;border-radius:2px;background:#fff;color:#303030;font-weight:700;}
 /* select-type-keyword */
 .search-element .select-type-keyword .sch-box {position:relative;}
@@ -432,7 +432,7 @@
 .search-element .select-type-keyword .sch-cate-group .kwd a {display:block;margin-top:7px;font-size:12px;}
 .search-element .select-type-keyword .sch-cate-group .kwd a em {color:#f33}
 .search-element .keyword-tags {display:flex;flex-wrap:wrap;margin-top:20px;}
-.search-element .keyword-tags .tag {height:30px;margin:0 8px 8px 0;background:#fff;padding:0 12px;border:1px solid #E9E9E9;border-radius:17px;font-size:14px;font-weight:300;}
+.search-element .keyword-tags .tag {height:30px;margin:0 8px 8px 0;background:#fff;padding:0 12px;border:1px solid #E9E9E9;border-radius:17px;font-size:14px;font-weight: 500;}
 .search-element .keyword-tags .tag.on {color:#f33;border:1px solid #f33;}
 
 /* custom scrollbar */
@@ -476,7 +476,7 @@
 
 /* ### 230718 breadcrumb 추가 ~ */
 .list-element .breadcrumb-wrap { text-align: right; margin-bottom: 7px; }
-.list-element .breadcrumb-wrap, .list-element .breadcrumb-wrap a { font-size: 14px; color: #999; font-weight: 300; padding-right: 8px; }
+.list-element .breadcrumb-wrap, .list-element .breadcrumb-wrap a { font-size: 14px; color: #999; font-weight: 500; padding-right: 8px; }
 .list-element .breadcrumb-wrap a { position: relative; margin: 0 6px; }
 .list-element .breadcrumb-wrap a:first-child { margin-left: 0; }
 .list-element .breadcrumb-wrap a::after {
@@ -533,7 +533,7 @@
 }
 
 .search-element .item-model .select-type-checked.model input[type="checkbox"]+label {
-    font-weight: 300;
+    font-weight: 500;
 }
 
 /* ### 230706 로고 추가 */
@@ -623,7 +623,7 @@
     border: 1px solid #E9E9E9;
     border-radius: 2px;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 500;
     background: #fff;
     margin-right: 2px;
 }
@@ -785,7 +785,7 @@
 .search-detail-container {position:relative;width:1240px;margin:0 auto;background:#fff;}
 .search-detail-container .bt-close-detail-view {display:none}
 .search-detail-container .detail-element {height:100%;}
-.search-detail-container.fixed .section-left  {position:fixed;top:0;}
+.search-detail-container.fixed .section-left  {position:fixed;top:80px;}
 .search-detail-container.relate .section-left {position:absolute;top:auto;bottom:0;}
 .search-detail-container.fixed .section-right  {margin-left:790px;}
 .search-detail-container.relate .section-right {margin-left:790px;}
@@ -904,7 +904,7 @@
 .detail-element .layer-360view .layer-inner {position: relative;/* padding: 60px; */z-index: 11;text-align: center;width: auto;background: rgba(0,0,0,0.6);display: inline-block;padding: 18px 28px 15px;-webkit-border-radius: 20px;-moz-border-radius: 20px;-ms-border-radius: 20px;-o-border-radius: 20px;border-radius: 20px;}
 .detail-element .layer-360view .layer-inner * {color: #fff}
 .detail-element .layer-360view .layer-inner h3 {font-size: 18px;font-weight: 700;}
-.detail-element .layer-360view .layer-inner p {font-size: 12px;font-weight: 300;margin-top: 1px;}
+.detail-element .layer-360view .layer-inner p {font-size: 12px;font-weight: 500;margin-top: 1px;}
 .detail-element .layer-360view .layer-inner .icon {display: block;width: 68px;height: 42px;margin: 0 auto;margin-top: 12px;/* background: url("../../images/elements/visual-360view-mark_01.png") no-repeat 50% 50%; */background-size: 100%;position: relative;}
 .detail-element .layer-360view .layer-inner .icon img#img_arrow {display: block;width: 100%;height: auto;}
 .detail-element .layer-360view .layer-inner .icon img#img_hand {display: block;width: 35px;height: auto;position: absolute;top: -5px;left: 20px;animation: view-drag 1.8s cubic-bezier(0.42, 0.0, 0.58, 1.0) infinite;}
@@ -1057,7 +1057,7 @@
 
 
 .detail-element .view-type-btns {display:flex;position:absolute;left:10px;bottom:10px;z-index:10;}
-.detail-element .view-type-btns button {width:54px;height:30px;margin-right:-1px;line-height:31px;text-align:center;border-radius:2px;color:#fff;background:#30303052;font-weight:300;font-size:12px;}
+.detail-element .view-type-btns button {width:54px;height:30px;margin-right:-1px;line-height:31px;text-align:center;border-radius:2px;color:#fff;background:#30303052;font-weight: 500;font-size:12px;}
 .detail-element .view-type-btns button.on {font-weight:700;background:#303030;}
 .detail-element .car-certifed {position:relative;padding-left:280px;min-height:130px;margin-top:10px;background:url("../../images/elements/bg-car-detail-certifed.jpg") no-repeat 0% 0%;background-size:cover}
 .detail-element .car-certifed img {display:block;}
@@ -1088,14 +1088,14 @@
     display: none;
 }
 .detail-element .car-options-smr {margin-top:10px;}
-.detail-element .car-options-smr span {color:#666;font-weight:300;font-size:13px;}
+.detail-element .car-options-smr span {color:#666;font-weight: 500;font-size:13px;}
 .detail-element .car-options-smr span + span {position:relative;padding-left:8px;margin-left:6px;}
 .detail-element .car-options-smr span + span:before {content:"";position:absolute;left:0;top:50%;margin-top:-5px;display:inline-block;width:1px;height:10px;background:#E9E9E9;}
 .detail-element .car-options {position:relative;padding:30px 30px 10px 30px;border-bottom:1px solid #E9E9E9}
-.detail-element .car-options .cert-num {position:absolute;right:30px;top:30px;font-size:11px;color:#999;font-weight:300;}
+.detail-element .car-options .cert-num {position:absolute;right:30px;top:30px;font-size:11px;color:#999;font-weight: 500;}
 .detail-element .car-options ul {display:flex;flex-wrap:wrap;}
 .detail-element .car-options ul li {width: 50%;margin-bottom: 8px;font-size: 14px;color: #666;display: flex;align-items: center;justify-content: flex-start;letter-spacing: -0.1px;}
-.detail-element .car-options ul li .t {display: inline-block; width: 75px; min-width: 75px; max-width: 75px; font-weight: 300;}
+.detail-element .car-options ul li .t {display: inline-block; width: 75px; min-width: 75px; max-width: 75px; font-weight: 500;}
 .detail-element .car-options ul li .c {display: inline-block; font-size: 16px; font-weight: 400; color: #303030;}
 
 
@@ -1133,7 +1133,7 @@
     top: 6px;
     color: #666;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .detail-element .car-price .rent em {
@@ -1153,9 +1153,9 @@
 /* 신차가 */
 .detail-element .car-price .car {
     color: #666;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 12px;
-    font-weight: 300;
+    font-weight: 400;
     display: block;
     margin-bottom: 5px;
 }
@@ -1193,7 +1193,7 @@
 /* ~ ### 230801 추가 */
 
 .detail-element .car-price .prc span {
-    font-weight: 300;
+    font-weight: 500;
     margin-right: 4px;
     font-size: 22px;
 }
@@ -1203,7 +1203,7 @@
 /* 뱃지 */
 .detail-element .badge {display:inline-flex;flex-wrap:wrap;overflow:hidden;}
 .detail-element .badge.noRnd {border-radius:0;}
-.detail-element .ele-badge { display: flex; justify-content: center; align-items: center; width: max-content; height: 21px; line-height: 21px; padding: 0px 4px; margin-right: 4px; margin-bottom: 5px; border: 0; color: #1A1A1A; background: #F0EFF4; border-radius: 4px; text-align: center; font-size: 12px; font-weight: 700; }
+.detail-element .ele-badge {display: flex;justify-content: center;align-items: center;width: max-content;padding: 5px 12px;/* height: 21px; *//* line-height: 21px; *//* padding: 0px 4px; */margin-right: 4px;margin-bottom: 5px;border: 0;color: #1A1A1A;background: #F0EFF4;border-radius: 4px;text-align: center;font-size: 12px;font-weight: 700;}
 .detail-element .ele-badge.badge-type1 {background-color:#FF3333;color:#fff;}
 .detail-element .ele-badge.badge-type2 {background-color:#F0EFF4;}
 .detail-element .ele-badge.badge-type3 {background-color: #F0EFF4;}
@@ -1371,7 +1371,7 @@
     font-size: 12px;
     text-decoration: underline;
     color: #666;
-    font-weight: 300;
+    font-weight: 500;
 }
 */
 
@@ -1459,7 +1459,7 @@
     margin-right: 0;
     margin-left: 0px;
     color: #f33;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 
@@ -1494,7 +1494,7 @@
     top: calc(100% + 5px);
     background-color: rgba(0,0,0,0.8);
     color: #fff;
-    font-weight: 300;
+    font-weight: 500;
     height: 36px;
     line-height: 36px;
     -webkit-border-radius: 18px;
@@ -1530,13 +1530,13 @@
 .detail-element .car-main-info .car-page-func .bt-compare {width:21px;height:18px;background:url("../../images/icon/ico-compare-off.svg") no-repeat 51% 50%;background-size: 21px;}
 .detail-element .car-main-info .car-page-func .bt-compare.on {width:21px;height:18px;background:url("../../images/icon/ico-compare-on.svg") no-repeat 51% 50%;background-size: 21px;}
 .detail-element .car-main-info .car-page-func .bt-share {width:21px;height:18px;background:url("../../images/icon/ico-detail-share.svg") no-repeat 45% 50%;background-size: 17px;}
-.detail-element .car-main-info .car-page-func .hits {position:absolute;left:0;top:0;padding-left:18px;margin-left:0;font-weight:300;text-indent:0;overflow:hidden;color:#999;background:url("../../images/icon/ico-detail-hits.svg") no-repeat 0% 50%;}
+.detail-element .car-main-info .car-page-func .hits {position:absolute;left:0;top:0;padding-left:18px;margin-left:0;font-weight:500;text-indent:0;overflow:hidden;color:#999;background:url("../../images/icon/ico-detail-hits.svg") no-repeat 0% 50%;}
 .detail-element .car-main-info .bt-report {width: 21px;height: 18px;background: url("../../images/icon/ico-detail-report.svg") no-repeat 45% 50%;background-size: 19px 18px;}
 .detail-element .car-summary {display:flex;padding:0 15px;}
 .detail-element .car-summary li {width:50%;position:relative;padding:30px 5px 30px 20px;border-bottom:1px solid #E9E9E9}
 .detail-element .car-summary li + li:before {content:"";position:absolute;top:20px;left:0;bottom:20px;display:block;width:1px;background:#E9E9E9;}
 .detail-element .car-summary li .detail {margin-top:10px;}
-.detail-element .car-summary li .detail .item {font-size:12px;font-weight:300;color:#666}
+.detail-element .car-summary li .detail .item {font-size:12px;font-weight: 500;color:#666}
 .detail-element .car-summary li .detail .item + .item:before {content:"";display:inline-block;width:1px;height:9px;margin:-3px 5px 0 3px;background:#E9E9E9;vertical-align:middle;vertical-align:middle;}
 .detail-element .car-summary li .detail .item var {margin-left:7px;font-weight:400;color:#333}
 .detail-element .car-summary li strong {font-size:16px;font-weight:700}
@@ -1551,7 +1551,7 @@
 .detail-element .car-merit .detail li .bdg {display:inline-block;height:20px;line-height:20px;padding:0 7px;font-weight:700}
 .detail-element .car-merit .detail li + li {margin-top:9px;}
 .detail-element .car-merit .detail li .t1 {margin-top:8px;font-size:16px;color:#000;}
-.detail-element .car-merit .detail li .t2 {margin-top:4px;font-size:12px;color:#555;font-weight:300;}
+.detail-element .car-merit .detail li .t2 {margin-top:4px;font-size:12px;color:#555;font-weight: 500;}
 .detail-element .car-merit .detail .lottecheck {background:#f8dcd8 url("../../images/elements/bg-carmerit-lottecheck.png") no-repeat 100% 50%;background-size:auto 100%}
 .detail-element .car-merit .detail .lottecheck .bdg {border:1px solid #E25A50;font-size:10px;color:#f33;}
 .detail-element .car-merit .detail .certcar {background:#e7e7e7 url("../../images/elements/bg-carmerit-certcar.png") no-repeat 100% 50%;background-size:auto 100%}
@@ -1593,7 +1593,7 @@
 .detail-element .car-summary li {width: 50%;position: relative;/* padding: 30px 5px 30px 20px; *//* border-bottom: 1px solid #E9E9E9 */}
 .detail-element .car-summary li + li:before {content: "";position: absolute;top: 20px;left: 0;bottom: 20px;display: block;width: 1px;background: #E9E9E9;}
 .detail-element .car-summary li .detail {margin-top: 10px;}
-.detail-element .car-summary li .detail .item {font-size: 12px;font-weight: 300;color: #666}
+.detail-element .car-summary li .detail .item {font-size: 12px;font-weight: 500;color: #666}
 .detail-element .car-summary li .detail .item + .item:before {content: "";display: inline-block;width: 1px;height: 9px;margin: -3px 5px 0 3px;background: #E9E9E9;vertical-align: middle;vertical-align: middle;}
 .detail-element .car-summary li .detail .item var {margin-left: 7px;font-weight: 400;color: #333}
 .detail-element .car-summary li strong {font-size: 16px;font-weight: 700}
@@ -1629,7 +1629,7 @@
 .detail-element .car-history .stamp {
     font-size: 13px;
     color: #333;
-    font-weight: 300;
+    font-weight: 500;
     background-color: #E5EFFF;
     text-align: center;
     padding: 11px 5px;
@@ -1642,7 +1642,7 @@
     display: none;
 }
 .detail-element .car-history .caption {display: flex;justify-content: center;}
-.detail-element .car-history .caption span {margin: 0 10px;font-size: 14px;color: #303030;font-weight: 300;}
+.detail-element .car-history .caption span {margin: 0 10px;font-size: 14px;color: #303030;font-weight: 500;}
 .detail-element .car-history .caption em {margin-left: 5px;font-weight: 400;color: #000}
 .detail-element .car-history .i-mark {display: inline-block;width: 12px;height: 12px;background-position: 50% 50%;vertical-align: middle;margin: -1px 5px 0 0;}
 .detail-element .car-history .i-mark.type1 {background-image: url("../../images/elements/i-mark-type1.svg")}
@@ -1665,10 +1665,10 @@
 .detail-element .area.car-insurance .isr-box li img {width: 40px;height: 40px;margin-bottom: 10px;}
 .detail-element .area.car-insurance .isr-box li .t-label { margin-bottom: 5px; }
 .detail-element .area.car-insurance .isr-box li .t-val { font-weight: 700; }
-.detail-element .area.car-insurance .isr-box li .t-val span { font-weight: 300; }
+.detail-element .area.car-insurance .isr-box li .t-val span { font-weight: 500; }
 
 
-.txt-noti { font-size: 12px; font-weight: 300; color: #666; text-align: center; margin-top: 20px; }
+.txt-noti { font-size: 12px; font-weight: 500; color: #666; text-align: center; margin-top: 20px; }
 .txt-noti strong { color: #000; font-weight: 700; }
 
 
@@ -1766,8 +1766,8 @@
     background-size: 100%
 }
 
-.detail-element .car-seller .seller-profile .info .car { margin-top: 1px;font-size:13px;font-weight:300;text-align:left; display: inline-block; color: #808080; }
-.detail-element .car-seller .seller-profile .info .car strong { color: #666; font-weight: 300; }
+.detail-element .car-seller .seller-profile .info .car { margin-top: 1px;font-size:13px;font-weight: 500;text-align:left; display: inline-block; color: #808080; }
+.detail-element .car-seller .seller-profile .info .car strong { color: #666; font-weight: 500; }
 .detail-element .car-seller .seller-profile .info .car + .car::before { content: '|'; color: #e9e9e9; margin-left: 3px; margin-right: 6px; }
 
 /*.detail-element .car-seller .seller-profile .info .car a {*/
@@ -1781,7 +1781,7 @@
     margin-top: 10px;
     font-size: 14px;
     color: #303030;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .detail-element .car-seller .seller-profile .info .btns {
@@ -1828,7 +1828,7 @@
     padding: 25px 20px 0;
     overflow: hidden;
     font-size: 13px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: -0.5px;
     background: #F9F9F9;
     border-radius: 5px;
@@ -1848,7 +1848,7 @@
     background: #F9F9F9;
     text-indent: -9999px;
     overflow: hidden;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -1963,7 +1963,7 @@
 .detail-element .car-history .car-check-area {position:relative;width:350px;height:289px;overflow:hidden;margin:15px auto;background:url("../../images/elements/visual-detail-carcheck-bg.png") no-repeat;background-size:100%;}
 .detail-element .car-history .car-check-area.accident-free:after {content:"";position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);display:block;width:140px;height:140px;background:url("../../images/elements/stamp-accident-free.png") no-repeat;background-size:100%;}
 .detail-element .car-history .caption {display:flex;justify-content:center;}
-.detail-element .car-history .caption span {margin:0 9px;font-size:12px;color:#303030;font-weight:300;}
+.detail-element .car-history .caption span {margin:0 9px;font-size:12px;color:#303030;font-weight: 500;}
 .detail-element .car-history .caption em {margin-left:5px;font-weight:400;color:#000}
 .detail-element .car-history .i-mark {display:inline-block;width:12px;height:12px;background-position:50% 50%;vertical-align:middle;margin:-1px 5px 0 0;}
 .detail-element .car-history .i-mark.type1 {background-image:url("../../images/elements/i-mark-type1.svg")}
@@ -2096,14 +2096,14 @@
 
 .detail-element .car-price-calc .tit {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 500;
     color: #666666;
     letter-spacing: -0.5px;
 }
 
 .detail-element .car-price-calc .val {
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
     color: #303030;
     letter-spacing: -0.5px;
 }
@@ -2122,7 +2122,7 @@
     margin-bottom: 0;
 }
 
-.lotte-cert-wrap .s-title-wrap a span { font-weight: 300; }
+.lotte-cert-wrap .s-title-wrap a span { font-weight: 500; }
 
 .lotte-cert-wrap .s-title-wrap a span:after {
     content: "";
@@ -2263,7 +2263,7 @@
     font-size: 14px;
     line-height: 36px;
     color: #000;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .tab-content .checkbox-wrap form .check-item input[type="radio"]+label::after { display: none; }
@@ -2286,7 +2286,7 @@
 
 .tab-content .checkbox-wrap form .check-item input[type="radio"]:disabled+label h4 {
     color: #999;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 /* 금액 */
@@ -2313,7 +2313,7 @@
 .tab-content + .psc-wrap li .val {
     font-size: 20px;
     line-height: 20px;
-    font-weight: 300;
+    font-weight: 500;
     color: #000;
 }
 
@@ -2348,7 +2348,7 @@
 
 .car-price-compare .psc-wrap li .val {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     color: #000;
 }
 
@@ -2405,13 +2405,13 @@
 
 .car-price-compare .psc-wrap li.box .tit {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 500;
     color: #000;
 }
 
 .car-price-compare .psc-wrap li.box .val {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     color: #000;
 }
 
@@ -2467,7 +2467,7 @@
 .car-price-compare .acq-area .val {
     font-size: 13px;
     color: #666;
-    font-weight: 300;
+    font-weight: 500;
     display: none;
 }
 
@@ -2551,7 +2551,7 @@
     margin-bottom: 10px;
     font-size: 12px;
     color: #666;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     line-height: 1.3;
 }
@@ -2562,7 +2562,7 @@
     justify-content: center;
     align-items: center;
     height: 32px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .detail-element .car-options-detail .options li span {
@@ -2643,7 +2643,7 @@
     margin-bottom: 5px;
     text-align: center;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .detail-element .car-options-detail .options-all {
@@ -2667,7 +2667,7 @@
 .detail-element .car-options-detail .options-all dd {
     width: 50%;
     padding-top: 5px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: -1px;
     white-space: nowrap;
 }
@@ -2702,7 +2702,7 @@
 .detail-element .live-check {position:absolute;bottom:0;left:0;right:0;height:40px;text-align:center;z-index:10;}
 .detail-element .live-check:before {content:"";position:absolute;left:0;top:0;width:100%;height:40px;display:block;background:#000;opacity:0.6;}
 .detail-element .live-check p {position:relative;padding-top:12px;text-align:center;color:#fff;z-index:10;font-weight:700;font-size:12px;}
-.detail-element .live-check p a {margin-left:10px;color:#fff;font-weight:300;font-size:12px;}
+.detail-element .live-check p a {margin-left:10px;color:#fff;font-weight: 500;font-size:12px;}
 .detail-element .live-check p a:after {content:"";display:inline-block;width:5px;height:5px;vertical-align:middle;margin:-1px 0 0 4px;border:1px solid #fff;transform:rotate(45deg);border-bottom:0;border-left:0;}
 
 .detail-element .car-price-compare {padding:30px;border-bottom:1px solid #E9E9E9}
@@ -2713,13 +2713,13 @@
 /*.detail-element .tab-content {padding-top:30px}*/
 .detail-element .car-price-calc li {display:flex;justify-content:space-between;align-items:center;}
 .detail-element .car-price-calc .tit {letter-spacing:-0.5px;}
-.detail-element .car-price-calc .tit small {display:block;font-size:12px;color:#969696;font-weight:300;}
+.detail-element .car-price-calc .tit small {display:block;font-size:12px;color:#969696;font-weight: 500;}
 .detail-element .car-price-calc .val {letter-spacing:-0.5px;}
 .detail-element .car-price-calc .car {padding-bottom:7px;border-bottom:1px solid #EDEDED;}
 .detail-element .car-price-calc .car .tit {color:#222;font-weight:700;font-size:14px;}
 .detail-element .car-price-calc .car .val {font-size:16px;color:#222;}
 .detail-element .car-price-calc .car .val var {font-weight:700;}
-.detail-element .car-price-calc .tax {margin-top:7px;font-weight:300}
+.detail-element .car-price-calc .tax {margin-top:7px;font-weight: 500}
 .detail-element .car-price-calc .tax .tit {color:#666;font-size:14px;}
 .detail-element .car-price-calc .tax .val {color:#666;font-size:14px;}
 /* X */
@@ -2745,7 +2745,7 @@
 .detail-element .car-price-calc .total .val {font-size:24px;font-weight:700;color:#f33;}
 /* tip */
 .detail-element .car-price-calc .tip {color:#999;letter-spacing:-0.7px;font-size:12px;}
-.detail-element .car-price-calc .tip.type2 {padding-top:10px;margin-top:20px;font-size:11px;font-weight:300;border-top:1px solid #E9E9E9;letter-spacing:0;}
+.detail-element .car-price-calc .tip.type2 {padding-top:10px;margin-top:20px;font-size:11px;font-weight: 500;border-top:1px solid #E9E9E9;letter-spacing:0;}
 .detail-element .car-price-calc .slt-group {padding-top:10px;}
 .detail-element .car-price-calc .slt {padding:5px 0;}
 .detail-element .car-price-calc .slt .tit {color:#222;font-weight:700;font-size:14px;}
@@ -2759,7 +2759,7 @@
 .detail-element .prc-proportion .item {height:80px;padding-top:17px;}
 .detail-element .prc-proportion .item .tit {display:block;text-align:center;font-size:16px;font-weight:700;color:#16161A}
 .detail-element .prc-proportion .item .tit var {text-decoration:underline;}
-.detail-element .prc-proportion .item .val {display:block;text-align:center;font-size:16px;font-weight:300;color:#16161A}
+.detail-element .prc-proportion .item .val {display:block;text-align:center;font-size:16px;font-weight: 500;color:#16161A}
 .detail-element .prc-proportion .item:first-child {background:#000}
 .detail-element .prc-proportion .item:first-child .tit,
 .detail-element .prc-proportion .item:first-child .val {color:#fff;}
@@ -3003,7 +3003,7 @@
 }
 
 .pop-car-history .smr-box ul li .t {
-    font-weight: 300
+    font-weight: 500
 }
 
 .pop-car-history .smr-box ul li .t.w80 {
@@ -3021,7 +3021,7 @@
 .pop-car-history .smr-box ul li .c:before {
     content: ":";
     display: inline-block;
-    font-weight: 300;
+    font-weight: 500;
     vertical-align: middle;
     margin: -4px 10px 0 0;
 }
@@ -3057,7 +3057,7 @@
     height: 70px;
     border-bottom: 1px solid #E9E9E9;
     border-left: 1px solid #E9E9E9;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -3081,7 +3081,7 @@
 
 .pop-car-history .carhistory-sec .round-box p {
     padding-top: 30px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .pop-car-history .carhistory-sec .round-box p + p {
@@ -3097,7 +3097,7 @@
 .pop-car-history .info-txt {
     padding: 10px 5px;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.7;
     text-indent: -12px;
     margin-left: 12px;
@@ -3105,7 +3105,7 @@
 
 .pop-car-history .desc-list li {
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.7;
     text-indent: -12px;
     margin-left: 12px;
@@ -3193,7 +3193,7 @@
 .banner-area.notify .tit {
     color: #000;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 500;
 }
 .layer_popup .pop_inner.m0 .banner-area {
     width: calc(100% - 80px);
@@ -3208,7 +3208,7 @@
 .banner-area.notify .txt {
     color: #666;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 5px;
 }
 .banner-area.notify .icon {
@@ -3286,7 +3286,7 @@
 .layer_popup .area .title-wrap em {
     font-size: 12px;
     color: #999;
-    font-weight: 300;
+    font-weight: 500;
 }
 /* ### 230720 ~ 선택자 수정 (.pop-quote -> .layer_popup ) */
 
@@ -3347,7 +3347,7 @@
 .info-container .txt-wrap .info .txt {
     font-size: 13px;
     line-height: 13px;
-    font-weight: 300;
+    font-weight: 500;
     color: #303030;
     margin-right: 5px;
 }
@@ -3398,7 +3398,7 @@
 .pop-quote .psc-container .psc-wrap li .val {
     font-size: 16px;
     line-height: 16px;
-    font-weight: 300;
+    font-weight: 500;
     color: #666;
 }
 
@@ -3443,13 +3443,13 @@
 }
 
 .pop-quote .psc-container .psc-wrap li.sub .tit var {
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .pop-quote .psc-container .psc-wrap li.prc_acq .tit {
     font-size: 13px;
     color: #666;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 
@@ -3464,7 +3464,7 @@
 .pop-quote .psc-container .psc-wrap li.sub .val {
     font-size: 16px;
     line-height: 16px;
-    font-weight: 300;
+    font-weight: 500;
     color: #000;
 }
 
@@ -3667,20 +3667,20 @@
 .pop-lotte-cert .data-wrap {display: flex;justify-content: space-between;align-items: flex-start;height: 80px;}
 .pop-lotte-cert .data-wrap li {width: 33.3%;height: 100%;display: flex;justify-content: center;align-items: center;}
 .pop-lotte-cert .data-wrap li > div { text-align: center; }
-.pop-lotte-cert .data-wrap li .t { font-size: 13px;font-weight: 300;color: #666;}
+.pop-lotte-cert .data-wrap li .t { font-size: 13px;font-weight: 500;color: #666;}
 .pop-lotte-cert .data-wrap li .c { font-size: 16px;font-weight: 500;margin-top: 5px;color: #000;}
 .pop-lotte-cert .data-wrap li .c.none {color: #4285F4;font-weight: 700;}
 /* Tips */
 .pop-lotte-cert .car-check-group .tips {width: 100%;margin-top: 30px;}
 .pop-lotte-cert .car-check-group .tips h4 {font-size: 16px;font-weight: 500;color: #000;margin-bottom: 10px;}
 .pop-lotte-cert .car-check-group .tips .contents {width: 100%;padding: 20px 20px 20px 40px;background-color: #F3F3F3;-webkit-border-radius: 10px;-moz-border-radius: 10px;-ms-border-radius: 10px;-o-border-radius: 10px;border-radius: 10px;}
-.pop-lotte-cert .car-check-group .tips .contents li {font-size: 13px;line-height: 27px;color: #303030;font-weight: 300;list-style: disc;}
+.pop-lotte-cert .car-check-group .tips .contents li {font-size: 13px;line-height: 27px;color: #303030;font-weight: 500;list-style: disc;}
 
 /* 진단검사 상세 */
 /* 양호/이상 */
 .pop-lotte-cert .car-check-detail .data-wrap {background-color: #F9F9F9;-webkit-border-radius: 10px;-moz-border-radius: 10px;-ms-border-radius: 10px;-o-border-radius: 10px;border-radius: 10px;}
 .pop-lotte-cert .car-check-detail .data-wrap li .t {color: #303030;}
-.pop-lotte-cert .car-check-detail .data-wrap li .c { font-size: 12px; font-weight: 300; }
+.pop-lotte-cert .car-check-detail .data-wrap li .c { font-size: 12px; font-weight: 500; }
 /* .pop-lotte-cert .car-check-detail .data-wrap li .c strong { font-size: 16px; font-weight: 700; margin-right: 1px; } */
 
 .pop-lotte-cert .car-check-detail .data-wrap li.all .c { color: #000; }
@@ -3693,7 +3693,7 @@
 .pop-lotte-cert .car-check-detail .data-wrap li:last-child:after { display: none; }
 
 .pop-lotte-cert .car-check-detail .data-wrap li .t { font-size: 16px; line-height: 20px; color: #303030; }
-.pop-lotte-cert .car-check-detail .data-wrap li .c { font-size: 20px; line-height: 20px; font-weight: 300; }
+.pop-lotte-cert .car-check-detail .data-wrap li .c { font-size: 20px; line-height: 20px; font-weight: 500; }
 .pop-lotte-cert .car-check-detail .data-wrap li .c strong { font-size: 28px; letter-spacing: -0.75px; margin-right: 3px; font-family: 'Open Sans', sans-serif; font-weight: 600; }
 
 /* summary */
@@ -3709,13 +3709,13 @@
 .pop-lotte-cert .car-check-detail .list-contents li.none .t-label::after {content: '';width: 16px;height: 16px;position: absolute;left: calc(100% + 4px);top: 50%;margin-top: -7px;background-image:url("../../images/icon/ico-check-round-solid.svg");background-repeat: no-repeat;background-position: center;background-size: 100% 100%;}
 .pop-lotte-cert .car-check-detail .list-contents li .t-val { color: #AAA; }
 .pop-lotte-cert .car-check-detail .list-contents li .t-val strong { color: #000; font-weight: 500; }
-.pop-lotte-cert .car-check-detail .list-contents li.none .t-val strong { color: #AAA; font-weight: 300; }
+.pop-lotte-cert .car-check-detail .list-contents li.none .t-val strong { color: #AAA; font-weight: 500; }
 
 
 /* 상세 */
 .pop-lotte-cert .car-check-detail .detail-wrap {margin-top: 30px;}
 .pop-lotte-cert .car-check-detail .detail-wrap .tip {text-align: right;margin-bottom: 7px;}
-.pop-lotte-cert .car-check-detail .detail-wrap .tip p {font-size: 12px;color: #666;font-weight: 300;position: relative;display: inline-block;}
+.pop-lotte-cert .car-check-detail .detail-wrap .tip p {font-size: 12px;color: #666;font-weight: 500;position: relative;display: inline-block;}
 .pop-lotte-cert .car-check-detail .detail-wrap .tip p::before {content: '';width: 10px;height: 10px;position: absolute;right: calc(100% + 5px);top: 50%;margin-top: -5px;background-image:url("../../images/icon/ico-check-linear.svg");background-position: center;background-repeat: no-repeat;background-size: 100%;}
 /* table */
 .pop-lotte-cert .car-check-detail .detail-wrap .table {width: 100%;border-bottom: 1px solid #E9E9E9;}
@@ -3741,9 +3741,9 @@
 .pop-lotte-cert .car-check-detail .detail-wrap .table table tr.active {color: #303030;font-weight: 500;}
 
 /* number */
-.pop-lotte-cert .car-check-detail .detail-wrap .table table tr h4 {font-size: 12px;letter-spacing: -0.2px;font-weight: 300;color: #aaa;text-align: left;padding: 0px 3px;min-width: 30px;max-width: 30px;text-align: center;display: inline-block;}
+.pop-lotte-cert .car-check-detail .detail-wrap .table table tr h4 {font-size: 12px;letter-spacing: -0.2px;font-weight: 500;color: #aaa;text-align: left;padding: 0px 3px;min-width: 30px;max-width: 30px;text-align: center;display: inline-block;}
 /* text */
-.pop-lotte-cert .car-check-detail .detail-wrap .table table tr h2  {font-size: 13px;line-height: 18px;font-weight: 300;color: #676767;position: relative;word-break: keep-all;padding-left: 28px;width: 100%;}
+.pop-lotte-cert .car-check-detail .detail-wrap .table table tr h2  {font-size: 13px;line-height: 18px;font-weight: 500;color: #676767;position: relative;word-break: keep-all;padding-left: 28px;width: 100%;}
 .pop-lotte-cert .car-check-detail .detail-wrap .table table tr.chk h2 {margin-left: 28px;padding-left: 0px;}
 .pop-lotte-cert .car-check-detail .detail-wrap .table table tr.chk h2::before {content: '';width: 8px;height: 8px;position: absolute;right: calc(100% + 8px);top: 50%;margin-top: -5px;background-image:url("../../images/icon/ico-check-linear.svg");background-position: center;background-repeat: no-repeat;background-size: 100%;}
 /* active */
@@ -3774,13 +3774,13 @@
 .pop-car-repair .summary-area .checkup-box li:last-child {border-right: none;}
 .pop-car-repair .summary-area .checkup-box li img {width: 50px; min-width: 50px;height: 50px; min-height: 50px;margin-bottom: 0;}
 .pop-car-repair .summary-area .checkup-box li > .txt-wrap {text-align: left;margin-left: 17px}
-.pop-car-repair .summary-area .checkup-box li .t-label {font-size: 14px;color: #666;font-weight: 300;margin-bottom: 3px;}
+.pop-car-repair .summary-area .checkup-box li .t-label {font-size: 14px;color: #666;font-weight: 500;margin-bottom: 3px;}
 /* 이력 */
 table.car-repair-history {margin-top: 40px;margin-bottom: 20px;}
 table.car-repair-history thead {background-color: #F9F9F9;}
 table.car-repair-history thead tr th {font-size: 14px;font-weight: 500;color: #000;padding: 12px;}
 table.car-repair-history tbody tr {border-bottom: 1px solid #F3F3F3;}
-table.car-repair-history tbody tr td {font-size: 13px;font-weight: 300;color: #000;padding: 10px 20px;text-align: center;}
+table.car-repair-history tbody tr td {font-size: 13px;font-weight: 500;color: #000;padding: 10px 20px;text-align: center;}
 /*table.car-repair-history tbody tr td:last-child {text-align: left;}*/
 
 /* 차량상세 헤더영역
