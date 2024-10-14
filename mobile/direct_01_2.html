@@ -196,7 +196,7 @@
                     </li>
                 </ul>
             </div>
-
+<!-- 
             <div class="sec-tit">
                 <div class="flex">
                     <h1>사업자정보</h1>
@@ -226,7 +226,7 @@
                         <span>정보통신서비스</span>
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
             <div class="sec-tit">
                 <div class="flex">
@@ -245,7 +245,7 @@
                     </li>
                 </ul>
             </div>
-
+<!-- 
             <div class="sec-tit">
                 <div class="flex">
                     <h1>공동명의 정보</h1>
@@ -274,7 +274,7 @@
                         <span>1%</span>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </section>
     </main>
 
@@ -282,7 +282,7 @@
     
     <!-- 팝업 -->
     <div class="layer_popup custom-alert-pop">
-        <button class="btn-show"></button>
+        <button class="btn-show" onclick="togglePopup();"></button>
         <div class="pop_inner">
             <div class="pop-head">
             </div>
@@ -325,6 +325,18 @@
             <button type="button">상담 신청하기</button>
             <button type="button" class="light" onclick="location.href='./direct_01_3.html'">다음</button>
         </div>
+        <script>
+            function togglePopup() {
+                const popup = document.querySelector('.price-box');
+                const btnShow = document.querySelector('.btn-show');
+    
+                // 팝업 활성화
+                popup.classList.toggle('show');
+    
+                // 버튼에 'on' 클래스 토글
+                btnShow.classList.toggle('on');
+            }
+        </script>
     </div>
 </body>
 </html>
