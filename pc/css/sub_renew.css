@@ -1,4 +1,4 @@
-﻿﻿@charset "UTF-8";
+@charset "UTF-8";
 
 body{}
 
@@ -28,7 +28,7 @@ body{}
 .promotionSale-wrap .car-wt-container .list-head .list-tit + .btn-more{box-sizing: border-box;height:36px;}
 .promotionSale-wrap .car-wt-container{height:506px;}
 
-.list-type-vertical .list-item{margin: 55px 40px 0 0;padding:0;}
+.list-type-vertical .list-item{margin: 55px 39px 0 0;padding:0;}
 .list-type-vertical .list-detail{padding-bottom:50px;}
 
 .list-type-vertical .list-thumb .car-thumb-slider img{width:280px;height:200px;}
@@ -49,8 +49,8 @@ body{}
 /* 한정특가 */
 .promotionSale-list .list-type-vertical .list-item{width:260px;margin-right:40px !important;}
 .promotionSale-list .list-type-vertical .list-thumb img{width:100%;height:184px;}
-.promotionSale-list .list-type-vertical .list-detail{padding-bottom:90px;}
-.promotionSale-list .list-type-vertical .list-detail .list-price{margin-top:16px;}
+.promotionSale-list .list-type-vertical .list-detail{padding-bottom: 68px;}
+.promotionSale-list .list-type-vertical .list-detail .list-price{/* margin-top:16px; */}
 .promotionSale-wrap .car-wt-container .list-type-vertical.n5 .timesaleWrap2{height:32px;background: linear-gradient(135deg,  #10d9c9 15%,#1a63f3 85%); }
 
 .pagination span a{font-weight:400;}
@@ -58,6 +58,10 @@ body{}
 /* 체크박스 */
 input[type="checkbox"]{position:absolute;left:0;opacity:0;width:22px;height:22px;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-user-drag:none}
 input[type="checkbox"]+label{position:relative;display:inline-block;height:22px;padding-left:30px;-webkit-user-select:none;-webkit-user-drag:none;cursor:pointer;font-size:14px;font-weight:500;}
+
+input[type="checkbox"]:checked+label::after{background:url('../images/icon/ico-checkbox-checked.png') no-repeat 50% 50%;background-size:100%;}
+input[type="checkbox"]:disabled+label::after{background:url('../images/icon/ico-checkbox-disabled.png') no-repeat 50% 50%;background-size:100%;}
+
 input[type="checkbox"]+label::after{content:"";display:inline-block;position:absolute;left:0;top:0;width:22px;height:22px;background:url('../images/icon/ico-checkbox.png') no-repeat 50% 50%;background-size:100%;}
 input[type="checkbox"]:checked+label::after{background:url('../images/icon/ico-checkbox-checked.png') no-repeat 50% 50%;background-size:100%;}
 input[type="checkbox"]:disabled+label::after{background:url('../images/icon/ico-checkbox-disabled.png') no-repeat 50% 50%;background-size:100%;}

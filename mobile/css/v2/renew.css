@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 
 body{}
 body{}
@@ -31,9 +31,9 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .visualTxt .vsRight{position:relative;background:#FFC85A;transition: 0.8s;transition-timing-function: ease;display:flex;justify-content:center;align-items:center;}
 /*.visualTxt .vsLeft.active.intro{width:100%;}*/
 .visualTxt > div{position:relative;height:100vh;box-sizing: border-box;text-align: center;text-align:center;overflow:hidden;}
-.visualTxt > div a{display:inline-block;position: relative;z-index:5;width: 55%;top: -10em;}
+.visualTxt > div a{display:inline-block;position: relative;z-index:5;/* width: 55%; */top: -14em;}
 .visualTxt > div a .vsTit{animation:txtLeft 1s ease-in-out both ;display:block;font-size:1.0em;font-weight:700;color:#fff;line-height:28px;}
-.visualTxt > div a .vsEx{animation:txtLeft 1s 0.3s ease-in-out both ;display:block;font-size:1.50em;font-weight:700;color:#fff;}
+.visualTxt > div a .vsEx{animation:txtLeft 1s 0.3s ease-in-out both;display:block;font-size: 2em;font-weight:700;color:#fff;}
 
 .visualTxt > div.main_bg_video{
 	position: absolute;
@@ -47,8 +47,40 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: brightness(50%);
+  filter: brightness(70%);
 }
+
+.vsBtnWrap{
+    animation:quickTop2 1s 1s ease-in-out both ;
+    display:flex;
+    width:100%;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 16px;
+}
+.vsBtnWrap button.vsBtn{
+    background:#FF0000;
+    color:#fff;
+    border-radius: 23px;
+    /* width:90px; */
+    padding: 7px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    /* gap: 7px; */
+}
+.vsBtnWrap button.vsBtn:after{
+    content:"";
+    display: block;
+    width: 10px;
+    height: 10px;
+    /* margin-top: 4px; */
+    position: relative;
+    right: -6px;
+    top: 1px;
+    background:url('../../images/renew/icon-arrow-r.svg') no-repeat 0 0;
+}
+
 
 /*.visualTxt .vsRight a .vsTit{animation:txtRight 1s 0.3s ease-in-out both ;}*/
 /*.visualTxt .vsRight a .vsEx{animation:txtRight 1s 0.8s ease-in-out both ;}*/
@@ -71,8 +103,8 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .mainVisualBx .srhBx{animation:txtTop 1s 0.3s ease-in-out both ;position: fixed;display: block;width:100%;text-align:center; margin-top: 48px; bottom: 120px;}
 .mainVisualBx .srhBx .iconSroll{animation:downScroll 1.8s ease-out infinite;display:none;width:40px;height:40px;margin:20px auto 0;background:url(../../images/renew/ic_scroll.png) no-repeat center center;} 
 .mainVisualBx .srhBx .btnSrhOpen{width:calc(100% - 3.25em);height:3.75em;display:inline-block;padding-left:1.88em;margin:12px 26px 0;font-size:16px;font-weight:400;color:#999999;line-height:24px;border-radius:64px;background:#fff url(../../images/renew/ic_srh.png) no-repeat 92% center;box-sizing: border-box;text-align:left; border: 2px solid #ff3333;} 
-.mainVisualBx .srhBx .txt{font-size:1.25em;font-weight:600;color:#fff;line-height:36px;} 
-.mainVisualBx .srhBx .txt .countNum{color:#FF0000;font-weight:900;} 
+.mainVisualBx .srhBx .txt{font-size: 1.25em;font-weight:600;color:#fff;line-height:36px;position: relative;left: -5px;} 
+.mainVisualBx .srhBx .txt .countNum{color:#FF0000;font-weight:900;font-size: 1.26em;} 
 
 .quickBan{display:none;position:fixed;z-index:20;right:40px;bottom:60px;width:68px;}
 .quickBan button{width:68px;height:68px;font-size:0;line-height:0;text-indent: -9999px;border-radius: 50%;box-shadow:7px 5px 21px -2px rgba(0, 0, 0, 0.20);}
@@ -88,24 +120,40 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .quickBan .quickList a.btnQuickPrice{background:url(../../images/renew/quick_estimate.png) no-repeat center top;}
 .quickBan .quickList a .num{position:absolute;right:-3px;top:0;  display: inline-block; min-width:24px;height:18px;padding:2px 5px; font-size:13px;font-weight:700;color:#fff;line-height:14px;background: #FF3333;border-radius: 18px;box-sizing: border-box;text-align: center;}
 
-.srhWrap{display:none;position: fixed;z-index:100;left:0;top:0; width:100%;height:100%;background:rgba(0, 0, 0, 0.8);}
+.srhWrap{display:none;position: fixed;z-index:100;left:0;top:0;width:100%;height:100%;background: rgba(0, 0, 0, 0.9);}
 .mainSrhBx{position:absolute;top:30%;width: calc(100% - 40px);/* margin: 0 15px; *//* left: 15px; */text-align: center;margin: 0 20px;}
 .mainSrhBx *{vertical-align: middle;}
-.mainSrhBx .txt{margin-bottom:20px;font-size:18px;font-weight:400;color:#fff;line-height:36px;text-align:center;} 
-.mainSrhBx .txt .countNum{margin-top:-2px;display:inline-block; color:#FF0000;font-weight:900;} 
+.mainSrhBx .txt{margin-bottom: 12px;font-size: 20px;font-weight:400;color:#fff;line-height:36px;text-align:center;display: flex;justify-content: center;align-items: flex-end;gap: 5px;} 
+.mainSrhBx .txt .countNum{margin-top:-2px;display:inline-block;color:#FF0000;font-weight:900;font-size: 24px;} 
 .mainSrhBx .selectSrh{display:none;position:absolute;left:0;top:86px;width:100px;width:140px;min-height:128px;padding:12px; box-sizing: border-box;background: #fff;border-radius: 20px;}
 .mainSrhBx .selectSrh.active{display:block;}
 .mainSrhBx .selectSrh li{margin-top:8px;}
 .mainSrhBx .selectSrh li:first-child{margin-top:0;}
 .mainSrhBx .selectSrh li a{display:block;padding:12px;font-size:16px;font-weight:400;color:#1A1A1A;line-height:24px;border-radius: 10px;background:#fff;}
 .mainSrhBx .selectSrh li a:hover{background:#F5F7FA;}
-.mainSrhBx .srhTxtList{display:none;position:absolute;left:30px;top:63px;width:330px; text-align:left;}
+.mainSrhBx .srhTxtList{display:none;position:absolute;top:63px;width: 86%;text-align:left;}
 .mainSrhBx .srhTxtList.visible{display:block;}
-.mainSrhBx .srhTxtList li{font-size:17px;font-weight:400;color:#fff;line-height:32px;}
+.mainSrhBx .srhTxtList li{font-size:17px;font-weight: 700;color:#fff;line-height: 38px;/* display: flex; */position: relative;padding: 6px;border-bottom: 1px solid #ddd;}
+.mainSrhBx .srhTxtList li:after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin: 6px 0 0 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    transform: rotate(45deg) translateY(-50%);
+    border-bottom: 0;
+    border-left: 0;
+    position: absolute;
+    right: 12px;
+    top: 18px;
+}
 .mainSrhBx .srhTxtList li .bold{color:orange;font-weight:700; }
-.mainSrhBx .srhTxtList li span{vertical-align: middle;}
-.mainSrhBx .inputSrhBx{position:relative;width:100%;height:3.75em;padding:6px 18px 0;border:2px solid #FF3333;background: #fff;border-radius:80px;box-sizing: border-box;}
+.mainSrhBx .srhTxtList li span{vertical-align: baseline;}
+.mainSrhBx .inputSrhBx{position:relative;width:100%;height:3.75em;padding: 5px 18px 0;border:2px solid #FF3333;background: #fff;border-radius:80px;box-sizing: border-box;}
 .mainSrhBx .inputSrhBx input[type='text']{width:100%;height:40px;border:none; font-size:16px;font-weight:400;color:#1A1A1A;line-height:24px;outline: none;}
+.mainSrhBx .inputSrhBx input[type='text']:focus{outline: none !important; border:1px solid #fff !important;}
 .mainSrhBx .inputSrhBx input[type='text']::placeholder{color:#999;}
 .mainSrhBx .inputSrhBx .btnSrhSelect{position:relative;min-width:100px;margin-right:16px; font-size:20px;font-weight:400;color:#1A1A1A;line-height:24px;text-align:left;}
 .mainSrhBx .inputSrhBx .btnSrhSelect::after{position:absolute;right:0;top:4px; display:block;content:''; width:16px;height:16px;background: url(../../images/renew/btn_select_arrow.png) no-repeat 0 0;}
@@ -181,7 +229,7 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 .slideListBx .banThemeList li dl dd.txtEx{margin-top:12px;font-size:1em;font-weight:400;color:#666666;line-height:24px;}
 .slideListBx .banThemeList li a{position:relative;display:inline-block;margin-top:32px;min-width:116px;height:36px;padding:7px 40px 7px 16px;font-size:14px;font-weight:400;color:#1A1A1A;border-radius:36px;border:1px solid #666;box-sizing:border-box;}
 .slideListBx .banThemeList li a:after{display:block;content:'';position:absolute;right:10px;top:9px;width:18px;height:18px;background:url(../../images/renew/ic_arrow.png) no-repeat 0 0;}
-.slideListBx .banThemeList li .icon1{display:block;position:absolute;right: -43px;bottom:-48px;width:220px;height:121px;background:url(../../images/renew/ic_car.png) no-repeat 0 0;background-size: 13.75em auto;}
+.slideListBx .banThemeList li .icon1{display:block;position:absolute;right: -0px;bottom: -39px;width:220px;height:121px;background:url(../../images/renew/ic_car.png) no-repeat 0 0;background-size: 16.75em auto;}
 .slideListBx .banThemeList .btnView:hover{background:#1a1a1a;color:#fff;}
 
 .carThemeBx{width:100%;height:100%;margin-top:30px;}
@@ -205,17 +253,17 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 }
 .carThemeList li .imgBx{position:relative; border-radius:5px;overflow:hidden;}
 .carThemeList li .imgBx img{width: 100%;}
-.carThemeList li .carTxtCon{margin-top:16px;}
+.carThemeList li .carTxtCon{margin-top: 6px;}
 .carThemeList li .carTxtCon dl.txtTit{display:flex;flex-wrap:wrap;}
 .carThemeList li .carTxtCon dl.txtTit dt{font-size:0.88em;font-weight:700;color:#1A1A1A;line-height:20px;}
-.carThemeList li .carTxtCon dl.txtTit dd{margin-top:4px;font-size:0.75em;font-weight:400;color:#666666;line-height:20px;}
+.carThemeList li .carTxtCon dl.txtTit dd{/* margin-top:4px; */font-size:0.75em;font-weight:400;color:#666666;line-height:20px;}
 .carThemeList li .carTxtCon dl.txtTit dd::after{display:inline-block;content:'';width:1px;height:10px;margin:0 4px;background:#DDDDDD;}
 .carThemeList li .carTxtCon dl.txtTit dd:last-child::after{display:none;}
-.carThemeList li .carTxtCon dl.txtPrice{margin-top:0.50em;}
+.carThemeList li .carTxtCon dl.txtPrice{/* margin-top:0.50em; */}
 .carThemeList li .carTxtCon dl.txtPrice dt{width:100%;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;align-self:stretch;font-size:16px;font-weight:400;color:#FF3333;line-height:24px;}
 .carThemeList li .carTxtCon dl.txtPrice dt .bold{font-weight:800;}
 .carThemeList li .carTxtCon dl.txtPrice dt .month{margin-left:4px;font-size:13px;}
-.carThemeList li .carTxtCon dl.txtPrice dd{margin-top:4px;font-size:13px;font-weight:400;color:#666666;line-height:20px;}
+.carThemeList li .carTxtCon dl.txtPrice dd{/* margin-top:4px; */font-size:13px;font-weight:400;color:#666666;line-height:20px;}
 .carThemeList li .carTxtCon .badgeList{margin-top:16px;overflow:hidden;}
 .carThemeList li .carTxtCon .badgeList li{float:left;padding:8px;margin-left:4px;font-size:12px;font-weight:400;color:#1A1A1A;line-height:14px;background:#EFEFEF;border-radius:4px;}
 .carThemeList li .carTxtCon .badgeList li:first-child{margin-left:0;}
@@ -223,10 +271,18 @@ html, body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, a{font-fami
 
 .carKeywordBx{position:relative;width:100%;margin:0px auto 120px;}
 .carKeywordBx .conTit{font-size:28px;font-weight:800;color:#111;text-align:center;}
-.carKeywordBx .keywordBut{
-    position: relative; display: flex; white-space: nowrap; overflow-x: auto; gap: 8px;  left: 30px; top: 16px;
+.carKeywordBx .keywordBut {
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    left: 30px;
+    top: 16px;
     text-align: left;
-    width: 100%; height: 40px; padding-right: 51px;
+    width: 100%;
+    height: 40px;
+    padding-right: 51px;
     -ms-overflow-style: none;
 }
 .carKeywordBx .keywordBut::-webkit-scrollbar{
@@ -305,49 +361,71 @@ li .saleType:after{
 
 /* 서비스 배너 스와이프 */
 .serviceWrap2{width: 100%;overflow: hidden;position: relative;word-break: keep-all;}
-.serviceWrap2 .serviceBx2{position: relative;width:100%;margin:0 auto; padding: 48px 0;box-sizing: border-box;display: flex;flex-direction: column;justify-content: center;}
+.serviceWrap2 .serviceBx2{position: relative;width:100%;margin:0 auto;padding: 48px 0;box-sizing: border-box;display: flex;flex-direction: column;gap: 5px;justify-content: center;}
 .serviceList2{position:relative;width:100%;margin:12px auto 0;}
 .serviceList2 ul{display: flex; flex-wrap: nowrap;margin-top: 70px;}
 .serviceList2 ul li{}
 .servTit2{text-align:center;font-size:24px;font-weight:700;color:#1A1A1A;line-height:44px;}
+.servTit2 dd{margin-top:8px;font-size:16px;font-weight:400;color:#999;line-height:24px;}
 .serviceTab2{margin-top:12px;display:flex;justify-content: center;}
 .serviceTab2 button{}
 .serviceTab2 button{display:inline-block;min-width:160px;height:54px;padding:13px 30px;margin-left:12px;border-radius:54px;font-size:16px;font-weight:400;color:#999;line-height:18px;border:1px solid #F7F7F7;background:#F7F7F7;box-sizing:border-box;}
 .serviceTab2 button:first-child{margin-left:0;}
 .serviceTab2 button.active{font-weight:700;color:#1A1A1A;border:1px solid #666;background:#fff;}
-.serviceList2 .swiper-pagination{
-    display: flex; white-space: nowrap; overflow-x: auto; gap: 8px;
+.serviceList2 .swiper-pagination {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto; /* auto에서 hidden으로 변경, 스크롤바 보이지 않도록 */
+    gap: 8px;
+    left: 0;
+    top: 0;
+    padding-right: 50px;
     text-align: left;
-    width: 100%; height: 40px; left: 30px; top: 0; padding-right: 51px;
-    -ms-overflow-style: none;
+    width: 100%; /* 패딩을 width에서 제외 */
+    height: 40px;
+    padding-right: 20px; /* 오른쪽 패딩 유지 */
+    padding-left: 30px;
+    -ms-overflow-style: none; /* IE/Edge에서 스크롤바 없애기 */
+    scrollbar-width: none; /* Firefox에서 스크롤바 없애기 */
 }
-.serviceList2 .swiper-pagination::-webkit-scrollbar{
-  display:none;
+
+.serviceList2 .swiper-pagination::-webkit-scrollbar {
+    display: none; /* 크롬/사파리에서 스크롤바 없애기 */
 }
 .serviceList2 .swiper-pagination span{display:inline-block;margin:0 50px;color:#fff;font-size:14px; line-height}
 .serviceList2 .swiper-pagination .swiper-pagination-bullet{
 	display: flex;
-    width: auto;
-    text-align: center;
-    height: 40px;
-    padding: 11px 16px;
-    margin-left: 12px;
-    border-radius: 54px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #999;
-    line-height: 18px;
-    border: 1px solid #F7F7F7;
-    background: #F7F7F7;
-    box-sizing: border-box;
-    align-items: baseline;
-    justify-content: center;
-    flex-direction: row;
-    margin: 0;
+	width: auto;
+	text-align: center;
+	height: 40px;
+	padding: 11px 16px;
+	margin-left: 12px;
+	border-radius: 54px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #999;
+	line-height: 18px;
+	border: 1px solid #F7F7F7;
+	background: #F7F7F7;
+	box-sizing: border-box;
+	align-items: baseline;
+	justify-content: center;
+	flex-direction: row;
+	margin: 0;
+	/* transform: translate3d(-200px, 0, 0); */ /* 각 슬라이드의 너비 + margin-right */
+	/* transition: transform 0.3s ease-in-out; */ */;
 }
 .serviceList2 .swiper-pagination .swiper-pagination-bullet:first-child:first-child{margin-left:0;}
-.serviceList2 .swiper-pagination .swiper-pagination-bullet-active {font-weight:700;color:#1A1A1A;border:1px solid #666;background:#fff;}
-.serviceList2 .swiper-wrapper{margin:70px 30px 0;}
+.serviceList2 .swiper-pagination .swiper-pagination-bullet-active {
+	font-weight:700;
+	color:#1A1A1A;
+	border:1px solid #666;
+	background:#fff;
+	position: relative;
+	/* transform: translate3d(-140px, 0, 0); */ /* 각 슬라이드의 너비 + margin-right */
+	/* transition: transform 0.3s ease-in-out; */ */
+}
+.serviceList2 .swiper-wrapper{margin: 56px 30px 0;}
 .serviceList2 .swiper-scrollbar{display: none;width:1200px;bottom:-10px;background:transparent;margin-left:-10px;}
 .serviceList2 .swiper-scrollbar-drag{background:#ddd;}
 /* 서비스 배너 */
@@ -375,7 +453,7 @@ li .saleType:after{
 .carBanList .slick-next{margin-left:552px;background:url(../../images/renew/btn_ban_next.png) no-repeat center center;}
 .carBanList .slick-next:hover{background:url(../../images/renew/btn_ban_next.png) no-repeat center center;}
 .carBanList .slick-next::before{display:none;}
-.carBanBx .swiper-pagination{width:100%;bottom: var(--swiper-pagination-bottom, -8px);}
+.carBanBx .swiper-pagination{width:100%;display: none;bottom: var(--swiper-pagination-bottom, -8px);}
 /*.carBanList .swiper-pagination li{width:20px;text-align:center;margin:0;vertical-align:middle;}*/
 .carBanBx .swiper-pagination span.swiper-pagination-bullet{position:relative;display:inline-block;content:'';width:10px;height:10px;background:#e5e5e5;border-radius:10px;font-size:0;opacity:1;}
 .carBanBx .swiper-pagination span.swiper-pagination-bullet-active{width:10px;height:10px;background:#1A1A1A;border-radius:16px;opacity:1;border:none;}
@@ -582,6 +660,14 @@ li .saleType:after{
     }
     100% {
         transform: translateY(0px);
+        opacity:1;
+    }
+}
+@keyframes quickTop2 {
+    0% {
+        opacity:0;
+    }
+    100% {
         opacity:1;
     }
 }

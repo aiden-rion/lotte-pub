@@ -176,11 +176,11 @@
         <section>
             <div class="sec-tit">
                 <div class="flex">
-                    <h1>자동차 임대차 계약 주요 내용 설명서</h1>
+                    <h1>차량 상세정보를 확인해 주세요</h1>
                 </div>
             </div>
             <ul class="detail-list">
-                <li class="carinfo">
+                <li class="carinfo" style="border-right:0; border-bottom:0;">
                     <a href="#">
                         <div class="img-wrap"></div>
                         <p>
@@ -188,15 +188,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="caroption">
-                    <a href="#">
-                        <div class="img-wrap"></div>
-                        <p>
-                            <strong>옵션정보 확인</strong>
-                        </p>
-                    </a>
-                </li>
-                <li class="history">
+                <li class="history" style="border-bottom:0;">
                     <a href="#">
                         <div class="img-wrap"></div>
                         <p>
@@ -204,7 +196,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="carcheck">
+                <li class="carcheck" style="border-right:0;">
                     <a href="#">
                         <div class="img-wrap"></div>
                         <p>
@@ -241,7 +233,9 @@
 
         <section>
             <div class="sec-tit">
-                <div class="flex">차량 배송지역 선택</div>
+                <div class="flex">
+                    <h1>차량 배송지역 선택</h1>
+                </div>
             </div>
             <div class="input-item">
                 <p class="tit">지역선택<em class="ess">*</em></p>
@@ -249,6 +243,15 @@
                     <option value="" selected>시/도 선택</option>
                     <option value="">서울시</option>
                     <option value="">경기도</option>
+                </select>
+            </div>
+            <div class="input-item">
+                <p class="tit">세부지역 선택<em class="ess">*</em></p>
+                <select id="income">
+                    <option value="" selected>시/군/구 선택</option>
+                    <option value="">강남구</option>
+                    <option value="">강서구</option>
+                    <option value="">동대문구</option>
                 </select>
             </div>
         </section>
@@ -364,7 +367,7 @@
     </div>
     <div class="btn-wrap">
         <button type="button">상담 신청하기</button>
-        <button type="button" class="contract" onclick="location.href='./direct_01_2.html'">다음</button>
+        <button type="button" class="light" onclick="location.href='./direct_01_1.html'">다음</button>
     </div>
 </div>
 

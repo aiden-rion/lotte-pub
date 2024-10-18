@@ -34,7 +34,7 @@
     <!-- layout--header 견적// -->
 	<div class="layout--header">
 		<header>
-            <a href="./car-detail.html" class="ir bt-page-prev">뒤로가기</a>
+            <a href="./direct_01_1.html" class="ir bt-page-prev">뒤로가기</a>
 			<h2 class="page-title">계약</h2>
 		</header>
 		<div class="side-menu " id="sideMenu">
@@ -196,7 +196,7 @@
                     </li>
                 </ul>
             </div>
-
+<!-- 
             <div class="sec-tit">
                 <div class="flex">
                     <h1>사업자정보</h1>
@@ -226,7 +226,7 @@
                         <span>정보통신서비스</span>
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
             <div class="sec-tit">
                 <div class="flex">
@@ -245,7 +245,7 @@
                     </li>
                 </ul>
             </div>
-
+<!-- 
             <div class="sec-tit">
                 <div class="flex">
                     <h1>공동명의 정보</h1>
@@ -274,7 +274,7 @@
                         <span>1%</span>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </section>
     </main>
 
@@ -282,7 +282,7 @@
     
     <!-- 팝업 -->
     <div class="layer_popup custom-alert-pop">
-        <button class="btn-show"></button>
+        <button class="btn-show" onclick="togglePopup();"></button>
         <div class="pop_inner">
             <div class="pop-head">
             </div>
@@ -290,25 +290,25 @@
             <div class="pop-contents agree-accordion-wrap">
                 <!-- 견적박스 -->
                 <div class="price-box">
-                    <h3 class="pop-tit">다이렉트 견적</h3>
-                    <h4>제네시스 더 올뉴 G80 가솔린 2.5 2WD 기본형</h4>
+                    <!-- <h3 class="pop-tit">다이렉트 견적</h3>
+                    <h4>제네시스 더 올뉴 G80 가솔린 2.5 2WD 기본형</h4> -->
                     <div class="ex-box">
                         <ul>
                             <li>
-                                <div class="tit">신차가</div>
+                                <div class="tit">차량판매가</div>
                                 <span>48,500,000원</span>
                             </li>
                             <li>
-                                <div class="tit">선납금</div>
-                                <span>7,650,000원 (30%)</span>
+                                <div class="tit">이전등록비</div>
+                                <span>1,250,000원</span>
                             </li>
                             <li>
-                                <div class="tit">보증금</div>
-                                <span>0원 (0%)</span>
+                                <div class="tit">관리비</div>
+                                <span>100,000원</span>
                             </li>
                             <li>
-                                <div class="tit">인수가</div>
-                                <span>17,650,000원</span>
+                                <div class="tit">탁송료</div>
+                                <span>55,000원</span>
                             </li>
                         </ul>
                     </div>
@@ -318,13 +318,25 @@
                 <dl>
                     <dt>총 예상 결제금액</dt>
                 </dl>
-                <strong><span>30,580,000원</span></strong>
+                <strong><span>49,905,000원</span></strong>
             </div>
         </div>
         <div class="btn-wrap">
             <button type="button">상담 신청하기</button>
-            <button type="button" class="contract" onclick="location.href='./direct_01_3.html'">다음</button>
+            <button type="button" class="light" onclick="location.href='./direct_01_3.html'">다음</button>
         </div>
+        <script>
+            function togglePopup() {
+                const popup = document.querySelector('.price-box');
+                const btnShow = document.querySelector('.btn-show');
+    
+                // 팝업 활성화
+                popup.classList.toggle('show');
+    
+                // 버튼에 'on' 클래스 토글
+                btnShow.classList.toggle('on');
+            }
+        </script>
     </div>
 </body>
 </html>
